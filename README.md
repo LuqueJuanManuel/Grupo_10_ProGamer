@@ -4,8 +4,10 @@
 
 ## ¿Quienes somos?
 
-Pro Gamer es un E-commerce pensado para ofrecer articulos y elementos de Tecnologia, como por ejemplo Computadoras, Netbook, teclados, mouse, etc. 
+Pro Gamer es un E-commerce pensado para ofrecer articulos y elementos de Tecnologia, como por ejemplo Computadoras, Netbook, teclados, mouse, etc.
+
 Lo que brindamos en nuestra pagina, es una buena experiencia de navegación para el Usuario, para que al momento de buscar lo que necesita no solo sea facil, sino que pueda despejar sus dudas sobre lo que busca y quedar satisfecho a la hora de comprar lo que necesita.
+
 El publico al que apunta nuestra pagina, es a todos! ya que unas de nuestras caracterizticas es ofrecer combos u ofertas de articulos variados para todo tipo de usuario, por ejemplo en la zona de elementos destacados ofrecemos por ejemplo: 
 - Combo de Pc Gaming,enfocado a aquellos que buscan sacarle el maximo potencial a sus videos Juegos favoritos.
 - Combo de Pc Profesional, destinada a aquellas personas que quieren aprovechar su PC para el uso laboral.
