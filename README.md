@@ -60,7 +60,7 @@ De la pagina Electropc, nos gusto la paleta de colores y un icono de whatsApp es
 
 5- [MercadoLibre](https://www.mercadolibre.com.ar/)
 
-De la pagina de Mercado Libre, use de referencia la forma de Pago y el formulario, para de entrega.
+De la pagina de Mercado Libre, tomamos de referencia la forma de Pago y el formulario, para de entrega.
 
 
 
