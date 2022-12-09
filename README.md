@@ -27,7 +27,7 @@ Entre otras cosas a destacar de nuestra pagina, una de ellas el "Dejanos tus dud
 
 ### Tomás López Turconi, 31 años.
 - Soy estudiante de Desarrollo web Node full stack y de Python, con ganas de mejorar tanto personal y profesionalmente.
-- Interesado e amante de la tecnología como en el hardware, software, robótica, IA, Deep L. y Machine L. Con muchas ganas de aprender mucho mas…
+- Interesado e amante de la tecnología como en el hardware, software, robótica, IA, Deep L. y Machine L. Con muchas ganas de aprender.
 
 ### Gastón Adán Praettestein, 36 años.
 - Estudiante de Programación Web Full Stack, apasionado por este nuevo mundo que comencé a conocer hace poquito, con el que quiero seguir creciendo y aprendiendo.
