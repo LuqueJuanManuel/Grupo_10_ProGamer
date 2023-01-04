@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
 
 /* General */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,16 +13,22 @@
 }
 
 /* #1C1427 , #40394A , #7ECA9C , #CCFFBD , #F3EFE0  */
-:root{
+:root {
     /* Tipografia */
-    --titulos: "Roboto",  sans-serif;
+    --titulos: "Roboto", sans-serif;
     --parrafos: "Teko";
     --otros: "rajadmi";
     /* Colores */
-    --violeta-oscuro: #1C1427;/* fondos */
+    --violeta-oscuro: #1C1427;
+    /* fondos */
     --gris-claro: #40394A;
     --verde-oscuro: #7ECA9C;
     --verde-claro: #CCFFBD;
     --crema: #F3EFE0;
     /* Tamaño tipografico */
+    --parrafos: 4vw;
+    --titulos: 6vw;
+    --precio: 5.2vw;
+    --descuento: 5vw;
+    --descripcion: 5vw;
 }
