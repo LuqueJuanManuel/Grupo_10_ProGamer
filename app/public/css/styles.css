@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
+
+/* General */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family:  sans-serif - teko; */
+}
+
+/* #1C1427 , #40394A , #7ECA9C , #CCFFBD , #F3EFE0  */
+:root{
+    /* Tipografia */
+    --titulos: "Roboto",  sans-serif;
+    --parrafos: "Teko";
+    --otros: "rajadmi";
+    /* Colores */
+    --violeta-oscuro: #1C1427;/* fondos */
+    --gris-claro: #40394A;
+    --verde-oscuro: #7ECA9C;
+    --verde-claro: #CCFFBD;
+    --crema: #F3EFE0;
+    /* Tamaño tipografico */
+}
