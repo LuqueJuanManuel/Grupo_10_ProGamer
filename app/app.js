@@ -28,8 +28,5 @@ app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname,"/views/login.html"))
 });
 
-app.get("/carritoDeCompras", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/carritoDeCompras.html"))
-});
 
 app.listen( PORT, ()=>console.log(`server listen in port ${PORT}\n http://localhost:${PORT}` ));
