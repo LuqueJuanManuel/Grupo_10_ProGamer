@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>Carrito de Compras</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <h2 id="tituloMiCompra">Mi compra</h2>
+
+        <article class="product-container">
+            <div>
+                <img class="product--container__image" src="/images/monitor.jpg" alt="imagen de monitor" width="100%">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+            <div class="box--container__productAndDetail">
+                <span class="box--container__h3productName">
+                    <h3 class="h3-productName">
+                        producto
+                    </h3>
+                </span>
+                <span>
+                    <p class="product--detail">detalle del producto: Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit.</p>
+                    <h4 class="product--code">codigo del producto: XXXX</h4>
+                </span>
+            </div>
+            <div class="box--container__amount">
+                <span class="box--container__h3-Amount">
+                    <h3 class="h3-amount">Cantidad</h3>
+                </span>
+                <span>
+                    <div class="box--container-amount">
+                        <button class="buttum--rest">
+                            -
+                        </button>
+                        <input type="number" class="amount--cart" placeholder="1">
+                        <button>
+                            +
+                        </button>
+                    </div>
+                </span>
+            </div>
+            <div class="priceByUnit">
+                <span>
+                    <h3 class="h3-priceByUnit">
+                        $ unit.
+                    </h3>
+                </span>
+                <span>
+                    12.345,67
+                </span>
+            </div>
+            <div class="box--subTotal">
+                <span>
+                    <h3 class="h3-subtotal">
+                        $ Subtotal
+                    </h3>
+                </span>
+                <span>
+                    12.345,67
+                </span>
+            </div>
+        </article>
+
+        <button class="addToCart">
+            + Agregar a carrito
+        </button>
+
+        <section class="moreInterest">
+            <h2>
+                tanbién te puede interezar
+            </h2>
+            <article>
+                <img src="/images/monitor.jpg" alt="imagen del producto" width="100%">
+                <h4>nombre del producto</h4>
+                <p>descripción del producto</p>
+                <h5>codigo del producto: xxxx</h5>
+                <h5>precio del contado</h5>
+                <h5>$ 12.345,67</h5>
+            </article>
+
+            <article>
+                <img src="/images/monitor.jpg" alt="imagen del producto" width="100%">
+                <h4>nombre del producto</h4>
+                <p>descripción del producto</p>
+                <h5>codigo del producto: xxxx</h5>
+                <h5>precio del contado</h5>
+                <h5>$ 12.345,67</h5>
+            </article>
+        </section>
+
+        <section class="toBuy">
+            <div class="Subtotal--end"> Subtotal: $ 12.345,67</div>
+            <button buttom-buy>Comprar</button>
+        </section>
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
