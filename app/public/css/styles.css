@@ -32,3 +32,7 @@
     --descuento: 5vw;
     --descripcion: 5vw;
 }
+
+body {
+    background-color: var(--violeta-oscuro);
+}
