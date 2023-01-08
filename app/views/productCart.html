@@ -19,7 +19,7 @@
         <h2 id="tituloMiCompra">Mi compra</h2>
 
         <!-- Detalle de la compra -->
-        
+
         <!-- imagen del Producto -->
         <article class="product--container">
             <div class="photo--container">
@@ -28,16 +28,16 @@
             </div>
 
             <!-- Cajas con detalles del producto -->
-        
+
             <div class="box--container__productAndDetail">
-                
-                <span class="span--left"> 
+
+                <span class="span--left">
                     <h3 class="h3-productName">
                         Producto
                     </h3>
                 </span>
 
-                <span class="span--right"> 
+                <span class="span--right">
                     <p>detalle del producto: Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit.</p>
                     <h4>codigo del producto: XXXX</h4>
@@ -47,19 +47,19 @@
             <!--Cantidad de Elementos  -->
             <div class="box--container">
 
-                <span class="span--left"> 
+                <span class="span--left">
                     <h3 class="h3-amount">Cantidad</h3>
                 </span>
 
-                <span class="span--right"> 
-                    
+                <span class="span--right">
+
                     <div class="box--button__rest">
                         <button class="button--rest">
                             -
                         </button>
 
                         <input type="number" class="input--amount" placeholder="1">
-                        
+
                         <button class="button--add">
                             +
                         </button>
@@ -101,16 +101,30 @@
 
         <!-- Boton Agregar al Carrito -->
         <button class="addToCart">
-            + Agregar a carrito
+            <a href="">+ Agregar a carrito</a>
         </button>
 
 
 
+        <!-- También te puede interezar -->
         <section class="moreInterest">
+
             <h2>
-                tanbién te puede interezar
+                También te puede interezar:
             </h2>
-            <article>
+
+            <article class="article">
+                <img src="/images/monitor.jpg" alt="imagen del producto" width="100%">
+                <h4>nombre del producto</h4>
+                <p>descripción del producto</p>
+                <h5>codigo del producto: xxxx</h5>
+                <span>
+                    <h5>precio del contado</h5>
+                    <h5>$ 12.345,67</h5>
+                </span>
+            </article>
+
+            <article class="article">
                 <img src="/images/monitor.jpg" alt="imagen del producto" width="100%">
                 <h4>nombre del producto</h4>
                 <p>descripción del producto</p>
@@ -119,7 +133,16 @@
                 <h5>$ 12.345,67</h5>
             </article>
 
-            <article>
+            <article class="article">
+                <img src="/images/monitor.jpg" alt="imagen del producto" width="100%">
+                <h4>nombre del producto</h4>
+                <p>descripción del producto</p>
+                <h5>codigo del producto: xxxx</h5>
+                <h5>precio del contado</h5>
+                <h5>$ 12.345,67</h5>
+            </article>
+
+            <article class="article article4">
                 <img src="/images/monitor.jpg" alt="imagen del producto" width="100%">
                 <h4>nombre del producto</h4>
                 <p>descripción del producto</p>
@@ -129,9 +152,17 @@
             </article>
         </section>
 
+        <!-- seccion de finalizar -->
         <section class="toBuy">
-            <div class="Subtotal--end"> Subtotal: $ 12.345,67</div>
-            <button buttom-buy>Comprar</button>
+
+            <div> Subtotal: $ 12.345,67</div>
+
+            <a href="" class="">Ver medios de pago</a>
+
+            <a href="">Ver forma de entrega</a>
+
+            <button>Comprar</button>
+
         </section>
     </main>
 

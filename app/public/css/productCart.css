@@ -5,6 +5,9 @@
 
 }
 
+body {
+    background-color: rgb(238, 236, 236);
+}
 
 main h2#tituloMiCompra {
     margin-top: 15px;
@@ -13,16 +16,14 @@ main h2#tituloMiCompra {
 }
 
 main article.product--container {
+    background-color: white;
     display: flex;
     flex-direction: column;
     padding: 3px;
     margin: 10px;
-    box-shadow: 1px 1px 3px 1px rgba( 0, 0, 0, 0.5);
+    box-shadow: 0.5px 0 6px 2px black;
 
 }
-
-/* Boton Agregar al carrito */
-
 
 
 main article.product--container div.photo--container {
@@ -67,7 +68,7 @@ main span.span--left {
 }
 
 main h3.productName {
- 
+    color: var(--crema);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,10 +98,10 @@ main div.box--container {
 
 
 main h3.amount {
-    
+
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
 main span.span--right {
@@ -110,7 +111,7 @@ main span.span--right {
     width: 70%;
     margin-top: 10px;
     margin-bottom: 10px;
-    
+
 }
 
 main div.box--button__rest {
@@ -118,7 +119,7 @@ main div.box--button__rest {
     justify-content: center;
     align-items: center;
     padding: 0px 5px 0px;
-    
+
 }
 
 
@@ -127,7 +128,7 @@ main button.button--rest {
     width: 25px;
     border: 1px solid grey;
     box-shadow: 1px 1px 1px black;
-    
+
 }
 
 main input.input--amount {
@@ -143,7 +144,146 @@ main button.button--add {
     box-shadow: 1px 1px 1px black;
 }
 
+/* Boton de agregar al carrito */
+
+main#productCart button.addToCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid grey;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    margin: 30px auto 0px;
+    width: 60%;
+    max-width: 300px;
+    height: 50px;
+
+}
+
+main#productCart button.addToCart a {
+    font-family: var(--fuente-titulos);
+    font-size: var(--titulos);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+/* tambien te puede interezar */
+
+main#productCart section.moreInterest {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+main#productCart section.moreInterest h2 {
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: var(--titulos);
+
+}
+
+main#productCart article.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 1px;
+    max-width: 40%;
+    box-shadow: 2px 5px 5px black;
+
+}
+
+/* sombra de los articulos */
+main#productCart article.article:hover {
+    box-shadow: 2px 5px 7px rgb(62, 252, 5);
+    border-color: rgb(32, 128, 3);
+}
+
+main#productCart article.article h4 {
+    font-family: var(--fuente-titulos);
+    text-align: center;
+}
+
+main#productCart article.article p {
+    font-family: var(--fuente-parrafos);
+}
+
+main#productCart article.article h5 {
+    text-align: center;
+    font-family: var(--fuente-parrafos);
+}
+
+main#productCart article.article span {
+    padding: 2px;
+}
+
+/* Seccion de finalizar compra  */
+
+main#productCart section.toBuy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+main#productCart section.toBuy div {
+    border: 1px solid black;
+    padding: 3px;
+    width: 60%;
+    min-width: 200px;
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+
+}
+
+main#productCart section.toBuy a {
+    margin: 8px 10px;
+    padding: 5px;
+    text-decoration: none;
+    width: 80%;
+    box-shadow: 0px 1px 2px black;
+}
+
+main#productCart section.toBuy button {
+    border: 2px solid var(--verde-claro);
+    background-color: var(--violeta-oscuro);
+    color: var(--crema);
+    margin-top: 15px;
+    font-size: 40px;
+    width: 60%;
+    border-radius: 25px;
+    box-shadow: 1px 2px 2px var(--verde-oscuro);
 
 
+}
 
+/* medidas 
+480 (smaller smartphones)
+768 ( tablets y large smarphones)
+769+ desktop les parece? */
 
+/* Tablets y Large Smarphones */
+
+@media (min-width: 481px) {
+
+    main#productCart article.article {
+        max-width: 25%;
+    }
+
+    main#productCart article.article4 {
+        display: none;
+    }
+
+}
+
+@media (min-width: 769) {
+    
+}
