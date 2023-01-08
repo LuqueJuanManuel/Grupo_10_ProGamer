@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap');
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+h4{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.registro-form{
+    background: lightgray;
+    padding: 1rem;
+    border-radius: 0.9rem;
+    box-shadow: 3px 3px 7px;
+    width: 100%;
+}
+.registro-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5rem;
+    margin: 15px;
+    padding: 15px;
+}
+.datos-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0.3rem;
+}
+
+.input-container,
+.button-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+    width: 100%;
+
+}
+
+.button-container{
+    border: none;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+}
+.input-style{
+    border: none;
+    border-radius: 0.2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+.input-select{
+    border: none;
+    border-radius: 0.2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+p{
+    background-color: white;
+    display: inline-block;
+    justify-content: flex-end;
+}
