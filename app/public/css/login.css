@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap');
+
+body{
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1rem;
+    min-height: 100vh;
+    padding: 3rem; 
+}
+a{
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+}
+h4{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.form-container{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 3px 3px 5px;
+    width: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.login-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    
+}
+
+.input-container,
+.login-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.input-email,
+.input-clave{
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+.btn-login{
+    border: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0.5rem;
+}
+.span-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.button-redes{
+    border: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+    margin: 0.2rem;
+}
