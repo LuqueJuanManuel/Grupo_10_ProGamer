@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+main h2#tituloMiCompra {
+    margin-top: 15px;
+    text-align: center;
+    font-family: var(--titulos);
+}
+
+main article.product--container {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px 1px rgba( 0, 0, 0, 0.5);
+
+}
+
+/* Boton Agregar al carrito */
+
+
+
+main article.product--container div.photo--container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main article.product--container div.photo--container img.product--container__image {
+    width: 100%;
+}
+
+main article.product--container div i {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 20px;
+
+}
+
+/* producto y detalles */
+
+/* div contendedor */
+
+main div.box--container__productAndDetail {
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+
+main span.span--left {
+    display: flex;
+    border-right: 1px solid black;
+    width: 30%;
+    padding-left: 3px;
+
+
+}
+
+main h3.productName {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main span.span--right {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px 0px;
+    width: 70%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+/* Cantidad */
+
+main div.box--container {
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 1px;
+}
+
+
+main h3.amount {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+main span.span--right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+main div.box--button__rest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px 0px;
+    
+}
+
+
+
+main button.button--rest {
+    width: 25px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px black;
+    
+}
+
+main input.input--amount {
+    text-align: center;
+    border: none;
+    width: 25px;
+
+}
+
+main button.button--add {
+    width: 25px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px black;
+}
+
+
+
+
+
