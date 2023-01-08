@@ -14,67 +14,97 @@
 <body>
     <header></header>
 
-    <main>
+    <main id="productCart">
+        <!-- tiulo: Mi Compra -->
         <h2 id="tituloMiCompra">Mi compra</h2>
 
-        <article class="product-container">
-            <div>
-                <img class="product--container__image" src="/images/monitor.jpg" alt="imagen de monitor" width="100%">
+        <!-- Detalle de la compra -->
+        
+        <!-- imagen del Producto -->
+        <article class="product--container">
+            <div class="photo--container">
+                <img class="product--container__image" src="/images/monitor.jpg" alt="imagen de monitor">
                 <i class="fa-regular fa-circle-xmark"></i>
             </div>
+
+            <!-- Cajas con detalles del producto -->
+        
             <div class="box--container__productAndDetail">
-                <span class="box--container__h3productName">
+                
+                <span class="span--left"> 
                     <h3 class="h3-productName">
-                        producto
+                        Producto
                     </h3>
                 </span>
-                <span>
-                    <p class="product--detail">detalle del producto: Lorem ipsum dolor sit, amet consectetur adipisicing
+
+                <span class="span--right"> 
+                    <p>detalle del producto: Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit.</p>
-                    <h4 class="product--code">codigo del producto: XXXX</h4>
+                    <h4>codigo del producto: XXXX</h4>
                 </span>
             </div>
-            <div class="box--container__amount">
-                <span class="box--container__h3-Amount">
+
+            <!--Cantidad de Elementos  -->
+            <div class="box--container">
+
+                <span class="span--left"> 
                     <h3 class="h3-amount">Cantidad</h3>
                 </span>
-                <span>
-                    <div class="box--container-amount">
-                        <button class="buttum--rest">
+
+                <span class="span--right"> 
+                    
+                    <div class="box--button__rest">
+                        <button class="button--rest">
                             -
                         </button>
-                        <input type="number" class="amount--cart" placeholder="1">
-                        <button>
+
+                        <input type="number" class="input--amount" placeholder="1">
+                        
+                        <button class="button--add">
                             +
                         </button>
                     </div>
                 </span>
             </div>
-            <div class="priceByUnit">
-                <span>
+
+            <!-- Precio por unidad -->
+            <div class="box--container">
+
+                <span class="span--left">
+
                     <h3 class="h3-priceByUnit">
-                        $ unit.
+                        $ Unit.
                     </h3>
                 </span>
-                <span>
+
+                <span class="span--right">
                     12.345,67
                 </span>
+
             </div>
-            <div class="box--subTotal">
-                <span>
+
+            <!-- subtotal -->
+            <div class="box--container">
+                <span class="span--left">
+
                     <h3 class="h3-subtotal">
                         $ Subtotal
                     </h3>
                 </span>
-                <span>
+
+                <span class="span--right">
                     12.345,67
                 </span>
             </div>
+
         </article>
 
+        <!-- Boton Agregar al Carrito -->
         <button class="addToCart">
             + Agregar a carrito
         </button>
+
+
 
         <section class="moreInterest">
             <h2>

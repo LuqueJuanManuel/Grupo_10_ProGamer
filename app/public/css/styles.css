@@ -15,8 +15,8 @@
 /* #1C1427 , #40394A , #7ECA9C , #CCFFBD , #F3EFE0  */
 :root {
     /* Tipografia */
-    --titulos: "Roboto", sans-serif;
-    --parrafos: "Teko";
+    --fuente-titulos: "Roboto", sans-serif;
+    --fuente-parrafos: "Teko";
     --otros: "rajadmi";
     /* Colores */
     --violeta-oscuro: #1C1427;
