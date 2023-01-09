@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap');
-
 section.banner {
     overflow:hidden;
     margin: 0 auto;
     max-width: 1516px;
-    
+    box-shadow: 0.5px 0 4px 0.2px var(--verde-oscuro);
 }
 section.banner div.banner-select {
     width: 100%;
@@ -30,7 +27,7 @@ section.banner div.banner-select img.img-banner1, img.img-banner2, img.img-banne
 }
 /* ofertas */
 section.title-section {
-    margin: 10px 0 0 15px;
+    margin: 10px 0 0 8px;
     
 }
 section.title-section div.title-container {
@@ -47,15 +44,16 @@ section.title-section div.title-container a {
     text-decoration: none;
     font-size: 0.65rem;
     letter-spacing: 0.4px;
-    font-family: 'teko',sans-serif;
+    font-family: var(--fuente-parrafos);
     color: var(--verde-oscuro);
 }
 section.title-section div.title-container  h2 {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    font-size: 1.5rem;
+    font-family: var(--fuente-titulos);
+    /* text-align: center; */
+    font-size: var(--titulos);
     color: var(--crema);
 }
+
 section.title-section div.title-container hr {
     width: 100%; 
     height: 0;
@@ -73,6 +71,7 @@ section.porducts-offerts {
     align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    gap: 8%;
     
 }
 section.porducts-offerts article.product {
@@ -80,7 +79,7 @@ section.porducts-offerts article.product {
     flex-direction:column;
     padding: 0.5rem;
     margin-bottom: 2.3rem;
-    max-width: 250px;
+    max-width: 200px;
     border: none;
     border-radius: 10px;
     background-color: white;
@@ -124,6 +123,8 @@ section.porducts-offerts article.product div.photo-container i:hover{
     font-weight: none;
 }
 section.porducts-offerts article.product a h3 {
+    font-family: var(--fuente-titulos);
+    font-size: var(--titulos);
     padding-bottom: 0.3rem;
     margin-top: 0.2rem;
     margin-bottom: 0.4rem;
@@ -148,21 +149,213 @@ section.porducts-offerts article.product div.price {
 section.porducts-offerts article.product div.price span.numb-offert {
     font-size: 1rem;
     letter-spacing: 0.3px;
-    font-family: "teko", sans-serif;
+    font-family: var(--fuente-parrafos);
     font-weight: 600;
     color: var(--verde-oscuro);
 }
 section.porducts-offerts article.product div.price h3 {
-    font-size: 30px;
+    font-size: 2rem;
     letter-spacing: 2px;
-    font-family: "teko", sans-serif;
+    font-family: var(--fuente-parrafos);
     color: var(--gris-claro);
     padding: 5px;
 }
 section.porducts-offerts article.product p {
-    font-family: "teko", sans-serif;
-    font-size: 1rem;
+    font-family: var(--fuente-parrafos);
+    font-size: var(--parrafos);
     letter-spacing: 0.5px;
     text-decoration: underline var(--gris-claro);
     color: var(--gris-claro);
+}
+/*modos de pago*/
+
+/* section.payMode-section {
+
+} */
+section.payMode-section article.modes {
+    background-color: var(--crema);
+    margin: 1rem ;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0 0 0.5rem;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+    margin-bottom: 2rem;
+
+}
+section.payMode-section article.modes div.text-modes {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.9rem;
+    margin-left: 0.5rem;
+}
+section.payMode-section article.modes div.text-modes a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.payMode-section article.modes div.text-modes a i{
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    border: 2px solid var(--violeta-oscuro);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--violeta-oscuro);
+    background-color: var(--verde-oscuro);
+    transition: all 1s ease;
+}
+section.payMode-section article.modes div.text-modes a i:hover{
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+}
+section.payMode-section article.modes div.text-modes p.text {
+    font-size: 0.9rem;
+    font-family: var(--fuente-parrafos);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.payMode-section article.modes div.text-modes a p{
+    font-size: 0.7rem;
+    font-family: var(--fuente-parrafos);
+    margin-left: 1rem;
+    color: var(--violeta-oscuro);
+    transition: all 1s ease;
+}
+section.payMode-section article.modes div.text-modes a p:hover{
+    color: var(--verde-oscuro);
+    text-decoration: underline var(--verde-oscuro);
+}
+section.payMode-section article.modes div.more-info {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-left: 3px solid rgba(0, 0, 0, 0.05);
+    
+}
+section.payMode-section article.modes div.more-info a {
+    text-decoration: none;
+}
+section.payMode-section article.modes div.more-info a i {
+    border: 7px solid var(--violeta-oscuro);
+    color: var(--violeta-oscuro);
+    height: 2.7rem;
+    width: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: var(--verde-oscuro);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    transition: all 1s ease;
+}
+section.payMode-section article.modes div.more-info a i:hover {
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+}
+/* banner oferta */
+section.banner-bottom{
+    margin-bottom: 2rem;
+}
+section.banner-bottom div.img-oferta {
+    width: 100%;
+    border: none;
+    
+}
+section.banner-bottom div.img-ofert img.b-ofert {
+    width: 100%;
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+    
+}
+/* titulo form registro */
+section.title-register {
+    margin-bottom: 0.5rem;
+}
+section.title-register div.register-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+section.title-register div.register-container h2.register-prom{
+    width: 75%;
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    /* text-align: center; */
+    font-size: var(--titulos);
+    color: var(--crema);
+}
+section.title-register div.register-container hr.line-left {
+    width: 30%;
+    margin-right: 1rem;
+    border: 0;
+    box-shadow: 0 1px 2px 1px var(--crema);
+}
+section.title-register div.register-container hr.line-rigth {
+    width: 30%;
+    margin-left: 1rem;
+    border: 0;
+    box-shadow: 0 1px 2px 1px var(--crema);
+}
+/* formulario de registro */
+section form div.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+section form div.form div.input-container, div.button-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+section form div.form div.input-container input.input-style {
+    border: none;
+    border-radius: 8px;
+    width: 12rem;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    background-color: var(--crema);
+    opacity: 0.9;
+} 
+section form div.form div.input-container input.input-style::placeholder {
+    opacity: 0.6;
+    font-family: var(--fuente-parrafos);
+    font-size: 0.9rem;
+}
+section form div.form div.input-container span.error-message, div.button-container span.error-message {
+    color: tomato;
+    padding-left: 0.5rem;
+    font-family: var(--fuente-parrafos);
+    font-size: var(--parrafos);
+    display: none;
+}
+section form div.form  div.button-container button.btn {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 8rem;
+    font-family: var(--fuente-parrafos);
+    text-decoration: underline;
+    color: var(--violeta-oscuro);
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    background-color: var(--crema);
+    transition: all 1s ease;
+    /* */
+}
+section form div.form  div.button-container button.btn:hover {
+    background-color: var(--verde-oscuro);
+    box-shadow: 0px 0 4px 2px var(--crema);
+    /* text-shadow: 1px 1px 5px rgba(0,0,0,0.9); */
 }
