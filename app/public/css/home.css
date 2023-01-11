@@ -79,7 +79,8 @@ section.porducts-offerts article.product {
     flex-direction:column;
     padding: 0.5rem;
     margin-bottom: 2.3rem;
-    max-width: 200px;
+    max-width: 225px;
+    max-height: 370px;
     border: none;
     border-radius: 10px;
     background-color: white;
@@ -116,6 +117,7 @@ section.porducts-offerts article.product div.photo-container i {
     right: 10px;
     font-size: 150%;
     opacity: 0.4;
+    cursor: pointer;
 }
 section.porducts-offerts article.product div.photo-container i:hover{
     color: red;
@@ -124,7 +126,7 @@ section.porducts-offerts article.product div.photo-container i:hover{
 }
 section.porducts-offerts article.product a h3 {
     font-family: var(--fuente-titulos);
-    font-size: var(--titulos);
+    font-size: 1.6rem;
     padding-bottom: 0.3rem;
     margin-top: 0.2rem;
     margin-bottom: 0.4rem;
@@ -134,7 +136,7 @@ section.porducts-offerts article.product a h3 {
     transition: all 5ms ease;
 }
 section.porducts-offerts article.product a h3:hover{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     
 }
 section.porducts-offerts article.product a {
@@ -146,6 +148,11 @@ section.porducts-offerts article.product div.price {
     align-items: center;
     margin-left: 18px;
 }
+section.porducts-offerts article.product div.price-product{
+    display:flex;
+    justify-content: center;   
+    align-items: center;
+}
 section.porducts-offerts article.product div.price span.numb-offert {
     font-size: 1rem;
     letter-spacing: 0.3px;
@@ -153,7 +160,7 @@ section.porducts-offerts article.product div.price span.numb-offert {
     font-weight: 600;
     color: var(--verde-oscuro);
 }
-section.porducts-offerts article.product div.price h3 {
+section.porducts-offerts article.product div h3 {
     font-size: 2rem;
     letter-spacing: 2px;
     font-family: var(--fuente-parrafos);
@@ -162,7 +169,7 @@ section.porducts-offerts article.product div.price h3 {
 }
 section.porducts-offerts article.product p {
     font-family: var(--fuente-parrafos);
-    font-size: var(--parrafos);
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
     text-decoration: underline var(--gris-claro);
     color: var(--gris-claro);
@@ -321,8 +328,8 @@ section form div.form div.input-container, div.button-container {
 section form div.form div.input-container input.input-style {
     border: none;
     border-radius: 8px;
-    width: 12rem;
-    height: 1.5rem;
+    width: 14rem;
+    height: 1.8rem;
     padding: 0 0.5rem;
     background-color: var(--crema);
     opacity: 0.9;
@@ -330,22 +337,23 @@ section form div.form div.input-container input.input-style {
 section form div.form div.input-container input.input-style::placeholder {
     opacity: 0.6;
     font-family: var(--fuente-parrafos);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 section form div.form div.input-container span.error-message, div.button-container span.error-message {
     color: tomato;
     padding-left: 0.5rem;
     font-family: var(--fuente-parrafos);
-    font-size: var(--parrafos);
+    font-size: 1.1rem;
     display: none;
 }
 section form div.form  div.button-container button.btn {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    height: 1.5rem;
-    width: 8rem;
+    height: 2rem;
+    width: 10rem;
     font-family: var(--fuente-parrafos);
+    font-size: 1.1rem;
     text-decoration: underline;
     color: var(--violeta-oscuro);
     font-weight: 600;
@@ -358,4 +366,81 @@ section form div.form  div.button-container button.btn:hover {
     background-color: var(--verde-oscuro);
     box-shadow: 0px 0 4px 2px var(--crema);
     /* text-shadow: 1px 1px 5px rgba(0,0,0,0.9); */
+}
+
+/*media query:TABLET*/
+@media (min-width: 490px){
+    
+    section.porducts-offerts {
+        flex-direction: column;
+    }
+    section.payMode-section article.modes {
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        max-width: 378px;
+        max-height: 203px;
+    }
+    section form div.form div.input-container input.input-style {
+        width: 20rem;
+        height: 2.2rem;
+        padding: 0.4rem 0.5rem 0 0.8rem;
+    } 
+    section form div.form div.input-container input.input-style::placeholder {
+        font-size: 1.5rem;/**/
+        
+    }
+    section form div.form  div.button-container button.btn {
+        height: 2.5rem;
+        width: 12rem;
+        font-size: 1.5rem;
+    }
+    section.title-register {
+        margin-top: 2rem;
+    }
+}
+
+/*media query: DESKTOP*/
+@media (min-width: 803px){
+    section.title-section div.title-container  h2 {
+        
+        font-size: 2.5rem;
+    }
+    section.porducts-offerts {
+        flex-direction:row;
+        gap: 5%;
+    }
+    section.title-register div.register-container h2.register-prom{
+        font-size: 2.5rem;
+    }
+    section form div.form {
+        margin-top: 2rem;
+    }
+}
+@media (min-width: 1024px){
+    section form div.form div.input-container input.input-style {
+        width: 24rem;
+        height: 2.5rem;
+        padding: 0.4rem 0.5rem 0 0.8rem;
+        margin: 0.5rem;
+    } 
+    section form div.form div.input-container input.input-style::placeholder {
+        font-size: 1.5rem;/**/
+        
+    }
+    section form div.form  div.button-container button.btn {
+        height: 3rem;
+        width: 15rem;
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+    }
+    section.banner-bottom div.img-ofert img.b-ofert {
+        max-width: 768px;
+        min-height: 227px;
+        width: 75%;
+        height: 50%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
 }
