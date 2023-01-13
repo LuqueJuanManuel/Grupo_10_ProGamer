@@ -104,7 +104,9 @@ img.logo{
 div.user-cart{
     display: flex;
 }   
-
+a.glass{
+    display: none;
+}
 
 div.hamburguer-container{
     display: flex;
@@ -237,6 +239,10 @@ footer div.footer-align{
    a.user-button {
        display: flex;
    } 
+   a.glass{
+    display: flex;
+}
+
    div.top-bar{
        display: flex;
        width: 85%;
