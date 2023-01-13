@@ -1,0 +1,53 @@
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Tipografia */
+    --fuente-titulos: "Roboto", sans-serif;
+    --fuente-parrafos: "Teko";
+    --otros: "rajadmi";
+    /* Colores */
+    --violeta-oscuro: #1C1427;
+    /* fondos */
+    --gris-claro: #40394A;
+    --verde-oscuro: #7ECA9C;
+    --verde-claro: #CCFFBD;
+    --crema: #F3EFE0;
+    /* Tamaño tipografico */
+    --parrafos: 4vw;
+    --titulos: 6vw;
+    --precio: 5.2vw;
+    --descuento: 5vw;
+    --descripcion: 5vw;
+}
+
+body#productDetail {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+body#productDetail h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 15px;
+    text-align: left;
+}
+
+body#productDetail article {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+body#productDetail article h3 {
+    text-align: center;
+}
+
+
+
+
