@@ -58,6 +58,23 @@ header{
     top: 0;
     left: 0;
     z-index: 100;
+    animation: logo-name 10s infinite ;
+    
+}
+
+@keyframes logo-name {
+    0%{
+        filter: hue-rotate(45deg);
+    }
+    25%{
+        filter: hue-rotate(90deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+         filter: hue-rotate(360deg);
+    }
 }
 div.logo img.logo{
     display: none;
@@ -66,6 +83,7 @@ div.logo img.logo{
     border: solid 2px;
     margin: 2px;
     margin-bottom: 10px;
+    
 }
 img.logo{
     display: none;
@@ -206,7 +224,7 @@ footer div.footer-align{
        justify-content: flex-start;
       flex-flow: row wrap;
       align-items:center;
-      
+      animation: none;
       width: 100%;
 
    }
@@ -235,7 +253,23 @@ footer div.footer-align{
        height: 200%;
        flex-direction: row;
        flex-wrap: wrap;
+       animation: logo-name  10s infinite;
     }
+    @keyframes logo-name {
+        0%{
+            filter: hue-rotate(45deg);
+        }
+        25%{
+            filter: hue-rotate(90deg);
+        }
+        50%{
+            filter: hue-rotate(180deg);
+        }
+        100%{
+             filter: hue-rotate(360deg);
+        }
+    }
+
    a.user-button {
        display: flex;
    } 
