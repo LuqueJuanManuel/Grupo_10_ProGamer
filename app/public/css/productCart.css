@@ -32,6 +32,7 @@ main article.product--container {
     margin: 10px;
     border: 2px solid var(--verde-claro);
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+    border-radius: 10px;
 
 }
 

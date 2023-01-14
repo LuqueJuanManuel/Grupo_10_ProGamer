@@ -11,224 +11,353 @@
     <title>productDetail</title>
 </head>
 
-<body id="productDetail">
-    <h2>Home / Notebooks / NOTEBOOK BANGHO MAX L4 I3 8GB SSD 240GB FREEDOS 14"</h2>
-    <article>
-        <h3>NOTEBOOK BANGHO MAX L4 I3 8GB SSD
-            240GB FREEDOS 14"</h3>
-        <div>
-            <span>
-                <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-2.webp" alt="" width="100%">
-                <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-3.webp" alt="" width="100%">
-                <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-4.webp" alt="" width="100%">
-            </span>
-            <span>
-                <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX.webp" alt="" width="100%">
-            </span>
+<body>
+    <header><!--logo,barra de navegacion,busqueda,login,carrito de compras,liks de enlaces-->
+        <div class="logo">
+            <a href="../index.html"><img class="logo" src="/images/logo ecomerce.jpg" alt="logo"></a>
         </div>
-        <section>
-
-            <div>
-                <p>$131449.00</p>
-                <p>Precio de lista</p>
-                <p>$197173.50</p>
+        <!-- menu de hamburguesa-->
+        <div class="hamburguer-container">
+            <a href="#" class="hamburguer button">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+        <div class="top-bar">
+            <div class="input-glass">
+                <div class="input-search"> <!-- input buscador -->
+                    <input class="search" type="text" placeholder="buscar">
+                </div>
+                <a href="#" class="glass button"> <!--boton lupa -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
             </div>
+            <div class="user-cart">
+                <a href="../login.html" class="user button"> <!--boton usuario -->
+                    <i class="fa-solid fa-user"></i>
+                </a>
 
-            <div>
-                <img src="/images/ahora-12.png" alt="" width="100%">
-                <p>12 cuotas sin interés de $16431.13 a precio de lista</p>
-                <p><a href="">Ver cuotas</a></p>
+                <a href="../productCart.html" class="cart button"> <!-- carrito de compras -->
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
             </div>
+        </div>
 
-            <div>
-                <i class="fa-light fa-circle-check"></i>
-                <p>STOCK EN LA WEB</p>
-                <p>Solo para venta por web</p>
-            </div>
+        <nav>
+            <ul class="links-busquedas">
 
-            <div>
-                <i class="fa-light fa-circle-xmark"></i>
-                <p>SIN STOCK EN EL LOCAL</p>
-                <p>Solo para venta presencial</p>
-            </div>
+                <li><a href="#">notebooks</a></li>
+                <li><a href="#">Computadores</a></li>
+                <li><a href="#">conponentes de pc</a></li>
+                <li><a href="#">monitores</a></li>
+                <li><a href="#">consolas</a></li>
 
-            <div>
-                <i class="fa-solid fa-house"></i>
-                <p>RETIRO ¡GRATIS!</p>
-                <p>LANUS (PROVINCIA)</p>
-            </div>
+            </ul>
+        </nav>
+    </header>
 
-            <div>
-                <i class="fa-solid fa-car-side"></i>
-                <p>LANUS (PROVINCIA)</p>
-                <p><a href="">Ver costo de envio</a></p>
-            </div>
-
-            <div>
-                <p>Agregar al carrito</p>
-                <span>
-                    <button>
-                        -
-                    </button>
-
-                    <input type="number" placeholder="1">
-
-                    <button>
-                        +
-                    </button>
+    <main id="productDetail">
+        <h2>Home / Notebooks / NOTEBOOK BANGHO MAX L4 I3 8GB SSD 240GB FREEDOS 14"</h2>
+        <article>
+            <h3>NOTEBOOK BANGHO MAX L4 I3 8GB SSD
+                240GB FREEDOS 14"</h3>
+            <div class="box-container-images">
+                <span class="images-left">
+                    <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-2.webp" alt="" width="100%">
+                    <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-3.webp" alt="" width="100%">
+                    <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-4.webp" alt="" width="100%">
                 </span>
+                <span class="images-right">
+                    <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX.webp" alt="" width="100%">
+                </span>
+            </div>
+
+            <section class="details">
+
+                <div class="price">
+                    <p class="p-price">$131449.00</p>
+                    <p>Precio de lista</p>
+                    <p>$197173.50</p>
+                </div>
+
+                <div class="cuotas">
+                    <span class="span-left">
+                        <img src="/images/ahora-12.png" alt="" width="100%">
+                    </span>
+                    <span class="span-right">
+                        <p class="cuotas">12 cuotas sin interés de $16431.13 a precio de lista</p>
+                        <p class="ver-cuotas"><a href="">Ver cuotas</a></p>
+                    </span>
+                </div>
+
+                <div class="stock-web">
+                    <span class="span-left">
+                        <i class="fa-light fa-circle-check"></i>
+                    </span>
+                    <span class="span-right">
+                        <p class="stockWeb">STOCK EN LA WEB</p>
+                        <p>Solo para venta por web</p>
+                    </span>
+                </div>
+
+                <div class="stock-local">
+                    <span class="span-left">
+                        <i class="fa-light fa-circle-xmark"></i>
+                    </span>
+                    <span class="span-right">
+                        <p class="stockLocal">SIN STOCK EN EL LOCAL</p>
+                        <p>Solo para venta presencial</p>
+                    </span>
+                </div>
+
+                <div class="retire">
+                    <span class="span-left">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    <span class="span-right">
+                        <p>RETIRO <FONT color="#39FC08">¡GRATIS!</FONT>
+                        </p>
+                        <p>LANUS (PROVINCIA)</p>
+                    </span>
+                </div>
+
+                <div class="shippingCost">
+                    <span class="span-left">
+                        <i class="fa-solid fa-car-side"></i>
+                    </span>
+                    <span class="span-right">
+                        <p>LANUS (PROVINCIA)</p>
+                        <p><a href="">Ver costo de envio</a></p>
+                    </span>
+                </div>
+
+                <div class="addToCart">
+                    <span class="span-left">
+                        <p class="addToCart"><a href="../index.html">Agregar al carrito</a></p>
+                    </span>
+                    <span class="span-right btn-addToCart">
+                        <button>
+                            -
+                        </button>
+
+                        <input type="number" placeholder="1">
+
+                        <button>
+                            +
+                        </button>
+                    </span>
+                </div>
+            </section>
+
+            <section class="Specifications">
+                <h3>Especificaciones tecnicas</h3>
+                <div>
+                    <p>General</p>
+                    <hr>
+                    <div>
+                        <p>Color: Negro</p>
+                        <p>Tipo:Notebook</p>
+                        <p>Sistema Operativo: FreeDos</p>
+                        <p>Tipo De CPU: Intel</p>
+                        <p>Modelo CPU: Intel I3 10110U</p>
+                        <p>Modelo GPU: Gráficos UHD Inte</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Conectividad</p>
+                    <hr>
+                    <div>
+                        <p>Puerto HDMI: Si</p>
+                        <p>Puertos USB 2.0: x1</p>
+                        <p>Puertos USB 3.1: x1</p>
+                        <p>Puertos USB 3.1 Type-C: x1</p>
+                        <p>Puertos Ethernet: Si</p>
+                        <p>Bluetooth: Si</p>
+                        <p>WIFI: Si</p>
+                        <p>Lectora: No</p>
+                        <p>WebCam: Si</p>
+                        <p>Idioma Del Teclado: Españo</p>
+                        <p>Pad Numerico: No</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Pantalla</p>
+                    <hr>
+                    <div>
+                        <p>Tamaño De La Pantalla: 14"</p>
+                        <p>Tipo De Display: HD</p>
+                        <p>Resolucion: 1366 X 768</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Memoria</p>
+                    <hr>
+                    <div>
+                        <p>Formato De Memorias: SODIMM</p>
+                        <p>Generacion De Memorias: DDR4</p>
+                        <p>RAM Integrada: 8GB</p>
+                        <p>Slot Adicional De RAM</p>
+                        <p> Disponible: 1</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Almacenamiento</p>
+                    <hr>
+                    <div>
+                        <p>Capacidad: SSD240 GB</p>
+                        <p>Lector De Memoria: Si</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Dimenciones</p>
+                    <hr>
+                    <div>
+                        <p>Peso: 1.35 Kg</p>
+                        <p>Ancho: 324.9 Mm</p>
+                        <p>Profundidad: 219.5 Mm</p>
+                        <p>Alto: 19.4 Mm</p>
+                    </div>
+                </div>
+                <section>
+
+        </article>
+
+        <!-- Productos Destacados -->
+
+        <section class="title-featured">
+            <div class="featured-container">
+                <hr class="line-left">
+                <h2 class="featured-prom">
+                    Productos Destacados
+                </h2>
+                <hr class="line-rigth">
             </div>
         </section>
 
-        <section>
-            <h3>Especificaciones tecnicas</h3>
-            <div>
-                <p>General</p>
-                <hr>
-                <div>
-                    <p>Color: Negro</p>
-                    <p>Tipo:Notebook</p>
-                    <p>Sistema Operativo: FreeDos</p>
-                    <p>Tipo De CPU: Intel</p>
-                    <p>Modelo CPU: Intel I3 10110U</p>
-                    <p>Modelo GPU: Gráficos UHD Inte</p>
+        <!-- Container de los productos D.-->
+        <section class="porducts-offerts">
+
+            <article class="product one">
+                <div class="photo-container">
+                    <a href="">
+                        <img src="images/monitor.jpg" alt="notebook">
+                    </a>
+                    <!-- moto ofert y heard -->
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <a href="">
+                    <h3>Nombre del producto</h3>
+                </a>
+                <div class="price-product">
+                    <h3>$XXX</h3>
+                    <!-- <span class="numb-offert">20% OFF</span> -->
+                </div>
+                <p>envio gratis...</p>
+            </article>
+
+            <article class="product two">
+                <div class="photo-container">
+                    <a href="">
+                        <img src="images/monitor.jpg" alt="notebook">
+                    </a>
+                    <!-- moto ofert y heard -->
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <a href="">
+                    <h3>Nombre del producto</h3>
+                </a>
+                <div class="price-product">
+                    <h3>$XXX</h3>
+                    <!-- <span class="numb-offert">20% OFF</span> -->
+                </div>
+                <p>envio gratis...</p>
+            </article>
+
+            <article class="product three">
+                <div class="photo-container">
+                    <a href="">
+                        <img src="images/monitor.jpg" alt="notebook">
+                    </a>
+                    <!-- moto ofert y heard -->
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <a href="">
+                    <h3>Nombre del producto</h3>
+                </a>
+                <div class="price-product">
+                    <h3>$XXX</h3>
+                    <!-- <span class="numb-offert">20% OFF</span> -->
+                </div>
+                <p>envio gratis...</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-align">
+            <div class="container-1">
+                <p class="app-social">
+                    seguinos en nuestras redes sociales
+                </p>
+                <nav class="icons-social">
+                    <ul class="link-social">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+                    </ul>
+                </nav>
+                <div class="contact">
+                    <p>
+                        contacto:
+                    </p>
+                    <p>
+                        horarios de atencion
+                    </p>
+                    calle/direccion/telefono
                 </div>
             </div>
 
-            <div>
-                <p>Conectividad</p>
-                <hr>
-                <div>
-                    <p>Puerto HDMI: Si</p>
-                    <p>Puertos USB 2.0: x1</p>
-                    <p>Puertos USB 3.1: x1</p>
-                    <p>Puertos USB 3.1 Type-C: x1</p>
-                    <p>Puertos Ethernet: Si</p>
-                    <p>Bluetooth: Si</p>
-                    <p>WIFI: Si</p>
-                    <p>Lectora: No</p>
-                    <p>WebCam: Si</p>
-                    <p>Idioma Del Teclado: Españo</p>
-                    <p>Pad Numerico: No</p>
+            <article class="container-2">
+                <p>Sobre nosotros</p>
+                <p>Pro Gamer</p>
+                <p>Es un e-comerce pensado para ofrecer articulos y elementos de tecnologia.
+                    una de nuestras caracteristicas es ofrecer combos u ofertas de articulos variados para todo tipo de
+                    usuarios
+                </p>
+                <div class="logo-footer">
+                    <img src="/images/logo ecomerce.jpg" alt="logo">
                 </div>
-            </div>
-
-            <div>
-                <p>Pantalla</p>
-                <hr>
-                <div>
-                    <p>Tamaño De La Pantalla: 14"</p>
-                    <p>Tipo De Display: HD</p>
-                    <p>Resolucion: 1366 X 768</p>
-                </div>
-            </div>
-
-            <div>
-                <p>Memoria</p>
-                <hr>
-                <div>
-                    <p>Formato De Memorias: SODIMM</p>
-                    <p>Generacion De Memorias: DDR4</p>
-                    <p>RAM Integrada: 8GB</p>
-                    <p>Slot Adicional De RAM</p>
-                    <p> Disponible: 1</p>
-                </div>
-            </div>
-
-            <div>
-                <p>Almacenamiento</p>
-                <hr>
-                <div>
-                    <p>Capacidad: SSD240 GB</p>
-                    <p>Lector De Memoria: Si</p>
-                </div>
-            </div>
-
-            <div>
-                <p>Dimenciones</p>
-                <hr>
-                <div>
-                    <p>Peso: 1.35 Kg</p>
-                    <p>Ancho: 324.9 Mm</p>
-                    <p>Profundidad: 219.5 Mm</p>
-                    <p>Alto: 19.4 Mm</p>
-                </div>
-            </div>
-            <section>
-
-    </article>
-
-    <!-- Productos Destacados -->
-
-    <section class="title-featured">
-        <div class="featured-container">
-            <hr class="line-left">
-            <h2 class="featured-prom">
-                Productos Destacados
-            </h2>
-            <hr class="line-rigth">
+            </article>
         </div>
-    </section>
+        <div class="footer-container3">
 
-    <!-- Container de los productos D.-->
-    <section class="porducts-offerts">
-
-        <article class="product one">
-            <div class="photo-container">
-                <a href="">
-                    <img src="images/monitor.jpg" alt="notebook">
-                </a>
-                <!-- moto ofert y heard -->
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="">
-                <h3>Nombre del producto</h3>
+            <a href="#" class="qr">
+                <img class="qr-img" src="/images/codigo-qr.png" alt="qr">
             </a>
-            <div class="price-product">
-                <h3>$XXX</h3>
-                <!-- <span class="numb-offert">20% OFF</span> -->
-            </div>
-            <p>envio gratis...</p>
-        </article>
 
-        <article class="product two">
-            <div class="photo-container">
-                <a href="">
-                    <img src="images/monitor.jpg" alt="notebook">
-                </a>
-                <!-- moto ofert y heard -->
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="">
-                <h3>Nombre del producto</h3>
-            </a>
-            <div class="price-product">
-                <h3>$XXX</h3>
-                <!-- <span class="numb-offert">20% OFF</span> -->
-            </div>
-            <p>envio gratis...</p>
-        </article>
+            <nav>
+                <ul class="nav-container">
+                    <li class="init"><a href="../index.html">Volver a inicio</a></li>
+                    <li class="aswers"><a href="#">Dejanos tus dudas</a></li>
+                    <p class="text-copyright">Todos los derechos reservados</p>
+                    <li class="tyc"><a href="#">terminos y condiciones</a></li>
 
-        <article class="product three">
-            <div class="photo-container">
-                <a href="">
-                    <img src="images/monitor.jpg" alt="notebook">
-                </a>
-                <!-- moto ofert y heard -->
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="">
-                <h3>Nombre del producto</h3>
-            </a>
-            <div class="price-product">
-                <h3>$XXX</h3>
-                <!-- <span class="numb-offert">20% OFF</span> -->
-            </div>
-            <p>envio gratis...</p>
-        </article>
+                </ul>
+            </nav>
+        </div>
 
-    </section>
 
+
+
+    </footer>
 
 </body>
 

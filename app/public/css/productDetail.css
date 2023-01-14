@@ -25,28 +25,186 @@
     --descripcion: 5vw;
 }
 
-body#productDetail {
-    background-color: wheat;
+main#productDetail {
+    background-color: var(--violeta-oscuro);
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
 
-body#productDetail h2 {
+main#productDetail h2 {
     font-family: var(--fuente-titulos);
+    color: var(--crema);
     font-size: 15px;
     text-align: left;
 }
 
-body#productDetail article {
+main#productDetail article {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    background-color: rgb(241, 241, 241);
 }
 
-body#productDetail article h3 {
+main#productDetail article h3 {
     text-align: center;
 }
+
+main div.box-container-images {
+    display: flex;
+    align-items: center;
+
+}
+
+main div span.images-left {
+
+    width: 20%;
+    margin-right: 5px;
+}
+
+main div span.images-left img {
+    border: 1px solid rgb(196, 195, 195);
+    box-shadow: 1px 1px 2px rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+main div span.images-right {
+    width: 80%;
+    border: 1px solid rgb(196, 195, 195);
+    box-shadow: 1px 1px 2px rgb(219, 219, 219);
+    border-radius: 5px;
+
+}
+
+main section.details {
+    border: 1px solid grey;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section div {
+    border-bottom: 1px solid grey;
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+}
+
+main section div.price {
+    display: inline-block;
+}
+
+main section div.price p.p-price {
+    color: #39FC08;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+main section div.price p {
+    text-align: center;
+}
+
+main section div span.span-left {
+    width: 20%;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+body section div span.span-left img {
+    padding: 10px;
+}
+
+body section div span.span-right {
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+body span.span-right p.cuotas {
+    color: orange;
+
+}
+
+body span.span-right p.ver-cuotas a {
+    text-decoration: none;
+
+}
+
+body span.span-right p.stockWeb {
+    color: #39FC08;
+}
+
+body span.span-right p.stockLocal {
+    color: red;
+}
+
+body span.span-right p a {
+    text-decoration: none;
+}
+
+body span.span-left p.addToCart a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: blue;
+}
+
+body span.btn-addToCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+body span.btn-addToCart button {
+    width: 15%;
+}
+
+body span.btn-addToCart input {
+    width: 20%;
+    text-align: center;
+}
+
+body section.Specifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body section.Specifications {
+    background-color: white;
+}
+
+body section.Specifications div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: none;
+}
+
+body section.Specifications div hr {
+    width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -57,12 +215,14 @@ section.title-featured {
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
+
 section.title-featured div.featured-container {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
-section.title-featured div.featured-container h2.featured-prom{
+
+section.title-featured div.featured-container h2.featured-prom {
     width: 82%;
     text-align: center;
     font-family: var(--fuente-titulos);
@@ -70,12 +230,14 @@ section.title-featured div.featured-container h2.featured-prom{
     font-size: var(--titulos);
     color: var(--crema);
 }
+
 section.title-featured div.featured-container hr.line-left {
     width: 30%;
     margin-right: 0.5rem;
     border: 0;
     box-shadow: 0 1px 2px 1px var(--crema);
 }
+
 section.title-featured div.featured-container hr.line-rigth {
     width: 30%;
     /* margin-left: 0.5rem; */
@@ -93,9 +255,10 @@ section.porducts-offerts {
     margin: 0 auto;
     gap: 8%;
 }
+
 section.porducts-offerts article.product {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     padding: 0.5rem;
     margin-bottom: 2.3rem;
     max-width: 225px;
@@ -106,12 +269,14 @@ section.porducts-offerts article.product {
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
     transition: all 0.8s ease;
 }
+
 /**/
 
 
 section.porducts-offerts article.product:hover {
     box-shadow: 6px 6px 16px var(--verde-oscuro);
 }
+
 section.porducts-offerts article.product div.photo-container {
     position: relative;
     display: flex;
@@ -124,28 +289,33 @@ section.porducts-offerts article.product div.photo-container {
     border-radius: 10px;
     transition: all 5ms ease;
 }
+
 section.porducts-offerts article.product div.photo-container:hover {
     border: none;
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
 }
+
 section.porducts-offerts article.product div.photo-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 section.porducts-offerts article.product div.photo-container i {
-    position:absolute;
+    position: absolute;
     top: 10px;
     right: 10px;
     font-size: 150%;
     opacity: 0.4;
     cursor: pointer;
 }
-section.porducts-offerts article.product div.photo-container i:hover{
+
+section.porducts-offerts article.product div.photo-container i:hover {
     color: red;
     font-weight: bold;
     font-weight: none;
 }
+
 section.porducts-offerts article.product a h3 {
     font-family: var(--fuente-titulos);
     font-size: 1.6rem;
@@ -157,24 +327,29 @@ section.porducts-offerts article.product a h3 {
     text-decoration: underline var(--verde-oscuro);
     transition: all 5ms ease;
 }
-section.porducts-offerts article.product a h3:hover{
+
+section.porducts-offerts article.product a h3:hover {
     font-size: 1.8rem;
-    
+
 }
+
 section.porducts-offerts article.product a {
     text-decoration: none;
 }
+
 section.porducts-offerts article.product div.price {
-    display:flex;
-    justify-content: center;   
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-left: 18px;
 }
-section.porducts-offerts article.product div.price-product{
-    display:flex;
-    justify-content: center;   
+
+section.porducts-offerts article.product div.price-product {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
+
 section.porducts-offerts article.product div.price span.numb-offert {
     font-size: 1rem;
     letter-spacing: 0.3px;
@@ -182,6 +357,7 @@ section.porducts-offerts article.product div.price span.numb-offert {
     font-weight: 600;
     color: var(--verde-oscuro);
 }
+
 section.porducts-offerts article.product div h3 {
     font-size: 2rem;
     letter-spacing: 2px;
@@ -189,6 +365,7 @@ section.porducts-offerts article.product div h3 {
     color: var(--gris-claro);
     padding: 5px;
 }
+
 section.porducts-offerts article.product p {
     font-family: var(--fuente-parrafos);
     font-size: 1.1rem;
