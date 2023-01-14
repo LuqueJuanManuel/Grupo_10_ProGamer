@@ -98,7 +98,7 @@ section.porducts-offerts article.product div.photo-container {
     align-items: center;
     margin: 10px 10px 5px 10px;
     padding: 5px;
-    border: 1px solid black;
+    border:none;
     border-radius: 10px;
     transition: all 5ms ease;
 }
@@ -113,8 +113,8 @@ section.porducts-offerts article.product div.photo-container img {
 }
 section.porducts-offerts article.product div.photo-container i {
     position:absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     font-size: 150%;
     opacity: 0.4;
     cursor: pointer;
