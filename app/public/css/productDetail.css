@@ -115,6 +115,14 @@ main section div.price p {
     text-align: center;
 }
 
+main section.details i.fa-circle-check {
+    color: green;
+}
+
+main section.details i.fa-circle-xmark {
+    color: red;
+}
+
 main section div span.span-left {
     width: 20%;
     margin-top: 5px;
