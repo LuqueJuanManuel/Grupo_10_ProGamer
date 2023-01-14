@@ -48,7 +48,7 @@ main#productDetail article {
 
 main#productDetail article h3 {
     text-align: center;
-    font-size:  100%;
+    font-size: 100%;
 }
 
 main div.box-container-images {
@@ -121,77 +121,77 @@ main section div span.span-left {
     margin-right: 5px;
 }
 
-body section div span.span-left img {
+bmain section div span.span-left img {
     padding: 10px;
 }
 
-body section div span.span-right {
+main section div span.span-right {
     width: 80%;
     margin-top: 5px;
     margin-left: 5px;
 }
 
-body span.span-right p.cuotas {
+main span.span-right p.cuotas {
     color: orange;
 
 }
 
-body span.span-right p.ver-cuotas a {
+main span.span-right p.ver-cuotas a {
     text-decoration: none;
 
 }
 
-body span.span-right p.stockWeb {
+main span.span-right p.stockWeb {
     color: #39FC08;
 }
 
-body span.span-right p.stockLocal {
+main span.span-right p.stockLocal {
     color: red;
 }
 
-body span.span-right p a {
+main span.span-right p a {
     text-decoration: none;
 }
 
-body span.span-left p.addToCart a {
+main span.span-left p.addToCart a {
     font-size: 1rem;
     text-decoration: none;
     color: blue;
 }
 
-body span.btn-addToCart {
+main span.btn-addToCart {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
 }
 
-body span.btn-addToCart button {
+main span.btn-addToCart button {
     width: 15%;
     max-width: 40px;
 }
 
-body span.btn-addToCart input {
+main span.btn-addToCart input {
     width: 20%;
     max-width: 60px;
     text-align: center;
 }
 
-body section.Specifications {
+main section.Specifications {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-body section.Specifications {
+main section.Specifications {
     background-color: white;
     margin-top: 10px;
     border: 1px solid grey;
     padding-top: 10px;
 }
 
-body section.Specifications div {
+main section.Specifications div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -200,7 +200,7 @@ body section.Specifications div {
     border-bottom: none;
 }
 
-body section.Specifications div hr {
+main section.Specifications div hr {
     width: 90%;
 }
 
@@ -241,16 +241,17 @@ section.title-featured div.featured-container hr.line-rigth {
 }
 
 /* Container de los productos D. */
-section.section-porducts-offerts{
+section.section-porducts-offerts {
     overflow-x: auto;
     width: 90%;
     padding-top: 1rem;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    
+
     /* overflow:hidden; */
 }
+
 section.section-porducts-offerts div.porducts-offerts {
     /* width: 100%;
     margin: 0 auto;
@@ -262,7 +263,7 @@ section.section-porducts-offerts div.porducts-offerts {
     display: grid;
     justify-content: center;
     margin: 0 auto;
-    grid-template-columns:repeat(3,250px);
+    grid-template-columns: repeat(3, 250px);
     gap: 20%;
 }
 
@@ -389,7 +390,7 @@ section.section-porducts-offerts div.porducts-offerts article.product p {
 
 @media (min-width: 481px) {
 
-    body section div span.span-right {
+    main section div span.span-right {
         width: 80%;
         max-width: 200px;
         height: 55px;
@@ -397,11 +398,53 @@ section.section-porducts-offerts div.porducts-offerts article.product p {
         margin-left: 5px;
     }
 
+    main section div.div-specifications {
+        align-items: center;
+    }
+
 }
 
-/* MediaQuerie Desktop */ 
+/* MediaQuerie Desktop */
 
 @media (min-width: 769px) {
 
-    
+    main#productDetail h2 {
+        font-size: 100%;
+        margin-bottom: 20px;
+        
+    }
+
+    main article section#topDesktop {
+        display: flex;
+    }
+
+    main div.box-container-images {
+        height: 100%;
+        border: none;
+    }
+
+    main section div.desktop {
+        width: 60%;
+        
+    }
+
+    main section.details {
+        width: 40%;
+        background-color: white;
+
+    }
+
+    main section.box-container-specifications {
+        display: flex;
+        padding: 5px;
+    }
+
+    main section.box-container-specifications p.p-titles {
+        font-weight: bold;
+    }
+
+    main section.box-container-specifications div p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
 }
