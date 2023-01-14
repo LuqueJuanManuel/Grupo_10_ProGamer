@@ -251,7 +251,7 @@ footer div.footer-align{
 
    }
    div.input-search{
-       width: 50%;
+       width: 100%;
        margin: 0;    
        text-align: center;
        font-size: 30px;
@@ -286,6 +286,7 @@ footer div.footer-align{
        justify-content:space-around ;
        align-items: center;
        width: 100%;
+       color: black;
    
        border-radius: 5px  ;
        font-family: "teko";
@@ -293,16 +294,25 @@ footer div.footer-align{
    
    nav ul.links-busquedas li{
        display: flex;
-       border: 2px solid ;
        border-radius: 2px;
        background-color: var(--verde-claro);
        padding: 3px 5px ;
        margin: 2px;
+       color: black;
+       text-decoration: none;
+       box-shadow: 5px 5px 15px black;
    }
-   nav ul.links-busquedas li:hover{
+   nav ul.links-busquedas li:hover {
        color: white;
-       background-color: #1C1427;
+       background-color: black;
        transform: scale(1.5);
+   }
+   nav ul.links-busquedas li a{
+    text-decoration: none;
+    color: black;
+   }
+   nav ul.links-busquedas li a:hover{
+    color: white;
    }
 
    .input-search,  ul.links-busquedas{
