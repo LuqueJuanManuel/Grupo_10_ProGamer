@@ -48,6 +48,7 @@ main#productDetail article {
 
 main#productDetail article h3 {
     text-align: center;
+    font-size:  100%;
 }
 
 main div.box-container-images {
@@ -77,11 +78,19 @@ main div span.images-right {
 }
 
 main section.details {
-    border: 1px solid grey;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main section div.desktop {
+    border-bottom: 1px solid grey;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 main section div {
@@ -159,10 +168,12 @@ body span.btn-addToCart {
 
 body span.btn-addToCart button {
     width: 15%;
+    max-width: 40px;
 }
 
 body span.btn-addToCart input {
     width: 20%;
+    max-width: 60px;
     text-align: center;
 }
 
@@ -175,6 +186,9 @@ body section.Specifications {
 
 body section.Specifications {
     background-color: white;
+    margin-top: 10px;
+    border: 1px solid grey;
+    padding-top: 10px;
 }
 
 body section.Specifications div {
@@ -189,25 +203,6 @@ body section.Specifications div {
 body section.Specifications div hr {
     width: 90%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Productos Destacados */
 /* titulo */
@@ -372,4 +367,25 @@ section.porducts-offerts article.product p {
     letter-spacing: 0.5px;
     text-decoration: underline var(--gris-claro);
     color: var(--gris-claro);
+}
+
+/* MediaQuerie Tablet */
+
+@media (min-width: 481px) {
+
+    body section div span.span-right {
+        width: 80%;
+        max-width: 200px;
+        height: 55px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+}
+
+/* MediaQuerie Desktop */ 
+
+@media (min-width: 769px) {
+
+    
 }
