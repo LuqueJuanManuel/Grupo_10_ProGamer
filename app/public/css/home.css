@@ -124,6 +124,11 @@ section.porducts-offerts article.product div.photo-container i:hover{
     font-weight: bold;
     font-weight: none;
 }
+.active{
+    color: red;
+    font-weight: bold;
+    font-weight: none;
+}
 section.porducts-offerts article.product a h3 {
     font-family: var(--fuente-titulos);
     font-size: 1.6rem;

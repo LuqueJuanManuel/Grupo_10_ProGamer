@@ -215,7 +215,7 @@ main section.Specifications div hr {
 /* Productos Destacados */
 /* titulo */
 section.title-featured {
-    margin: 0 auto;
+    
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
@@ -225,25 +225,27 @@ section.title-featured div.featured-container {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    border: none;
+    width: 100%;
 }
 
 section.title-featured div.featured-container h3.featured-prom {
     font-family: var(--fuente-titulos);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--crema);
     text-align: center;
 }
 
 section.title-featured div.featured-container hr.line-left {
-    width: 30%;
-    /* margin-right: 0.5rem; */
+    width: 38%;
+    margin-right: 0.5rem;
     border: 0;
     box-shadow: 0 1px 2px 1px var(--crema);
 }
 
 section.title-featured div.featured-container hr.line-rigth {
-    width: 30%;
-    /* margin-left: 0.5rem; */
+    width: 38%;
+    margin-left: 0.5rem;
     border: 0;
     box-shadow: 0 1px 2px 1px var(--crema);
 }
@@ -251,13 +253,16 @@ section.title-featured div.featured-container hr.line-rigth {
 /* Container de los productos D. */
 section.section-porducts-offerts {
     overflow-x: auto;
-    width: 90%;
+    width: 100%;
     padding-top: 1rem;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-
+    scroll-snap-type: x proximity;
     /* overflow:hidden; */
+}
+section.section-porducts-offerts::-webkit-scrollbar{
+    width: 0;
 }
 
 section.section-porducts-offerts div.porducts-offerts {
@@ -269,10 +274,12 @@ section.section-porducts-offerts div.porducts-offerts {
     /* grid-template-rows: repeat(2, 150px); */
     max-width: 250px;
     display: grid;
-    justify-content: center;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 250px);
+    justify-content: start;
+    padding: 0 1rem 0 1rem;
+    grid-template-columns: repeat(4, 250px);
     gap: 20%;
+    border-bottom: none;
+    width: 100%;
 }
 
 section.section-porducts-offerts div.porducts-offerts article.product {
@@ -285,7 +292,7 @@ section.section-porducts-offerts div.porducts-offerts article.product {
     max-height: 370px;
     border: none;
     border-radius: 10px;
-    background-color: white;
+    background-color: white !important;
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
     transition: all 0.8s ease;
 }
@@ -303,9 +310,9 @@ section.section-porducts-offerts div.porducts-offerts article.product div.photo-
     height: 190px;
     justify-content: center;
     align-items: center;
-    margin: 10px 10px 5px 10px;
+    margin: 10px 20px 5px 10px;
     padding: 5px;
-    border: 1px solid black;
+    border: none;
     border-radius: 10px;
     transition: all 5ms ease;
 }
@@ -335,10 +342,15 @@ section.section-porducts-offerts div.porducts-offerts article.product div.photo-
     font-weight: bold;
     font-weight: none;
 }
+section.section-porducts-offerts div.porducts-offerts article.product div.photo-container i.active {
+    color: red;
+    font-weight: bold;
+    font-weight: none;
+}
 
 section.section-porducts-offerts div.porducts-offerts article.product a h3 {
     font-family: var(--fuente-titulos);
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
     padding-bottom: 0.3rem;
     margin-top: 0.2rem;
     margin-bottom: 0.4rem;
@@ -368,6 +380,8 @@ section.section-porducts-offerts div.porducts-offerts article.product div.price-
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: none;
+    width: 100%;
 }
 
 section.section-porducts-offerts div.porducts-offerts article.product div.price span.numb-offert {
@@ -379,7 +393,7 @@ section.section-porducts-offerts div.porducts-offerts article.product div.price 
 }
 
 section.section-porducts-offerts div.porducts-offerts article.product div h3 {
-    font-size: 2rem;
+    font-size: 2rem !important;
     letter-spacing: 2px;
     font-family: var(--fuente-parrafos);
     color: var(--gris-claro);
@@ -454,5 +468,9 @@ section.section-porducts-offerts div.porducts-offerts article.product p {
     main section.box-container-specifications div p {
         margin-top: 3px;
         margin-bottom: 3px;
+    }
+    section.section-porducts-offerts div.porducts-offerts {
+        
+        justify-content: space-around;
     }
 }
