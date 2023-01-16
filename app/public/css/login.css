@@ -9,7 +9,7 @@
 
 body{
     font-family: 'Teko', sans-serif;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     padding: 6rem 1rem;
