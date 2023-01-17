@@ -62,6 +62,12 @@ De la pagina Electropc, nos gusto la paleta de colores y un icono de whatsApp es
 
 De la pagina de Mercado Libre, tomamos de referencia la forma de Pago y el formulario, para de entrega.
 
+***
+
+## Link al documento o plataforma que utilicen para organizar el trabajo.
+
+[Tablero Trello](https://trello.com/b/GTtHK1Zq)
+
 
 
 
