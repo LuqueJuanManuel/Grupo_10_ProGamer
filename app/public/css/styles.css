@@ -97,12 +97,12 @@ img.logo{
     padding: 10px;
     text-align: center;
     font-size: 24px;
-     /* background-color: white; */
-    color: black;
+    background-color: var(--violeta-oscuro); 
+    color: white;
     text-align: center;
     border-radius: 5px;
-    /* border: 2px solid; */
-    /* box-shadow: 5px 5px 15px; */
+    border: 2px solid; 
+    box-shadow: 5px 5px 15px black; 
     max-width: 45px ;
     max-height: 45px;
     transition: all background-color 0.5s;
@@ -110,8 +110,8 @@ img.logo{
 
 }
 .button:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     transform:  scale(1.5);
 
 }
@@ -293,7 +293,7 @@ footer div.footer-align{
        color: black;
        text-align: center;
        border-radius: 5px;
-       border: 2px solid;
+       /* border: 2px solid ; */
        
    }
    input.search{
@@ -320,7 +320,7 @@ footer div.footer-align{
        justify-content:space-around ;
        align-items: center;
        width: 100%;
-       color: black;
+       color: white;
    
        border-radius: 5px  ;
        font-family: "teko";
@@ -328,25 +328,29 @@ footer div.footer-align{
    
    nav ul.links-busquedas li{
        display: flex;
-       border-radius: 2px;
-       background-color: var(--verde-claro);
-       padding: 3px 5px ;
+       border-radius: 5px;
+       background-color: var(--violeta-oscuro);
+       padding: 5px;
+       font-size: 24px;
+       text-align: center;
        margin: 2px;
-       color: black;
+       color: white;
        text-decoration: none;
        box-shadow: 5px 5px 15px black;
+    transition: all background-color 0.5s; 
    }
    nav ul.links-busquedas li:hover {
-       color: white;
-       background-color: black;
+       color: black;
+       background-color: white;
        transform: scale(1.5);
    }
    nav ul.links-busquedas li a{
     text-decoration: none;
-    color: black;
+    color: white; 
    }
    nav ul.links-busquedas li a:hover{
-    color: white;
+    color: black;
+    background-color: white;
    }
 
    .input-search,  ul.links-busquedas{
