@@ -377,7 +377,28 @@ section form div.form  div.button-container button.btn:hover {
 @media (min-width: 490px){
     
     section.porducts-offerts {
-        flex-direction: column;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        overflow: auto;
+        width:60%;
+        padding: 2rem;
+        gap: 30%;
+        scroll-snap-type: x proximity;
+        justify-content: flex-start !important;
+    }
+    section.porducts-offerts::-webkit-scrollbar{
+        background-color: var(--violeta-oscuro);
+        border-bottom: 2px solid rgba(86,229,87,0.05);
+        opacity: 0.2;
+    }
+    section.porducts-offerts::-webkit-scrollbar-thumb{
+        background-color: rgba(86,229,87,0.3);
+        
+        border-radius: 20px;
+        
+    }
+    section.porducts-offerts article.product {
+        min-width: 224px;
     }
     section.payMode-section article.modes {
         margin: 0 auto;
@@ -412,8 +433,8 @@ section form div.form  div.button-container button.btn:hover {
         font-size: 2.5rem;
     }
     section.porducts-offerts {
-        flex-direction:row;
-        gap: 5%;
+        width: 100%;
+        gap: 10%;
     }
     section.title-register div.register-container h2.register-prom{
         font-size: 2.5rem;
@@ -423,6 +444,9 @@ section form div.form  div.button-container button.btn:hover {
     }
 }
 @media (min-width: 1024px){
+    section.porducts-offerts {
+        justify-content: center !important;
+    }
     section form div.form div.input-container input.input-style {
         width: 24rem;
         height: 2.5rem;
