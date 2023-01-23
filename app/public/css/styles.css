@@ -132,9 +132,7 @@ div.hamburguer-container{
     justify-content: flex-start;
     width: 75%;
 }
-.hamburguer{
-    display: flex;
-}
+
 nav.nav-container{
     display: none;
  }
