@@ -77,11 +77,13 @@ main span.span--left {
     background-color: #e1dfdf;
 }
 
-main h3.productName {
-    color: var(--crema);
+main h3.h3-tittle {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+
 }
 
 main span.span--right {
@@ -97,6 +99,20 @@ main span.span--right {
 
 }
 
+main p {
+    font-family: var(--fuente-parrafos);
+    font-size: 1rem;
+    text-align: center;
+}
+    
+
+main h4.h4-productCode {
+    font-family: var(--fuente-parrafos);
+    font-size: 1rem;
+    text-align: center;
+
+}
+
 /* Cantidad */
 
 main div.box--container {
@@ -107,12 +123,13 @@ main div.box--container {
 }
 
 
-main h3.amount {
-
+main h3.h3-tittle {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+} 
 
 main span.span--right {
     display: flex;
@@ -260,6 +277,7 @@ main#productCart section.toBuy {
     padding: 10px;
     background-color: white;
     border: 2px solid var(--verde-claro);
+    border-radius: 5px;
     box-shadow: 2px 2px px 2px var(--verde-oscuro);
 }
 
@@ -267,6 +285,7 @@ main#productCart section.toBuy div {
     border: 1px solid black;
     padding: 3px;
     width: 60%;
+    max-width: 350px;
     min-width: 200px;
     font-family: var(--fuente-titulos);
     font-weight: bold;
@@ -278,30 +297,35 @@ main#productCart section.toBuy a.payForm {
     padding: 5px;
     text-decoration: none;
     width: 80%;
+    max-width: 350px;
     box-shadow: 0px 1px 2px black;
     color: black;
+
 }
 
 main#productCart section.toBuy button {
-    border: 2px solid var(--verde-claro);
-    background-color: var(--violeta-oscuro);
-    color: var(--crema);
+    background-color: var(--crema);
     margin-top: 15px;
     font-size: 40px;
     width: 70%;
+    height: 3.5rem;
     max-width: 200px;
     border-radius: 25px;
-    box-shadow: 1px 2px 2px var(--verde-oscuro);
+    border: 2px solid var(--violeta-oscuro);
+}
 
-
+main#productCart section.toBuy button:hover {
+    border: 2px solid white;
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+    
 }
 
 main#productCart section.toBuy a#btnBuy {
     margin: 8px 10px;
     padding: 5px;
     text-decoration: none;
-    width: 80%;
-    color: white;
+    color:var(--violeta-oscuro);
+    font-family: var(--fuente-parrafos);
 }
 
 
@@ -329,7 +353,7 @@ main#productCart section.toBuy a#btnBuy {
 
     main div#container--buyToDesktop {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
     }
 
@@ -337,7 +361,7 @@ main#productCart section.toBuy a#btnBuy {
         display: flex;
         flex-direction: row;
         padding: 0px;
-        width: 65%;
+        width: 60%;
 
     }
 
@@ -352,8 +376,9 @@ main#productCart section.toBuy a#btnBuy {
         align-items: center;
         justify-content: center;
         margin-top: 0px;
-        width: 35%;
+        width: 30%;
         background-color: white;
+        border-radius: 5px;
         border: 1px solid var(--verde-claro);
         box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
         padding: 10px;
@@ -379,29 +404,33 @@ main#productCart section.toBuy a#btnBuy {
     }
 
     main#productCart section#toBuyDesktop button {
-        border: 2px solid var(--verde-claro);
-        background-color: rgb(65, 65, 65);
-        color: var(--crema);
-        margin-top: 15px;
-        font-size: 40px;
-        width: 70%;
-        max-width: 200px;
-        border-radius: 25px;
-        box-shadow: 1px 2px 2px var(--verde-oscuro);
+    background-color: var(--crema);
+    margin-top: 15px;
+    font-size: 40px;
+    width: 70%;
+    height: 3.5rem;
+    max-width: 200px;
+    border-radius: 25px;
+    border: 2px solid var(--violeta-oscuro);
+}
 
-
-    }
+main#productCart section#toBuyDesktop button:hover {
+    border: 2px solid white;
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+    
+}
 
     main#productCart section#toBuyDesktop button a#btnBuy {
-        color: white;
+        color: var(--violeta-oscuro);
         text-decoration: none;
+        font-family: var(--fuente-parrafos);
     }
 
 
 
     main article.product--container div.photo--container {
         width: auto;
-        border: 1px solid black;
+        
     }
 
     main article.product--container div i {
@@ -415,10 +444,12 @@ main#productCart section.toBuy a#btnBuy {
         margin-top: 0px;
         border: 1px solid black;
         width: 20%;
+        border: none;
     }
 
     main span.span--left {
         display: flex;
+        justify-content: center;
         border-right: none;
         border-bottom: 1px solid black;
         width: 100%;
@@ -440,6 +471,7 @@ main#productCart section.toBuy a#btnBuy {
         flex-direction: column;
         width: 100%;
         margin-top: 0px;
+        border: none
     }
 
     main div.box--button__rest {
