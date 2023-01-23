@@ -1,28 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    padding: 3rem;
-}
-
 h4{
     font-family: var(--fuente-titulos);
     margin-bottom: 1rem;
     text-align: center;
+    text-decoration:underline;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    color: var(--violeta-oscuro);
+    text-shadow: 10px 3px 15px  rgba(64, 57, 74, 0.7);
 }
-
+.registro-form:hover {
+    box-shadow: 3px 3px 7px 2px var(--verde-oscuro);
+}
 .registro-form{
     background: lightgray;
     padding: 1rem;
     border-radius: 0.9rem;
-    box-shadow: 3px 3px 7px;
     width: 100%;
+}
+form {
+    width: 75%;
+    max-width: 350px;
+    margin:2rem 0 4rem 0;
 }
 
 .registro-container{
@@ -32,7 +30,8 @@ h4{
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
-    margin: 15px;
+    margin: 0 auto;
+    
     padding: 15px;
 }
 
@@ -43,6 +42,12 @@ h4{
     align-items: left;
     margin: 0.3rem;
     font-family: var(--otros);
+    font-size: 0.8rem;
+    transition: all .5s ease;
+}
+.datos-box:hover{
+    text-decoration:underline;
+    letter-spacing: 0.05rem;
 }
 
 .input-container,
@@ -57,17 +62,31 @@ h4{
     border: none;
     align-items: center;
     padding: 0.5rem;
-    margin-top: 0.4rem;
-    border-radius: 0.2rem;
+    /* margin-top: 0.4rem; */
+    border-radius: 8px;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
+    font-family: var(--fuente-parrafos);
+    font-size: 1.2rem;
+    background-color: var(--crema);
+    box-shadow: 0 0 10px var(--violeta-oscuro);
+    margin-top: 1rem;
+    color: var(--violeta-oscuro);
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    transition: all 1s ease;
 }
-
+.button-container:hover{
+    background-color: var(--violeta-oscuro);
+    box-shadow: 0px 0 4px 2px var(--verde-oscuro);
+    color: var(--crema);
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+}
 .input-style,
 .input-select{
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 8px;
     height: 2rem;
     padding: 0 0.5rem;
     outline: none;
@@ -82,4 +101,5 @@ p{
     padding: 0.3rem;
     font-size: 0.8rem;
     text-align: end; 
+    font-family: var(--otros);
 }

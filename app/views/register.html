@@ -11,7 +11,49 @@
     <title>Rgistro</title>
 </head>
 
-<body class="registro">
+<body>
+    <header><!--logo,barra de navegacion,busqueda,login,carrito de compras,liks de enlaces-->
+        <div class="logo">
+                <a href="../index.html"><img class="logo" src="/images/logo ecomerce.jpg" alt="logo"></a>
+        </div>
+                             <!-- menu de hamburguesa-->
+        <div class="hamburguer-container">
+            <a href="#" class="hamburguer button"> 
+            <i class="fas fa-bars"></i>
+           </a>
+        </div>
+    <div class="top-bar">  
+     <div class="input-glass">
+        <div class= "input-search">  <!-- input buscador -->
+                <input class="search" type="text" placeholder="buscar">
+        </div>
+            <a href= "#" class="glass button">  <!--boton lupa -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+     </div>
+     <div class="user-cart">
+            <a href="../login.html" class="user button">  <!--boton usuario -->
+                <i class="fa-solid fa-user"></i>
+            </a>
+        
+             <a href="../productCart.html" class="cart button"> <!-- carrito de compras -->
+             <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+     </div>
+    </div> 
+    
+        <nav>
+             <ul class="links-busquedas">
+    
+                <li><a href="#">Notebooks</a></li> 
+                <li><a href="#">Computadores</a></li> 
+                <li><a href="#">Conponentes de PC</a></li> 
+                <li><a href="#">Monitores</a></li> 
+                <li><a href="#">Consolas</a></li> 
+                     
+             </ul>
+        </nav>
+    </header>
     <div class="registro-container">
         <form action="" method="">
 
@@ -44,7 +86,7 @@
                     <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre...">
                 </div>
 
-                <div class="input-container">
+                <!-- <div class="input-container">
                     <h6 class="datos-box">Provincia</h6>
                     <select name="Provincia" class="input-select">
                         <option value="" hidden selected>Elija una provincia</option>
@@ -86,12 +128,71 @@
                 <div class="input-container">
                     <h6 class="datos-box">Teléfono</h6>
                     <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono...">
-                </div>
+                </div> -->
                 <p>Campos obligatorios *</p>
                 <button class="button-container" type="submit">Registrarme</button>
             </div>
         </form>
     </div>
+    <footer>
+
+        <div class="footer-align">
+            <div class="container-1">
+                <p class="app-social">
+                    seguinos en nuestras redes sociales
+                </p>
+                <nav class="icons-social">
+                    <ul class="link-social">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+                    </ul>
+                </nav>
+                <div class="contact">
+                    <p>
+                        contacto:
+                    </p>
+                    <p>
+                        horarios de atencion
+                    </p>
+                    calle/direccion/telefono
+                </div>
+            </div>
+
+            <article class="container-2">
+                <p>Sobre nosotros</p>
+                <p>Pro Gamer</p>
+                <p>Es un e-comerce pensado para ofrecer articulos y elementos de tecnologia.
+                    una de nuestras caracteristicas es ofrecer combos u ofertas de articulos variados para todo tipo de
+                    usuarios
+                </p>
+                <div class="logo-footer">
+                    <img src="/images/logo ecomerce.jpg" alt="logo">
+                </div>
+            </article>
+        </div>
+        <div class="footer-container3">
+
+            <a href="#" class="qr">
+                <img class="qr-img" src="/images/codigo-qr.png" alt="qr">
+            </a>
+
+            <nav>
+                <ul class="nav-container">
+                    <li class="init"><a href="../index.html">Volver a inicio</a></li>
+                    <li class="aswers"><a href="#">Dejanos tus dudas</a></li>
+                    <p class="text-copyright">Todos los derechos reservados</p>
+                    <li class="tyc"><a href="#">terminos y condiciones</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+    </footer>
 </body>
 
 </html>
