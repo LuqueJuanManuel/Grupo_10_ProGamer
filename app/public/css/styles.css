@@ -47,7 +47,7 @@ header{
     background-image: url(/images/logo\ ecomerce.jpg);
     background-position: 100%;
     background-size: 100%;
-    max-width: 1290px;
+    /* max-width: 1290px; */
     padding: 10px;
     border: 2px solid; 
     display: flex;
