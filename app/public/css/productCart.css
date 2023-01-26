@@ -185,14 +185,13 @@ main#productCart button.addToCart {
     height: 60px;
     background-color: var(--crema);
     transition: 1s;
-
 }
 
 main#productCart button.addToCart:hover {
-    border: 2px solid var(--verde-claro);
-    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
-    background-color: var(--crema);
-
+    background-color: var(--violeta-oscuro);
+    box-shadow: 0px 0 4px 2px var(--verde-oscuro);
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
 }
 
 main#productCart button.addToCart a {
@@ -201,7 +200,10 @@ main#productCart button.addToCart a {
     text-decoration: none;
     color: var(--violeta-oscuro);
     font-weight: bold;
+}
 
+main#productCart button.addToCart a:hover {
+color: var(--crema);
 }
 
 /* tambien te puede interezar */
