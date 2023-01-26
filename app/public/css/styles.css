@@ -47,11 +47,9 @@ header{
     background-image: url(/images/logo\ ecomerce.jpg);
     background-position: 100%;
     background-size: 100%;
-    max-width: 1290px;
     padding: 10px;
     border: 2px solid; 
     display: flex;
-    /* flex-flow: row wrap; */
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -73,7 +71,7 @@ header{
         filter: hue-rotate(180deg);
     }
     100%{
-         filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
     }
 }
 div.logo img.logo{
@@ -105,12 +103,12 @@ img.logo{
     box-shadow: 5px 5px 15px black; 
     max-width: 45px ;
     max-height: 45px;
-    transition: all background-color 0.5s;
+    transition: all 1s ease ;
     
 
 }
 .button:hover{
-    background-color: white;
+    background-color: var(--crema);
     color: black;
     transform:  scale(1.5);
 
@@ -151,11 +149,11 @@ footer{
     z-index: 100;
     overflow: visible;
     max-width: 1290px;
-    padding: 5px;
+    padding: 10px;
     border: 2px solid; 
     display: flex;
     flex-flow: row wrap; 
-    justify-content:flex-start;
+    justify-content:space-between;
     align-items: center;
     left: 0;
     bottom: 0;
@@ -251,23 +249,22 @@ footer div.footer-align{
        height: 200%;
        flex-direction: row;
        flex-wrap: wrap;
-       animation: logo-name  10s infinite;
+       animation: logo-name  5s infinite;
     }
     @keyframes logo-name {
         0%{
-            filter: hue-rotate(45deg);
+            transform: rotateY(45deg);
         }
         25%{
-            filter: hue-rotate(90deg);
+            transform: rotateY(90deg);
         }
         50%{
-            filter: hue-rotate(180deg);
+            transform: rotateY(180deg);
         }
         100%{
-             filter: hue-rotate(360deg);
+            transform: rotateY(360deg);
         }
     }
-
    a.user-button {
        display: flex;
    } 
@@ -286,7 +283,7 @@ footer div.footer-align{
        width: 100%;
        margin: 0;    
        text-align: center;
-       font-size: 30px;
+       font-size: 24px;
        background-color: white;
        color: black;
        text-align: center;
@@ -296,6 +293,7 @@ footer div.footer-align{
    }
    input.search{
        width: 100%;
+       font-size: 24px;
    }
    div.input-glass{
        display: flex;
@@ -329,13 +327,12 @@ footer div.footer-align{
        border-radius: 5px;
        background-color: var(--violeta-oscuro);
        padding: 5px;
-       font-size: 24px;
        text-align: center;
        margin: 2px;
        color: white;
        text-decoration: none;
        box-shadow: 5px 5px 15px black;
-    transition: all background-color 0.5s; 
+    transition: all 1s ease; 
    }
    nav ul.links-busquedas li:hover {
        color: black;
@@ -345,10 +342,13 @@ footer div.footer-align{
    nav ul.links-busquedas li a{
     text-decoration: none;
     color: white; 
+    text-transform: uppercase;
+    transition: all 1s ease;
    }
    nav ul.links-busquedas li a:hover{
     color: black;
-    background-color: white;
+    background-color: var(--crema);
+    font-weight: 600;
    }
 
    .input-search,  ul.links-busquedas{
