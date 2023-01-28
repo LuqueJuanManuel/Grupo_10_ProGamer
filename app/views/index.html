@@ -8,6 +8,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <title>Progamer</title>
 </head>
 
@@ -75,8 +77,8 @@
             </div>
         </section>
         <!-- productos -->
-        <section class="porducts-offerts">
-            <article class="product">
+        <section class="porducts-offerts  js-flickity" data-flickity-options='{ "freeScroll": true, "watchCSS": true  }'>
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -94,7 +96,7 @@
                 <p>envio gratis...</p>
             </article>
 
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -112,7 +114,7 @@
                 <p>envio gratis...</p>
             </article>
 
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -143,8 +145,8 @@
             </div>
         </section>
         <!-- productos -->
-        <section class="porducts-offerts">
-            <article class="product">
+        <section class="porducts-offerts  js-flickity" data-flickity-options='{ "freeScroll": true, "watchCSS": true  }'>
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -161,7 +163,7 @@
                 </div>
                 <p>envio gratis...</p>
             </article>
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -178,7 +180,7 @@
                 </div>
                 <p>envio gratis...</p>
             </article>
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -330,7 +332,9 @@
 
 
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="/JS/favourite.js"></script>
+    <script src="/js/product-slider.js"></script>
 </body>
 
 </html>
