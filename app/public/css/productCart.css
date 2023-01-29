@@ -99,7 +99,7 @@ main span.span--right {
 
 }
 
-main p {
+main p.p-productDetail {
     font-family: var(--fuente-parrafos);
     font-size: 1rem;
     text-align: center;
@@ -203,7 +203,11 @@ main#productCart button.addToCart a {
 }
 
 main#productCart button.addToCart a:hover {
-color: var(--crema);
+    color: var(--crema);
+}
+
+main#productCart button.addToCart:hover>a {
+    color: var(--crema);
 }
 
 /* tambien te puede interezar */
@@ -384,10 +388,10 @@ main#productCart section.toBuy {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-    padding: 10px;
+    padding: 15px;
     background-color: white;
     border: 2px solid var(--verde-claro);
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 2px 2px px 2px var(--verde-oscuro);
 }
 
@@ -403,14 +407,28 @@ main#productCart section.toBuy div {
 }
 
 main#productCart section.toBuy a.payForm {
-    margin: 8px 10px;
-    padding: 5px;
-    text-decoration: none;
-    width: 80%;
-    max-width: 350px;
-    box-shadow: 0px 1px 2px black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    width: 219px;
+    font-family: var(--fuente-parrafos);
+    font-size: 1rem;
+    font-weight: 400;
+    box-shadow: 0 0 2px var(--violeta-oscuro);
     color: black;
+    text-decoration: none;
+    transition: all .5s ease;
 
+}
+
+main#productCart section.toBuy a.payForm:hover {
+    background-color: tomato;
+    box-shadow: 0 0 10px var(--violeta-oscuro);
+    text-decoration: underline;
+    letter-spacing: 0.05rem;
 }
 
 main#productCart section.toBuy button {
@@ -508,13 +526,30 @@ main#productCart section.toBuy a#btnBuy {
     }
 
     main#productCart section#toBuyDesktop a.payForm {
-        margin: 8px 10px;
-        padding: 5px;
-        text-decoration: none;
-        width: 80%;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem;
+        height: 2.5rem;
+        margin: 0.5rem;
+        cursor: pointer;
         color: black;
-        box-shadow: 0px 1px 2px black;
+        text-decoration: none;
+        width: 219px;
+        font-family: var(--fuente-parrafos);
+        font-size: 1rem;
+        font-weight: 400;
+        box-shadow: 0 0 2px var(--violeta-oscuro);
+        transition: all .5s ease;
     }
+
+    main#productCart section#toBuyDesktop a.payForm:hover {
+        background-color: tomato;
+    box-shadow: 0 0 10px var(--violeta-oscuro);
+    text-decoration: underline;
+    letter-spacing: 0.05rem;
+    }
+
+
 
     main#productCart section#toBuyDesktop button {
         border: none;
@@ -534,6 +569,7 @@ main#productCart section.toBuy a#btnBuy {
         transition: all 1s ease;
     }
 
+
     main#productCart section#toBuyDesktop button:hover {
         background-color: var(--violeta-oscuro);
         box-shadow: 0px 0 4px 2px var(--verde-oscuro);
@@ -552,7 +588,9 @@ main#productCart section.toBuy a#btnBuy {
         color: var(--crema);
     }
 
-
+    main#productCart section#toBuyDesktop button:hover>a#btnBuy {
+        color: var(--crema);
+    }
 
     main article.product--container div.photo--container {
         width: auto;
@@ -569,8 +607,21 @@ main#productCart section.toBuy a#btnBuy {
         flex-direction: column;
         margin-top: 0px;
         border: 1px solid black;
-        width: 20%;
+        width: 100%;
         border: none;
+    }
+
+    main p.p-productDetail {
+        font-family: var(--fuente-parrafos);
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    main h4.h4-productCode {
+        font-family: var(--fuente-parrafos);
+        font-size: 1.5rem;
+        text-align: center;
+    
     }
 
     main span.span--left {
