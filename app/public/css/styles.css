@@ -374,15 +374,7 @@ footer div.footer-align{
         flex-flow: row wrap;
     }
 
-    div.footer-container3{
-        display: flex;
-        width: 100%;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        position: relative;
-        background-color: var(--crema);
-        margin: 5px;
-    }
+    
     p.text-copyright{
     display: flex;
     position: absolute;
@@ -412,6 +404,7 @@ footer div.footer-align{
         flex-flow: row wrap;
         justify-content: space-around;
         width: 100%;
+        margin: 10px;
         }
         ul.link-social li {
             font-size: 35px;
@@ -424,6 +417,8 @@ footer div.footer-align{
             width:49%;
             justify-content: flex-start;
             align-items: flex-start;
+            padding: 10px;
+            border-radius: 5px;
             background-color: var(--crema);    
         }
         article.container-2{
@@ -432,14 +427,27 @@ footer div.footer-align{
             width: 49%;
             background-color: var(--crema);
             margin-left: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        div.footer-container3{
+            display: flex;
+            width: 100%;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            position: relative;
+            background-color: var(--crema);
+            margin: 5px 0px 0px 0px; 
+            border-radius: 5px;
         }
         ul .nav-container{
             width: 100%;
             justify-content: space-between;
         }
-        div.contact{
-            margin-top: 30px;
+        article.container-2 p{
+            margin:  5px;
         }
+       
     /* fin del footer */
     
 }

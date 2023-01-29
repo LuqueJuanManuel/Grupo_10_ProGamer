@@ -8,6 +8,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <title>Progamer</title>
 </head>
 
@@ -75,8 +77,8 @@
             </div>
         </section>
         <!-- productos -->
-        <section class="porducts-offerts">
-            <article class="product">
+        <section class="porducts-offerts  js-flickity" data-flickity-options='{ "freeScroll": true, "watchCSS": true  }'>
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -94,7 +96,7 @@
                 <p>envio gratis...</p>
             </article>
 
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -112,7 +114,7 @@
                 <p>envio gratis...</p>
             </article>
 
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -143,8 +145,8 @@
             </div>
         </section>
         <!-- productos -->
-        <section class="porducts-offerts">
-            <article class="product">
+        <section class="porducts-offerts  js-flickity" data-flickity-options='{ "freeScroll": true, "watchCSS": true  }'>
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -161,7 +163,7 @@
                 </div>
                 <p>envio gratis...</p>
             </article>
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -178,7 +180,7 @@
                 </div>
                 <p>envio gratis...</p>
             </article>
-            <article class="product">
+            <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="../productDetail.html">
                         <img src="images/monitor.jpg" alt="notebook">
@@ -280,10 +282,10 @@
                 </p>
                 <nav class="icons-social">
                     <ul class="link-social">
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"><img src="/images/facebook.png" alt="facebook" width="40px"></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank"><img src="/images/instagram.png" alt="instagram" width="40px"></i></a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank"><img src="/images/linkedin.png" alt="linkedin" width="40px"></a></li>
+                        <li><a href="https://wa.me/+001-(555)1234567"><img src="/images/whatsaap.png" alt="whatsapp" width="40px"></a></li>
                     </ul>
                 </nav>
                 <div class="contact">
@@ -298,7 +300,7 @@
             </div>
 
             <article class="container-2">
-                <p>Sobre nosotros</p>
+                <p>Sobre nosotros:</p>
                 <p>Pro Gamer</p>
                 <p>Es un e-comerce pensado para ofrecer articulos y elementos de tecnologia.
                     una de nuestras caracteristicas es ofrecer combos u ofertas de articulos variados para todo tipo de
@@ -320,7 +322,7 @@
                     <li class="init"><a href="../index.html">Volver a inicio</a></li>
                     <li class="aswers"><a href="#">Dejanos tus dudas</a></li>
                     <p class="text-copyright">Todos los derechos reservados</p>
-                    <li class="tyc"><a href="#">terminos y condiciones</a></li>
+                    <li class="tyc"><a href="./politica de privacidad-Progamer.txt" target="_blank"><p>Terminos y condiciones</p></a></li>
 
                 </ul>
             </nav>
@@ -330,7 +332,9 @@
 
 
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="/JS/favourite.js"></script>
+    <script src="/js/product-slider.js"></script>
 </body>
 
 </html>

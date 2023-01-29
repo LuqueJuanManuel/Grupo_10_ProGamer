@@ -65,7 +65,7 @@ section.title-section div.title-container hr {
 }
 /* productos */
 
-section.porducts-offerts {
+/* section.porducts-offerts {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,10 +73,22 @@ section.porducts-offerts {
     margin: 0 auto;
     gap: 8%;
     
+} */
+.dot{
+    margin: 1rem 0.8rem 1rem 0 !important;
+    background-color: var(--verde-neon) !important;
 }
+.flickity-button {
+    background-color: var(--verde-neon) !important;
+    
+}
+
 section.porducts-offerts article.product {
     display: flex;
     flex-direction:column;
+    position: relative;
+    justify-content: center;
+    margin: 2rem;
     padding: 0.5rem;
     margin-bottom: 2.3rem;
     max-width: 225px;
@@ -178,6 +190,11 @@ section.porducts-offerts article.product p {
     letter-spacing: 0.5px;
     text-decoration: underline var(--gris-claro);
     color: var(--gris-claro);
+}
+/* action carousel*/
+.js-flickity:after {
+    content: 'flickity';
+    display: none;
 }
 /*modos de pago*/
 
@@ -376,7 +393,7 @@ section form div.form  div.button-container button.btn:hover {
 /*media query:TABLET*/
 @media (min-width: 490px){
     
-    section.porducts-offerts {
+/*     section.porducts-offerts {
         flex-direction:row;
         flex-wrap: nowrap;
         overflow: auto;
@@ -396,10 +413,10 @@ section form div.form  div.button-container button.btn:hover {
         
         border-radius: 20px;
         
-    }
-    section.porducts-offerts article.product {
+    } */
+    /* section.porducts-offerts article.product {
         min-width: 224px;
-    }
+    } */
     section.payMode-section article.modes {
         margin: 0 auto;
         margin-top: 2rem;
@@ -425,17 +442,25 @@ section form div.form  div.button-container button.btn:hover {
         margin-top: 2rem;
     }
 }
-
-/*media query: DESKTOP*/
-@media (min-width: 803px){
+@media (min-width: 769px){
+    section.porducts-offerts{
+        /*  left: 2rem;
+        margin-right: 5rem; */
+        width: 90%;
+        display: block;
+        justify-items: center;
+        margin: 0 auto;
+    }
     section.title-section div.title-container  h2 {
         
         font-size: 2.5rem;
     }
-    section.porducts-offerts {
-        width: 100%;
-        gap: 10%;
-    }
+    
+}
+
+/*media query: DESKTOP*/
+@media (min-width: 803px){
+    
     section.title-register div.register-container h2.register-prom{
         font-size: 2.5rem;
     }
@@ -443,9 +468,14 @@ section form div.form  div.button-container button.btn:hover {
         margin-top: 2rem;
     }
 }
-@media (min-width: 1024px){
+@media (min-width: 1000px){
+    .js-flickity:after {
+        content: '';
+    }
     section.porducts-offerts {
+        display: flex;
         justify-content: center !important;
+        
     }
     section form div.form div.input-container input.input-style {
         width: 24rem;
