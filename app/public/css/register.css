@@ -72,9 +72,14 @@ form {
     background-color: var(--crema);
     box-shadow: 0 0 10px var(--violeta-oscuro);
     margin-top: 1rem;
-    color: var(--violeta-oscuro);
+    /* color: var(--violeta-oscuro); */
     text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     transition: all 1s ease;
+}
+a.register {
+    text-decoration: none;
+    color: var(--violeta-oscuro);
+    width: 100%;
 }
 .button-container:hover{
     background-color: var(--violeta-oscuro);
@@ -82,6 +87,9 @@ form {
     color: var(--crema);
     letter-spacing: 0.1rem;
     text-decoration: underline;
+}
+.button-container:hover >a.register{
+    color: var(--crema);
 }
 .input-style,
 .input-select{
