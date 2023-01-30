@@ -3,30 +3,35 @@ const app = express();
 const path = require("path");
 const PORT = 3000;
 
-
+/* Archivos Estaticos */
 app.use(express.static("public"));
 
+/* Template engine Config. */
+app.set("view engine", "ejs");
+app.set("views", "./src/views")
 
-/* home */
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/index.html"))
-});
-/* detalle de producto */
-app.get("/productDetail", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/productDetail.html"))
-});
-/* carrito de compras */
-app.get("/productCart", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/productCart.html"))
-});
-/* formulario de registro*/
-app.get("/register", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/register.html"))
-});
-/* login */
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/login.html"))
-});
+/* Routers */
+const indexRouter = require("./routes");
+const productsRouter = require("./routes/products");
+const usersRouter = require("./routes/users");
+
+/* Routes Middlewares */
+
+/* Index - HomePage */
+app.use("/", indexRouter);
+
+/* Detalle de producto */
+app.use("/productDetail", productsRouter);
+
+/* Carrito de compras */
+app.use("/productCart", productsRouter);
+
+/* Formulario de Registro */
+app.use("/register", usersRouter);
+
+/* Login */
+app.use("/login", usersRouter)
+
 
 
 app.listen( PORT, ()=>console.log(`server listen in port ${PORT}\n http://localhost:${PORT}` ));
