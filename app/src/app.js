@@ -6,8 +6,6 @@ const PORT = 3000;
 
 app.use(express.static("public"));
 
-app.use(express.static("views"));
-
 
 /* home */
 app.get("/", (req, res) => {
