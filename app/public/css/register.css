@@ -106,10 +106,11 @@ main#register .input-select{
     height: 2rem;
     padding: 0 0.5rem;
     outline: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.5) inset;
 }
 
 main#register .input-style::placeholder{
-    color: lightgray;
+    color: rgba(0,0,0,0.3);
 }
 
 main#register p{
@@ -118,4 +119,71 @@ main#register p{
     font-size: 0.8rem;
     text-align: end; 
     font-family: var(--otros);
+}
+
+/* admin  */
+/* agregar image */
+div.input-file{
+    margin-bottom: 1.5rem;
+    
+}
+input[type=file]::file-selector-button {
+    border: none;
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: var(--fuente-parrafos);
+    font-size: 0.95rem;
+    margin: 0 0.5rem 0 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: var(--verde-oscuro);
+    color: var(--violeta-oscuro);
+    transition: all .5s ease-in-out;
+}
+input[type=file]::file-selector-button:hover {
+    background-color: var(--violeta-oscuro);
+    color: var(--crema);
+    letter-spacing: 0.05rem;
+    text-decoration: underline;
+}
+/* description general */
+textarea {
+    resize: none !important;
+	/* background: var(--crema); */
+	width: 98%;
+	height: 50px;
+	min-height: 80px;
+	padding: 8px 10px;
+	margin: 0 auto;
+	border: none;
+	border-radius: 8px;
+	font-family: var(--fuente-parrafos);
+	font-size: 1rem;
+	line-height: 22px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	display: block;
+	outline: none;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.5) inset;
+}
+textarea:focus {
+	border: 1px solid var(--verde-oscuro);
+}
+
+/* price-descount */
+.contaner-price-descount{
+    width: 25%;
+    display: flex;
+    /* justify-content: end; */
+    
+}
+.container-price-A{
+    margin:0 100% 0 45%;
+}
+.title-tecnicalEspecific{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
 }

@@ -14,6 +14,7 @@ app.set("views", "./src/views")
 const indexRouter = require("./routes");
 const productsRouter = require("./routes/products");
 const usersRouter = require("./routes/users");
+const adminRouter = require("./routes/admin");
 
 /* Routes Middlewares */
 
@@ -32,6 +33,8 @@ app.use("/register", usersRouter);
 /* Login */
 app.use("/login", usersRouter)
 
+/* admin */
+app.use('/admin', adminRouter);
 
 
 app.listen( PORT, ()=>console.log(`server listen in port ${PORT}\n http://localhost:${PORT}` ));

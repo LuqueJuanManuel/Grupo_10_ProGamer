@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %> 
+    <!-- <title>Admin - agregar producto</title> -->
+<body>
+    <!-- header -->
+    <%- include("../partials/header") %> 
+    <!-- fin del header -->
+    <main id="register">
+        <div class="registro-container">
+            <form action="" method="">
+                
+                <div class="registro-form">
+    
+                    <h4>Agregar producto</h4>
+                    <!-- nombre del producto -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Nombre del producto:</h6>
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre...">
+                    </div>
+                    <div class="input-container">
+                        <h6 class="datos-box">Marca del producto:</h6>
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar la marca...">
+                    </div>
+    
+                    <!-- agregar categoria -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Categoria:</h6>
+                        <select name="Provincia" class="input-select">
+                            <option value="" hidden selected>Elija su categoria</option>
+                            <option value="Buenos Aires">Notebooks</option>
+                            <option value="chaco">Computadores</option>
+                            <option value="cordoba">Componentes de PC</option>
+                            <option value="misiones">Monitores</option>
+                            <option value="chubut">Consolas</option>
+                        </select>
+                    </div>
+                    <!-- agregar sub categoria -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Sub-categoria:</h6>
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria">
+                    </div>
+                    <!-- price -->
+                    <!-- descount -->
+                    <div class="contaner-price-descount">
+                        <div class="input-container container-price-A">
+                            <h6 class="datos-box ">Precio:</h6>
+                            <input class="input-style" type="text" name="lastname" placeholder="Precio">
+                        </div>
+                        <div class="input-container container-descount-A">
+                            <h6 class="datos-box">Descuento:</h6>
+                            <input class="input-style" type="text" name="lastname" placeholder="Descuento">
+                        </div>
+                        
+                    </div>
+                    <h6 class="datos-box title-tecnicalEspecific">Especificaciones tecnicas</h6>
+                    <!-- description general -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Descripción:</h6>
+                        <textarea name="" id=""  placeholder="Descripción del producto..."></textarea>
+                    </div>
+                    <!-- conetividad -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Conectividad:</h6>
+                        <textarea name="" id=""  placeholder="Conectividad del producto..."></textarea>
+                    </div>
+                    <!-- pantalla -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Pantalla:</h6>
+                        <textarea name="" id=""  placeholder="Pantalla del producto..."></textarea>
+                    </div>
+                    <!-- memoria --> 
+                    <div class="input-container">
+                        <h6 class="datos-box">Memoria:</h6>
+                        <textarea name="" id=""  placeholder="Memoria del producto..."></textarea>
+                    </div>
+                    <!-- almacenamiento -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Almacenamiento:</h6>
+                        <textarea name="" id=""  placeholder="Almacenamiento del producto..."></textarea>
+                    </div>
+                    <!-- dimencion -->
+                    <div class="input-container">
+                        <h6 class="datos-box">Dimenciones:</h6>
+                        <textarea name="" id=""  placeholder="Dimenciones del producto..."></textarea>
+                    </div>
+    
+                    <!-- agregar image -->
+                    <div class="input-container input-file">
+    
+                        <h6 class="datos-box">Imagenes del producto:</h6>
+                        <input class="input-style-file" accept="image/png,image/jpeg" type="file"  name="image">
+                        
+                    </div>
+    
+                    <!-- boton de enviar -->
+                    <button class="button-container" type="submit"><a class="register"  href="../login.html">Agregar</a></button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- footer -->
+    <%- include("../partials/footer") %> 
+    <!-- fin del footer -->
+    <%- include("../partials/scripts") %>
+</body>
+</html>
