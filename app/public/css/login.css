@@ -1,11 +1,12 @@
-main {
+main#login {
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-section{
+
+main#login section{
     font-family: var(--fuente-parrafos);
     width: 75%;
     max-width: 350px;
@@ -14,13 +15,13 @@ section{
 
 }
 
-a{
+main#login a{
     color: black;
     font-size: 1rem;
     text-decoration: none;
 }
 
-.title{
+main#login .title{
     font-family: var(--fuente-titulos);
     margin-bottom: 1rem;
     text-align: center;
@@ -31,7 +32,7 @@ a{
     text-shadow: 10px 3px 15px  rgba(64, 57, 74, 0.7);
 }
 
-.form-container{
+main#login .form-container{
     background-color: lightgray;
     padding: 1rem;
     border-radius: 0.8rem;
@@ -39,10 +40,12 @@ a{
     width: 100%;
     transition: all .5s ease;
 }
-.form-container:hover{
+
+main#login .form-container:hover{
     box-shadow: 3px 3px 7px 2px var(--verde-oscuro);
 }
-.form{
+
+main#login .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,8 +53,8 @@ a{
 
 }
 
-.input-container,
-.login-container{
+main#login .input-container,
+main#login .login-container{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
@@ -59,12 +62,12 @@ a{
     border: none;
 }
 
-.login-container{
+main#login .login-container{
     margin: 5px;
 }
 
-.input-email,
-.input-clave{
+main#login .input-email,
+main#login .input-clave{
     height: 2.5rem;
     padding: 0 0.5rem;
     border: none;
@@ -72,11 +75,13 @@ a{
     background-color: rgb(247, 245, 245);
     outline: none;
 }
-.input-email,
-.input-clave:hover {
+
+main#login .input-email,
+main#login .input-clave:hover {
     color: lightgray;
 }
-.btn-login{
+
+main#login .btn-login{
     border: none;
     align-items: center;
     padding: 0.3rem;
@@ -94,7 +99,8 @@ a{
     text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     transition: all 1s ease;
 }
-.btn-login:hover{
+
+main#login .btn-login:hover{
     background-color: var(--violeta-oscuro);
     box-shadow: 0px 0 4px 2px var(--verde-oscuro);
     color: var(--crema);
@@ -102,22 +108,24 @@ a{
     text-decoration: underline;
 }
 
-.span-container{
+main#login .span-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 90%;
     
 }
-span{
+
+main#login span{
     transition: all .5s ease;
 }
-span:hover{
+
+main#login span:hover{
     text-decoration:underline;
     letter-spacing: 0.05rem;
 }
 
-.button-redes{
+main#login .button-redes{
     border: none;
     border-radius: 8px;
     padding: 0.5rem;
@@ -131,28 +139,33 @@ span:hover{
     box-shadow: 0 0 2px var(--violeta-oscuro);
     transition: all .5s ease;
 }
-.button-redes:hover{
+
+main#login .button-redes:hover{
     background-color:tomato;
     box-shadow: 0 0 10px var(--violeta-oscuro);
     text-decoration:underline;
     letter-spacing: 0.05rem;
 }
-.fa-facebook{
+
+main#login .fa-facebook{
     color: blue;
     margin: 0 auto;
     padding-right: 0.5rem;
     font-size: 1.2rem;
 }
-i{
+
+main#login i{
     position: relative;
     top: 0.1rem;
 }
-.fa-google{
+
+main#login .fa-google{
     color: red;
     padding-right: 0.5rem;
     font-size: 1.2rem;
 }
-.button-redes:hover > .fa-google{
+
+main#login .button-redes:hover > .fa-google{
     color: blue;
 }
 

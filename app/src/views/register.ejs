@@ -8,86 +8,89 @@
     <!-- header -->
     <%- include("partials/header") %> 
     <!-- fin del header -->
-    <div class="registro-container">
-        <form action="" method="">
-
-            <div class="registro-form">
-
-                <h4>Regístrate</h4>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Email*</h6>
-                    <input class="input-style" type="email" name="email" placeholder="Ingresar email...">
+    <main id="register">
+        <div class="registro-container">
+            <form action="" method="">
+    
+                <div class="registro-form">
+    
+                    <h4>Regístrate</h4>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Email*</h6>
+                        <input class="input-style" type="email" name="email" placeholder="Ingresar email...">
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Contraseña*</h6>
+                        <input class="input-style" type="password" name="pass" placeholder="Ingresar contraseña...">
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Confirma tu contraseña*</h6>
+                        <input class="input-style" type="password" name="pass2" placeholder="Confirmar contraseña...">
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Apellido*</h6>
+                        <input class="input-style" type="text" name="name" placeholder="Ingresar apellido...">
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Nombre*</h6>
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre...">
+                    </div>
+    
+                    <!-- <div class="input-container">
+                        <h6 class="datos-box">Provincia</h6>
+                        <select name="Provincia" class="input-select">
+                            <option value="" hidden selected>Elija una provincia</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="chaco">Chaco</option>
+                            <option value="cordoba">Córdoba</option>
+                            <option value="misiones">Misiones</option>
+                            <option value="chubut">Chubut</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Tipo de documento</h6>
+                        <select name="documento" class="input-select">
+                            <option value="" hidden selected>Elija tipo de documento</option>
+                            <option value="DNI">DNI</option>
+                            <option value="Libreta Civica">Libreta Civica</option>
+                            <option value="Pasaporte Nacional">Pasaporte Nacional</option>
+                            <option value="Libreta de Enrolamiento">Libreta de Enrolamiento</option>
+                        </select>
+    
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Documento*</h6>
+                        <input class="input-style" type="text" name="documento" placeholder="Numero de documento o DNI">
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Codigo postal*</h6>
+                        <input class="input-style" type="text" name="codigopostal" placeholder="Ingresar codigo postal">
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Dirección</h6>
+                        <input class="input-style" type="text" name="direccion" placeholder="Ingresar dirección...">
+                    </div>
+    
+                    <div class="input-container">
+                        <h6 class="datos-box">Teléfono</h6>
+                        <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono...">
+                    </div> -->
+                    <p>Campos obligatorios *</p>
+                    <button class="button-container" type="submit"><a class="register"  href="/register/login">Registrarme</a></button>
                 </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Contraseña*</h6>
-                    <input class="input-style" type="password" name="pass" placeholder="Ingresar contraseña...">
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Confirma tu contraseña*</h6>
-                    <input class="input-style" type="password" name="pass2" placeholder="Confirmar contraseña...">
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Apellido*</h6>
-                    <input class="input-style" type="text" name="name" placeholder="Ingresar apellido...">
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Nombre*</h6>
-                    <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre...">
-                </div>
-
-                <!-- <div class="input-container">
-                    <h6 class="datos-box">Provincia</h6>
-                    <select name="Provincia" class="input-select">
-                        <option value="" hidden selected>Elija una provincia</option>
-                        <option value="Buenos Aires">Buenos Aires</option>
-                        <option value="chaco">Chaco</option>
-                        <option value="cordoba">Córdoba</option>
-                        <option value="misiones">Misiones</option>
-                        <option value="chubut">Chubut</option>
-                    </select>
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Tipo de documento</h6>
-                    <select name="documento" class="input-select">
-                        <option value="" hidden selected>Elija tipo de documento</option>
-                        <option value="DNI">DNI</option>
-                        <option value="Libreta Civica">Libreta Civica</option>
-                        <option value="Pasaporte Nacional">Pasaporte Nacional</option>
-                        <option value="Libreta de Enrolamiento">Libreta de Enrolamiento</option>
-                    </select>
-
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Documento*</h6>
-                    <input class="input-style" type="text" name="documento" placeholder="Numero de documento o DNI">
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Codigo postal*</h6>
-                    <input class="input-style" type="text" name="codigopostal" placeholder="Ingresar codigo postal">
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Dirección</h6>
-                    <input class="input-style" type="text" name="direccion" placeholder="Ingresar dirección...">
-                </div>
-
-                <div class="input-container">
-                    <h6 class="datos-box">Teléfono</h6>
-                    <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono...">
-                </div> -->
-                <p>Campos obligatorios *</p>
-                <button class="button-container" type="submit"><a class="register"  href="/register/login">Registrarme</a></button>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </main>
+    
 <!-- footer -->
     <%- include("partials/footer") %> 
     <!-- fin del footer -->

@@ -1,10 +1,11 @@
-section.banner {
+main#home section.banner {
     overflow:hidden;
     margin: 0 auto;
     max-width: 1516px;
     box-shadow: 0.5px 0 4px 0.2px var(--verde-oscuro);
 }
-section.banner div.banner-select {
+
+main#home section.banner div.banner-select {
     width: 100%;
     display: flex;
     justify-content:start;
@@ -12,7 +13,8 @@ section.banner div.banner-select {
     animation-timing-function:cubic-bezier(1, 0, 0, 1);
     
 }
-section.banner div.banner-select img.img-banner1, img.img-banner2, img.img-banner3 {
+
+main#home section.banner div.banner-select img.img-banner1, img.img-banner2, img.img-banner3 {
     width: 100%;
 }
 
@@ -26,11 +28,12 @@ section.banner div.banner-select img.img-banner1, img.img-banner2, img.img-banne
     100% {margin-left: -200%;}
 }
 /* ofertas */
-section.title-section {
+main#home section.title-section {
     margin: 10px 0 0 8px;
     
 }
-section.title-section div.title-container {
+
+main#home section.title-section div.title-container {
     display: flex;
     justify-content:center;
     align-items: center;
@@ -38,7 +41,7 @@ section.title-section div.title-container {
     
     
 }
-section.title-section div.title-container a {
+main#home section.title-section div.title-container a {
     width: 65px;
     margin:11px 2px 0 6px ;
     text-decoration: none;
@@ -47,14 +50,15 @@ section.title-section div.title-container a {
     font-family: var(--fuente-parrafos);
     color: var(--verde-oscuro);
 }
-section.title-section div.title-container  h2 {
+
+main#home section.title-section div.title-container  h2 {
     font-family: var(--fuente-titulos);
     /* text-align: center; */
     font-size: var(--titulos);
     color: var(--crema);
 }
 
-section.title-section div.title-container hr {
+main#home section.title-section div.title-container hr {
     width: 100%; 
     height: 0;
     margin: 2px 0 0 5px;
@@ -74,16 +78,16 @@ section.title-section div.title-container hr {
     gap: 8%;
     
 } */
-.dot{
+main#home .dot{
     margin: 1rem 0.8rem 1rem 0 !important;
     background-color: var(--verde-neon) !important;
 }
-.flickity-button {
+main#home .flickity-button {
     background-color: var(--verde-neon) !important;
     
 }
 
-section.porducts-offerts article.product {
+main#home section.porducts-offerts article.product {
     display: flex;
     flex-direction:column;
     position: relative;
@@ -99,10 +103,11 @@ section.porducts-offerts article.product {
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
     transition: all 0.8s ease;
 }
-section.porducts-offerts article.product:hover {
+
+main#home section.porducts-offerts article.product:hover {
     box-shadow: 6px 6px 16px var(--verde-oscuro);
 }
-section.porducts-offerts article.product div.photo-container {
+main#home section.porducts-offerts article.product div.photo-container {
     position: relative;
     display: flex;
     height: 190px;
@@ -114,16 +119,17 @@ section.porducts-offerts article.product div.photo-container {
     border-radius: 10px;
     transition: all 5ms ease;
 }
-section.porducts-offerts article.product div.photo-container:hover {
+main#home section.porducts-offerts article.product div.photo-container:hover {
     border: none;
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
 }
-section.porducts-offerts article.product div.photo-container img {
+main#home section.porducts-offerts article.product div.photo-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-section.porducts-offerts article.product div.photo-container i {
+
+main#home section.porducts-offerts article.product div.photo-container i {
     position:absolute;
     top: 5px;
     right: 5px;
@@ -131,17 +137,19 @@ section.porducts-offerts article.product div.photo-container i {
     opacity: 0.4;
     cursor: pointer;
 }
-section.porducts-offerts article.product div.photo-container i:hover{
+
+main#home section.porducts-offerts article.product div.photo-container i:hover{
     color: red;
     font-weight: bold;
     font-weight: none;
 }
-.active{
+ 
+main#home .active{
     color: red;
     font-weight: bold;
     font-weight: none;
 }
-section.porducts-offerts article.product a h3 {
+main#home section.porducts-offerts article.product a h3 {
     font-family: var(--fuente-titulos);
     font-size: 1.6rem;
     padding-bottom: 0.3rem;
@@ -152,39 +160,43 @@ section.porducts-offerts article.product a h3 {
     text-decoration: underline var(--verde-oscuro);
     transition: all 5ms ease;
 }
-section.porducts-offerts article.product a h3:hover{
+
+main#home section.porducts-offerts article.product a h3:hover{
     font-size: 1.8rem;
     
 }
-section.porducts-offerts article.product a {
+main#home section.porducts-offerts article.product a {
     text-decoration: none;
 }
-section.porducts-offerts article.product div.price {
+main#home section.porducts-offerts article.product div.price {
     display:flex;
     justify-content: center;   
     align-items: center;
     margin-left: 18px;
 }
-section.porducts-offerts article.product div.price-product{
+main#home section.porducts-offerts article.product div.price-product{
     display:flex;
     justify-content: center;   
     align-items: center;
 }
-section.porducts-offerts article.product div.price span.numb-offert {
+
+main#home section.porducts-offerts article.product div.price span.numb-offert {
     font-size: 1rem;
     letter-spacing: 0.3px;
     font-family: var(--fuente-parrafos);
     font-weight: 600;
     color: var(--verde-oscuro);
 }
-section.porducts-offerts article.product div h3 {
+
+main#home section.porducts-offerts article.product div h3 {
     font-size: 2rem;
     letter-spacing: 2px;
     font-family: var(--fuente-parrafos);
     color: var(--gris-claro);
     padding: 5px;
 }
-section.porducts-offerts article.product p {
+
+main#home section.porducts-offerts article.product p {
     font-family: var(--fuente-parrafos);
     font-size: 1.1rem;
     letter-spacing: 0.5px;
@@ -192,7 +204,7 @@ section.porducts-offerts article.product p {
     color: var(--gris-claro);
 }
 /* action carousel*/
-.js-flickity:after {
+main#home .js-flickity:after {
     content: 'flickity';
     display: none;
 }
@@ -201,7 +213,7 @@ section.porducts-offerts article.product p {
 /* section.payMode-section {
 
 } */
-section.payMode-section article.modes {
+main#home section.payMode-section article.modes {
     background-color: var(--crema);
     margin: 1rem ;
     display: flex;
@@ -213,19 +225,22 @@ section.payMode-section article.modes {
     margin-bottom: 2rem;
 
 }
-section.payMode-section article.modes div.text-modes {
+
+main#home section.payMode-section article.modes div.text-modes {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0.9rem;
     margin-left: 0.5rem;
 }
-section.payMode-section article.modes div.text-modes a {
+
+main#home section.payMode-section article.modes div.text-modes a {
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-section.payMode-section article.modes div.text-modes a i{
+
+main#home section.payMode-section article.modes div.text-modes a i{
     font-size: 1.1rem;
     margin-right: 0.5rem;
     border: 2px solid var(--violeta-oscuro);
@@ -239,28 +254,33 @@ section.payMode-section article.modes div.text-modes a i{
     background-color: var(--verde-oscuro);
     transition: all 1s ease;
 }
-section.payMode-section article.modes div.text-modes a i:hover{
+
+main#home section.payMode-section article.modes div.text-modes a i:hover{
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
 }
-section.payMode-section article.modes div.text-modes p.text {
+
+main#home section.payMode-section article.modes div.text-modes p.text {
     font-size: 0.9rem;
     font-family: var(--fuente-parrafos);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-section.payMode-section article.modes div.text-modes a p{
+
+main#home section.payMode-section article.modes div.text-modes a p{
     font-size: 0.7rem;
     font-family: var(--fuente-parrafos);
     margin-left: 1rem;
     color: var(--violeta-oscuro);
     transition: all 1s ease;
 }
-section.payMode-section article.modes div.text-modes a p:hover{
+
+main#home section.payMode-section article.modes div.text-modes a p:hover{
     color: var(--verde-oscuro);
     text-decoration: underline var(--verde-oscuro);
 }
-section.payMode-section article.modes div.more-info {
+
+main#home section.payMode-section article.modes div.more-info {
     width: 30%;
     display: flex;
     justify-content: center;
@@ -269,10 +289,12 @@ section.payMode-section article.modes div.more-info {
     border-left: 3px solid rgba(0, 0, 0, 0.05);
     
 }
-section.payMode-section article.modes div.more-info a {
+
+main#home section.payMode-section article.modes div.more-info a {
     text-decoration: none;
 }
-section.payMode-section article.modes div.more-info a i {
+
+main#home section.payMode-section article.modes div.more-info a i {
     border: 7px solid var(--violeta-oscuro);
     color: var(--violeta-oscuro);
     height: 2.7rem;
@@ -287,33 +309,41 @@ section.payMode-section article.modes div.more-info a i {
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
     transition: all 1s ease;
 }
-section.payMode-section article.modes div.more-info a i:hover {
+
+main#home section.payMode-section article.modes div.more-info a i:hover {
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
 }
+
 /* banner oferta */
-section.banner-bottom{
+main#home section.banner-bottom{
     margin-bottom: 2rem;
 }
-section.banner-bottom div.img-oferta {
+
+main#home section.banner-bottom div.img-oferta {
     width: 100%;
     border: none;
     
 }
-section.banner-bottom div.img-ofert img.b-ofert {
+
+main#home section.banner-bottom div.img-ofert img.b-ofert {
     width: 100%;
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
     
 }
+
 /* titulo form registro */
-section.title-register {
+
+main#home section.title-register {
     margin-bottom: 0.5rem;
 }
-section.title-register div.register-container {
+
+main#home section.title-register div.register-container {
     display: flex;
     justify-content:center;
     align-items: center;
 }
-section.title-register div.register-container h2.register-prom{
+
+main#home section.title-register div.register-container h2.register-prom{
     width: 75%;
     text-align: center;
     font-family: var(--fuente-titulos);
@@ -321,20 +351,24 @@ section.title-register div.register-container h2.register-prom{
     font-size: var(--titulos);
     color: var(--crema);
 }
-section.title-register div.register-container hr.line-left {
+
+main#home section.title-register div.register-container hr.line-left {
     width: 30%;
     margin-right: 1rem;
     border: 0;
     box-shadow: 0 1px 2px 1px var(--crema);
 }
-section.title-register div.register-container hr.line-rigth {
+
+main#home section.title-register div.register-container hr.line-rigth {
     width: 30%;
     margin-left: 1rem;
     border: 0;
     box-shadow: 0 1px 2px 1px var(--crema);
 }
+
 /* formulario de registro */
-section form div.form {
+
+main#home section form div.form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,12 +376,14 @@ section form div.form {
     margin: 0 auto;
     margin-bottom: 2rem;
 }
-section form div.form div.input-container, div.button-container {
+
+main#home section form div.form div.input-container, div.button-container {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
 }
-section form div.form div.input-container input.input-style {
+
+main#home section form div.form div.input-container input.input-style {
     border: none;
     border-radius: 8px;
     width: 14rem;
@@ -356,19 +392,22 @@ section form div.form div.input-container input.input-style {
     background-color: var(--crema);
     opacity: 0.9;
 } 
-section form div.form div.input-container input.input-style::placeholder {
+
+main#home section form div.form div.input-container input.input-style::placeholder {
     opacity: 0.6;
     font-family: var(--fuente-parrafos);
     font-size: 1.1rem;
 }
-section form div.form div.input-container span.error-message, div.button-container span.error-message {
+
+main#home section form div.form div.input-container span.error-message, div.button-container span.error-message {
     color: tomato;
     padding-left: 0.5rem;
     font-family: var(--fuente-parrafos);
     font-size: 1.1rem;
     display: none;
 }
-section form div.form  div.button-container button.btn {
+
+main#home section form div.form  div.button-container button.btn {
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -384,7 +423,8 @@ section form div.form  div.button-container button.btn {
     transition: all 1s ease;
     /* */
 }
-section form div.form  div.button-container button.btn:hover {
+
+main#home section form div.form  div.button-container button.btn:hover {
     background-color: var(--verde-oscuro);
     box-shadow: 0px 0 4px 2px var(--crema);
     /* text-shadow: 1px 1px 5px rgba(0,0,0,0.9); */
@@ -417,33 +457,39 @@ section form div.form  div.button-container button.btn:hover {
     /* section.porducts-offerts article.product {
         min-width: 224px;
     } */
-    section.payMode-section article.modes {
+
+    main#home section.payMode-section article.modes {
         margin: 0 auto;
         margin-top: 2rem;
         margin-bottom: 4rem;
         max-width: 378px;
         max-height: 203px;
     }
-    section form div.form div.input-container input.input-style {
+
+    main#home section form div.form div.input-container input.input-style {
         width: 20rem;
         height: 2.2rem;
         padding: 0.4rem 0.5rem 0 0.8rem;
     } 
-    section form div.form div.input-container input.input-style::placeholder {
+
+    main#home section form div.form div.input-container input.input-style::placeholder {
         font-size: 1.5rem;/**/
         
     }
-    section form div.form  div.button-container button.btn {
+
+    main#home section form div.form  div.button-container button.btn {
         height: 2.5rem;
         width: 12rem;
         font-size: 1.5rem;
     }
-    section.title-register {
+
+    main#home section.title-register {
         margin-top: 2rem;
     }
 }
+
 @media (min-width: 769px){
-    section.porducts-offerts{
+    main#home section.porducts-offerts{
         /*  left: 2rem;
         margin-right: 5rem; */
         width: 90%;
@@ -451,7 +497,8 @@ section form div.form  div.button-container button.btn:hover {
         justify-items: center;
         margin: 0 auto;
     }
-    section.title-section div.title-container  h2 {
+
+    main#home section.title-section div.title-container  h2 {
         
         font-size: 2.5rem;
     }
@@ -461,39 +508,46 @@ section form div.form  div.button-container button.btn:hover {
 /*media query: DESKTOP*/
 @media (min-width: 803px){
     
-    section.title-register div.register-container h2.register-prom{
+    main#home section.title-register div.register-container h2.register-prom{
         font-size: 2.5rem;
     }
-    section form div.form {
+
+    main#home section form div.form {
         margin-top: 2rem;
     }
 }
+
 @media (min-width: 1000px){
-    .js-flickity:after {
+    main#home .js-flickity:after {
         content: '';
     }
-    section.porducts-offerts {
+
+    main#home section.porducts-offerts {
         display: flex;
         justify-content: center !important;
         
     }
-    section form div.form div.input-container input.input-style {
+
+    main#home section form div.form div.input-container input.input-style {
         width: 24rem;
         height: 2.5rem;
         padding: 0.4rem 0.5rem 0 0.8rem;
         margin: 0.5rem;
     } 
-    section form div.form div.input-container input.input-style::placeholder {
+
+    main#home section form div.form div.input-container input.input-style::placeholder {
         font-size: 1.5rem;/**/
         
     }
-    section form div.form  div.button-container button.btn {
+
+    main#home section form div.form  div.button-container button.btn {
         height: 3rem;
         width: 15rem;
         font-size: 1.6rem;
         margin-top: 0.5rem;
     }
-    section.banner-bottom div.img-ofert img.b-ofert {
+
+    main#home section.banner-bottom div.img-ofert img.b-ofert {
         max-width: 768px;
         min-height: 227px;
         width: 75%;

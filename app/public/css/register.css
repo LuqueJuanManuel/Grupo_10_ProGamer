@@ -1,4 +1,4 @@
-h4{
+main#register h4{
     font-family: var(--fuente-titulos);
     margin-bottom: 1rem;
     text-align: center;
@@ -8,23 +8,26 @@ h4{
     color: var(--violeta-oscuro);
     text-shadow: 10px 3px 15px  rgba(64, 57, 74, 0.7);
 }
-.registro-form:hover {
+
+main#register .registro-form:hover {
     box-shadow: 3px 3px 7px 2px var(--verde-oscuro);
 }
-.registro-form{
+
+main#register .registro-form{
     background: lightgray;
     padding: 1rem;
     border-radius: 0.9rem;
     width: 100%;
     transition: all .5s ease;
 }
-form {
+
+main#register form {
     width: 75%;
     max-width: 350px;
     margin:2rem 0 4rem 0;
 }
 
-.registro-container{
+main#register .registro-container{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,7 +38,7 @@ form {
     padding: 15px;
 }
 
-.datos-box{
+main#register .datos-box{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,20 +48,21 @@ form {
     font-size: 0.8rem;
     transition: all .5s ease;
 }
-.datos-box:hover{
+
+main#register .datos-box:hover{
     text-decoration:underline;
     letter-spacing: 0.05rem;
 }
 
-.input-container,
-.button-container{
+main#register .input-container,
+main#register .button-container{
     display: flex;
     flex-direction: column;
     margin-bottom: 0.3rem;
     width: 100%;
 }
 
-.button-container{
+main#register .button-container{
     border: none;
     align-items: center;
     padding: 0.5rem;
@@ -76,23 +80,27 @@ form {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     transition: all 1s ease;
 }
-a.register {
+
+main#register a.register {
     text-decoration: none;
     color: var(--violeta-oscuro);
     width: 100%;
 }
-.button-container:hover{
+
+main#register .button-container:hover{
     background-color: var(--violeta-oscuro);
     box-shadow: 0px 0 4px 2px var(--verde-oscuro);
     color: var(--crema);
     letter-spacing: 0.1rem;
     text-decoration: underline;
 }
-.button-container:hover >a.register{
+
+main#register .button-container:hover >a.register{
     color: var(--crema);
 }
-.input-style,
-.input-select{
+
+main#register .input-style,
+main#register .input-select{
     border: none;
     border-radius: 8px;
     height: 2rem;
@@ -100,11 +108,11 @@ a.register {
     outline: none;
 }
 
-.input-style::placeholder{
+main#register .input-style::placeholder{
     color: lightgray;
 }
 
-p{
+main#register p{
     margin: 0.3rem;
     padding: 0.3rem;
     font-size: 0.8rem;
