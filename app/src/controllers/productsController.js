@@ -1,9 +1,9 @@
 module.exports = {
     productDetail : (req, res) => {
-        return res.render("productDetail")
+        return res.render("products/productDetail")
     },
 
     productCart : (req, res) => {
-        return res.render("productCart")
+        return res.render("products/productCart")
     },
 }

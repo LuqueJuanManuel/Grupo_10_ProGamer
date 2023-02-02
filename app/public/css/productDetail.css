@@ -26,9 +26,10 @@
 }
 
 
-p {
+main#productDetail p {
     font-family: var(--fuente-parrafos);
-    font-size: 1.rem;
+    font-size: 1.6rem;
+    color: var(--violeta-oscuro)
 }
 
 h3 {
@@ -85,6 +86,14 @@ main#productDetail div span.images-right {
     border: 1px solid rgb(196, 195, 195);
     box-shadow: 1px 1px 2px rgb(219, 219, 219);
     border-radius: 5px;
+    transition: all 1s ease;
+
+}
+
+main#productDetail div span.images-right:hover {
+    border: 1px solid white;
+    box-shadow: 6px 6px 16px var(--verde-oscuro);
+    scale: 1.1;
 
 }
 
@@ -119,11 +128,15 @@ main#productDetail section div.price {
 main#productDetail section div.price p.p-price {
     color: #39FC08;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: var(--fuente-parrafos);
 }
 
 main#productDetail section div.price p {
     text-align: center;
+    font-family: var(--fuente-parrafos);
+    font-size: 1.6rem;
+    color: var(--violeta-oscuro);
 }
 
 main#productDetail section.details i.fa-circle-check {
@@ -469,7 +482,7 @@ main#productDetail section.section-porducts-offerts div.porducts-offerts article
     main#productDetail section div span.span-right {
         width: 80%;
         max-width: 200px;
-        height: 55px;
+        height: 100px;
         margin-top: 5px;
         margin-left: 5px;
     }

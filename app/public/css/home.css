@@ -157,12 +157,12 @@ main#home section.porducts-offerts article.product a h3 {
     margin-bottom: 0.4rem;
     text-align: center;
     color: var(--gris-claro);
-    text-decoration: underline var(--verde-oscuro);
     transition: all 5ms ease;
 }
 
 main#home section.porducts-offerts article.product a h3:hover{
     font-size: 1.8rem;
+    text-decoration: underline var(--verde-oscuro);
     
 }
 main#home section.porducts-offerts article.product a {
