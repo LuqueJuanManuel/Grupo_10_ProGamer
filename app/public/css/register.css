@@ -38,7 +38,7 @@ main#register .registro-container{
     padding: 15px;
 }
 
-main#register .datos-box{
+main#register h6.datos-box{
     width: 100%;
     display: flex;
     flex-direction: column;
