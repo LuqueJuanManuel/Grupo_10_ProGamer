@@ -4,6 +4,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
 
+/* archivos styles de las vistas */
+/*  @import url("/css/home.css");
+@import url("/css/login.css");
+@import url("/css/productCart.css");
+@import url("/css/productDetail.css");
+@import url("/css/register.css");  */ 
+/* se pisan los estilos */
+
 /* General */
 * {
     box-sizing: border-box;

@@ -1,61 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/productCart.css">
-    <title>Carrito de Compras</title>
-</head>
+<%- include("partials/head") %> 
+
+   <!--  <title>Carrito de Compras</title> -->
+
 
 <body>
 
-    <header><!--logo,barra de navegacion,busqueda,login,carrito de compras,liks de enlaces-->
-        <div class="logo">
-            <a href="/"><img class="logo" src="/images/logo ecomerce.jpg" alt="logo"></a>
-        </div>
-        <!-- menu de hamburguesa-->
-        <div class="hamburguer-container">
-            <a href="#" class="hamburguer button">
-                <i class="fas fa-bars"></i>
-            </a>
-        </div>
-        <div class="top-bar">
-            <div class="input-glass">
-                <div class="input-search"> <!-- input buscador -->
-                    <input class="search" type="text" placeholder="buscar">
-                </div>
-                <a href="#" class="glass button"> <!--boton lupa -->
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="user-cart">
-                <a href="/register/login" class="user button"> <!--boton usuario -->
-                    <i class="fa-solid fa-user"></i>
-                </a>
-
-                <a href="/productDetail/productCart" class="cart button"> <!-- carrito de compras -->
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </div>
-        </div>
-
-        <nav>
-            <ul class="links-busquedas">
-
-                <li><a href="#">Notebooks</a></li>
-                <li><a href="#">Computadores</a></li>
-                <li><a href="#">Conponentes de PC</a></li>
-                <li><a href="#">Monitores</a></li>
-                <li><a href="#">Consolas</a></li>
-
-            </ul>
-        </nav>
-    </header>
-
+    <%- include("partials/header") %> 
+   
 
     <main id="productCart">
         <!-- tiulo: Mi Compra -->
@@ -249,67 +203,9 @@
         
     </main>
 
-    <footer>
+    <%- include("partials/footer") %> 
 
-        <div class="footer-align">
-            <div class="container-1">
-                <p class="app-social">
-                    seguinos en nuestras redes sociales
-                </p>
-                <nav class="icons-social">
-                    <ul class="link-social">
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
-                    </ul>
-                </nav>
-                <div class="contact">
-                    <p>
-                        contacto:
-                    </p>
-                    <p>
-                        horarios de atencion
-                    </p>
-                    calle/direccion/telefono
-                </div>
-            </div>
-
-            <article class="container-2">
-                <p>Sobre nosotros</p>
-                <p>Pro Gamer</p>
-                <p>Es un e-comerce pensado para ofrecer articulos y elementos de tecnologia.
-                    una de nuestras caracteristicas es ofrecer combos u ofertas de articulos variados para todo tipo de
-                    usuarios
-                </p>
-                <div class="logo-footer">
-                    <img src="/images/logo ecomerce.jpg" alt="logo">
-                </div>
-            </article>
-        </div>
-        <div class="footer-container3">
-
-            <a href="#" class="qr">
-                <img class="qr-img" src="/images/codigo-qr.png" alt="qr">
-            </a>
-
-            <nav>
-                <ul class="nav-container">
-                    <li class="init"><a href="/">Volver a inicio</a></li>
-                    <li class="aswers"><a href="#">Dejanos tus dudas</a></li>
-                    <p class="text-copyright">Todos los derechos reservados</p>
-                    <li class="tyc"><a href="#">terminos y condiciones</a></li>
-
-                </ul>
-            </nav>
-        </div>
-
-
-
-
-    </footer>
-
-
+    <%- include("partials/scripts") %>
 </body>
 
 </html>
