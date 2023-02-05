@@ -7,6 +7,7 @@ router.get('/create', controller.create);
 /* router.post('/', controller.store); */
 
 /* edit */
-
+router.get('/edit', controller.edit);
+//router.put('/edit/:id', controller.update);
 
 module.exports = router;

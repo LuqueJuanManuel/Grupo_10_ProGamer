@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<%- include("../partials/head") %>
 
-<title>Admin - agregar producto</title>
+    <%- include("../partials/head") %>
+
+<title>Admin - editar producto</title>
 <body>
     <!-- header -->
     <%- include("../partials/header") %> 
@@ -15,15 +15,15 @@
                 
                 <div class="registro-form">
     
-                    <h4>Agregar producto</h4>
+                    <h4>Editar producto</h4>
                     <!-- nombre del producto -->
                     <div class="input-container">
                         <h6  class="datos-box">Nombre del producto:</h6>
-                        <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre...">
+                        <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre..." value="">
                     </div>
                     <div class="input-container">
                         <h6 class="datos-box">Marca del producto:</h6>
-                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca...">
+                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="">
                     </div>
     
                     <!-- agregar categoria -->
@@ -41,24 +41,24 @@
                     <!-- agregar sub categoria -->
                     <div class="input-container">
                         <h6 class="datos-box">Sub-categoria:</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria">
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria" value="">
                     </div>
                     <!-- price -->
                     <!-- descount -->
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box ">Precio:</h6>
-                            <input class="input-style" type="text" name="price" id="price" placeholder="Precio">
+                            <input class="input-style" type="text" name="price" id="price" placeholder="Precio" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6 class="datos-box">Descuento:</h6>
-                            <input class="input-style" type="text" name="discount" id="discount" placeholder="Descuento">
+                            <input class="input-style" type="text" name="discount" id="discount" placeholder="Descuento" value="">
                         </div>
                     </div>
                     <div class="contaner-price-descount container-price-b">
                         <div class="input-container ">
                             <h6 class="datos-box ">Stock:</h6>
-                            <input class="input-style" type="text" name="stock" id="stock" placeholder="Stock">
+                            <input class="input-style" type="text" name="stock" id="stock" placeholder="Stock" value="">
                         </div>
                     </div>
     
@@ -73,11 +73,11 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">CPU:</h6>
-                            <input class="input-style" type="text" name="cpu" id="cpu" placeholder="CPU">
+                            <input class="input-style" type="text" name="cpu" id="cpu" placeholder="CPU" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Placa/Grafica:</h6>
-                            <input class="input-style" type="text" name="graphic-card" id="graphic-card" placeholder="Placa Grafica">
+                            <input class="input-style" type="text" name="graphic-card" id="graphic-card" placeholder="Placa Grafica" value="">
                         </div>
                     </div>
                     <div class="input-container">
@@ -95,11 +95,11 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">RAM/tipo:</h6>
-                            <input class="input-style" type="text" name="ram" id="ram" placeholder="RAM">
+                            <input class="input-style" type="text" name="ram" id="ram" placeholder="RAM" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Capacidad/tipo:</h6>
-                            <input class="input-style" type="text" name="capacity" id="capacity" placeholder="Capacidad/tipo">
+                            <input class="input-style" type="text" name="capacity" id="capacity" placeholder="Capacidad/tipo" value="">
                         </div>
                     </div>
     
@@ -108,37 +108,37 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Puertos:</h6>
-                            <input class="input-style" type="text" name="ports" id="ports" placeholder="Puertos">
+                            <input class="input-style" type="text" name="ports" id="ports" placeholder="Puertos" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Puertos HDMI:</h6>
-                            <input class="input-style" type="text" name="HDMI" id="HDMI" placeholder="Puertos HDMI">
+                            <input class="input-style" type="text" name="HDMI" id="HDMI" placeholder="Puertos HDMI" value="">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Puertos Ethernet:</h6>
-                            <input class="input-style" type="text" name="Ethernet" id="Ethernet" placeholder="Puertos Ethernet">
+                            <input class="input-style" type="text" name="Ethernet" id="Ethernet" placeholder="Puertos Ethernet" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Puertos USB:</h6>
-                            <input class="input-style" type="text" name="USB" id="USB" placeholder="Puertos USB">
+                            <input class="input-style" type="text" name="USB" id="USB" placeholder="Puertos USB" value="">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">WIFI:</h6>
-                            <input class="input-style" type="text" name="WIFI" id="WIFI" placeholder="WIFI">
+                            <input class="input-style" type="text" name="WIFI" id="WIFI" placeholder="WIFI" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">WebCam:</h6>
-                            <input class="input-style" type="text" name="webCam" id="webCam" placeholder="WebCam">
+                            <input class="input-style" type="text" name="webCam" id="webCam" placeholder="WebCam" value="">
                         </div>
                     </div>
                     <div class="contaner-price-descount container-price-b">
                         <div class="input-container ">
                             <h6 class="datos-box ">Bluetooth:</h6>
-                            <input class="input-style" type="text" name="bluetooth" id="bluetooth" placeholder="Bluetooth">
+                            <input class="input-style" type="text" name="bluetooth" id="bluetooth" placeholder="Bluetooth" value="">
                         </div>
                     </div>
                     <!-- pantalla -->
@@ -146,21 +146,21 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Tamaño:</h6>
-                            <input class="input-style" type="text" name="screen-size" id="screen-size" placeholder="Tamaño">
+                            <input class="input-style" type="text" name="screen-size" id="screen-size" placeholder="Tamaño" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Tipo display:</h6>
-                            <input class="input-style" type="text" name="display" id="display" placeholder="Tipo-display">
+                            <input class="input-style" type="text" name="display" id="display" placeholder="Tipo-display" value="">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">resolucion:</h6>
-                            <input class="input-style" type="text" name="resolution" id="resolution" placeholder="resolucion">
+                            <input class="input-style" type="text" name="resolution" id="resolution" placeholder="resolucion" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Conección:</h6>
-                            <input class="input-style" type="text" name="Conection" id="Conection" placeholder="Conección">
+                            <input class="input-style" type="text" name="Conection" id="Conection" placeholder="Conección" value="">
                         </div>
                     </div>
                     <!-- dimenciones -->
@@ -168,21 +168,21 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Peso:</h6>
-                            <input class="input-style" type="text" name="lastname" placeholder="resolucion">
+                            <input class="input-style" type="text" name="lastname" placeholder="resolucion" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Alto:</h6>
-                            <input class="input-style" type="text" name="weight" id="weight" placeholder="Alto">
+                            <input class="input-style" type="text" name="weight" id="weight" placeholder="Alto"value="">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Ancho:</h6>
-                            <input class="input-style" type="text" name="width" id="width" placeholder="Ancho">
+                            <input class="input-style" type="text" name="width" id="width" placeholder="Ancho" value="">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Profundidad:</h6>
-                            <input class="input-style" type="text" name="depth" id="depth" placeholder="Profundidad">
+                            <input class="input-style" type="text" name="depth" id="depth" placeholder="Profundidad" value="">
                         </div>
                     </div>
     
@@ -195,7 +195,7 @@
                     </div>
     
                     <!-- boton de enviar -->
-                    <button class="button-container" type="submit"><a class="register"  href="../login.html">Agregar</a></button>
+                    <button class="button-container" type="submit"><a class="register"  href="../login.html">Guardar cambios</a></button>
                 </div>
             </form>
         </div>
@@ -205,5 +205,6 @@
     <%- include("../partials/footer") %> 
     <!-- fin del footer -->
     <%- include("../partials/scripts") %>
+    
 </body>
 </html>
