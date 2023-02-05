@@ -8,7 +8,7 @@ app.use(express.static("public"));
 
 /* Template engine Config. */
 app.set("view engine", "ejs");
-app.set("views", "./src/views")
+app.set("views", "./src/views");
 
 /* Routers */
 const indexRouter = require("./routes");
@@ -35,6 +35,12 @@ app.use("/login", usersRouter)
 
 /* admin */
 app.use('/admin', adminRouter);
+
+/* error 404 */
+app.use((req,res,next)=>{
+    res.status(404).render("not-found")
+})
+
 
 
 app.listen( PORT, ()=>console.log(`server listen in port ${PORT}\n http://localhost:${PORT}` ));
