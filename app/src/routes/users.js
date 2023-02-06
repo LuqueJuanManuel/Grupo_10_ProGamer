@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/usersController");
 
 /* Ruta a Register */
-router.get("/", controller.register);
+router.get("/register", controller.register);
 
 /* Ruta a Login */
 router.get("/login", controller.login);

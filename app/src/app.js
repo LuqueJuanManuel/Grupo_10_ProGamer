@@ -28,10 +28,10 @@ app.use("/productDetail", productsRouter);
 app.use("/productCart", productsRouter);
 
 /* Formulario de Registro */
-app.use("/register", usersRouter);
+app.use("/users", usersRouter);
 
 /* Login */
-app.use("/login", usersRouter)
+/* app.use("/", usersRouter) */
 
 /* admin */
 app.use('/admin', adminRouter);
