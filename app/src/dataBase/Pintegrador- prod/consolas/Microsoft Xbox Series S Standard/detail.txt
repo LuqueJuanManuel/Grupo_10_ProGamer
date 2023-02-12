@@ -1,0 +1,15 @@
+Precio	$149.999
+
+Submodelo	S
+
+Edición	Standard
+
+Color		Blanco
+
+Capacidad		512 GB
+
+Tipos de memoria		GDDR6
+
+Memoria RAM		10 GB
+
+Con Wi-Fi		Sí

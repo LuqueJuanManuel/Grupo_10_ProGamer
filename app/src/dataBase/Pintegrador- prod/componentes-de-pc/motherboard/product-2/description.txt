@@ -1,0 +1,11 @@
+precio  57.289,00
+
+Otras características
+Plataforma: Intel
+Capacidad máxima soportada de la memoria RAM: 128 GB
+Chipsets: Intel® B660 Chipset
+Socket: LGA1700
+Ranuras de expansión: 1 x PCIe 3.0 x16 slot (supports x1 mode),1 x PCIe 3.0 x16 slot (supports x4 mode),1 x PCIe 4.0/3.0 x16 slot
+Con procesador: No
+Aplicaciones: PC
+Tipo de memoria RAM: DDR4

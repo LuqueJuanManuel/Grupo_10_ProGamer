@@ -1,0 +1,28 @@
+[
+    {
+        "id" : 1,
+        "name" : "Notebooks",
+        "code" : "notebooks"
+    },
+    {
+        "id" : 2,
+        "name" : "Computadores",
+        "code" : "pc"
+    },
+    {
+        "id" : 3,
+        "name" : "Componentes de PC",
+        "code" : "Components"
+    },
+    {
+        "id" : 4,
+        "name" : "Monitores",
+        "code" : "monitors"
+    },
+    {
+        "id" : 5,
+        "name" : "Consolas",
+        "code" : "console"
+    }
+    
+]

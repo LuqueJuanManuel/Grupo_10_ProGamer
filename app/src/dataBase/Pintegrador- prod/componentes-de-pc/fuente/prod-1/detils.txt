@@ -1,0 +1,33 @@
+Fuente Gigabyte P850GM 850W 80 Gold Modular
+
+prcio		51.732,00
+
+
+Marca de la fuente	8738922
+Modelo de la fuente	GP-P850GM
+Potencia de salida	850 W
+Voltaje	110V/220V
+
+Otros
+Tipo de fuente de alimentación para PC: ATX
+Tipo de refrigeración: Hidráulica
+Con protección de bajo voltaje: Sí
+Con iluminación RGB: No
+Cantidad de conectores SATA: 8
+Cantidad de conectores floppy: 1
+Cantidad de conectores PCI-E: 4
+Certificación de eficiencia: 80 Plus Gold
+Diámetro del ventilador: 120 mm
+Organismo de certificación (OCP): Otro (sin especificar)
+Número de certificado de seguridad eléctrica: ND
+Altura de la fuente de alimentación para PC x Ancho de la fuente de alimentación para PC: 0 cm x 0 cm
+Largo de la fuente de alimentación para PC: 150 mm
+Peso de la fuente de alimentación para PC: 0 g
+Frecuencia: 60 Hz
+Largo del conector principal: 610 mm
+Tipo de modulación: Modular
+Con protección sobre potencia: Sí
+Con protección sobre voltaje: Sí
+Con protección contra cortocircuito: Sí
+Con funcionamiento silencioso: Sí
+Cantidad de pines de la placa madre: 24

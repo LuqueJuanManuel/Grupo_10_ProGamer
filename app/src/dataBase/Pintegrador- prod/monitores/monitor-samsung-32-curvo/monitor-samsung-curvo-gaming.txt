@@ -1,0 +1,27 @@
+Precio  $ 110.114,00
+
+Tamaño de pantalla: 27'
+Resolución: WQHD (2560x1440)
+Tipo de Panel: VA
+Relación de Aspecto: 16:9
+Tasa de resfresco: 144 Hz
+Brillo: 250
+Tiempo de respuesta: 1ms
+Angulo de Visión (H/V): 178°(H)/178°(V)
+AMD FreeSync™: Si
+HDMI: Si
+DisplayPort: Si
+Salida de audio: Si
+Montable en pared: Si, 75 x 75
+
+Tamaño de pantalla activa (HxV) (mm)	596.736(H)x335.664(V)
+
+Peso del equipo con soporte
+4.5 kg
+ 
+Peso del equipo sin soporte
+4.1 kg
+ 
+Peso del paquete
+6.1 kg
+

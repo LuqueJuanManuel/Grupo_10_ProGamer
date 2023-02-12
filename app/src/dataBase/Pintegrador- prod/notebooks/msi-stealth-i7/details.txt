@@ -1,0 +1,23 @@
+precio	$ 597.166,00
+
+Línea del procesador:	ALDER LAKE I7-1280P
+
+Memoria RAM:	16GB DDR4 ( 8GB*2)
+
+Capacidad del SSD:	1TB NVME PCIE SSD GEN4X4 W /O DRAM
+
+Interfaz del SSD:	PCIe
+
+Tarjeta gráfica: NVME	RTX3060 MAX-Q
+
+Memoria de video:	6GB GDDR6
+
+Tamaño de la pantalla:	17.3 "
+
+Frecuencia de actualización de la pantalla:	144HZ
+
+Conectividad:	WLAN INTEL WI-FI 6 AX201(2*2 AX) + BT5.2
+
+Teclado:	SPECTRUM BACKLIGHT
+
+Nombre del sistema operativo:	Windows® 11 Home Advanced Single Language

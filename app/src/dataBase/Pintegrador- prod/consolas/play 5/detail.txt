@@ -1,0 +1,15 @@
+Precio	$330000 
+
+Edición	Standard
+
+Color		Blanco/Negro
+
+Capacidad	825 GB
+
+Tipos de memoria	GDDR6
+
+Memoria RAM		16 GB
+
+Con Wi-Fi		Sí
+
+Con HDMI		Sí

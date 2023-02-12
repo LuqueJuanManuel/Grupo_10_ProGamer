@@ -1,0 +1,83 @@
+precio		$ 178.915,00
+
+Generales
+
+Diagonal de la pantalla: 68,6 cm (27″)
+Brillo de la pantalla (típico): 300 cd / m²
+Resolución de la pantalla: 1920 x 1080 Pixeles
+Relación de aspecto nativa: 16:9
+Tiempo de respuesta: 1 ms
+Tipo HD: Full HD
+Tecnología de visualización: LCD
+Forma de la pantalla: Plana
+Formatos gráficos soportados: 1920 x 1080 (HD 1080)
+Relación de aspecto: 16:9
+Razón de contraste (típica): 1000:1
+Relación de contraste (dinámico): 120000:1
+Máxima velocidad de actualización: 144 Hz
+Ángulo de visión, horizontal: 178°
+Ángulo de visión, vertical: 178°
+Tipo de pantalla: IPS
+Tamaño visible, horizontal: 59,8 cm
+Tamaño visible, vertical: 33,6 cm
+sRGB: Si
+Cobertura sRGB (típica): 125%
+
+
+Desempeño
+
+Tecnología Flicker free (reduce el parpadeo de la pantalla): Si
+
+Multimedia
+
+Altavoces incorporados: Si
+Número de altavoces: 2
+Potencia estimada RMS: 4 W
+Cámara incorporada: No
+
+Diseño
+
+Posicionamiento de mercado: Juego
+Certificado Energy Star: No
+Color del producto: Negro
+
+Puertos e Interfaces
+Conector USB incorporado: Si
+Versión de conector USB: 3.2 Gen 1 (3.1 Gen 1)
+Número de puertos ascendentes: 1
+Cantidad de puertos USB descendentes de tipo A: 2
+Puerto DVI: No
+HDMI: Si
+Número de puertos HDMI: 2
+Versión HDMI: 1.4
+Cantidad de DisplayPorts: 1
+Versión de DisplayPort: 1.2
+Entrada de audio: No
+Salida de auriculares: Si
+
+Ergonomía
+
+Interfaz de panel de montaje: 100 x 100 mm
+Ranura para cable de seguridad: Si
+Tipo de ranura de bloqueo del cable: Kensington
+Montaje VESA: Si
+Ajustes de altura: Si
+Ajuste de altura: 13 cm
+Ajuste de la inclinación: Si
+Ángulo de inclinación: -5 – 20°
+
+Control de energía
+
+Consumo energético: 60 W
+Consumo de energía (apagado): 0,3 W
+Consumo de energía (ahorro): 0,5 W
+
+Peso y dimensiones
+
+Ancho: 619 mm
+Profundidad: 56 mm
+Altura: 365,5 mm
+Peso: 6,6 kg
+Ancho del dispositivo (con soporte): 619 mm
+Profundidad dispositivo (con soporte): 203 mm
+Altura del dispositivo (con soporte): 518,9 mm
