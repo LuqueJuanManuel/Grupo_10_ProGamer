@@ -21,6 +21,9 @@ const adminRouter = require("./routes/admin");
 /* Index - HomePage */
 app.use("/", indexRouter);
 
+/* Todos los productos */;
+app.use("/products", productsRouter);
+
 /* Detalle de producto */
 app.use("/productDetail", productsRouter);
 
