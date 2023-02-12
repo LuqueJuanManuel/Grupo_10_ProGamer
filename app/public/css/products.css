@@ -1,0 +1,113 @@
+main#products div.accordion {
+    background-color: var(--violeta-oscuro);
+   
+}
+
+main#products div.accordion-item {
+    margin-top: 15px;
+    background-color: var(--verde-neon);
+}
+
+main#products button.accordion-button {
+    background-color: var(--crema);
+    border: 1px solid var(--verde-claro);
+}
+
+main#products p.filtrarPorCategoria {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: var(--gris-claro);
+}
+
+main#products li {
+    font-family: var(--fuente-parrafos);
+    font-size: 1.5rem;
+    transition: all 2s ease;
+}
+
+main#products a {
+    text-decoration: none;
+    color: var(--gris-claro);
+}
+
+main#products li:hover a{
+    color: black;
+    text-decoration: underline;
+    transform: scale(2);
+    font-size: 2rem;
+}
+
+main#products h2.nuestrosProductos {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--crema);
+    margin-top: 15px;
+}
+
+main#products div.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+}
+
+main#products div.card:hover {
+    box-shadow: 6px 6px 16px var(--verde-oscuro);
+}
+
+main#products h5 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    color: var(--gris-claro);
+}
+
+main#products h5:hover {
+    font-size: 1.8rem;
+    text-decoration: underline var(--verde-oscuro);
+}
+
+main#products p.card-text {
+    font-family: var(--fuente-parrafos);
+    font-size: 2rem;
+    color: var(--gris-claro);
+}
+
+main#products div.precio-descuento {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main#products p.discount {
+    font-size: 1rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 1rem;
+}
+
+main#products a.btn-primary{
+    background-color: var(--violeta-oscuro);
+    color: var(--crema);
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    border: 1px solid var(--verde-neon);
+    border-radius: 10px;
+    transition: all 3ms;
+}
+
+main#products a.btn-primary:hover{
+    background-color: var(--crema);
+    color: var(--violeta-oscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid var(--verde-neon);
+    border-radius: 10px;
+}
+
+
+
+
+

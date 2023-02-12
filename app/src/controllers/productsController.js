@@ -1,4 +1,8 @@
 module.exports = {
+    index: (req, res) => {
+        return res.render("products/products");
+    },
+
     productDetail : (req, res) => {
         return res.render("products/productDetail")
     },
