@@ -6,6 +6,7 @@
         "email" : "lemagauna@gmail.com",
         "password" : "",
         "category" : "user",
+        "address" : "",
         "image" : ""
     },
     {
@@ -15,6 +16,7 @@
         "email" : "Juanluque@gmail.com",
         "password" : "",
         "category" : "user",
+        "address" :"",
         "image" : ""
     },
     {
@@ -24,6 +26,7 @@
         "email" : "tomas.lopez.tur@gmail.com",
         "password" : "",
         "category" : "user",
+        "address" : "",
         "image" : ""
     }
 ]
