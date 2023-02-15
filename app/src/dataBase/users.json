@@ -1,0 +1,29 @@
+[
+    {
+         "id" : 1,
+        "name" : "emanuel",
+        "lastname": "gauna",
+        "email" : "lemagauna@gmail.com",
+        "password" : "",
+        "category" : "user",
+        "image" : ""
+    },
+    {
+         "id" : 2,
+        "name" : "juan",
+        "lastname": "luque",
+        "email" : "Juanluque@gmail.com",
+        "password" : "",
+        "category" : "user",
+        "image" : ""
+    },
+    {
+         "id" : 3,
+        "name" : "tomas",
+        "lastname": "lopez turconi",
+        "email" : "tomas.lopez.tur@gmail.com",
+        "password" : "",
+        "category" : "user",
+        "image" : ""
+    }
+]
