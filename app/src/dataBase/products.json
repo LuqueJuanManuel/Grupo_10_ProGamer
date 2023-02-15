@@ -125,7 +125,7 @@
         "high":"",
         "width":"",
         "depth":"",
-        "image": ["pc-armada-1.jpeg", "pc-armada-2.jpeg", "pc-armada-3.jpeg", "pc-armada-4.jpeg"]
+        "image": ["pc-armada_1-1.jpeg", "pc-armada_1-2.jpeg", "pc-armada_1-3.jpeg", "pc-armada_1-4.jpeg"]
     },
     {
         "id": 5,
@@ -157,7 +157,7 @@
         "high":"",
         "width":"",
         "depth":"",
-        "image": ["pc-armada-1.jpeg", "pc-armada-2.jpeg", "pc-armada-3.jpeg", "pc-armada-4.jpeg"]
+        "image": ["pc-armada_2-1.jpeg", "pc-armada_2-2.jpeg", "pc-armada_2-3.jpeg", "pc-armada_2-4.jpeg"]
     },
     {
         "id": 6,
@@ -189,7 +189,7 @@
         "high":"",
         "width":"",
         "depth":"",
-        "image": ["Dell1.jpg"]
+        "image": ["Dell_3-1.jpg"]
     },
     {
         "id": 7,
