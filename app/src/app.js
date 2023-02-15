@@ -1,10 +1,15 @@
+/* requires */
 const express = require("express");
 const app = express();
 const path = require("path");
 const PORT = 3000;
+const methodOverride = require('method-override');
 
-/* Archivos Estaticos */
+/* Middlewares Global */
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}));
+app.use(methodOverride(_method));
+
 
 /* Template engine Config. */
 app.set("view engine", "ejs");
