@@ -51,6 +51,7 @@ main#products div.card {
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
     text-align: center;
     border-radius: 10px;
+    
     transition: all 0.8s ease;
 }
 
