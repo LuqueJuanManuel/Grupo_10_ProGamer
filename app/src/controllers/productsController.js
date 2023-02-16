@@ -1,6 +1,15 @@
+/* Requires */
+const { readJSON, writeJSON } = require('../dataBase/');
+
+const products = readJSON('products.json');
+
+
+
 module.exports = {
     index: (req, res) => {
-        return res.render("products/products");
+        res.render("products/products", {
+            products,
+        })
     },
 
     productDetail : (req, res) => {

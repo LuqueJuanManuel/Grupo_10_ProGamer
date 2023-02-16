@@ -80,91 +80,21 @@
     
     <h2 class="nuestrosProductos">Nuestros Productos:</h2>
 
-    <div class="col-12  col-md-6 col-lg-4 p-3">
-      <div class="card">
-      <img src="/images/fuentes/FUENTE_850_GOLD_1.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre del producto</h5>
-        <div class="precio-descuento">
-          <p class="card-text">$ XXXX</p>
-          <p class="card-text discount">20% off</p>
+    <% products.forEach(({image, name, discount, price})=> { %>
+      <div class="col-12  col-md-6 col-lg-4 p-3">
+        <div class="card">
+        <img src="/images/products/<%= image[0] %>" class="card-img-top" alt="imagen del producto">
+        <div class="card-body">
+          <h5 class="card-title"><%= name %></h5>
+          <div class="precio-descuento">
+            <p class="card-text">$<%= price %></p>
+            <p class="card-text discount"><%= discount %>% off</p>
+          </div>
+          <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
         </div>
-        <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
-      </div>
-      </div>
-    </div>
-
-    <div class="col-12  col-md-6 col-lg-4 p-3">
-      <div class="card">
-      <img src="/images/Notebook/Asus_1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre del Productos</h5>
-        <div class="precio-descuento">
-          <p class="card-text">$ XXXX</p>
-          <p class="card-text discount">20% off</p>
         </div>
-        <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
       </div>
-      </div>
-    </div>
-
-    <div class="col-12  col-md-6 col-lg-4 p-3">
-      <div class="card">
-      <img src="/images/memorias/MEMORIA_FURY_BEAST.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre del Productos</h5>
-        <div class="precio-descuento">
-          <p class="card-text">$ XXXX</p>
-          <p class="card-text discount">20% off</p>
-        </div>
-        <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
-      </div>
-      </div>
-    </div>
-
-    <div class="col-12  col-md-6 col-lg-4 p-3">
-      <div class="card">
-      <img src="/images/Placa-madre/MOTHER_ASUS_2.PNG" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre del Productos</h5>
-        <div class="precio-descuento">
-          <p class="card-text">$ XXXX</p>
-          <p class="card-text discount">20% off</p>
-        </div>
-        <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
-      </div>
-      </div>
-    </div>
-
-    <div class="col-12  col-md-6 col-lg-4 p-3">
-      <div class="card">
-      <img src="/images/placas-de-videos/GFORCE_G210_1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre del Productos</h5>
-        <div class="precio-descuento">
-          <p class="card-text">$ XXXX</p>
-          <p class="card-text discount">20% off</p>
-        </div>
-        <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
-      </div>
-      </div>
-    </div>
-
-    <div class="col-12  col-md-6 col-lg-4 p-3">
-      <div class="card">
-      <img src="/images/tarjeta-grafica/1200_1200-1-PNY-Graphics-Cards-GTX-1650-ra.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <div class="precio-descuento">
-          <p class="card-text">$ XXXX</p>
-          <p class="card-text discount">20% off</p>
-        </div>
-        <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
-      </div>
-      </div>
-    </div>
-
-
+    <% }) %>
     
   </section>
   </main>
