@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/adminController");
+const { uploadImageProduct } = require("../middlewares/upload")
 
 /* create */
 router.get('/create', controller.create);
@@ -8,6 +9,7 @@ router.get('/create', controller.create);
 
 /* edit */
 router.get('/edit', controller.edit);
-//router.put('/edit/:id', controller.update);
+
+router.put('/edit/:id', uploadImageProduct.single("image") , controller.update);
 
 module.exports = router;
