@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("../partials/head") %>
+    <%- include("../partials/head", {title: "editando: " + name}) %>
 
 <title>Admin - editar producto</title>
 <body>
@@ -11,7 +11,8 @@
 
     <main id="register">
         <div class="registro-container">
-            <form action="" method="POST">
+            <!-- enctype -->
+            <form action="/admin/?_method=PUT" method="POST" enctype="multipart/form-data">
                 
                 <div class="registro-form">
     
@@ -19,11 +20,11 @@
                     <!-- nombre del producto -->
                     <div class="input-container">
                         <h6  class="datos-box">Nombre del producto:</h6>
-                        <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre..." value="">
+                        <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre..." value="name">
                     </div>
                     <div class="input-container">
                         <h6 class="datos-box">Marca del producto:</h6>
-                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="">
+                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="brand">
                     </div>
     
                     <!-- agregar categoria -->
@@ -41,14 +42,14 @@
                     <!-- agregar sub categoria -->
                     <div class="input-container">
                         <h6 class="datos-box">Sub-categoria:</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria" value="">
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria" value="lastname">
                     </div>
                     <!-- price -->
                     <!-- descount -->
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box ">Precio:</h6>
-                            <input class="input-style" type="text" name="price" id="price" placeholder="Precio" value="">
+                            <input class="input-style" type="text" name="price" id="price" placeholder="Precio" value="price">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6 class="datos-box">Descuento:</h6>
@@ -190,7 +191,7 @@
                     <div class="input-container input-file">
     
                         <h6 class="datos-box">Imagenes del producto:</h6>
-                        <input class="input-style-file" accept="image/png,image/jpeg" type="file"  name="image" id="image">
+                        <input class="input-style-file" type="file"  name="image" id="image" multiple>
                         
                     </div>
     
