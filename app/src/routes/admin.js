@@ -8,8 +8,8 @@ router.get('/create', controller.create);
 /* router.post('/', controller.store); */
 
 /* edit */
-router.get('/edit', controller.edit);
+router.get('/edit/:id', controller.edit);
 
-router.put('/edit/:id', uploadImageProduct.single("image") , controller.update);
+router.put('/edit/:id', uploadImageProduct.array("image") , controller.update);
 
 module.exports = router;
