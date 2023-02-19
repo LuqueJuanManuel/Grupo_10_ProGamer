@@ -8,6 +8,34 @@ module.exports ={
     edit: (req, res) => {
         res.render('admin/adminEdit');
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     destroy: (req,res) => {
         let productId = Number(req.params,id);
         
