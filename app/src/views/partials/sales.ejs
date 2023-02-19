@@ -1,6 +1,6 @@
 <main id="sales">
     <section class="porducts-offerts  js-flickity" data-flickity-options='{ "freeScroll": true, "watchCSS": true  }'>
-        <% products.forEach(product =>  { %>
+        <% productosEnOferta.forEach(product =>  { %>
          <article class="product carousel-cell">
             <div class="photo-container">
                 <a href="/productDetail">
@@ -16,8 +16,10 @@
                 <% } %>
             </a>
             <div class="price">
-                <h3>$<%= product.price %></h3>
-                <span class="numb-offert"><%= product.discount %>% OFF</span>
+                <h3>$<%= toThousand(product.price)%></h3>
+                <% if(product.discount > 0) { %>
+                <span class="numb-offert"><%= product.discount %>% OFF</span>  
+                <% } %> 
             </div>
             <p>envio gratis...</p>
         </article>
