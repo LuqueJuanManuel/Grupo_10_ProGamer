@@ -8,6 +8,6 @@ router.get('/create', controller.create);
 
 /* edit */
 router.get('/edit', controller.edit);
-//router.put('/edit/:id', controller.update);
+router.put('/edit/:id', controller.update);
 
 module.exports = router;
