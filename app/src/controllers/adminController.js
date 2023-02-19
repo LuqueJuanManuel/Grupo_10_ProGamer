@@ -36,6 +36,10 @@ module.exports ={
 
 
     
+    
+    
+    
+    
     destroy: (req,res) => {
         let productId = Number(req.params,id);
         
