@@ -1,3 +1,4 @@
+const { writeJSON } = require("../dataBase");
 
 
 module.exports ={
@@ -7,4 +8,11 @@ module.exports ={
     edit: (req, res) => {
         res.render('admin/adminEdit');
     },
+    destroy: (req,res) => {
+        let productId = Number(req.params,id);
+        
+        let newArrayProducts = products.filter(product => product.id !== productId);
+        writeJSON('products.json',newArrayProducts);
+        
+    }
 }
