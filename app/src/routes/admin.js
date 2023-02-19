@@ -10,6 +10,6 @@ router.get('/create', controller.create);
 /* edit */
 router.get('/edit/:id', controller.edit);
 
-router.put('/edit/:id', uploadImageProduct.array("image") , controller.update);
+router.put('/edit/:id', uploadImageProduct.single("image") , controller.update);
 
 module.exports = router;

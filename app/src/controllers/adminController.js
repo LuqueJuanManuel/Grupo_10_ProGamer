@@ -24,6 +24,8 @@ module.exports ={
       // Update - Method to update
       update: (req, res) => {
         let productID = +req.params.id;
+        /* const images = req.files.map(file => file.filename); */
+
         products.forEach((product) => {
           if (product.id === productID) {
             product.name = req.body.name;
@@ -31,9 +33,11 @@ module.exports ={
             product.price = req.body.price;
             product.discount = req.body.discount;
             product.category = req.body.category;
-          }
+            product.image = req.file ? req.file.filename : "default-image.png";
+        };
+          
         });
-        writeJSON(products);
-        res.redirect("/products/");
+        writeJSON("products.json", products);
+        res.redirect(200, "/");
       },
 }
