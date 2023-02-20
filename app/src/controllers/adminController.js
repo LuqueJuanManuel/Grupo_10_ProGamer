@@ -1,41 +1,44 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../dataBase/products.json');
+const { readJSON, writeJSON } = require('../dataBase/');
 
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = readJSON('products.json');
 
-const writeJson = (products) => {
-    fs.writeFileSync(productsFilePath, JSON.stringify(products), {encoding:"utf8"})
-}
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
 
 module.exports ={
     create: (req, res) => {
         res.render('admin/adminAdd');
     },
     edit: (req, res) => {
-		let productId = +req.params.id;
-	    let productToEdit = products.find(product => product.id === productId);
-		res.render("admin/adminEdit", {
-			...productToEdit,
-		})
-	},
-            update: (req,res)=>{
-                let productId = +req.params.id;
-                
-                products.forEach(product => {
-                    if(product.id === productId){
-                        product.name = req.body.name;
-                        product.price = req.body.price;
-                        product.category = req.body.category;
-                        product.description = req.body.description;
-                        product.discount = req.body.discount;
-                        product.image = req.file.filename.image;
-        
-                    }
-                });
-                writeJson(products);
-                res.redirect("/products/")
-            },
+        let productToEdit = products.find(
+          (product) => product.id == +req.params.id);
+    
+        res.render("admin/adminEdit", {
+          productToEdit,
+          toThousand
+        });
+      },
+      // Update - Method to update
+      update: (req, res) => {
+        let productID = +req.params.id;
+        /* const images = req.files.map(file => file.filename); */
+
+        products.forEach((product) => {
+          if (product.id === productID) {
+            product.name = req.body.name;
+            product.description = req.body.description;
+            product.price = req.body.price;
+            product.discount = req.body.discount;
+            product.category = req.body.category;
+            product.image = req.file ? req.file.filename : "default-image.png";
         };
-        
+          
+        });
+        writeJSON("products.json", products);
+        res.redirect(200, "/");
+      },
+}
