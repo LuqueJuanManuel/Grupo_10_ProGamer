@@ -10,6 +10,8 @@
 @import url("/css/productCart.css");
 @import url("/css/productDetail.css");
 @import url("/css/register.css");
+@import url("/css/products.css");   
+@import url("/css/adminHome.css");
 @import url("/css/products.css"); 
 @import url("/css/search.css");  
 /* se pisan los estilos */
@@ -52,7 +54,7 @@ p{
 }
 
 body {
-    background-color: var(--violeta-oscuro);
+    background-color: var(--violeta-oscuro) !important;
     width: 100%;
 
 }
