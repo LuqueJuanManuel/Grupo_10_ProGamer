@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<<<<<<< HEAD
-    <%- include("../partials/head", {title: "editando: " + name}) %>
-=======
     <%- include("../partials/head" , {title: 'Editando: ' + productToEdit.name }) %>
->>>>>>> 0fa97d70f43a13ea902f091356e3294d7adc6dc4
+>>>>>>>>> Temporary merge branch 2
 
 <title>Admin - editar producto:<%= productToEdit.name %></title>
 <body>
@@ -15,33 +12,19 @@
 
     <main id="register">
         <div class="registro-container">
-<<<<<<< HEAD
-            <!-- enctype -->
-            <form action="/admin/?_method=PUT" method="POST" enctype="multipart/form-data">
-=======
             <form action="/admin/edit/<%= productToEdit.id  %>?_method=PUT" method="POST" enctype="multipart/form-data">
->>>>>>> 0fa97d70f43a13ea902f091356e3294d7adc6dc4
                 
                 <div class="registro-form">
     
                     <h4>Editar producto <%= productToEdit.name %></h4>
                     <!-- nombre del producto -->
                     <div class="input-container">
-<<<<<<< HEAD
-                        <h6  class="datos-box">Nombre del producto:</h6>
-                        <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre..." value="name">
-                    </div>
-                    <div class="input-container">
-                        <h6 class="datos-box">Marca del producto:</h6>
-                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="brand">
-=======
                         <h6  class="datos-box">Nombre del producto:<%= productToEdit.name %></h6>
                         <input class="input-style" type="text" name="name" id="name" placeholder="<%= productToEdit.name %>" value="<%= productToEdit.name %>">
                     </div>
                     <div class="input-container">
                         <h6 class="datos-box">Marca del producto: <%= productToEdit.brand  %></h6>
                         <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= productToEdit.brand %>">
->>>>>>> 0fa97d70f43a13ea902f091356e3294d7adc6dc4
                     </div>
     
                     <!-- agregar categoria -->
@@ -58,27 +41,17 @@
                     </div>
                     <!-- agregar sub categoria -->
                     <div class="input-container">
-<<<<<<< HEAD
-                        <h6 class="datos-box">Sub-categoria:</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria" value="lastname">
-=======
                         <h6 class="datos-box">Sub-categoria:<%= productToEdit.lastname %></h6>
                         <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria" value="<%= productToEdit.lastname %>">
->>>>>>> 0fa97d70f43a13ea902f091356e3294d7adc6dc4
                     </div>
                     <!-- price -->
                     <!-- descount -->
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
-<<<<<<< HEAD
-                            <h6 class="datos-box ">Precio:</h6>
-                            <input class="input-style" type="text" name="price" id="price" placeholder="Precio" value="price">
-=======
                             <h6 class="datos-box ">Precio:$<%= toThousand(productToEdit.price)
                              %></h6>
                             <input class="input-style" type="text" name="price" id="price" placeholder="Precio" value="$<%= toThousand(productToEdit.price)
                             %>">
->>>>>>> 0fa97d70f43a13ea902f091356e3294d7adc6dc4
                         </div>
                         <div class="input-container container-descount-A">
                             <h6 class="datos-box">Descuento:<%= productToEdit.discount %>%OFF</h6>
@@ -219,13 +192,9 @@
                     <!-- agregar image -->
                     <div class="input-container input-file">
                         <h6 class="datos-box">Imagenes del producto:</h6>
-<<<<<<< HEAD
-                        <input class="input-style-file" type="file"  name="image" id="image" multiple>
-                        
-=======
                         <input class="input-style-file"  type="file" value="<%= productToEdit.image %>"  name="image" id="image" multiple>
                          <label for="image" class="form-label-arch-edit">Archivos a modificar: <%= productToEdit.image %></label>
->>>>>>> 0fa97d70f43a13ea902f091356e3294d7adc6dc4
+>>>>>>>>> Temporary merge branch 2
                     </div>
     
                     <!-- boton de enviar -->
