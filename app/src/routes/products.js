@@ -13,6 +13,10 @@ router.get("/productDetail", controller.productDetail);
 /* Ruta a ProductCart */
 router.get("/productCart", controller.productCart);
 
+/* Ruta a Search */
+
+router.get("/search", controller.search);
+
 
 
 

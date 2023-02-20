@@ -11,7 +11,7 @@
 
     <main id="register">
         <div class="registro-container">
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 
                 <div class="registro-form">
     
@@ -21,6 +21,7 @@
                         <h6  class="datos-box">Nombre del producto:</h6>
                         <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre...">
                     </div>
+                    <!-- Marca del producto -->
                     <div class="input-container">
                         <h6 class="datos-box">Marca del producto:</h6>
                         <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca...">
@@ -190,12 +191,12 @@
                     <div class="input-container input-file">
     
                         <h6 class="datos-box">Imagenes del producto:</h6>
-                        <input class="input-style-file" accept="image/png,image/jpeg" type="file"  name="image" id="image">
+                        <input class="input-style-file" accept="image/png,image/jpeg" type="file"  name="images" id="image" multiple>
                         
                     </div>
     
                     <!-- boton de enviar -->
-                    <button class="button-container" type="submit"><a class="register"  href="../login.html">Agregar</a></button>
+                    <button class="button-container" type="submit">Agregar</button>
                 </div>
             </form>
         </div>
