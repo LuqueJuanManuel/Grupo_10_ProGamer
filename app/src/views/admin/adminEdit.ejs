@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("../partials/head") %>
+    <%- include("../partials/head" , {title: 'Editando: ' + productToEdit.name }) %>
 
-<title>Admin - editar producto</title>
+<title>Admin - editar producto:<%= productToEdit.name %></title>
 <body>
     <!-- header -->
     <%- include("../partials/header") %> 
@@ -11,24 +11,24 @@
 
     <main id="register">
         <div class="registro-container">
-            <form action="" method="POST">
+            <form action="/admin/edit/<%= productToEdit.id  %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 
                 <div class="registro-form">
     
-                    <h4>Editar producto</h4>
+                    <h4>Editar producto <%= productToEdit.name %></h4>
                     <!-- nombre del producto -->
                     <div class="input-container">
-                        <h6  class="datos-box">Nombre del producto:</h6>
-                        <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre..." value="">
+                        <h6  class="datos-box">Nombre del producto:<%= productToEdit.name %></h6>
+                        <input class="input-style" type="text" name="name" id="name" placeholder="<%= productToEdit.name %>" value="<%= productToEdit.name %>">
                     </div>
                     <div class="input-container">
-                        <h6 class="datos-box">Marca del producto:</h6>
-                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="">
+                        <h6 class="datos-box">Marca del producto: <%= productToEdit.brand  %></h6>
+                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= productToEdit.brand %>">
                     </div>
     
                     <!-- agregar categoria -->
                     <div class="input-container">
-                        <h6 class="datos-box">Categoria:</h6>
+                        <h6 class="datos-box">Categoria:<%= productToEdit.category %></h6>
                         <select name="category" id="category" class="input-select">
                             <option value="" hidden selected>Elija su categoria</option>
                             <option value="Notebooks">Notebooks</option>
@@ -40,25 +40,27 @@
                     </div>
                     <!-- agregar sub categoria -->
                     <div class="input-container">
-                        <h6 class="datos-box">Sub-categoria:</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria" value="">
+                        <h6 class="datos-box">Sub-categoria:<%= productToEdit.lastname %></h6>
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar Sub-categoria" value="<%= productToEdit.lastname %>">
                     </div>
                     <!-- price -->
                     <!-- descount -->
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
-                            <h6 class="datos-box ">Precio:</h6>
-                            <input class="input-style" type="text" name="price" id="price" placeholder="Precio" value="">
+                            <h6 class="datos-box ">Precio:$<%= toThousand(productToEdit.price)
+                             %></h6>
+                            <input class="input-style" type="text" name="price" id="price" placeholder="Precio" value="$<%= toThousand(productToEdit.price)
+                            %>">
                         </div>
                         <div class="input-container container-descount-A">
-                            <h6 class="datos-box">Descuento:</h6>
-                            <input class="input-style" type="text" name="discount" id="discount" placeholder="Descuento" value="">
+                            <h6 class="datos-box">Descuento:<%= productToEdit.discount %>%OFF</h6>
+                            <input class="input-style" type="text" name="discount" id="discount" placeholder="Descuento" value="<%= productToEdit.discount %>">
                         </div>
                     </div>
                     <div class="contaner-price-descount container-price-b">
                         <div class="input-container ">
-                            <h6 class="datos-box ">Stock:</h6>
-                            <input class="input-style" type="text" name="stock" id="stock" placeholder="Stock" value="">
+                            <h6 class="datos-box ">Stock:<%= productToEdit.stock %></h6>
+                            <input class="input-style" type="text" name="stock" id="stock" placeholder="Stock" value="<%= productToEdit.stock %>">
                         </div>
                     </div>
     
@@ -67,23 +69,23 @@
                     <!-- description general -->
                     <div class="input-container">
                         <h6 class="datos-box">Descripción:</h6>
-                        <textarea name="description" id="description"  placeholder="Descripción del producto..."></textarea>
+                        <textarea name="description" id="description"  placeholder="Descripción del producto..."><%= productToEdit.description %></textarea>
                     </div>
     
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">CPU:</h6>
-                            <input class="input-style" type="text" name="cpu" id="cpu" placeholder="CPU" value="">
+                            <input class="input-style" type="text" name="cpu" id="cpu" placeholder="CPU" value="<%= productToEdit.cpu %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Placa/Grafica:</h6>
-                            <input class="input-style" type="text" name="graphic-card" id="graphic-card" placeholder="Placa Grafica" value="">
+                            <input class="input-style" type="text" name="graphicCard" id="graphicCard" placeholder="Placa Grafica" value="<%= productToEdit.graphicCard %>">
                         </div>
                     </div>
                     <div class="input-container">
                         <h6 class="datos-box">Sistemas operativos:</h6>
                         <select name="so" id="so" class="input-select" >
-                            <option value="" hidden selected>Elija los SO:</option>
+                            <option value="" hidden selected>Elija los SO:<%= productToEdit.so %></option>
                             <option value="Windows">Windows</option>
                             <option value="Linux">Linux</option>
                             <option value="MacOS">MacOS</option>
@@ -95,11 +97,11 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">RAM/tipo:</h6>
-                            <input class="input-style" type="text" name="ram" id="ram" placeholder="RAM" value="">
+                            <input class="input-style" type="text" name="ram" id="ram" placeholder="RAM" value="<%= productToEdit.ram %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Capacidad/tipo:</h6>
-                            <input class="input-style" type="text" name="capacity" id="capacity" placeholder="Capacidad/tipo" value="">
+                            <input class="input-style" type="text" name="capacity" id="capacity" placeholder="Capacidad/tipo" value="<%= productToEdit.capacity %>">
                         </div>
                     </div>
     
@@ -108,37 +110,37 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Puertos:</h6>
-                            <input class="input-style" type="text" name="ports" id="ports" placeholder="Puertos" value="">
+                            <input class="input-style" type="text" name="ports" id="ports" placeholder="Puertos" value="<%= productToEdit.puertos %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Puertos HDMI:</h6>
-                            <input class="input-style" type="text" name="hdmi" id="hdmi" placeholder="Puertos HDMI" value="">
+                            <input class="input-style" type="text" name="hdmi" id="hdmi" placeholder="Puertos HDMI" value="<%= productToEdit.hdmi %>">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Puertos Ethernet:</h6>
-                            <input class="input-style" type="text" name="ethernet" id="ethernet" placeholder="Puertos Ethernet" value="">
+                            <input class="input-style" type="text" name="ethernet" id="ethernet" placeholder="Puertos Ethernet" value="<%= productToEdit.ethernet %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Puertos USB:</h6>
-                            <input class="input-style" type="text" name="usb" id="usb" placeholder="Puertos USB" value="">
+                            <input class="input-style" type="text" name="usb" id="usb" placeholder="Puertos USB" value="<%= productToEdit.usb %>">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">WIFI:</h6>
-                            <input class="input-style" type="text" name="wifi" id="wifi" placeholder="WIFI" value="">
+                            <input class="input-style" type="text" name="wifi" id="wifi" placeholder="WIFI" value="<%= productToEdit.wifi %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">WebCam:</h6>
-                            <input class="input-style" type="text" name="webCam" id="webCam" placeholder="WebCam" value="">
+                            <input class="input-style" type="text" name="webCam" id="webCam" placeholder="WebCam" value="<%= productToEdit.webCam  %>">
                         </div>
                     </div>
                     <div class="contaner-price-descount container-price-b">
                         <div class="input-container ">
                             <h6 class="datos-box ">Bluetooth:</h6>
-                            <input class="input-style" type="text" name="bluetooth" id="bluetooth" placeholder="Bluetooth" value="">
+                            <input class="input-style" type="text" name="bluetooth" id="bluetooth" placeholder="Bluetooth" value="<%= productToEdit.bluetooth %>">
                         </div>
                     </div>
                     <!-- pantalla -->
@@ -146,21 +148,21 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Tamaño:</h6>
-                            <input class="input-style" type="text" name="screen-size" id="screen-size" placeholder="Tamaño" value="">
+                            <input class="input-style" type="text" name="screenSize" id="screenSize" placeholder="Tamaño" value="<%= productToEdit.screenSize %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Tipo display:</h6>
-                            <input class="input-style" type="text" name="display" id="display" placeholder="Tipo-display" value="">
+                            <input class="input-style" type="text" name="display" id="display" placeholder="Tipo-display" value="<%= productToEdit.display %>">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">resolucion:</h6>
-                            <input class="input-style" type="text" name="resolution" id="resolution" placeholder="resolucion" value="">
+                            <input class="input-style" type="text" name="resolution" id="resolution" placeholder="resolucion" value="<%= productToEdit.resolution %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Conección:</h6>
-                            <input class="input-style" type="text" name="Conection" id="Conection" placeholder="Conección" value="">
+                            <input class="input-style" type="text" name="conection" id="Conection" placeholder="Conección" value="<%= productToEdit.conection %>">
                         </div>
                     </div>
                     <!-- dimenciones -->
@@ -168,34 +170,33 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Peso:</h6>
-                            <input class="input-style" type="text" name="weight" placeholder="resolucion" value="">
+                            <input class="input-style" type="text" name="weight" placeholder="resolucion" value="<%= productToEdit.weight %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Alto:</h6>
-                            <input class="input-style" type="text" name="high" id="high" placeholder="Alto"value="">
+                            <input class="input-style" type="text" name="high" id="high" placeholder="Alto"value="<%= productToEdit.high %>">
                         </div>
                     </div>
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box cpu">Ancho:</h6>
-                            <input class="input-style" type="text" name="width" id="width" placeholder="Ancho" value="">
+                            <input class="input-style" type="text" name="width" id="width" placeholder="Ancho" value="<%= productToEdit.width %>">
                         </div>
                         <div class="input-container container-descount-A">
                             <h6  class="datos-box cpu">Profundidad:</h6>
-                            <input class="input-style" type="text" name="depth" id="depth" placeholder="Profundidad" value="">
+                            <input class="input-style" type="text" name="depth" id="depth" placeholder="Profundidad" value="<%= productToEdit.depth %>">
                         </div>
                     </div>
     
                     <!-- agregar image -->
                     <div class="input-container input-file">
-    
                         <h6 class="datos-box">Imagenes del producto:</h6>
-                        <input class="input-style-file" accept="image/png,image/jpeg" type="file"  name="image" id="image">
-                        
+                        <input class="input-style-file"  type="file" value="<%= productToEdit.image %>"  name="image" id="image" multiple>
+                         <label for="image" class="form-label-arch-edit">Archivos a modificar: <%= productToEdit.image %></label>
                     </div>
     
                     <!-- boton de enviar -->
-                    <button class="button-container" type="submit"><a class="register"  href="../login.html">Guardar cambios</a></button>
+                    <button class="button-container" type="submit"><a class="register" >Guardar cambios</a></button>
                 </div>
             </form>
         </div>
