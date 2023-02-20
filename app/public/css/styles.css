@@ -11,6 +11,7 @@
 @import url("/css/productDetail.css");
 @import url("/css/register.css");
 @import url("/css/products.css");   
+@import url("/css/adminHome.css");
 /* se pisan los estilos */
 
 /* General */
@@ -51,7 +52,7 @@ p{
 }
 
 body {
-    background-color: var(--violeta-oscuro);
+    background-color: var(--violeta-oscuro) !important;
     width: 100%;
 
 }
