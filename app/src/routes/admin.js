@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/adminController");
 const { uploadImageProduct } = require("../middlewares/upload")
+
 /* validacion de edicion de productos */
-const productEditValidator = require('../validations/productEditValidator');
+const productEditValidator = require("../validations/productsEditValidator");
 
 /* create */
 router.get('/create', controller.create);

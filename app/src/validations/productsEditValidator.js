@@ -16,7 +16,5 @@ module.exports = [
     check("discount")
     .isLength({min:0, max:99}).withMessage("el descuento no puede ser del 100%"),
     check("stock")
-    .notEmpty().isInt({min:1}).withMessage("el stock es obligatorio"),
-    check("image")
-    .notEmpty().withMessage("debes ingresar una imagen")
+    .notEmpty().isInt({min:1}).withMessage("el stock es obligatorio")
 ];
