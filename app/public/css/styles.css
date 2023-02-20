@@ -10,8 +10,13 @@
 @import url("/css/productCart.css");
 @import url("/css/productDetail.css");
 @import url("/css/register.css");
+<<<<<<< HEAD
 @import url("/css/products.css");   
 @import url("/css/adminHome.css");
+=======
+@import url("/css/products.css"); 
+@import url("/css/search.css");  
+>>>>>>> c257ab8b5e9dd0aca671fccce024f44746e1991d
 /* se pisan los estilos */
 
 /* General */
@@ -103,6 +108,9 @@ img.logo{
     display: none;
 }
 .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 2px;
     padding: 10px;
     text-align: center;
@@ -115,6 +123,7 @@ img.logo{
     box-shadow: 5px 5px 15px black; 
     max-width: 45px ;
     max-height: 45px;
+    text-decoration: none;
     transition: all 1s ease ;
     
 
@@ -126,9 +135,10 @@ img.logo{
 
 }
 
-/* .user{
-        display: none;
-}  */ 
+button.glass {
+    display: none;
+}
+
 div.user-cart{
     display: flex;
 }   
@@ -252,9 +262,12 @@ footer div.footer-align{
        margin-bottom: 10px;
        align-self: flex-start;
        margin-left: 0;
+       }
 
+header button.glass {
+    display: flex;
+}
        
-   }
    header div.logo img.logo{
        display: flex;
        width: 100%;
@@ -288,9 +301,14 @@ footer div.footer-align{
        display: flex;
        width: 90%;
        flex-flow: row wrap;
-       justify-content: space-between;
+       justify-content: space-evenly;
 
    }
+
+   form {
+    display: flex;
+   }
+   
    div.input-search{
        width: 100%;
        margin: 0;    
@@ -308,7 +326,6 @@ footer div.footer-align{
        font-size: 24px;
    }
    div.input-glass{
-       display: flex;
        width: 62%;
    }
    div.user-cart{
