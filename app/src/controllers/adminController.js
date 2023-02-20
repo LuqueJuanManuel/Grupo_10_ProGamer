@@ -2,6 +2,11 @@ const { writeJSON } = require("../dataBase");
 
 
 module.exports ={
+    adminHome: (req, res) => {
+        res.render("admin/adminHome",{
+			products
+		})
+    },
     create: (req, res) => {
         res.render('admin/adminAdd');
     },

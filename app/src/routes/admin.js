@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/adminController");
 
+/* Home */
+router.get('/home', controller.adminHome);
+
+
 /* create */
 router.get('/create', controller.create);
 /* router.post('/', controller.store); */
