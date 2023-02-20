@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/adminController");
-const { uploadImageProduct } = require("../middlewares/upload")
+const { uploadImageProduct } = require("../middlewares/upload");
+const productsAddValidator = require("../validations/productsAddValidator");
 
 /* Home */
 router.get('/home', controller.adminHome);
@@ -9,7 +10,10 @@ router.get('/home', controller.adminHome);
 
 /* create */
 router.get('/create', controller.create);
-/* router.post('/', controller.store); */
+
+router.post('/create', uploadImageProduct.array("images"), productsAddValidator, controller.store)
+
+
 
 /* edit */
 router.get('/edit/:id', controller.edit);
