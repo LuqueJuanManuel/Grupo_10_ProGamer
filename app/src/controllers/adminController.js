@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require("express-validator")
+
 
 const { readJSON, writeJSON } = require('../dataBase/');
 /*  requiere express-validator*/
@@ -92,7 +92,7 @@ module.exports ={
   },     
     
     destroy: (req,res) => {
-        let productId = Number(req.params,id);
+        let productId = Number(req.params.id);
         
         let newArrayProducts = products.filter(product => product.id !== productId);
         writeJSON('products.json',newArrayProducts);
