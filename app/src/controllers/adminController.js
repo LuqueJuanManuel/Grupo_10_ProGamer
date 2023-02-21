@@ -98,8 +98,13 @@ module.exports ={
     destroy: (req,res) => {
         let productId = Number(req.params.id);
         
-        let newArrayProducts = products.filter(product => product.id !== productId);
-        writeJSON('products.json',newArrayProducts);
+        products.forEach(product => {
+          if(product.id === productId){
+            let newArrayProducts = products.indexOf(product);
+            products.splice(newArrayProducts, 1)
+          }
+        })
+        writeJSON('products.json',products);
         res.redirect("/admin/home");
     },
 
