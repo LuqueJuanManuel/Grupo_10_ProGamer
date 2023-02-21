@@ -302,7 +302,7 @@ header button.glass {
 
    }
 
-   form {
+   form.form-header {
     display: flex;
    }
    
