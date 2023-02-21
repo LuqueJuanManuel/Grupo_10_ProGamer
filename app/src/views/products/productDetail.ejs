@@ -7,6 +7,7 @@
   <%- include("../partials/header")%>
 
     <main id="productDetail">
+      <h2 class="product-name"><%= product.name %></h2>
         <section class="imagenes-detalles">
             <div class="card">
         <div id="carouselExampleDark" class="carousel carousel-dark slide">
@@ -16,22 +17,14 @@
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/images/products/<%= product.image %>" class="d-block w-100" alt="imagen">
+              <% product.image.forEach(img => { %>
+                 <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/images/products/<%= img %>" class="d-block w-100" alt="imagen">
                 <div class="carousel-caption d-none d-md-block">
                 </div>
               </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="/images/products/<%= product.image %>" class="d-block w-100" alt="imagen2">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="/images/products/<%= product.image %>" class="d-block w-100" alt="imagen3">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-              </div>
-            </div>
+             <% }); %>
+             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -52,7 +45,7 @@
                 <li class="list-group-item"><%= product.brand %></li>
                 <li class="list-group-item"><%= product.category %></li>
                 <li class="list-group-item"><%= product.cpu %></li>
-                <li class="list-group-item"><%= product.graphic-card %></li>
+                <li class="list-group-item"><%= product.graphicCard %></li>
                 <li class="list-group-item"><%= product.so %></li>
                 <li class="list-group-item"><%= product.ram %></li>
                 <li class="list-group-item"><%= product.capacity %></li>
@@ -63,7 +56,7 @@
                 <li class="list-group-item"><%= product.wifi %></li>
                 <li class="list-group-item"><%= product.webCam %></li>
                 <li class="list-group-item"><%= product.bluetooth %></li>
-                <li class="list-group-item"><%= product.screen-size %></li>
+                <li class="list-group-item"><%= product.screenSize %></li>
                 <li class="list-group-item"><%= product.display %></li>
                 <li class="list-group-item"><%= product.resolution %></li>
                 <li class="list-group-item"><%= product.conection %></li>
@@ -75,7 +68,7 @@
         </div>
         </section>
         <div class="btn-container">
-          <button class="btn-primary">Agregar al carrito</button>
+          <button class="btn-primary"><a href="/products/productCart">Agregar al carrito</a></button>
         </div>       
 </main>
 <!-- FOOTER -->
