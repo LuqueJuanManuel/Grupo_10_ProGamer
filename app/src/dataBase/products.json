@@ -6,7 +6,7 @@
         "category": "Notebooks",
         "lastname": "Notebook",
         "price": 244000,
-        "discount": 20,
+        "discount": 25,
         "stock": 2,
         "description": "Procesador:Intel Core i5 4.40 Ghz, Memoria: 8 GB soldados + 8 GB SO-DIMM, Pantalla: Full HD y antireflejante, Sistema de audio: SonicMaster, Puertos: 3 USB 3.2 tipo C y A y otro USB 2.0 Tipo A",
         "cpu": "Intel Core i5 de 12va Generación",
@@ -29,7 +29,11 @@
         "high": "23,25 mm",
         "width": "35,97 mm",
         "depth": "1,99 mm",
-        "image": ["asus-vivobook-x1502_1.jpeg", "asus-vivobook-x1502_2.jpeg", "asus-vivobook-x1502_3.jpeg"]
+        "image": [
+            "asus-vivobook-x1502_1.jpeg",
+            "asus-vivobook-x1502_2.jpeg",
+            "asus-vivobook-x1502_3.jpeg"
+        ]
     },
     {
         "id": 2,

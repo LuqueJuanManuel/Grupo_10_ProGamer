@@ -96,7 +96,7 @@ module.exports ={
         
         let newArrayProducts = products.filter(product => product.id !== productId);
         writeJSON('products.json',newArrayProducts);
-        res.redirect("admin/adminHome");
+        res.redirect("/admin/home");
     },
 
     store: (req, res) => {
