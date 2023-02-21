@@ -7,6 +7,7 @@ const { readJSON, writeJSON } = require('../dataBase/');
 const { validationResult } = require("express-validator");
 
 const products = readJSON('products.json');
+const arrayDeCategorias = readJSON('categories.json');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -19,7 +20,10 @@ module.exports ={
 		})
     },
     create: (req, res) => {
-        res.render('admin/adminAdd');
+        res.render('admin/adminAdd' , {
+          products,
+          arrayDeCategorias,
+        });
     },
     edit: (req, res) => {
       
@@ -147,9 +151,9 @@ module.exports ={
             res.redirect("/products")
         }
         else {
-            console.log(errors)
             return res.render("admin/adminAdd", {
                 products,
+                arrayDeCategorias,
                 errors : errors.mapped(),
                 old : req.body,
             })
