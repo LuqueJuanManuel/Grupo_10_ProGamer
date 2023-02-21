@@ -1,5 +1,5 @@
-/* const fs = require('fs');
-const path = require('path'); */
+const fs = require('fs');
+const path = require('path');
 
 
 const { readJSON, writeJSON } = require('../dataBase/');
@@ -92,11 +92,11 @@ module.exports ={
   },     
     
     destroy: (req,res) => {
-        let productId = Number(req.params,id);
+        let productId = Number(req.params.id);
         
         let newArrayProducts = products.filter(product => product.id !== productId);
         writeJSON('products.json',newArrayProducts);
-        
+        res.redirect("admin/adminHome");
     },
 
     store: (req, res) => {
