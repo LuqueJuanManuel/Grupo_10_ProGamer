@@ -37,33 +37,33 @@
         </div>
         <div class="detalles">
             <ul class="list-group">
-                <li class="list-group-item"><%= product.name %></li>
-                <li class="list-group-item">$<%= product.price %></li>
-                <li class="list-group-item"><%= product.discount %></li>
-                <li class="list-group-item"><%= product.description %></li>
-                <li class="list-group-item"><%= product.stock %></li>
-                <li class="list-group-item"><%= product.brand %></li>
-                <li class="list-group-item"><%= product.category %></li>
-                <li class="list-group-item"><%= product.cpu %></li>
-                <li class="list-group-item"><%= product.graphicCard %></li>
-                <li class="list-group-item"><%= product.so %></li>
-                <li class="list-group-item"><%= product.ram %></li>
-                <li class="list-group-item"><%= product.capacity %></li>
-                <li class="list-group-item"><%= product.puertos %></li>
-                <li class="list-group-item"><%= product.hdmi %></li>
-                <li class="list-group-item"><%= product.ethernet %></li>
-                <li class="list-group-item"><%= product.usb %></li>
-                <li class="list-group-item"><%= product.wifi %></li>
-                <li class="list-group-item"><%= product.webCam %></li>
-                <li class="list-group-item"><%= product.bluetooth %></li>
-                <li class="list-group-item"><%= product.screenSize %></li>
-                <li class="list-group-item"><%= product.display %></li>
-                <li class="list-group-item"><%= product.resolution %></li>
-                <li class="list-group-item"><%= product.conection %></li>
-                <li class="list-group-item"><%= product.weight %></li>
-                <li class="list-group-item"><%= product.hight %></li>
-                <li class="list-group-item"><%= product.width %></li>
-                <li class="list-group-item"><%= product.deepth %></li>
+                <li class="list-group-item"><%= product.name ? product.name : "-" %></li>
+                <li class="list-group-item">$ <%= product.price ? product.price : "-" %></li>
+                <li class="list-group-item"><%= product.discount ? product.discount : "-" %> %OFF</li>
+                <li class="list-group-item"><%= product.description ? product.description : "-" %></li>
+                <li class="list-group-item">Stock: <%= product.stock ? product.stock : "No hay Stock" %></li>
+                <li class="list-group-item">Marca: <%= product.brand ? product.brand : "-" %></li>
+                <li class="list-group-item">Categoria: <%= product.category ? product.category : "-" %></li>
+                <li class="list-group-item">CPU: <%= product.cpu ? product.cpu : "-" %></li>
+                <li class="list-group-item">Tarjeta Grafica: <%= product.graphicCard ? product.graphicCard : "-" %></li>
+                <li class="list-group-item">Sistema Operativo: <%= product.so ? product.so : "-" %></li>
+                <li class="list-group-item">RAM: <%= product.ram ? product.ram : "-" %></li>
+                <li class="list-group-item">Capacidad: <%= product.capacity ? product.capacity : "-" %></li>
+                <li class="list-group-item">Puertos: <%= product.puertos ? product.puertos : "-" %></li>
+                <li class="list-group-item">HDMI: <%= product.hdmi ? product.hdmi : "-" %></li>
+                <li class="list-group-item">Ethernet: <%= product.ethernet ? product.ethernet : "-" %></li>
+                <li class="list-group-item">USB: <%= product.usb ? product.usb : "-" %></li>
+                <li class="list-group-item">Wifi: <%= product.wifi ? product.wifi : "-" %></li>
+                <li class="list-group-item">WebCam: <%= product.webCam ? product.webCam : "-" %></li>
+                <li class="list-group-item">Bluetooth<%= product.bluetooth ? product.bluetooth : "-" %></li>
+                <li class="list-group-item">Screen-Size: <%= product.screenSize ? product.screenSize : "-" %></li>
+                <li class="list-group-item">Display: <%= product.display ? product.display : "-" %></li>
+                <li class="list-group-item">Resolucion: <%= product.resolution ? product.resolution : "-" %></li>
+                <li class="list-group-item">Conexion: <%= product.conection ? product.conection : "-" %></li>
+                <li class="list-group-item">Peso: <%= product.weight ? product.weight : "-" %></li>
+                <li class="list-group-item">Altura: <%= product.hight ? product.hight : "-" %></li>
+                <li class="list-group-item">Ancho: <%= product.width ? product.width : "-" %></li>
+                <li class="list-group-item">Profundidad: <%= product.deepth ? product.deepth : "-" %></li>
               </ul>
         </div>
         </section>
