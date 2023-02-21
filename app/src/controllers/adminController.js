@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require("express-validator")
 
 const { readJSON, writeJSON } = require('../dataBase/');
 /*  requiere express-validator*/
