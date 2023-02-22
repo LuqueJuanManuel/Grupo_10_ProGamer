@@ -81,7 +81,7 @@
     
     <h2 class="nuestrosProductos">Nuestros Productos:</h2>
 
-    <% products.forEach(({image, name, discount, price})=> { %>
+    <% products.forEach(({image, name, discount, price, id})=> { %>
       <div class="col-12  col-md-6 col-lg-4 p-3">
         <div class="card">
         <img src="/images/products/<%= image[0] %>" class="card-img-top" alt="imagen del producto">
@@ -96,7 +96,7 @@
             <p class="card-text discount"><%= discount %>% off</p>
             <% } %>
           </div>
-          <a href="/products/productDetail" class="btn btn-primary">Ver detalles</a>
+          <a href="/products/productDetail/<%= id %>" class="btn btn-primary">Ver detalles</a>
         </div>
         </div>
       </div>

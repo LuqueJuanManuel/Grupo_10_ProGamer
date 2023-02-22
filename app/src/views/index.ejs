@@ -47,13 +47,13 @@
             <% productosDestacados.forEach(product =>  { %>
              <article class="product carousel-cell">
                 <div class="photo-container">
-                    <a href="/productDetail">
+                    <a href="/products/productDetail/<%= product.id %>">
                         <img src="images/products/<%= product.image[0]%>" alt="">
                     </a>
                     <!-- moto ofert y heard -->
                     <i class="fa-regular fa-heart"></i>
                 </div>
-                <a href="/productDetail">
+                <a href="/products/productDetail/<%= product.id %>">
                     <% if (product.name.length > 12) { %> 
                         <h3><%=product.name.slice(0,12) %></h3> <% } else{ %>
                     <h3><%= product.name%></h3>

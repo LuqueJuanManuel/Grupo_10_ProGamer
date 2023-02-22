@@ -15,7 +15,15 @@ module.exports = {
     },
 
     productDetail : (req, res) => {
-        return res.render("products/productDetail")
+        
+        const product = products.find(product => product.id === +req.params.id);
+        const productosEnOferta = products.filter(product => product.discount >= 20);
+
+        return res.render("products/productDetail", {
+            product,
+            productosEnOferta,
+            toThousand,
+        })
     },
 
     productCart : (req, res) => {
