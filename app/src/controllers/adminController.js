@@ -77,7 +77,7 @@ module.exports ={
 
      writeJSON("products.json", productsModify);
 
-      return res.redirect("/");
+      return res.redirect("admin/adminHome");
     } else {
         const products = readJSON("products.json");
         const product = products.find((product) => product.id === +req.params.id);
