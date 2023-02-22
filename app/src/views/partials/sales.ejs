@@ -1,10 +1,10 @@
-<main id="sales">
+<main id="home">
     <section class="porducts-offerts  js-flickity" data-flickity-options='{ "freeScroll": true, "watchCSS": true  }'>
         <% productosEnOferta.forEach(product =>  { %>
          <article class="product carousel-cell">
             <div class="photo-container">
                 <a href="/products/productDetail/<%= product.id %>">
-                    <img src="images/products/<%= product.image[0]%>" alt="">
+                    <img src="/images/products/<%= product.image[0]%>" alt="">
                 </a>
                 <!-- moto ofert y heard -->
                 <i class="fa-regular fa-heart"></i>

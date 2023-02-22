@@ -24,7 +24,7 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 · Ser menos desordenados.
 
-**************************************************************************************************************
+***********************************************************************************************************
 
 # RESTROSPECTIVA DEL SPRINT 3.
 
@@ -45,3 +45,25 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 ### Dejar de hacer:
      - Dejar las tarjetas de trello estaticas (sin moverlas una vez terminadas las tareas).
+
+
+**********************************************************************************************************
+
+# RESTROSPECTIVA DEL SPRINT 4.
+
+### ### Seguir haciendo:
+       - Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
+       - En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
+
+### Hacer más:
+       - Mantenerce mas comunicados, al momento de hacer push a la rama develop, para evitar conflictos.
+     
+
+### Empezar a hacer:
+       - Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
+       
+### Hacer menos:
+      - Dejar tareas de sprint anteriores, para evitar atrazarce con las tareas nuevas.
+
+### Dejar de hacer:
+      - Prestar atencion a las ramas en donde estamos trabjando. Aveces trabajamos en la rama develop y generamos conflictos.
