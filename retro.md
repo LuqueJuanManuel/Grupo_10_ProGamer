@@ -63,7 +63,7 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
        - Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
        
 ### Hacer menos:
-      - Dejar tareas de sprint anteriores, para evitar atrazarce con las tareas nuevas.
+      - Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas.
 
 ### Dejar de hacer:
-      - Prestar atencion a las ramas en donde estamos trabjando. Aveces trabajamos en la rama develop y generamos conflictos.
+      - Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
