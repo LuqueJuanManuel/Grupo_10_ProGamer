@@ -5,10 +5,16 @@ const path = require("path");
 const PORT = 3000;
 const methodOverride = require('method-override');
 
+/*  instalar express-session ()npm i express-session*/
+/* requerir mudulo global de app session*/
+const session = require("express-session");
+
 /* Middlewares Global */
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+/* aplicar de forma global session con su prop secret */
+app.use(session({secret: "secreto !!!"}))
 
 
 /* Template engine Config. */
