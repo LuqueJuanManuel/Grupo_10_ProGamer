@@ -14,7 +14,7 @@ const productEditValidator = require("../validations/productsEditValidator");
 /* create */
 router.get('/create', controller.create);
 
-router.post('/create', uploadImageProduct.array("images"), productsAddValidator, controller.store)
+router.post('/create', uploadImageProduct.array("image"), productsAddValidator, controller.store)
 
 
 
