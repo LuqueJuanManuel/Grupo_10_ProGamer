@@ -8,7 +8,7 @@ const { uploadImageProduct } = require('../middlewares/upload');
 router.get("/", controller.index);
 
 /* Ruta a ProductDetail */
-router.get("/productDetail", controller.productDetail); 
+router.get("/productDetail/:id", controller.productDetail); 
 
 /* Ruta a ProductCart */
 router.get("/productCart", controller.productCart);

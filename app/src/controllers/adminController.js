@@ -6,6 +6,7 @@ const { readJSON, writeJSON } = require('../dataBase/');
 const { validationResult } = require("express-validator");
 
 const products = readJSON('products.json');
+const arrayDeCategorias = readJSON('categories.json');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -18,7 +19,10 @@ module.exports ={
 		})
     },
     create: (req, res) => {
-        res.render('admin/adminAdd');
+        res.render('admin/adminAdd' , {
+          products,
+          arrayDeCategorias,
+        });
     },
     edit: (req, res) => {
       
@@ -72,7 +76,7 @@ module.exports ={
 
      writeJSON("products.json", productsModify);
 
-      return res.redirect("/");
+      return res.redirect("admin/adminHome");
     } else {
         const products = readJSON("products.json");
         const product = products.find((product) => product.id === +req.params.id);
@@ -91,11 +95,16 @@ module.exports ={
   },     
     
     destroy: (req,res) => {
-        let productId = Number(req.params,id);
+        let productId = Number(req.params.id);
         
-        let newArrayProducts = products.filter(product => product.id !== productId);
-        writeJSON('products.json',newArrayProducts);
-        
+        products.forEach(product => {
+          if(product.id === productId){
+            let newArrayProducts = products.indexOf(product);
+            products.splice(newArrayProducts, 1)
+          }
+        })
+        writeJSON('products.json',products);
+        res.redirect("/admin/home");
     },
 
     store: (req, res) => {
@@ -146,9 +155,9 @@ module.exports ={
             res.redirect("/products")
         }
         else {
-            console.log(errors)
             return res.render("admin/adminAdd", {
                 products,
+                arrayDeCategorias,
                 errors : errors.mapped(),
                 old : req.body,
             })
