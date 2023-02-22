@@ -37,7 +37,7 @@ module.exports ={
       // Update - Method to update
 
       update: (req, res) => {
-         
+        
           const errors = validationResult(req);
 
           if(req.fileValidatorError){
@@ -63,12 +63,12 @@ module.exports ={
                         brand,
                         stock: +stock,
                         description: description.trim(),
-                            image: req.file ? req.file.filename : product.image,
+                        image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],
                     };
-                    if (req.file) {
+                  /*   if (req.files) {
                         fs.existsSync(`./public/images/products/${product.image}`) &&
                           fs.unlinkSync(`./public/images/products/${product.image}`);
-                      }
+                      } */
                       return productModify;
             }
                 return product;
@@ -76,7 +76,7 @@ module.exports ={
 
      writeJSON("products.json", productsModify);
 
-      return res.redirect("admin/adminHome");
+      return res.redirect( 200, "/admin/home");
     } else {
         const products = readJSON("products.json");
         const product = products.find((product) => product.id === +req.params.id);

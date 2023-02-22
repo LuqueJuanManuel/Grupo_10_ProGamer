@@ -21,7 +21,7 @@ router.post('/create', uploadImageProduct.array("images"), productsAddValidator,
 /* edit */
 router.get('/edit/:id', controller.edit);
 
-router.put('/edit/:id', uploadImageProduct.single("image") , productEditValidator, controller.update);
+router.put('/edit/:id', uploadImageProduct.array("image") , productEditValidator, controller.update);
 
 
 
