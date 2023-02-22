@@ -95,8 +95,9 @@ main#home section.porducts-offerts article.product {
     margin: 2rem;
     padding: 0.5rem;
     margin-bottom: 2.3rem;
+    min-width: 225px;
     max-width: 225px;
-    max-height: 370px;
+    min-height: 370px;
     border: none;
     border-radius: 10px;
     background-color: white;
@@ -125,7 +126,8 @@ main#home section.porducts-offerts article.product div.photo-container:hover {
 }
 main#home section.porducts-offerts article.product div.photo-container img {
     width: 100%;
-    height: 100%;
+    height: 150px;
+    padding: 20px;
     object-fit: cover;
 }
 
@@ -189,7 +191,7 @@ main#home section.porducts-offerts article.product div.price span.numb-offert {
 }
 
 main#home section.porducts-offerts article.product div h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
     font-family: var(--fuente-parrafos);
     color: var(--gris-claro);
@@ -463,7 +465,6 @@ main#home section form div.form  div.button-container button.btn:hover {
         margin-top: 2rem;
         margin-bottom: 4rem;
         max-width: 378px;
-        max-height: 203px;
     }
 
     main#home section form div.form div.input-container input.input-style {
@@ -517,43 +518,3 @@ main#home section form div.form  div.button-container button.btn:hover {
     }
 }
 
-@media (min-width: 1000px){
-    main#home .js-flickity:after {
-        content: '';
-    }
-
-    main#home section.porducts-offerts {
-        display: flex;
-        justify-content: center !important;
-        
-    }
-
-    main#home section form div.form div.input-container input.input-style {
-        width: 24rem;
-        height: 2.5rem;
-        padding: 0.4rem 0.5rem 0 0.8rem;
-        margin: 0.5rem;
-    } 
-
-    main#home section form div.form div.input-container input.input-style::placeholder {
-        font-size: 1.5rem;/**/
-        
-    }
-
-    main#home section form div.form  div.button-container button.btn {
-        height: 3rem;
-        width: 15rem;
-        font-size: 1.6rem;
-        margin-top: 0.5rem;
-    }
-
-    main#home section.banner-bottom div.img-ofert img.b-ofert {
-        max-width: 768px;
-        min-height: 227px;
-        width: 75%;
-        height: 50%;
-        position: relative;
-        display: block;
-        margin: 0 auto;
-    }
-}

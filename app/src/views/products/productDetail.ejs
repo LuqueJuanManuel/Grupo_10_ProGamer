@@ -1,285 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include("../partials/head", { title: "Detalle de Producto"}) %> 
-
-    <title>productDetail</title>
-
-
+<!-- HEAD -->
+<%- include("../partials/head")%>
 <body>
-    <%- include("../partials/header") %> 
+  <!-- HEADER -->
+  <%- include("../partials/header")%>
 
     <main id="productDetail">
-        <div>
-            <h2>Home / Notebooks / NOTEBOOK BANGHO MAX L4 I3 8GB SSD 240GB FREEDOS 14"</h2>
+      <h2 class="product-name"><%= product.name %></h2>
+        <section class="imagenes-detalles">
+            <div class="card">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <% product.image.forEach(img => { %>
+                 <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/images/products/<%= img %>" class="d-block w-100" alt="imagen">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+             <% }); %>
+             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-        <article>
-            <section id="topDesktop">
-                <div class="desktop">
-                    <h3>NOTEBOOK BANGHO MAX L4 I3 8GB SSD
-                        240GB FREEDOS 14"</h3>
-                    <div class="box-container-images">
-                        <span class="images-left">
-                            <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-2.webp" alt="" width="100%">
-                            <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-3.webp" alt="" width="100%">
-                            <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX-4.webp" alt="" width="100%">
-                        </span>
-                        <span class="images-right">
-                            <img src="/images/Notebook/NOTEBOOK-BANGHO-MAX.webp" alt="" width="100%">
-                        </span>
-                    </div>
-                </div>
-
-                <section class="details">
-
-                    <div class="price">
-                        <p class="p-price">$131449.00</p>
-                        <p>Precio de lista</p>
-                        <p>$197173.50</p>
-                    </div>
-
-                    <div class="cuotas contenedores">
-                        <span class="span-left">
-                            <img src="/images/ahora-12.png" alt="">
-                        </span>
-                        <span class="span-right">
-                            <p class="cuotas">12 cuotas sin interés de $16431.13 a precio de lista</p>
-                            <p class="ver-cuotas"><a href="">Ver cuotas</a></p>
-                        </span>
-                    </div>
-
-                    <div class="stock-web contenedores">
-                        <span class="span-left">
-                            <i class="fa-regular fa-circle-check"></i>
-                        </span>
-                        <span class="span-right">
-                            <p class="stockWeb">STOCK EN LA WEB</p>
-                            <p>Solo para venta por web</p>
-                        </span>
-                    </div>
-
-                    <div class="stock-local contenedores">
-                        <span class="span-left">
-                            <i class="fa-regular fa-circle-xmark"></i>
-                        </span>
-                        <span class="span-right">
-                            <p class="stockLocal">SIN STOCK EN EL LOCAL</p>
-                            <p>Solo para venta presencial</p>
-                        </span>
-                    </div>
-
-                    <div class="retire contenedores">
-                        <span class="span-left">
-                            <i class="fa-solid fa-house"></i>
-                        </span>
-                        <span class="span-right">
-                            <p>RETIRO <FONT color="#39FC08">¡GRATIS!</FONT>
-                            </p>
-                            <p>LANUS (PROVINCIA)</p>
-                        </span>
-                    </div>
-
-                    <div class="shippingCost contenedores">
-                        <span class="span-left">
-                            <i class="fa-solid fa-car-side"></i>
-                        </span>
-                        <span class="span-right">
-                            <p>LANUS (PROVINCIA)</p>
-                            <p><a href="">Ver costo de envio</a></p>
-                        </span>
-                    </div>
-
-                </section>
-
-            </section>
-
-            <!-- Boton de agregar al carrito -->
-            <div class="div--Container-btn-addToCart"> 
-                <button class="btn-addToCart">
-                    <a href="/">Agregar al carrito</a>
-                </button>
-            </div>
-            
-
-            <!-- Especificaciones  -->
-            <section class="Specifications">
-                <div class="div-specifications">
-                    <h3>Especificaciones tecnicas</h3>
-                </div>
-                <section class="box-container-specifications">
-                    <div>
-                        <p class="p-titles">General</p>
-                        <hr>
-                        <div class="box-container-p">
-                            <p>Color: Negro</p>
-                            <p>Tipo:Notebook</p>
-                            <p>Sistema Operativo: FreeDos</p>
-                            <p>Tipo De CPU: Intel</p>
-                            <p>Modelo CPU: Intel I3 10110U</p>
-                            <p>Modelo GPU: Gráficos UHD Inte</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="p-titles">Conectividad</p>
-                        <hr>
-                        <div class="box-container-p">
-                            <p>Puerto HDMI: Si</p>
-                            <p>Puertos USB 2.0: x1</p>
-                            <p>Puertos USB 3.1: x1</p>
-                            <p>Puertos USB 3.1 Type-C: x1</p>
-                            <p>Puertos Ethernet: Si</p>
-                            <p>Bluetooth: Si</p>
-                            <p>WIFI: Si</p>
-                            <p>Lectora: No</p>
-                            <p>WebCam: Si</p>
-                            <p>Idioma Del Teclado: Españo</p>
-                            <p>Pad Numerico: No</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="p-titles">Pantalla</p>
-                        <hr>
-                        <div class="box-container-p">
-                            <p>Tamaño De La Pantalla: 14"</p>
-                            <p>Tipo De Display: HD</p>
-                            <p>Resolucion: 1366 X 768</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="p-titles">Memoria</p>
-                        <hr>
-                        <div class="box-container-p">
-                            <p>Formato De Memorias: SODIMM</p>
-                            <p>Generacion De Memorias: DDR4</p>
-                            <p>RAM Integrada: 8GB</p>
-                            <p>Slot Adicional De RAM</p>
-                            <p> Disponible: 1</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="p-titles">Almacenamiento</p>
-                        <hr>
-                        <div class="box-container-p">
-                            <p>Capacidad: SSD240 GB</p>
-                            <p>Lector De Memoria: Si</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="p-titles">Dimenciones</p>
-                        <hr>
-                        <div class="box-container-p">
-                            <p>Peso: 1.35 Kg</p>
-                            <p>Ancho: 324.9 Mm</p>
-                            <p>Profundidad: 219.5 Mm</p>
-                            <p>Alto: 19.4 Mm</p>
-                        </div>
-                    </div>
-
-                </section>
-
-        </article>
-
-        <!-- Productos Destacados -->
-
-        <section class="title-featured">
-            <div class="featured-container">
-                <hr class="line-left">
-                <h3 class="featured-prom">
-                    Productos Destacados
-                </h3>
-                <hr class="line-rigth">
-            </div>
+        <div class="detalles">
+            <ul class="list-group">
+                <li class="list-group-item"><%= product.name ? product.name : "-" %></li>
+                <li class="list-group-item">$ <%= product.price ? product.price : "-" %></li>
+                <li class="list-group-item"><%= product.discount ? product.discount : "-" %> %OFF</li>
+                <li class="list-group-item"><%= product.description ? product.description : "-" %></li>
+                <li class="list-group-item">Stock: <%= product.stock ? product.stock : "No hay Stock" %></li>
+                <li class="list-group-item">Marca: <%= product.brand ? product.brand : "-" %></li>
+                <li class="list-group-item">Categoria: <%= product.category ? product.category : "-" %></li>
+                <li class="list-group-item">CPU: <%= product.cpu ? product.cpu : "-" %></li>
+                <li class="list-group-item">Tarjeta Grafica: <%= product.graphicCard ? product.graphicCard : "-" %></li>
+                <li class="list-group-item">Sistema Operativo: <%= product.so ? product.so : "-" %></li>
+                <li class="list-group-item">RAM: <%= product.ram ? product.ram : "-" %></li>
+                <li class="list-group-item">Capacidad: <%= product.capacity ? product.capacity : "-" %></li>
+                <li class="list-group-item">Puertos: <%= product.puertos ? product.puertos : "-" %></li>
+                <li class="list-group-item">HDMI: <%= product.hdmi ? product.hdmi : "-" %></li>
+                <li class="list-group-item">Ethernet: <%= product.ethernet ? product.ethernet : "-" %></li>
+                <li class="list-group-item">USB: <%= product.usb ? product.usb : "-" %></li>
+                <li class="list-group-item">Wifi: <%= product.wifi ? product.wifi : "-" %></li>
+                <li class="list-group-item">WebCam: <%= product.webCam ? product.webCam : "-" %></li>
+                <li class="list-group-item">Bluetooth<%= product.bluetooth ? product.bluetooth : "-" %></li>
+                <li class="list-group-item">Screen-Size: <%= product.screenSize ? product.screenSize : "-" %></li>
+                <li class="list-group-item">Display: <%= product.display ? product.display : "-" %></li>
+                <li class="list-group-item">Resolucion: <%= product.resolution ? product.resolution : "-" %></li>
+                <li class="list-group-item">Conexion: <%= product.conection ? product.conection : "-" %></li>
+                <li class="list-group-item">Peso: <%= product.weight ? product.weight : "-" %></li>
+                <li class="list-group-item">Altura: <%= product.hight ? product.hight : "-" %></li>
+                <li class="list-group-item">Ancho: <%= product.width ? product.width : "-" %></li>
+                <li class="list-group-item">Profundidad: <%= product.deepth ? product.deepth : "-" %></li>
+              </ul>
+        </div>
         </section>
-
-        <!-- Container de los productos D.-->
-        <section class="section-porducts-offerts">
-            <div class="porducts-offerts">
-                <article class="product one">
-                    <div class="photo-container">
-                        <a href="/productDetail">
-                            <img src="images/monitor.jpg" alt="notebook">
-                        </a>
-                        <!-- moto ofert y heard -->
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <a href="/productDetail">
-                        <h3>Nombre del producto</h3>
-                    </a>
-                    <div class="price-product">
-                        <h3>$XXX</h3>
-                        <!-- <span class="numb-offert">20% OFF</span> -->
-                    </div>
-                    <p>envio gratis...</p>
-                </article>
-
-                <article class="product two">
-                    <div class="photo-container">
-                        <a href="/productDetail">
-                            <img src="images/monitor.jpg" alt="notebook">
-                        </a>
-                        <!-- moto ofert y heard -->
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <a href="/productDetail">
-                        <h3>Nombre del producto</h3>
-                    </a>
-                    <div class="price-product">
-                        <h3>$XXX</h3>
-                        <!-- <span class="numb-offert">20% OFF</span> -->
-                    </div>
-                    <p>envio gratis...</p>
-                </article>
-
-                <article class="product three">
-                    <div class="photo-container">
-                        <a href="/productDetail">
-                            <img src="images/monitor.jpg" alt="notebook">
-                        </a>
-                        <!-- moto ofert y heard -->
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <a href="/productDetail">
-                        <h3>Nombre del producto</h3>
-                    </a>
-                    <div class="price-product">
-                        <h3>$XXX</h3>
-                        <!-- <span class="numb-offert">20% OFF</span> -->
-                    </div>
-                    <p>envio gratis...</p>
-                </article>
-
-                <article class="product four">
-                    <div class="photo-container">
-                        <a href="/productDetail">
-                            <img src="images/monitor.jpg" alt="notebook">
-                        </a>
-                        <!-- moto ofert y heard -->
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <a href="/productDetail">
-                        <h3>Nombre del producto</h3>
-                    </a>
-                    <div class="price-product">
-                        <h3>$XXX</h3>
-                        <!-- <span class="numb-offert">20% OFF</span> -->
-                    </div>
-                    <p>envio gratis...</p>
-                </article>
-            </div>
-
-        </section>
-
-    </main>
-
-    <%- include("../partials/footer") %> 
-
-    <%- include("../partials/scripts") %> <!-- tiene otros script ademas del favourite -->
-    <!-- <script src="/js/favourite.js"></script> -->
+        <div class="btn-container">
+          <button class="btn-primary"><a href="/products/productCart">Agregar al carrito</a></button>
+        </div>       
+</main>
+<!-- FOOTER -->
+<%- include("../partials/footer")%>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>
-
 </html>
