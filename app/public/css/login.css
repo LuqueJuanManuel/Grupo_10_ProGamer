@@ -75,11 +75,11 @@ main#login .input-clave{
     background-color: rgb(247, 245, 245);
     outline: none;
 }
-
+/* 
 main#login .input-email,
 main#login .input-clave:hover {
     color: lightgray;
-}
+} */
 
 main#login .btn-login{
     border: none;

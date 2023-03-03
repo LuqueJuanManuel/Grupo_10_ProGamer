@@ -11,8 +11,8 @@ const guestMiddleware = require("../middlewares/guestMiddleware");
 router.get("/register", controller.register);
 
 // Ruta a Login //
-/* router.get("/login", autMiddleware , controller.login);
-
+router.get("/login" , controller.login);
+/*autMiddleware
 router.post("/login", [
    check("email").isEmail(),
    check("password").isLength({min:8}).withMessage("la contraseña debe tener mas de 8 caracteres") 
