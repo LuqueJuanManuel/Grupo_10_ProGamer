@@ -10,6 +10,10 @@ router.get("/", controller.index);
 /* Ruta a ProductDetail */
 router.get("/productDetail/:id", controller.productDetail); 
 
+/* Ruta a categorias */
+
+router.get("/categories/:id", controller.categories);
+
 /* Ruta a ProductCart */
 router.get("/productCart", controller.productCart);
 
