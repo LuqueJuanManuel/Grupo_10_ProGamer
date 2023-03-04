@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include("../partials/head", {title: "registro"}) %>
-
-<title>registro</title>
+    <%- include("../partials/head", {title: "login"})  %>
+    <title>Document</title>
 <body>
     <!-- header -->
-    <%- include("../partials/header") %> 
-    <!-- fin del header -->
+    <%- include("../partials/header",) %>
+     <!-- fin del header -->
     <main id="register">
         <div class="registro-container">
             <form action="" method="">
     
                 <div class="registro-form">
     
-                    <h4>Regístrate</h4>
+                    <h4>Perfil del usuario</h4>
     
                     <div class="input-container">
                         <h6 class="datos-box">Email*</h6>
                         <input class="input-style" type="email" name="email" placeholder="Ingresar email...">
-                    </div>
-    
-                    <div class="input-container">
-                        <h6 class="datos-box">Contraseña*</h6>
-                        <input class="input-style" type="password" name="pass" placeholder="Ingresar contraseña...">
-                    </div>
-    
-                    <div class="input-container">
-                        <h6 class="datos-box">Confirma tu contraseña*</h6>
-                        <input class="input-style" type="password" name="pass2" placeholder="Confirmar contraseña...">
                     </div>
     
                     <div class="input-container">
@@ -40,12 +28,8 @@
                         <h6 class="datos-box">Nombre*</h6>
                         <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre...">
                     </div>
-                    <div class="input-container">
-                        <h6 class="datos-box">Foto de perfil</h6>
-                        <input type="file" name="avatar">
-                    </div>
     
-                    <!-- <div class="input-container">
+                    <div class="input-container">
                         <h6 class="datos-box">Provincia</h6>
                         <select name="Provincia" class="input-select">
                             <option value="" hidden selected>Elija una provincia</option>
@@ -87,18 +71,20 @@
                     <div class="input-container">
                         <h6 class="datos-box">Teléfono</h6>
                         <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono...">
-                    </div> -->
+                    </div>
+                    <div class="input-container">
+                        <h6 class="datos-box">Cambiar foto de perfil</h6>
+                        <input type="file" name="avatar">
+                    </div>
                     <p>Campos obligatorios *</p>
-                    <button class="button-container" type="submit"><a class="register"  href="/register/login">Registrarme</a></button>
+                    <button class="button-container" type="submit"><a class="register"  href="./userHome">Editar</a></button>
                 </div>
             </form>
         </div>
     </main>
-    
-<!-- footer -->
-    <%- include("../partials/footer") %> 
+    <!-- footer-->
+    <%- include("../partials/footer")  %> 
     <!-- fin del footer -->
     <%- include("../partials/scripts") %>
 </body>
-
 </html>

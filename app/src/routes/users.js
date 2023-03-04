@@ -22,4 +22,9 @@ router.post("/login", [
  */
 
 
+/* pre visualizacion de las vistas*/
+router.get('/userHome', controller.userHome);
+
+router.get('/userEdit', controller.userEdit);
+
 module.exports = router;

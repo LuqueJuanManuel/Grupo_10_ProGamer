@@ -8,6 +8,12 @@ module.exports = {
     login : (req, res) => {
         return res.render("users/login")
     },
+    userHome: (req, res) => {
+        return res.render("users/userHome")
+    },
+    userEdit: (req, res) => {
+        return res.render("users/userEdit")
+    }
     /* processLogin: (req,res) =>{
         //errors es igual a la validacion de errores //
         let errors = validationResult(req);
