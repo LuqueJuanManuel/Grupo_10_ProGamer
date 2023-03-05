@@ -4,7 +4,7 @@
         "name" : "emanuel",
         "lastname": "gauna",
         "email" : "lemagauna@gmail.com",
-        "password" : "",
+        "pass" : "",
         "category" : "user",
         "address" : "",
         "image" : ""
@@ -14,7 +14,7 @@
         "name" : "juan",
         "lastname": "luque",
         "email" : "Juanluque@gmail.com",
-        "password" : "",
+        "pass" : "",
         "category" : "user",
         "address" :"",
         "image" : ""
@@ -24,7 +24,7 @@
         "name" : "tomas",
         "lastname": "lopez turconi",
         "email" : "tomas.lopez.tur@gmail.com",
-        "password" : "",
+        "pass" : "",
         "category" : "user",
         "address" : "",
         "image" : ""
