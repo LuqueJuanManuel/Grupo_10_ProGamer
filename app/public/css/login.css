@@ -75,11 +75,11 @@ main#login .input-clave{
     background-color: rgb(247, 245, 245);
     outline: none;
 }
-
+/* 
 main#login .input-email,
 main#login .input-clave:hover {
     color: lightgray;
-}
+} */
 
 main#login .btn-login{
     border: none;
@@ -168,7 +168,24 @@ main#login .fa-google{
 main#login .button-redes:hover > .fa-google{
     color: blue;
 }
-
+main#login .checkUser-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main#login .input-check {
+    position: relative;
+    bottom: .03rem;
+    margin-right: .5rem;
+}
+main#login .checkUser-label{
+    font-family: var(--fuente-parrafos);
+    font-size: 1.1rem;
+}
+main#login .checkUser-label:hover{
+    text-decoration:underline;
+    letter-spacing: 0.05rem;
+}
 /* @media screen and (min-width: 481px) {
     div.form-container {
         max-width: 420px;

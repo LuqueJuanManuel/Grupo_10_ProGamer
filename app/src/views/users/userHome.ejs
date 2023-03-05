@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head", {title: "login"})  %>
+    <title>Document</title>
+<body >
+    <!-- header -->
+    <%- include("../partials/header",) %>
+    <!-- fin del header -->
+    <main class="userHome">
+        <section>
+            <div class="form-container">
+                <h4 class="title">Hola, Bienvenid@!!</h4>
+                
+                    <div class="btn-userHome">
+                        <a href="/users/userEdit">Ver perfil</a>
+                    </div>
+                    <div class="btn-userHome">
+                        <a href="">Ver Compras</a>
+                    </div>
+                    <div class="btn-userHomeDelete">
+                        <a href="">Eliminar cuenta</a>
+                    </div>
+                    <div class="btn-userHomeDelete">
+                        <a href="">Cerrar sesion</a>
+                    </div>
+                
+            </div>
+            
+        </section>
+            
+    </main>
+    <!-- footer-->
+    <%- include("../partials/footer")  %> 
+    <!-- fin del footer -->
+    <%- include("../partials/scripts") %>
+</body>
+</html>
