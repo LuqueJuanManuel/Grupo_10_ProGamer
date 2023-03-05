@@ -10,12 +10,23 @@
     <!-- fin del header -->
     <main id="register">
         <div class="registro-container">
-            <form action="" method="">
+
+            <form action="../users/login.ejs" method="post" enctype="multipart/form-data">
     
                 <div class="registro-form">
     
                     <h4>Regístrate</h4>
-    
+                
+                    <div class="input-container">
+                        <h6 class="datos-box">Nombre*</h6>
+                        <input class="input-style" type="text" name="name" placeholder="Ingresar nombre...">
+                    </div>
+                    
+                    <div class="input-container">
+                        <h6 class="datos-box">Apellido*</h6>
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar apellido...">
+                    </div>
+
                     <div class="input-container">
                         <h6 class="datos-box">Email*</h6>
                         <input class="input-style" type="email" name="email" placeholder="Ingresar email...">
@@ -29,16 +40,6 @@
                     <div class="input-container">
                         <h6 class="datos-box">Confirma tu contraseña*</h6>
                         <input class="input-style" type="password" name="pass2" placeholder="Confirmar contraseña...">
-                    </div>
-    
-                    <div class="input-container">
-                        <h6 class="datos-box">Apellido*</h6>
-                        <input class="input-style" type="text" name="name" placeholder="Ingresar apellido...">
-                    </div>
-    
-                    <div class="input-container">
-                        <h6 class="datos-box">Nombre*</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre...">
                     </div>
     
                     <!-- <div class="input-container">
@@ -85,7 +86,7 @@
                         <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono...">
                     </div> -->
                     <p>Campos obligatorios *</p>
-                    <button class="button-container" type="submit"><a class="register"  href="/register/login">Registrarme</a></button>
+                    <button class="button-container" type="submit"><a class="register" >Registrarme</a></button>
                 </div>
             </form>
         </div>

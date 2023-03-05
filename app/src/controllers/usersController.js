@@ -1,16 +1,12 @@
 const { validationResult } = require("express-validator")
+/* requerimos bcrypt para hashear contraseñas */
+const bcrypt = require("bcryptjs");
 
 module.exports = {
-    register : (req, res) => {
-        return res.render("users/register")
-    },
-    processLogin: (req,res) =>{
-      res.send(req.body);
-    },
     login : (req, res) => {
         return res.render("users/login")
     },
-    /* processLogin: (req,res) =>{
+    processLogin: (req,res) =>{
         //errors es igual a la validacion de errores //
         let errors = validationResult(req);
         // si  form contiene errores //
@@ -40,5 +36,13 @@ module.exports = {
             req.session.usuarioLoguedo = usuarioLoguearse;
             res.render("success")
             //sino contiene errores //
-        } */
+        },
+        register : (req, res) => {
+            res.render("users/register")
+        },
+        processRegister:(req, res) =>{
+            
+        },
+    
+     
 }

@@ -5,9 +5,11 @@ const path = require("path");
 const PORT = 3000;
 const methodOverride = require('method-override');
 
-/*  instalar express-session ()npm i express-session*/
+
 /* requerir mudulo global de app session*/
 const session = require("express-session");
+/* instalar cookie-parser */
+const cookieParser = require("cookie-parser");
 
 /* Middlewares Global */
 app.use(express.static("public"));
@@ -18,7 +20,10 @@ app.use(session({
     secret: "proGamer",
     resave: false,
     saveUninitialized: true
-}))
+}));
+/* aplicar cookie parser de manera global de app */
+app.use(cookieParser());
+
 
 
 /* Template engine Config. */
@@ -28,7 +33,7 @@ app.set("views", "./src/views");
 /* Routers */
 const indexRouter = require("./routes");
 const productsRouter = require("./routes/products");
-const usersRouter = require("./routes/users");
+const usersRouter = require("../src/routes/users");
 const adminRouter = require("./routes/admin");
 
 /* Routes Middlewares */
