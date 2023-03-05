@@ -52,7 +52,7 @@ module.exports ={
         if(errors.isEmpty()){
             const { name, price, category,description, discount, brand, stock } = req.body;
             
-            const productsModify =products.map((product) => { 
+            const productsModify = products.map((product) => { 
             if(product.id === +req.params.id){
             let productModify =  {
                         ...product,

@@ -4,7 +4,9 @@ module.exports = {
     register : (req, res) => {
         return res.render("users/register")
     },
-
+    processLogin: (req,res) =>{
+      res.send(req.body);
+    },
     login : (req, res) => {
         return res.render("users/login")
     },

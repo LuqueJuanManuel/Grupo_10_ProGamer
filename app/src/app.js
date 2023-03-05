@@ -14,7 +14,11 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 /* aplicar de forma global session con su prop secret */
-app.use(session({secret: "secreto !!!"}))
+app.use(session({
+    secret: "proGamer",
+    resave: false,
+    saveUninitialized: true
+}))
 
 
 /* Template engine Config. */

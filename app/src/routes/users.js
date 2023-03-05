@@ -1,11 +1,14 @@
 const express = require("express");
 const { check } = require("express-validator");
+const { processLogin } = require("../controllers/usersController");
 const router = express.Router();
 const controller = require("../controllers/usersController");
 const autMiddleware = require("../middlewares/autMiddleware");
 /*  */
 const guestMiddleware = require("../middlewares/guestMiddleware");
 
+/* post login user */
+router.post("/login", processLogin);
 
 /* Ruta a Register */ //
 router.get("/register", controller.register);
