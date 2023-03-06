@@ -5,8 +5,6 @@ const { processLogin, login, register, processRegister, userHome, userEdit } = r
 const { avatarUsers } = require("../middlewares/avatarUsers");
 const registerValidator = require("../validations/registerValidator");
 const userInSession = require("../middlewares/userInSession");
-const autMiddleware = require("../middlewares/autMiddleware");
-const guestMiddleware = require("../middlewares/guestMiddleware");
  
 
 // Ruta a Login //

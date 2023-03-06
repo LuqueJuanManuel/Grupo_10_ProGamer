@@ -43,11 +43,13 @@ module.exports = {
             }
 
             req.session.usuarioLoguedo = usuarioLoguearse;
+           
             res.render("success")
             //sino contiene errores //
         },
         register : (req, res) => {
             res.render("users/register", {session: req.session})
+            
         },
         processRegister:(req, res) =>{
             /* agregando errores de validaciones */
