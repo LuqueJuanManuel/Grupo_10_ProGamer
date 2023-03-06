@@ -15,6 +15,7 @@ module.exports = {
       products, 
       productosEnOferta,
       productosDestacados,
+      session: req.session,
       toThousand,
     })
   }

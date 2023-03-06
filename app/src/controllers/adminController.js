@@ -14,7 +14,8 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports ={
     adminHome: (req, res) => {
         res.render("admin/adminHome",{
-			products
+			products,
+      session: req.session,
 
 		})
     },
@@ -22,6 +23,7 @@ module.exports ={
         res.render('admin/adminAdd' , {
           products,
           arrayDeCategorias,
+          session: req.session,
         });
     },
     edit: (req, res) => {
@@ -31,6 +33,7 @@ module.exports ={
     
         res.render("admin/adminEdit", {
           ...productToEdit,
+          session: req.session,
           toThousand
         });
       },
@@ -89,6 +92,7 @@ module.exports ={
         ...product,
         errors: errors.mapped(),
         old: req.body,
+        session: req.session,
         toThousand
       });
     }
@@ -159,6 +163,7 @@ module.exports ={
                 products,
                 arrayDeCategorias,
                 errors : errors.mapped(),
+                session: req.session,
                 old : req.body,
             })
         };

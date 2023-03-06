@@ -16,13 +16,19 @@
             <div class="form-container">
                 <h4 class="title">Iniciar sesión</h4>
                 <!-- ingresando login -->
-            <form action="/users/login.ejs" method="post">
+            <form action="/users/login" method="post">
                 <div class="form">
                     <div class="input-container">
                         <input class="input-email" type="email" name="email" placeholder="Ingresar correo...">
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="text-danger"><%= errors.email.msg %> </small>
+                        <% } %>
                     </div>
                     <div class="input-container">
                         <input class="input-clave" type="password" name="pass" placeholder="Ingresar contraseña...">
+                        <% if (locals.errors && errors.pass) { %>
+                            <small class="text-danger"><%= errors.pass.msg %> </small>
+                        <% } %>
                     </div>
                     <div class="checkUser-container">
                         <input class="input-check" type="checkbox" name="check" id="check" placeholder="Recordar usuario">
@@ -33,6 +39,9 @@
                         <span> <a href="">Olvide mi clave</a></span>
                     </div>
                     <div class="login-container">
+                        <% if (locals.errorMsg ) { %>
+                            <small class="text-danger"><%= errorMsg %> </small>
+                        <% } %>
                         <button type="submit" class="btn-login" value="login">Login</button>
                     </div>
                     <h4>Iniciar sesión con....</h4>

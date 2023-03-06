@@ -13,6 +13,7 @@ module.exports = {
         res.render("products/products", {
             products,
             categories,
+            session: req.session,
             toThousand,
         })
     },
@@ -25,6 +26,7 @@ module.exports = {
         return res.render("products/productDetail", {
             product,
             productosEnOferta,
+            session: req.session,
             toThousand,
         })
 
@@ -49,6 +51,7 @@ module.exports = {
         toThousand,
         results,
         products,
+        session: req.session,
        })
     },
     categories: (req,res) => {

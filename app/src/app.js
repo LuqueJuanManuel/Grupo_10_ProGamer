@@ -60,10 +60,10 @@ app.use("/users", usersRouter);
 app.use('/admin', adminRouter);
 
 /* error 404 */
-app.use((req,res,next)=>{
+/* app.use((req,res,next)=>{
     res.status(404).render("not-found")
 })
-
+ */
 
 
 app.listen( PORT, ()=>console.log(`server listen in port ${PORT}\n http://localhost:${PORT}` ));

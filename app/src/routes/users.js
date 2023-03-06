@@ -6,13 +6,13 @@ const { avatarUsers } = require("../middlewares/avatarUsers")
 const registerValidator = require("../validations/registerValidator")
 const autMiddleware = require("../middlewares/autMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
- 
+const loginValidator = require("../validations/loginValidator");
 
 // Ruta a Login //
 router.get("/login",  login);
 
 /* post login user */
-router.post("/login", registerValidator,  processLogin);
+router.post("/login", loginValidator,  processLogin);
 
 /* Ruta a Register */
 router.get("/register", register);
