@@ -5,7 +5,7 @@
         "lastname": "gauna",
         "email" : "lemagauna@gmail.com",
         "pass" : "",
-        "category" : "user",
+        "category" : "admin",
         "address" : "",
         "avatar" : ""
     },
@@ -15,7 +15,7 @@
         "lastname": "luque",
         "email" : "Juanluque@gmail.com",
         "pass" : "",
-        "category" : "user",
+        "category" : "admin",
         "address" :"",
         "avatar" : ""
     },
@@ -25,7 +25,7 @@
         "lastname": "lopez turconi",
         "email" : "tomas.lopez.tur@gmail.com",
         "pass" : "123456",
-        "category" : "user",
+        "category" : "admin",
         "address" : "",
         "avatar" : ""
     }

@@ -3,7 +3,7 @@ const { readJSON, writeJSON } = require('../dataBase/');
 
 const products = readJSON('products.json');
 const categories = readJSON('categories.json');
-console.log(categories);
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 

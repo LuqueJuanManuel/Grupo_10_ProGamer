@@ -10,6 +10,8 @@ const methodOverride = require('method-override');
 const session = require("express-session");
 /* instalar cookie-parser */
 const cookieParser = require("cookie-parser");
+/* requerir chequeo de cookies a nivel global de app */
+const cookieCheck = require("./middlewares/cookieCheck");
 
 /* Middlewares Global */
 app.use(express.static("public"));
@@ -21,8 +23,10 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-/* aplicar cookie parser de manera global de app */
 app.use(cookieParser());
+/* aplicar cookie parser de manera global de app */
+app.use(cookieCheck);
+
 
 
 
