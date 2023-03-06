@@ -177,10 +177,12 @@ main#login .input-check {
     position: relative;
     bottom: .03rem;
     margin-right: .5rem;
+    cursor: pointer;
 }
 main#login .checkUser-label{
     font-family: var(--fuente-parrafos);
     font-size: 1.1rem;
+    cursor: pointer;
 }
 main#login .checkUser-label:hover{
     text-decoration:underline;
