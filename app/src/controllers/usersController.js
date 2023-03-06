@@ -32,6 +32,23 @@ module.exports = {
                 address: user.address,
                 avatar: user.avatar
             }
+            /* tiempo de duracion - 1 hora */
+
+            //let times = 3600000;
+
+            /* cookie para mantener la cuenta abierta */
+
+            /* if (req.body.check){
+                res.cookie(
+                    'proGamer',
+                    req.session.user,
+                    {
+                        expires: new Date(Date.now() + times),
+                        httpOnly: true
+                    }
+                )
+            } */
+            
             /* crea para poder acceder a la variable */
             res.locals.user = req.session.user;
             res.redirect('/');
@@ -43,34 +60,7 @@ module.exports = {
                 
             })
         }
-        /* // si  form contiene errores //
-        if(errors.isEmpty()){
-            let usersJSON = fs.readFileSync("users.json", {encoding: "utf-8"});
-            let users;
-            if(usersJSON == ""){
-                users = [];
-            }else{
-                users = JSON.parse(usersJSON);
-            }
-            // si lo encuentra al usuario //
-            for (let i = 0;  i < users.length; i++) {
-                if(users[i].email == req.body.email){
-                   // si la contraseña lo verifica //
-                    if(bcrypt.compareSync(req.body.password, users[i].password ))
-                    usuarioLoguearse = users[i];
-                                }
-                            }
-                        }
-            if(usuarioLoguearse == undefined){
-                return res.render("users/login", {errors:[
-                    {msg: "credenciales invalidas"}
-                ]});
-            }
 
-            req.session.usuarioLoguedo = usuarioLoguearse;
-           
-            res.render("success")
-            //sino contiene errores // */
         },
         register : (req, res) => {
             res.render("users/register", {session: req.session})
