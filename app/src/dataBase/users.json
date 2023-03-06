@@ -25,7 +25,7 @@
         "lastname": "lopez turconi",
         "email" : "tomas.lopez.tur@gmail.com",
         "pass" : "123456",
-        "category" : "admin",
+        "category" : "user",
         "address" : "",
         "avatar" : ""
     }

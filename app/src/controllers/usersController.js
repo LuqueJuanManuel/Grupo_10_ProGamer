@@ -10,10 +10,10 @@ module.exports = {
         return res.render("users/login",{session: req.session})
     },
     userHome: (req, res) => {
-        return res.render("users/userHome")
+        return res.render("users/userHome",{session: req.session})
     },
     userEdit: (req, res) => {
-        return res.render("users/userEdit")
+        return res.render("users/userEdit",{session: req.session})
     },
     processLogin: (req,res) =>{
         //errors es igual a la validacion de errores //
@@ -30,15 +30,15 @@ module.exports = {
                 email: user.email,
                 category: user.category,
                 address: user.address,
-                avatar: user.avatar
+                avatar: user.avatar,
+                city: user.city
             }
             /* tiempo de duracion - 1 hora */
-
-            //let times = 3600000;
+            let times = 3600000;
 
             /* cookie para mantener la cuenta abierta */
 
-            /* if (req.body.check){
+            if (req.body.check){
                 res.cookie(
                     'proGamer',
                     req.session.user,
@@ -47,7 +47,7 @@ module.exports = {
                         httpOnly: true
                     }
                 )
-            } */
+            }
             
             /* crea para poder acceder a la variable */
             res.locals.user = req.session.user;

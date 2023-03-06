@@ -22,6 +22,6 @@ router.post("/register", avatarUsers.single("avatar"), registerValidator, proces
 /* pre visualizacion de las vistas  */
 router.get('/userHome', userHome);
 
-router.get('/userHome', userEdit);
+router.get('/userEdit', userEdit);
 
 module.exports = router;

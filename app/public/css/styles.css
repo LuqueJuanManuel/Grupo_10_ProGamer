@@ -126,7 +126,6 @@ img.logo{
     text-decoration: none;
     transition: all 1s ease ;
     
-
 }
 .button:hover{
     background-color: var(--crema);
@@ -138,10 +137,55 @@ img.logo{
 button.glass {
     display: none;
 }
-
+/* cambios para la session del user */
 div.user-cart{
     display: flex;
+    position: relative;
 }   
+.users-menu {
+    display: none;
+    position: absolute;
+    font-size: 1rem;
+    width: 8rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-left: -3rem;
+    top: 3.4rem;
+}
+.users-menu a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--fuente-parrafos);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+}
+.users-menu a.users-menu-links:hover{
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+}
+.user-cart:hover .users-menu{
+    display: block;
+}
+div.user-cart .user-session{
+    display: inline-block;
+    z-index: 1000;
+    width: 8px;
+    height: 8px;
+    background: #00d900;
+    border-radius: 50px;
+    position: absolute;
+    top: .4rem;
+    left: 2.2rem;
+    transition: all .8s ease-out ;
+}
+.button:hover .user-session{
+    top: .1rem;
+    left: 2rem;
+}
+/*Fin de los cambios para la session del user */
 a.glass{
     display: none;
 }
@@ -393,6 +437,13 @@ header button.glass {
        align-items: flex-end;
        text-decoration: none;
        height: 100%;
+    }
+    .users-menu {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .users-menu a{
+        color: var(--verde-neon);
+        font-weight: bolder;
     }
 
     /* fin del header */

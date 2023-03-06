@@ -20,10 +20,24 @@
     </form>
     </div>
     <div class="user-cart">
-      <a href="/users/login" class="user button">
-        <!--boton usuario -->
-        <i class="fa-solid fa-user"></i>
-      </a>
+      <%if (typeof session.user != "undefined") {%>
+        <a href="users/userHome" class="user button">
+          <!--boton usuario -->
+          <span class="user-session"></span>
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <div class="users-menu">
+          <%if (session.user.category === "admin") {%>
+            <a class="users-menu-links" href="/admin/home">Admin</a>
+          <%}%>
+          <a class="users-menu-links" href="users/userHome">Mis datos</a>
+          <a class="users-menu-links" href="">Cerrar sesión</a>
+        </div>
+      <%}else {%>
+        <a href="/users/login" class="user button">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      <%}%>
 
       <a href="/productDetail/productCart" class="cart button">
         <!-- carrito de compras -->

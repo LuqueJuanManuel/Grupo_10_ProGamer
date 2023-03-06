@@ -33,7 +33,7 @@ module.exports = {
     },
 
     productCart : (req, res) => {
-        return res.render("products/productCart")
+        return res.render("products/productCart",{session: req.session})
     },
 
     search: (req, res) => {
