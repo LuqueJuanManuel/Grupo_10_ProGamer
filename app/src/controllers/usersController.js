@@ -1,7 +1,7 @@
 /* requerir validaciones de usuarios */
 const { validationResult } = require("express-validator");
 /* requerir database de usuarios */
-const { users , writeJSON, readJSON } = require("../database");
+const { users , writeJSON, readJSON } = require("../database/index");
 /* requerimos bcrypt para hashear contraseñas */
 const bcrypt = require("bcryptjs");
 
@@ -69,6 +69,7 @@ module.exports = {
         processRegister:(req, res) =>{
             /* agregando errores de validaciones */
             let errors = validationResult(req);
+            
             /* si no hay errores */
             if(errors.isEmpty()){
                 let lastId = 0;

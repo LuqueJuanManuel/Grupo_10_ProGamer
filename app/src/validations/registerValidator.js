@@ -1,7 +1,7 @@
 /* para la validaciones requerir express-validator */
 const { check, body } = require("express-validator");
-const { users } = require("../database/users.json");
-const bcrypt = require("bcryptjs");
+const { users }  = require("../database");
+
 
 module.exports = [
     /* nombre requerido */
@@ -35,6 +35,7 @@ module.exports = [
         min: 6,
     })
     .withMessage('La contraseña debe tener como mínimo 6 caracteres'),
+    
     /* considencia de contraseñas */
     body('pass2')
     .custom((value, {req}) => value !== req.body.pass ? false : true)

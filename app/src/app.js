@@ -4,8 +4,6 @@ const app = express();
 const path = require("path");
 const PORT = 3000;
 const methodOverride = require('method-override');
-
-
 /* requerir mudulo global de app session*/
 const session = require("express-session");
 /* instalar cookie-parser */
@@ -13,8 +11,13 @@ const cookieParser = require("cookie-parser");
 /* requerir chequeo de cookies a nivel global de app */
 const cookieCheck = require("./middlewares/cookieCheck");
 
+/* Template engine Config. */
+app.set("view engine", "ejs");
+app.set("views", "./src/views");
+
 /* Middlewares Global */
 app.use(express.static("public"));
+app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 /* aplicar de forma global session con su prop secret */
@@ -30,14 +33,11 @@ app.use(cookieCheck);
 
 
 
-/* Template engine Config. */
-app.set("view engine", "ejs");
-app.set("views", "./src/views");
 
 /* Routers */
 const indexRouter = require("./routes");
 const productsRouter = require("./routes/products");
-const usersRouter = require("../src/routes/users");
+const usersRouter = require("./routes/users");
 const adminRouter = require("./routes/admin");
 
 /* Routes Middlewares */
