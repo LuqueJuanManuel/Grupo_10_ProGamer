@@ -1,6 +1,7 @@
 /* para la validaciones requerir express-validator */
 const { check, body } = require("express-validator");
 const { users } = require("../database/users.json");
+const bcrypt = require("bcryptjs");
 
 module.exports = [
     /* nombre requerido */
@@ -25,7 +26,8 @@ module.exports = [
         return user === undefined;
     })
     .withMessage("Email ya registrado"),
-    /* conttraseña obligatoria */
+    
+    /* contraseña obligatoria */
     check('pass')
     .notEmpty()
     .withMessage('Debes escribir tu contraseña').bail()
@@ -37,8 +39,5 @@ module.exports = [
     body('pass2')
     .custom((value, {req}) => value !== req.body.pass ? false : true)
     .withMessage('Las contraseñas no coinciden')
-    /* aceptar terminos y condiciones */
-    /* check('terms')
-    .isString('on')
-    .withMessage('Debes aceptar los términos y condiciones') */
+   
 ]

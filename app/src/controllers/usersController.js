@@ -70,7 +70,7 @@ module.exports = {
             /* agregando errores de validaciones */
             let errors = validationResult(req);
             /* si no hay errores */
-            if(errors.isEmpty()) {
+            if(errors.isEmpty()){
                 let lastId = 0;
                 /* si en la lista de usuarios el ultimo usuario es menor dele el valor de id que trae usuario */
                 users.forEach(user => {
