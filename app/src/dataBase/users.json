@@ -23,7 +23,7 @@
     "id": 3,
     "name": "tomas",
     "lastname": "lopez turconi",
-    "email": "tomas.lopez.tur@gmail.com",
+    "email": "",
     "pass": "123456",
     "category": "user",
     "address": "",
@@ -37,6 +37,17 @@
     "pass": "$2a$10$D1tudR5aFJjPoibLrzzE1OWigSZzYB22n4pghpmE5nGi55qwcfbyG",
     "avatar": "1678222430600_users_.webp",
     "category": "USER",
+    "address": "",
+    "city": ""
+  },
+  {
+    "id": 5,
+    "name": "Tomas",
+    "lastname": "Lopez Turconi",
+    "email": "tomas.lopez.tur@gmail.com",
+    "pass": "$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza",
+    "avatar": "default-image.png",
+    "category": "admin",
     "address": "",
     "city": ""
   }
