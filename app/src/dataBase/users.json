@@ -1,32 +1,43 @@
 [
-    {
-        "id" : 1,
-        "name" : "emanuel",
-        "lastname": "gauna",
-        "email" : "lemagauna@gmail.com",
-        "pass" : "",
-        "category" : "admin",
-        "address" : "",
-        "avatar" : ""
-    },
-    {
-        "id" : 2,
-        "name" : "juan",
-        "lastname": "luque",
-        "email" : "Juanluque@gmail.com",
-        "pass" : "",
-        "category" : "admin",
-        "address" :"",
-        "avatar" : ""
-    },
-    {
-        "id" : 3,
-        "name" : "tomas",
-        "lastname": "lopez turconi",
-        "email" : "tomas.lopez.tur@gmail.com",
-        "pass" : "123456",
-        "category" : "user",
-        "address" : "",
-        "avatar" : ""
-    }
+  {
+    "id": 1,
+    "name": "emanuel",
+    "lastname": "gauna",
+    "email": "lemagauna@gmail.com",
+    "pass": "",
+    "category": "admin",
+    "address": "",
+    "avatar": ""
+  },
+  {
+    "id": 2,
+    "name": "juan",
+    "lastname": "luque",
+    "email": "Juanluque@gmail.com",
+    "pass": "",
+    "category": "admin",
+    "address": "",
+    "avatar": ""
+  },
+  {
+    "id": 3,
+    "name": "tomas",
+    "lastname": "lopez turconi",
+    "email": "tomas.lopez.tur@gmail.com",
+    "pass": "123456",
+    "category": "user",
+    "address": "",
+    "avatar": ""
+  },
+  {
+    "id": 4,
+    "name": "ema",
+    "lastname": "gau",
+    "email": "loquesea@mail.com",
+    "pass": "$2a$10$D1tudR5aFJjPoibLrzzE1OWigSZzYB22n4pghpmE5nGi55qwcfbyG",
+    "avatar": "1678222430600_users_.webp",
+    "category": "USER",
+    "address": "",
+    "city": ""
+  }
 ]

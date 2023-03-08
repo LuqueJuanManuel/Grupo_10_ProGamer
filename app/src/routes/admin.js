@@ -7,7 +7,6 @@ const productsAddValidator = require("../validations/productsAddValidator");
 /* Home */
 router.get('/home', controller.adminHome);
 
-
 /* validacion de edicion de productos */
 const productEditValidator = require("../validations/productsEditValidator");
 

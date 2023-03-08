@@ -2,7 +2,7 @@
 <html lang="en">
 
     <%- include("../partials/head" , {title: 'Editando: ' + name }) %>
->>>>>>> fec05e3f6456a3b429cc5ce6c4dc2a809aa69acc
+
 
 <title>Admin - editar producto:<%= name %></title>
 <body>
@@ -34,7 +34,7 @@
                     <div class="input-container">
                         <h6 class="datos-box">Categoria:</h6>
                         <select name="category" id="category" class="input-select <%= (locals.errors && errors.category) && 'is-invalid'%>" required>
-                            <option value="" hidden selected>Elija su categoria</option>
+                            <option value="<%= category %>" hidden selected ><%= category %></option>
                             <option value="Notebooks">Notebooks</option>
                             <option value="Computadores">Computadores</option>
                             <option value="Componentes-de-PC">Componentes de PC</option>
@@ -92,7 +92,7 @@
                     <div class="input-container">
                         <h6 class="datos-box">Sistemas operativos:</h6>
                         <select name="so" id="so" class="input-select" >
-                            <option value="" hidden selected>Elija los SO:<%= so %></option>
+                            <option value="<%= so %>" hidden selected><%= so %></option>
                             <option value="Windows">Windows</option>
                             <option value="Linux">Linux</option>
                             <option value="MacOS">MacOS</option>
