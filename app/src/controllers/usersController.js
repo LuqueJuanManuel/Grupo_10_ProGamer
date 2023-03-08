@@ -15,6 +15,9 @@ module.exports = {
     userEdit: (req, res) => {
         return res.render("users/userEdit",{session: req.session})
     },
+    userEditUpdate: (req, res) => {
+
+    },
     processLogin: (req,res) =>{
         //errors es igual a la validacion de errores //
         let errors = validationResult(req);
