@@ -23,8 +23,8 @@ module.exports = [
     body('pass')
     .custom((value, {req}) => {
         let user = users.find(user => user.email === req.body.email);
-        /* return bcrypt.compareSync(value, user.password); */
-        return user.pass === value;
+        return bcrypt.compareSync(value, user.pass);
+        /* return user.pass === value; */
     })
     .withMessage('contraseña invalida')
 ]
