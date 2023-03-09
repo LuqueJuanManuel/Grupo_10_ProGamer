@@ -13,7 +13,13 @@ module.exports = {
         return res.render("users/userHome",{session: req.session})
     },
     userEdit: (req, res) => {
-        return res.render("users/userEdit",{session: req.session})
+        let userSessionID = req.session.user.id;
+        let userSession = users.find(user => user.id === userSessionID);
+        
+        return res.render("users/userEdit",{
+            user: userSession,
+            session:req.session
+        })
     },
     userEditUpdate: (req, res) => {
 
@@ -34,7 +40,9 @@ module.exports = {
                 category: user.category,
                 address: user.address,
                 avatar: user.avatar,
-                city: user.city
+                city: user.city,
+                postalCode:user.postalCode,
+                tel: user.tel
             }
             /* tiempo de duracion - 1 hora */
             let times = 3600000;
@@ -59,7 +67,8 @@ module.exports = {
         }else{
             
             return res.render('users/login',{
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
                 
             })
         }
@@ -93,7 +102,9 @@ module.exports = {
                  avatar: req.file ? req.file.filename : "default-image.png",
                  category: "USER",
                  address: "",
-                 city: "" 
+                 city: "" ,
+                 postalCode:"",
+                 tel:""
                 };
          
                 users.push(newUser);

@@ -8,30 +8,34 @@
      <!-- fin del header -->
     <main id="register">
         <div class="registro-container">
-            <form action="" method="">
+            <form action="/users/userHome/userEdit?_method=PUT" method="post" enctype="multipart/form-data">
     
                 <div class="registro-form">
     
                     <h4>Perfil del usuario</h4>
-    
+
+                    <div class="input-container user-Image-container">
+                        <img class="user-Image" src="/images/users/<%= user.avatar %>" alt="">
+                    </div>
+
                     <div class="input-container">
-                        <h6 class="datos-box">Email*</h6>
-                        <input class="input-style" type="email" name="email" placeholder="Ingresar email...">
+                        <h6 class="datos-box">Nombre*</h6>
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre..." value="<%= locals.old ? old.name : user.name %>">
                     </div>
     
                     <div class="input-container">
                         <h6 class="datos-box">Apellido*</h6>
-                        <input class="input-style" type="text" name="name" placeholder="Ingresar apellido...">
+                        <input class="input-style" type="text" name="name" placeholder="Ingresar apellido..."value="<%= locals.old ? old.lastname : user.lastname %>">
                     </div>
-    
+
                     <div class="input-container">
-                        <h6 class="datos-box">Nombre*</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre...">
+                        <h6 class="datos-box">Email*</h6>
+                        <input class="input-style" type="email" name="email" placeholder="Ingresar email..."  readonly value="<%= user.email %>">
                     </div>
     
                     <div class="input-container">
                         <h6 class="datos-box">Provincia</h6>
-                        <select name="Provincia" class="input-select">
+                        <select name="city" class="input-select">
                             <option value="" hidden selected>Elija una provincia</option>
                             <option value="Buenos Aires">Buenos Aires</option>
                             <option value="chaco">Chaco</option>
@@ -41,36 +45,20 @@
                         </select>
                     </div>
     
-                    <div class="input-container">
-                        <h6 class="datos-box">Tipo de documento</h6>
-                        <select name="documento" class="input-select">
-                            <option value="" hidden selected>Elija tipo de documento</option>
-                            <option value="DNI">DNI</option>
-                            <option value="Libreta Civica">Libreta Civica</option>
-                            <option value="Pasaporte Nacional">Pasaporte Nacional</option>
-                            <option value="Libreta de Enrolamiento">Libreta de Enrolamiento</option>
-                        </select>
-    
-                    </div>
     
                     <div class="input-container">
-                        <h6 class="datos-box">Documento*</h6>
-                        <input class="input-style" type="text" name="documento" placeholder="Numero de documento o DNI">
-                    </div>
-    
-                    <div class="input-container">
-                        <h6 class="datos-box">Codigo postal*</h6>
-                        <input class="input-style" type="text" name="codigopostal" placeholder="Ingresar codigo postal">
+                        <h6 class="datos-box">Codigo postal</h6>
+                        <input class="input-style" type="text" name="postalCode" placeholder="Ingresar codigo postal"value="<%= locals.old ? old.postalCode : user.postalCode %>">
                     </div>
     
                     <div class="input-container">
                         <h6 class="datos-box">Dirección</h6>
-                        <input class="input-style" type="text" name="direccion" placeholder="Ingresar dirección...">
+                        <input class="input-style" type="text" name="address" placeholder="Ingresar dirección..." value="<%= locals.old ? old.address : user.address %>">
                     </div>
     
                     <div class="input-container">
                         <h6 class="datos-box">Teléfono</h6>
-                        <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono...">
+                        <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono..." value="<%= locals.old ? old.tel : user.tel %>">
                     </div>
                     <div class="input-container">
                         <h6 class="datos-box">Cambiar foto de perfil</h6>

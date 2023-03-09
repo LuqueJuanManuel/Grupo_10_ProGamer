@@ -48,7 +48,9 @@
     "pass": "$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza",
     "avatar": "default-image.png",
     "category": "admin",
-    "address": "",
-    "city": ""
+    "address": "SiempreViva 404",
+    "city": "cordoba",
+    "postalCode":"1414",
+    "tel":"1555708596"
   }
 ]

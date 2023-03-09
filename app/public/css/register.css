@@ -201,6 +201,26 @@ textarea:focus {
 .container-price-b{
     margin: 0 auto;
 }
+/* image avatar en userEdit */
+/* div.user-Image-container{
+    
+} */
+div.user-Image-container{
+    justify-content: center;
+    align-items: center;
+    
+}
+div.user-Image-container img{
+    width: 8rem ;
+    height: 8rem;
+    border-radius: 8px;
+    box-shadow:0 0px 5px var(--violeta-oscuro);
+    transition: all 1s ease-in-out;
+}
+div.user-Image-container img:hover{
+    
+    box-shadow: 4px 4px 20px var(--violeta-oscuro);
+}
 
 @media (min-width: 415px){
     .cpu {
