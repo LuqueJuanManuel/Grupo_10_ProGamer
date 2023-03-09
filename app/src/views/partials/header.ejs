@@ -21,7 +21,7 @@
     </div>
     <div class="user-cart">
       <%if (typeof session.user != "undefined") {%>
-        <a href="users/userHome" class="user button">
+        <a href="/users/userHome" class="user button">
           <!--boton usuario -->
           <span class="user-session"></span>
           <i class="fa-solid fa-user"></i>
@@ -30,8 +30,8 @@
           <%if (session.user.category === "admin") {%>
             <a class="users-menu-links" href="/admin/home">Admin</a>
           <%}%>
-          <a class="users-menu-links" href="/users/userHome">Mis datos</a>
-          <a class="users-menu-links" href="">Cerrar sesión</a>
+          <a class="users-menu-links" href="/userHome">Mis datos</a>
+          <a class="users-menu-links" href="/users/logOut">Cerrar sesión</a>
         </div>
       <%}else {%>
         <a href="/users/login" class="user button">

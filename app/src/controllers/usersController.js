@@ -109,6 +109,14 @@ module.exports = {
                 })
             }  
         },
+        logOut: (req, res) => {
+            req.session.destroy();
+            if (req.cookies.proGamer) {
+                res.cookie("proGamer", "", {maxAge: -1})
+            }
+            res.redirect("/");
+            
+        },
     
      
 }
