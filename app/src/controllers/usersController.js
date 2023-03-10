@@ -12,14 +12,14 @@ module.exports = {
     userHome: (req, res) => {
         let userSessionID = req.session.user.id;
         let userSession = users.find(user => user.id === userSessionID);
-        delete userSession.pass;
+
         return res.render("users/userHome",{
             user: userSession,session: req.session})
     },
     userEdit: (req, res) => {
         let userSessionID = req.session.user.id;
         let userSession = users.find(user => user.id === userSessionID);
-        delete userSession.pass;
+        
         return res.render("users/userEdit",{
             user: userSession,
             session:req.session

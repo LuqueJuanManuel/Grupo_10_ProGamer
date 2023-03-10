@@ -264,9 +264,10 @@ main#home section.payMode-section article.modes div.text-modes a i:hover{
 main#home section.payMode-section article.modes div.text-modes p.text {
     font-size: 0.9rem;
     font-family: var(--fuente-parrafos);
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0 !important;
 }
 
 main#home section.payMode-section article.modes div.text-modes a p{
@@ -274,6 +275,7 @@ main#home section.payMode-section article.modes div.text-modes a p{
     font-family: var(--fuente-parrafos);
     margin-left: 1rem;
     color: var(--violeta-oscuro);
+    margin-bottom: 0 !important;
     transition: all 1s ease;
 }
 
@@ -411,6 +413,9 @@ main#home section form div.form div.input-container span.error-message, div.butt
 
 main#home section form div.form  div.button-container button.btn {
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 8px;
     cursor: pointer;
     height: 2rem;
@@ -470,7 +475,7 @@ main#home section form div.form  div.button-container button.btn:hover {
     main#home section form div.form div.input-container input.input-style {
         width: 20rem;
         height: 2.2rem;
-        padding: 0.4rem 0.5rem 0 0.8rem;
+        /* padding: 0.4rem 0.5rem 0 0.8rem; */
     } 
 
     main#home section form div.form div.input-container input.input-style::placeholder {

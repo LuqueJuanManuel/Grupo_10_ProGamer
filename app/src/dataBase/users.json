@@ -10,6 +10,16 @@
         "avatar": ""
     },
     {
+        "id": 2,
+        "name": "juan",
+        "lastname": "luque",
+        "email": "Juanluque@gmail.com",
+        "pass": "",
+        "category": "admin",
+        "address": "",
+        "avatar": ""
+    },
+    {
         "id": 3,
         "name": "tomas",
         "lastname": "lopez turconi",
@@ -38,8 +48,10 @@
         "pass": "$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza",
         "avatar": "default-image.png",
         "category": "admin",
-        "address": "",
-        "city": ""
+        "address": "av.SiempreViva 410",
+        "city": "Buenos Aires",
+        "postalCode": "404",
+        "tel": "15555555"
     },
     {
         "id": 6,
