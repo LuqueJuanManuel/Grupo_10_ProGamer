@@ -10,18 +10,56 @@ module.exports = {
         return res.render("users/login",{session: req.session})
     },
     userHome: (req, res) => {
-        return res.render("users/userHome",{session: req.session})
+        let userSessionID = req.session.user.id;
+        let userSession = users.find(user => user.id === userSessionID);
+        delete userSession.pass;
+        return res.render("users/userHome",{
+            user: userSession,session: req.session})
     },
     userEdit: (req, res) => {
         let userSessionID = req.session.user.id;
         let userSession = users.find(user => user.id === userSessionID);
-        
+        delete userSession.pass;
         return res.render("users/userEdit",{
             user: userSession,
             session:req.session
         })
     },
     userEditUpdate: (req, res) => {
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+            let userId = req.session.user.id;
+            let user = users.find(user => user.id === userId);
+
+            const {name, lastname, address, city, postalCode, tel} = req.body
+
+            user.name = name;
+            user.lastname = lastname;
+            user.address = address;
+            user.city = city;
+            user.postalCode = postalCode;
+            user.tel = tel;
+            user.avatar = req.file ? req.file.filename : user.avatar;
+            
+            
+            writeJSON("users.json", users);
+            
+            delete user.pass;
+            req.session.user = user;
+
+            return res.redirect('/users/userHome');
+        }else{
+            let userSessionID = req.session.user.id;
+            let userSession = users.find(user => user.id === userSessionID);
+
+            return res.render("users/userEdit",{
+                user: userSession,
+                session:req.session,
+                errors: errors.mapped()
+            })
+        }
+        
 
     },
     processLogin: (req,res) =>{

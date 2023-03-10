@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head", {title: "login"})  %>
+    <%- include("../partials/head", {title: "Menu"})  %>
     <title>Document</title>
 <body >
     <!-- header -->
@@ -9,7 +9,7 @@
     <main class="userHome">
         <section>
             <div class="form-container">
-                <h4 class="title">Hola, Bienvenid@!!</h4>
+                <h4 class="title">Hola, Bienvenid@ <%= user.name %>!!</h4>
                 
                     <div class="btn-userHome">
                         <a href="/users/userHome/userEdit">Ver perfil</a>

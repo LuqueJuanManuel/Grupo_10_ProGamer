@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head", {title: "login"})  %>
+    <%- include("../partials/head", {title: user.name})  %>
     <title>Document</title>
 <body>
     <!-- header -->
@@ -12,7 +12,7 @@
     
                 <div class="registro-form">
     
-                    <h4>Perfil del usuario</h4>
+                    <h4>Información del perfil</h4>
 
                     <div class="input-container user-Image-container">
                         <img class="user-Image" src="/images/users/<%= user.avatar %>" alt="">
@@ -20,12 +20,18 @@
 
                     <div class="input-container">
                         <h6 class="datos-box">Nombre*</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar nombre..." value="<%= locals.old ? old.name : user.name %>">
+                        <input class="input-style" type="text" name="name" placeholder="Ingresar nombre..." value="<%= locals.old ? old.name : user.name %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <small class="text-danger"><%= errors.name.msg %> </small>
+                        <% } %>
                     </div>
     
                     <div class="input-container">
                         <h6 class="datos-box">Apellido*</h6>
-                        <input class="input-style" type="text" name="name" placeholder="Ingresar apellido..."value="<%= locals.old ? old.lastname : user.lastname %>">
+                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar apellido..."value="<%= locals.old ? old.lastname : user.lastname %>">
+                        <% if (locals.errors && errors.lastname) { %>
+                            <small class="text-danger"><%= errors.lastname.msg %> </small>
+                        <% } %>
                     </div>
 
                     <div class="input-container">
@@ -66,7 +72,8 @@
                     </div>
                     <p>Campos obligatorios *</p>
                     <a class="button-container register" href="./">Volver al menu</a>
-                    <button class="button-container" type="submit"><a class="register"  href="./">Editar</a></button>
+
+                    <button class="button-container" type="submit"><a class="register"  >Editar</a></button>
                 </div>
             </form>
         </div>
