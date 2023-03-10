@@ -10,16 +10,6 @@
         "avatar": ""
     },
     {
-        "id": 2,
-        "name": "juan",
-        "lastname": "luque",
-        "email": "Juanluque@gmail.com",
-        "pass": "",
-        "category": "admin",
-        "address": "",
-        "avatar": ""
-    },
-    {
         "id": 3,
         "name": "tomas",
         "lastname": "lopez turconi",
@@ -42,14 +32,35 @@
     },
     {
         "id": 5,
-        "name": "TomasII",
+        "name": "Tomas",
         "lastname": "Lopez Turconi",
         "email": "tomas.lopez.tur@gmail.com",
-        "avatar": "1678407878766_users_.jpeg",
+        "pass": "$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza",
+        "avatar": "default-image.png",
         "category": "admin",
-        "address": "SiempreViva 410",
-        "city": "",
-        "postalCode": "8408",
-        "tel": "1555708596"
+        "address": "",
+        "city": ""
+    },
+    {
+        "id": 6,
+        "name": "Juan",
+        "lastname": "prueba2",
+        "email": "juanprueba@mail.com",
+        "pass": "$2a$10$IlHOriX05pi72aW4XSu18esd254DwoGF.QRLR6.JB8StToZ/xIuPK",
+        "avatar": "1678384569591_users_.jpg",
+        "category": "USER",
+        "address": "",
+        "city": ""
+    },
+    {
+        "id": 7,
+        "name": "juan",
+        "lastname": "luque",
+        "email": "juanAdmin@mail.com",
+        "pass": "$2a$10$Lpatossy5puliO25zr2bIuimqi1SId12I4ipbXKpTjVeABTLqez22",
+        "avatar": "1678387790863_users_.jpg",
+        "category": "admin",
+        "address": "",
+        "city": ""
     }
 ]

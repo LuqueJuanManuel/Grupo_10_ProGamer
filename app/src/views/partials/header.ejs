@@ -30,8 +30,8 @@
           <%if (session.user.category === "admin") {%>
             <a class="users-menu-links" href="/admin/home">Admin</a>
           <%}%>
-          <a class="users-menu-links" href="/users/userHome">Mis datos</a>
-          <a class="users-menu-links" href="">Cerrar sesión</a>
+          <a class="users-menu-links" href="/userHome">Mis datos</a>
+          <a class="users-menu-links" href="/users/logOut">Cerrar sesión</a>
         </div>
       <%}else {%>
         <a href="/users/login" class="user button">

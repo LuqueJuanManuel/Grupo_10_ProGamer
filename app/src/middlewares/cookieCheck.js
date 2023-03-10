@@ -1,3 +1,4 @@
+/* cookie */
 module.exports = (req, res, next) => {
     if(req.cookies.proGamer && !req.session.user) {
         req.session.user = req.cookies.proGamer;

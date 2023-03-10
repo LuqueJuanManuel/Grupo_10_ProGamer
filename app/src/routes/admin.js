@@ -3,22 +3,23 @@ const router = express.Router();
 const controller = require("../controllers/adminController");
 const { uploadImageProduct } = require("../middlewares/upload");
 const productsAddValidator = require("../validations/productsAddValidator");
+const sessionAdminCheck = require("../middlewares/sessionAdminCheck")
 
 /* Home */
-router.get('/home', controller.adminHome);
+router.get('/home', sessionAdminCheck, controller.adminHome);
 
 /* validacion de edicion de productos */
 const productEditValidator = require("../validations/productsEditValidator");
 
 /* create */
-router.get('/create', controller.create);
+router.get('/create', sessionAdminCheck, controller.create);
 
 router.post('/create', uploadImageProduct.array("image"), productsAddValidator, controller.store)
 
 
 
 /* edit */
-router.get('/edit/:id', controller.edit);
+router.get('/edit/:id', sessionAdminCheck, controller.edit);
 
 router.put('/edit/:id', uploadImageProduct.array("image") , productEditValidator, controller.update);
 
