@@ -46,10 +46,10 @@
         "lastname": "Lopez Turconi",
         "email": "tomas.lopez.tur@gmail.com",
         "pass": "$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza",
-        "avatar": "default-image.png",
-        "category": "admin",
+        "avatar": "1678493535051_users_.jpg",
+        "category": "USER",
         "address": "av.SiempreViva 410",
-        "city": "Buenos Aires",
+        "city": "",
         "postalCode": "404",
         "tel": "15555555"
     },
