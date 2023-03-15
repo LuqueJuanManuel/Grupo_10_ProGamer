@@ -45,7 +45,7 @@ module.exports = {
             
             writeJSON("users.json", users);
             
-            delete user.pass;
+            /* delete user.pass; */
             req.session.user = user;
 
             return res.redirect('/users/userHome');

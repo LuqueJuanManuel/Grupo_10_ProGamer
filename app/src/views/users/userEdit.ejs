@@ -40,9 +40,14 @@
                     </div>
     
                     <div class="input-container">
+                        
                         <h6 class="datos-box">Provincia</h6>
                         <select name="city" class="input-select">
-                            <option value="" hidden selected>Elija una provincia</option>
+                            <%if (session.user.city !== "") {%>
+                                <option value="<%= user.city %>"><%= locals.old ? old.city : user.city %></option>
+                            <%}else{%>
+                                <option value="" hidden selected>Elija una provincia</option>
+                            <%}%>
                             <option value="Buenos Aires">Buenos Aires</option>
                             <option value="chaco">Chaco</option>
                             <option value="cordoba">Córdoba</option>
