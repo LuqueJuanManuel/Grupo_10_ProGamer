@@ -1,1 +1,78 @@
-[{"id":1,"name":"emanuel","lastname":"gauna","email":"lemagauna@gmail.com","pass":"","category":"admin","address":"","avatar":""},{"id":2,"name":"juan","lastname":"luque","email":"Juanluque@gmail.com","pass":"","category":"admin","address":"","avatar":""},{"id":3,"name":"tomas","lastname":"lopez turconi","email":"","pass":"123456","category":"user","address":"","avatar":""},{"id":4,"name":"ema","lastname":"gau","email":"loquesea@mail.com","pass":"$2a$10$D1tudR5aFJjPoibLrzzE1OWigSZzYB22n4pghpmE5nGi55qwcfbyG","avatar":"1678222430600_users_.webp","category":"USER","address":"","city":""},{"id":5,"name":"Tomas","lastname":"Lopez Turconi","email":"tomas.lopez.tur@gmail.com","pass":"$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza","avatar":"1678493535051_users_.jpg","category":"USER","address":"av.SiempreViva 410","city":"Buenos Aires","postalCode":"404","tel":"15555555"},{"id":6,"name":"Juan","lastname":"prueba2","email":"juanprueba@mail.com","pass":"$2a$10$IlHOriX05pi72aW4XSu18esd254DwoGF.QRLR6.JB8StToZ/xIuPK","avatar":"1678384569591_users_.jpg","category":"USER","address":"","city":""},{"id":7,"name":"juan","lastname":"luque","email":"juanAdmin@mail.com","pass":"$2a$10$Lpatossy5puliO25zr2bIuimqi1SId12I4ipbXKpTjVeABTLqez22","avatar":"1678387790863_users_.jpg","category":"admin","address":"","city":""}]
+[
+    {
+        "id": 1,
+        "name": "emanuel",
+        "lastname": "gauna",
+        "email": "lemagauna@gmail.com",
+        "pass": "",
+        "category": "admin",
+        "address": "",
+        "avatar": ""
+    },
+    {
+        "id": 2,
+        "name": "juan",
+        "lastname": "luque",
+        "email": "Juanluque@gmail.com",
+        "pass": "",
+        "category": "admin",
+        "address": "",
+        "avatar": ""
+    },
+    {
+        "id": 3,
+        "name": "tomas",
+        "lastname": "lopez turconi",
+        "email": "",
+        "pass": "123456",
+        "category": "user",
+        "address": "",
+        "avatar": ""
+    },
+    {
+        "id": 4,
+        "name": "ema",
+        "lastname": "gau",
+        "email": "loquesea@mail.com",
+        "pass": "$2a$10$D1tudR5aFJjPoibLrzzE1OWigSZzYB22n4pghpmE5nGi55qwcfbyG",
+        "avatar": "1678222430600_users_.webp",
+        "category": "USER",
+        "address": "",
+        "city": ""
+    },
+    {
+        "id": 5,
+        "name": "Tomas",
+        "lastname": "Lopez Turconi",
+        "email": "tomas.lopez.tur@gmail.com",
+        "pass": "$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza",
+        "avatar": "1678493535051_users_.jpg",
+        "category": "USER",
+        "address": "av.SiempreViva 410",
+        "city": "Buenos Aires",
+        "postalCode": "404",
+        "tel": "15555555"
+    },
+    {
+        "id": 6,
+        "name": "Juan",
+        "lastname": "prueba2",
+        "email": "juanprueba@mail.com",
+        "pass": "$2a$10$IlHOriX05pi72aW4XSu18esd254DwoGF.QRLR6.JB8StToZ/xIuPK",
+        "avatar": "1678384569591_users_.jpg",
+        "category": "USER",
+        "address": "",
+        "city": ""
+    },
+    {
+        "id": 7,
+        "name": "juan",
+        "lastname": "luque",
+        "email": "juanAdmin@mail.com",
+        "pass": "$2a$10$Lpatossy5puliO25zr2bIuimqi1SId12I4ipbXKpTjVeABTLqez22",
+        "avatar": "1678387790863_users_.jpg",
+        "category": "admin",
+        "address": "",
+        "city": ""
+    }
+]
