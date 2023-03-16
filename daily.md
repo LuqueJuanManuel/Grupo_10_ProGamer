@@ -174,3 +174,87 @@ y cambie el funcionamiento. Y corregi algunos problemas de los name de algunas v
 
 - Se aplican los ultimos detalles de productDetail, la vista dinamica y los estilos. 
 - Complicaciones: tuve dificultades a la hora de implementar algunas validaciones a la vista, como implementar el json de categorias para que sw muestren en la vist.
+
+*************************************************************************
+
+# Sprint 5 - Middlewares y Auth.
+
+## Viernes 3 de Marzo
+
+## Luque Juan 
+
+- se implemento Multer para subir la imagen del  usuario. 
+
+## Tomas Lopez Turconi
+
+- Arregle las vistas para el usuario userEdit y userHome.
+Tambien agrege que en los formulario de registro se pueda subir una imagen y en el login el checkbox para redordar la cuenta.
+
+*********************************************************************************************************
+
+## Domingo 5 de Marzo
+
+## Luque Juan
+
+- Se implementa middlewares de rutas para validar si el usuario esta logueado o no y si el rol del usuario es admin, dandoles permisos para entrar o no a las rutas. 
+- Complicaciones: me costo pensar la logica a implementar los middlewares. 
+
+## Tomas Lopez Turconi
+
+- Empeze con el login y las cookies, tuve un problema en session que no encontrava el error, pero lo pude solucionar.
+Despues empeze con las validaciones.
+
+## Emanuel Gauna
+
+- Modificación de select admintEdit.ejs
+
+**********************************************************************************************************
+
+## Lunes 6 de Marzo
+
+## Tomas Lopez Turconi 
+
+- Trabaje y finalize el login con coojie y aplique session a las vistas de header y para que tengan funcionalidad
+
+## Emanuel Gauna 
+
+- Modificando const de rutas de users en el app.js modificación de archivo index.js de carpeta dataBases prop users.
+
+- Prueba de subida de imagenes con Multer.
+
+**********************************************************************************************************
+
+## Martes 7 de Marzo
+
+## Tomaz Lopez Turconi
+
+- Aplique bcrypt al login.
+
+******************************************************************************************************
+
+## Jueves 8 de Marzo
+
+## Tomaz Lopez Turconi
+
+- Termine la visualizacion de userEdit y el userEditUpdate para la edicion de datos.
+Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
+
+## Luque Juan
+
+- Se corrige el codigo de  los middlewares de ruta y se hace un merge a develop comprovando que todo funcione correctamente y tambien se crea la ruta a logOut y se aplica en los botones correspondientes.
+
+*****************************************************************************************************
+
+## Miercoles 15 de Marzo
+
+## Tomaz Lopez Turconi
+
+- Terminando los detalles de las vistas , funcionalidad del userController.
+
+**********************************************************************************************
+
+
+
+
+
+

@@ -1,1 +1,67 @@
-[{"id":1,"name":"emanuel","lastname":"gauna","email":"lemagauna@gmail.com","pass":"","category":"admin","address":"","avatar":""},{"id":2,"name":"juan","lastname":"luque","email":"Juanluque@gmail.com","pass":"","category":"admin","address":"","avatar":""},{"id":3,"name":"tomas","lastname":"lopez turconi","email":"","pass":"123456","category":"user","address":"","avatar":""},{"id":4,"name":"ema","lastname":"gau","email":"loquesea@mail.com","pass":"$2a$10$D1tudR5aFJjPoibLrzzE1OWigSZzYB22n4pghpmE5nGi55qwcfbyG","avatar":"1678222430600_users_.webp","category":"USER","address":"","city":""},{"id":5,"name":"Tomas","lastname":"Lopez Turconi","email":"tomas.lopez.tur@gmail.com","pass":"$2a$10$d8wJavPhlFe00nojr4d8mOF8957RLjT5IJhE1j3Obh3UYy.T6Hcza","avatar":"1678493535051_users_.jpg","category":"USER","address":"av.SiempreViva 410","city":"Buenos Aires","postalCode":"404","tel":"15555555"},{"id":6,"name":"Juan","lastname":"prueba2","email":"juanprueba@mail.com","pass":"$2a$10$IlHOriX05pi72aW4XSu18esd254DwoGF.QRLR6.JB8StToZ/xIuPK","avatar":"1678384569591_users_.jpg","category":"USER","address":"","city":""},{"id":7,"name":"juan","lastname":"luque","email":"juanAdmin@mail.com","pass":"$2a$10$Lpatossy5puliO25zr2bIuimqi1SId12I4ipbXKpTjVeABTLqez22","avatar":"1678387790863_users_.jpg","category":"admin","address":"","city":""}]
+[
+    {
+        "id": 1,
+        "name": "Tomas ",
+        "lastname": "Lopez",
+        "email": "tomasLopez@mail.com",
+        "pass": "$2a$10$6t1sNsVLhkkKheIeNRnIB.WYRhfLvIRWTj0Pl6N9INYT1qqWnWFQ.",
+        "avatar": "default-image.png",
+        "category": "admin",
+        "address": "",
+        "city": "",
+        "postalCode": "",
+        "tel": ""
+    },
+    {
+        "id": 2,
+        "name": "Emanuel",
+        "lastname": "Gauna",
+        "email": "Ema@mail.com",
+        "pass": "$2a$10$9W6KL970YJc66SnweF.05eF10.7eymBuiSwXQeemAfyq6dcE.oRia",
+        "avatar": "default-image.png",
+        "category": "admin",
+        "address": "",
+        "city": "",
+        "postalCode": "",
+        "tel": ""
+    },
+    {
+        "id": 3,
+        "name": "Juan",
+        "lastname": "Luque",
+        "email": "Juan@mail.com",
+        "pass": "$2a$10$5My1tQjPI/s6TG5VSiExsu.tp2MtyCHCXjsDcLzh0Rwgtr84ezmR6",
+        "avatar": "default-image.png",
+        "category": "admin",
+        "address": "",
+        "city": "",
+        "postalCode": "",
+        "tel": ""
+    },
+    {
+        "id": 5,
+        "name": "usuario",
+        "lastname": "admin",
+        "email": "usuario@admin.com",
+        "pass": "$2a$10$Dw1y158zAoHbLdb7g2p74uhM8BEw4XEZ6awGj20Kpa326SP4pRw/6",
+        "avatar": "default-image.png",
+        "category": "admin",
+        "address": "",
+        "city": "",
+        "postalCode": "",
+        "tel": ""
+    },
+    {
+        "id": 6,
+        "name": "usuario",
+        "lastname": "log",
+        "email": "usuario@log.com",
+        "pass": "$2a$10$/.wYt7d7aQslTDM1J0MvMeAOWsFnBA8OP7n.QKOACwxRr3BfbnhWK",
+        "avatar": "default-image.png",
+        "category": "USER",
+        "address": "",
+        "city": "",
+        "postalCode": "",
+        "tel": ""
+    }
+]
