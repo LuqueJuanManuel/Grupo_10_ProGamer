@@ -66,7 +66,6 @@ module.exports = {
         //errors es igual a la validacion de errores //
         let errors = validationResult(req);
         
-        console.log(errors)
         if (errors.isEmpty()){
             /* usuario logeado */
             let user = users.find(user => user.email === req.body.email);

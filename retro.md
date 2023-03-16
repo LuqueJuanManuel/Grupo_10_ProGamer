@@ -51,7 +51,7 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 # RESTROSPECTIVA DEL SPRINT 4.
 
-### ### Seguir haciendo:
+### Seguir haciendo:
        - Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
        - En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
 
@@ -67,3 +67,38 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 ### Dejar de hacer:
       - Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
+
+*********************************************************************************************************
+
+# RESTROSPECTIVA DEL SPRINT 5.
+
+### Seguir haciendo: 
+- Seguir manteniendo una comunicación activa con el equipo, atravez de Whatsapp y el tablero de trello.
+
+### Hacer más:
+
+- Empezar a hacer commits con tareas mas pequeñas, para tener un mejor control de los cambios realizados.
+
+- Una vez que la tarea realizada funciona correctamente en nuestras ramas, no olvidarnos de mantener actualizado la rama develop.
+
+### Empezar a hacer:
+
+- Ni bien se finaliza el día de trabajo, subir un reporte al archivo daily.md con lo realizado.
+
+### Hacer menos:
+
+- Avanzar en el proyecto sin hacer commits. 
+
+### Dejar de hacer:
+
+- Hacer codigo extenso sin guardar los cambios.
+
+- Comprobar en las ramas individuales antes de subirlo a develop y asi evitar errores.
+
+**************************************************************************************************************
+
+
+
+
+
+
