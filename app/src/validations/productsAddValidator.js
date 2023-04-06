@@ -13,7 +13,7 @@ check("brand")
 
 check("description")
     .notEmpty().withMessage("La descripción es obligatoria").bail()
-    .isLength({ min: 5}).withMessage("La descripción debe tener mínimo 20 caracteres"),
+    .isLength({ min: 5}).withMessage("La descripción debe tener mínimo 5 caracteres"),
 
 check("price")
     .isInt({min:1}).withMessage("Debes indicar un precio"),
