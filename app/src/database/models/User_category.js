@@ -1,33 +1,29 @@
-
 module.exports = (sequelize, dataTypes) => {
-
-    let alias = 'User_category';
+    let alias = "User_Category";
     let cols = {
-        id: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            primaryKey: true,
+       id: {
+        type: dataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false,
             autoIncrement: true,
-            allowNull: false
-        },
-        rol: {
-            type: dataTypes.STRING(10),
-            allowNull: false
-        },
-    };
+            primaryKey: true
+       },
+       rol: {
+        type: dataTypes.STRING(10),
+        allowNull: false
+       }
+    }
 
     let config = {
-        tableName: 'user_categories',
-        createdAt: "created_at",
-        updatedAt: "updated_at",
-    };
-    const User_category = sequelize.define(alias, cols, config)
+        tableName: "User_Category",
+        timestamps: false
+    }
 
-     User_category.associate = (models) => {
-        User_category.hasMany(models.User, {
-            as: "users",
-            foreignKey: "user_category_id",
-        })
-    } 
+    const User_Category = sequelize.define(alias, cols, config);
 
-    return User_category
+    /* FALTA AGREGAR LAS RELACIONES CON USER */
+    /* FALTA HACER EL USER_CATEGORY.ASSOCIATE */
+
+
+
+    return Product;
 }
