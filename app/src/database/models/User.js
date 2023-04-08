@@ -1,3 +1,5 @@
+const { categories } = require("../../controllers/productsController");
+
 module.exports = (sequelize, dataTypes) => {
   /*  users(
 id INT unsigned NOT NULL AUTO_INCREMENT,
@@ -71,15 +73,13 @@ FOREIGN KEY (user_category_id) references user_categories(id)
     };
     const User = sequelize.define(alias, cols, config)
 
-  /*   Image.associate = (models) => {
-        Product.belongsToMany(models.Product, {
-            as: "products",
-            through: "actor_movie",
-            foreignKey: "actor_id",
-            otherKey: "movie_id",
-            timestamps: false
+     User.associate = (models) => {
+        Category.belongsTo(models.User_category, {
+            as: "user_categories",
+            foreignKey: "user_category_id",
+            
         })
-    } */
+    } 
 
     return User
 }
