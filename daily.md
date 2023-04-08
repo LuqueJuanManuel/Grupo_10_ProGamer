@@ -254,7 +254,22 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 **********************************************************************************************
 
 
+# Sprint 6 - Base de Datos.
 
+## Jueves 6 de abril
 
+## Luque Juan - Tomas turconi - Emanuel Gauna
+
+- se implemento  instalacion de sql y sequelize , sequelize-cli , mysql2.
+
+- se creo archivo de sequelizerc en la raiz del proyecto, se modifico el archivo config.
+
+- se termino de completar el diagrama de entidad relacion.
+
+## Tomas Lopez Turconi
+
+- creacion de base de datos proGamer.
+
+*********************************************************************************************************
 
 

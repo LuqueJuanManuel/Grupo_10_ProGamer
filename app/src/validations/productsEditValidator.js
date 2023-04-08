@@ -10,7 +10,7 @@ module.exports = [
     .notEmpty().withMessage("debe ingresar una marca"),
     check("description")
     .notEmpty().withMessage("la descripcion es obligatoria").bail()
-    .isLength({min:20}).withMessage("la descripcion debe tener un minimo de 20 caracteres"),
+    .isLength({min:5}).withMessage("la descripcion debe tener un minimo de 5 caracteres"),
     check("price")
     .isInt({min:1}).withMessage("no se puede regalar el producto"),
     check("discount")
