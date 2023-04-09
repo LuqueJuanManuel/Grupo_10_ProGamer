@@ -1,4 +1,4 @@
-const { categories } = require("../../controllers/productsController");
+/* const { categories } = require("../../controllers/productsController"); */
 
 module.exports = (sequelize, dataTypes) => {
   /*  users(
@@ -68,8 +68,7 @@ FOREIGN KEY (user_category_id) references user_categories(id)
 
     let config = {
         tableName: 'users',
-        createdAt: "created_at",
-        updatedAt: "updated_at",
+        timestamps: false
     };
     const User = sequelize.define(alias, cols, config)
 
