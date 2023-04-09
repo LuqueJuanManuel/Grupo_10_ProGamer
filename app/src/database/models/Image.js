@@ -9,19 +9,18 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         name: {
-            type: dataTypes.STRING(255).UNSIGNED,
+            type: dataTypes.STRING(255),
             allowNull: false
         },
-        products_id: {
-            type: dataTypes.STRING(100),
+        product_id: {
+            type: dataTypes.INTEGER().UNSIGNED,
             allowNull: false
         },
     };
 
     let config = {
         tableName: 'images',
-        createdAt: "created_at",
-        updatedAt: "updated_at",
+        timestamps: false
     };
     
     const Image = sequelize.define(alias, cols, config);

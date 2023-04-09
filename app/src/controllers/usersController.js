@@ -1,7 +1,7 @@
 /* requerir validaciones de usuarios */
 const { validationResult } = require("express-validator");
 /* requerir database de usuarios */
-/* const { users , writeJSON, readJSON } = require("../database/index"); */
+/*  const { users , writeJSON, readJSON } = require("../oldDatabase/index");  */
 /* requerimos bcrypt para hashear contraseñas */
 const bcrypt = require("bcryptjs");
 const { Image , Sequelize , User , User_category } = require('../database/models');
@@ -136,7 +136,7 @@ module.exports = {
             if(errors.isEmpty()){
                 let lastId = 0;
                 /* si en la lista de usuarios el ultimo usuario es menor dele el valor de id que trae usuario */
-                users.forEach(user => {
+                Users.forEach(user => {
                  if(user.id > lastId) {
                      lastId = user.id;
                  }
