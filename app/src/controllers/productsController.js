@@ -1,11 +1,9 @@
 /* Requires */
 const { readJSON, writeJSON } = require('../dataBase/');
-
 const products = readJSON('products.json');
 const categories = readJSON('categories.json');
-
-
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 module.exports = {
     index: (req, res) => {
