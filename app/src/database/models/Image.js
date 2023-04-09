@@ -18,8 +18,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255).UNSIGNED,
             allowNull: false
         },
-        products_id: {
-            type: dataTypes.STRING(100),
+        product_id: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
     };
@@ -33,8 +33,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Image.associate = (models) => {
         Product.belongsToMany(models.Product, {
-            as: "products",
-            foreignKey: "products_id",
+            as: "product",
+            foreignKey: "product_id",
         })
     } 
 
