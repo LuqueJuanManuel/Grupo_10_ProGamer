@@ -115,6 +115,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             defaultValue: false
         },
+        product_category_id: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
+        }
        
     }
 
@@ -125,10 +129,21 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config);
 
-    /* FALTA AGREGAR LAS RELACIONES CON PRODUCT CATEGORY */
-    /* FALTA HACER EL PRODUCT.ASSOCIATE */
+    Product.associate = (models) => {
+        Product.belongsTo(models.Product_category, {
+            as: 'product_category',
+            foreignKey: 'product_category_id'
+        })
 
+
+         Product.hasMany(models.Image, {
+                as: 'Images',
+                foreignKey: 'products_id'
+            })
+        
+    }
+    
    
 
-    return Product;
-}
+    return Product; 
+    }
