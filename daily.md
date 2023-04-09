@@ -271,5 +271,17 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 - creacion de base de datos proGamer.
 
 *********************************************************************************************************
+## viernes 7 de abril
+
+## Emanuel Gauna
+
+- cracion de modelos Image y User 
+
+
+## Sabado 8 de abril
+
+## Emanuel Gauna
+
+- creacion de modelo User_category entablesco relacion de categoria y usuario y relacion de imagenes a productos"
 
 
