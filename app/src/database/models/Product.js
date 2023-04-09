@@ -141,9 +141,9 @@ module.exports = (sequelize, dataTypes) => {
                 foreignKey: 'product_id'
             })
         }
-
+    }
     
    
 
-    return Product;
-}
+    return Product; 
+    }
