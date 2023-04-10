@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS movies_db;
+DROP DATABASE IF EXISTS pcGamer_db;
 CREATE DATABASE pcGamer_db;
 
 USE pcGamer_db;
@@ -34,7 +34,9 @@ FOREIGN KEY (user_category_id) references user_categories(id)
 /*insert into users(id, name, lastname, email, pass, avatar, address, city, postalCode, tel, user_category_id)
 values (default, 'usuario', 'admin', 'usuario@admin.com', '$2a$10$Dw1y158zAoHbLdb7g2p74uhM8BEw4XEZ6awGj20Kpa326SP4pRw/6', 'default-image.png', null, null, null, null, 2),
 (default, 'usuario', 'log', 'usuario@log.com', '$2a$10$/.wYt7d7aQslTDM1J0MvMeAOWsFnBA8OP7n.QKOACwxRr3BfbnhWK', 'default-image.png', null, null, null, null, 1);
+
 select * from  users;
+
 select  users.id,name, lastname, email, pass, avatar, address, city, postalCode, tel, user_categories.rol
 from users inner join user_categories
 on users.user_category_id = user_categories.id;*/
