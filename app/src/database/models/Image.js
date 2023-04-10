@@ -12,8 +12,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         },
-        product_id: {
-            type: dataTypes.INTEGER().UNSIGNED,
+        products_id: {
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull: false
         },
     };
@@ -26,11 +26,11 @@ module.exports = (sequelize, dataTypes) => {
     const Image = sequelize.define(alias, cols, config);
 
     Image.associate = (models) => {
-        Product.belongsTo(models.Product, {
+        Image.belongsTo(models.Product, {
             as: "products",
-            foreignKey: "product_id"
+            foreignKey: "products_id",
         })
     } 
 
-    return Image
+    return Image;
 }

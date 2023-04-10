@@ -29,5 +29,5 @@ module.exports = (sequelize, dataTypes) => {
         })
     } 
 
-    return User_category
+    return User_category;
 }

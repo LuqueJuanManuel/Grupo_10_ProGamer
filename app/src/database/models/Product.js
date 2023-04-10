@@ -116,7 +116,7 @@ module.exports = (sequelize, dataTypes) => {
             defaultValue: false
         },
         product_category_id: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull: false
         }
        
@@ -131,15 +131,15 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = (models) => {
         Product.belongsTo(models.Product_category, {
-            as: 'product_category',
-            foreignKey: 'product_category_id'
+            as: "product_category",
+            foreignKey: "product_category_id",
         })
 
 
-         Product.hasMany(models.Image, {
-                as: 'Images',
-                foreignKey: 'products_id'
-            })
+        Product.hasMany(models.Image, {
+            as: "images",
+            foreignKey: "products_id",
+        })
         
     }
     

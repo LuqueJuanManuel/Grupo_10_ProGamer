@@ -28,7 +28,7 @@ FOREIGN KEY (user_category_id) references user_categories(id)
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        lastName: {
+        lastname: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -73,12 +73,12 @@ FOREIGN KEY (user_category_id) references user_categories(id)
     const User = sequelize.define(alias, cols, config)
 
      User.associate = (models) => {
-        Category.belongsTo(models.User_category, {
+        User.belongsTo(models.User_category, {
             as: "user_categories",
             foreignKey: "user_category_id",
             
         })
     } 
 
-    return User
+    return User;
 }
