@@ -17,9 +17,9 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName: 'user_categories',
-        createdAt: "created_at",
-        updatedAt: "updated_at",
+        timestamps: false
     };
+
     const User_category = sequelize.define(alias, cols, config)
 
      User_category.associate = (models) => {
@@ -29,5 +29,5 @@ module.exports = (sequelize, dataTypes) => {
         })
     } 
 
-    return User_category
+    return User_category;
 }

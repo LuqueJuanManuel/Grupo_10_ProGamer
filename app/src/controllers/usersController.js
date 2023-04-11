@@ -1,9 +1,11 @@
 /* requerir validaciones de usuarios */
 const { validationResult } = require("express-validator");
 /* requerir database de usuarios */
-const { users , writeJSON, readJSON } = require("../database/index");
+/*  const { users , writeJSON, readJSON } = require("../oldDatabase/index");  */
 /* requerimos bcrypt para hashear contraseñas */
 const bcrypt = require("bcryptjs");
+const { Image , Sequelize , User , User_category } = require('../database/models');
+
 
 module.exports = {
     login : (req, res) => {
@@ -19,11 +21,22 @@ module.exports = {
     userEdit: (req, res) => {
         let userSessionID = req.session.user.id;
         let userSession = users.find(user => user.id === userSessionID);
-        
-        return res.render("users/userEdit",{
-            user: userSession,
-            session:req.session
+        const USER = User.findByPk(userSession, {
+            include:[
+                {association:"user_categories"}
+            ]
         })
+        .then(user => {
+            return res.render("users/userEdit",{
+                user: user,
+                session:req.session
+            })
+            .catch(error => console-log(error));
+        });
+    
+
+
+        
     },
     userEditUpdate: (req, res) => {
         let errors = validationResult(req);
@@ -123,7 +136,7 @@ module.exports = {
             if(errors.isEmpty()){
                 let lastId = 0;
                 /* si en la lista de usuarios el ultimo usuario es menor dele el valor de id que trae usuario */
-                users.forEach(user => {
+                Users.forEach(user => {
                  if(user.id > lastId) {
                      lastId = user.id;
                  }

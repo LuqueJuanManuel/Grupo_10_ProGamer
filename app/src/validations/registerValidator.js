@@ -1,6 +1,6 @@
 /* para la validaciones requerir express-validator */
 const { check, body } = require("express-validator");
-const { users }  = require("../database");
+/* const { users }  = require("../database"); */
 
 
 module.exports = [
