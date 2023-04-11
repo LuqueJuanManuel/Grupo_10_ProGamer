@@ -13,9 +13,9 @@
         <!-- banner -->
         <section class="banner">
             <div class="banner-select">
-                <img src="/images/banner/b-01.jpg" alt="Banner1" class="img-banner1">
-                <img src="/images/banner/b-02.jpg" alt="Banner2" class="img-banner2">
-                <img src="/images/banner/b-03.png" alt="Banner3" class="img-banner3">
+                <img src="/images/banner/<%= banner.name ='b-01.jpg'%>" alt="Banner1" class="img-banner1">
+                <img src="/images/banner/<%= banner.name ='b-02.jpg'%>" alt="Banner2" class="img-banner2">
+                <img src="/images/banner/<%= banner.name ='b-03.jpg'%>" alt="Banner3" class="img-banner3">
             </div>
         </section>
         <section class="title-section">
@@ -48,7 +48,7 @@
              <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="/products/productDetail/<%= product.id %>">
-                        <img src="images/products/<%= product.image[0]%>" alt="">
+                        <img src="images/products/<%= product.images[0].name%>" alt="">
                     </a>
                     <!-- moto ofert y heard -->
                     <i class="fa-regular fa-heart"></i>
@@ -111,7 +111,7 @@
         </section>
         <section class="banner-bottom">
             <div class="img-ofert">
-                <img src="images/banner/b-ofert.jpg" alt="Banner-oferta" class="b-ofert">
+                <img src="images/banner/<%= banner.name ='b-ofert.jpg'%>" alt="Banner-oferta" class="b-ofert">
             </div>
         </section>
         <section class="title-register">
