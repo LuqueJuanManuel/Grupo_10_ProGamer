@@ -2,7 +2,7 @@
 /* const { readJSON, writeJSON } = require('../dataBase/'); */
 /* const products = readJSON('products.json'); */
 /* const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); */
-const {User, sequelize} = require('../database/models');
+const {User} = require('../database/models');
 
 
 module.exports = {
