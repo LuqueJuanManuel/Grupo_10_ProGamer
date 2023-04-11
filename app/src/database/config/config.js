@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": '311091',
-    "database": "pcGamer_db",
+    "database": "pcgamer_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
