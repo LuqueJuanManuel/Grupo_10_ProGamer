@@ -282,6 +282,8 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 ## Emanuel Gauna
 
-- creacion de modelo User_category entablesco relacion de categoria y usuario y relacion de imagenes a productos"
+- creacion de modelo User_category entablesco relacion de categoria y usuario y relacion de imagenes a productos
 
+## Martes 11 de abril
 
+- require de database/models a archivo userController y registerValidator, armado de create de usuario en userController
