@@ -60,8 +60,7 @@
         <div class="carousel-item data-bs-interval=2000">
           <img src="/images/banner/b-03.png" class="d-block w-100" alt="imagen de banner 3">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            
           </div>
         </div>
       </div>
@@ -81,10 +80,10 @@
     
     <h2 class="nuestrosProductos">Nuestros Productos:</h2>
 
-    <% products.forEach(({image, name, discount, price, id})=> { %>
+    <% products.forEach(({images, name, discount, price, id})=> { %>
       <div class="col-12  col-md-6 col-lg-4 p-3">
         <div class="card">
-        <img src="/images/products/<%= image[0] %>" class="card-img-top" alt="imagen del producto">
+        <img src="/images/products/<%= images[0].name %>" class="card-img-top" alt="imagen del producto">
         <div class="card-body">
           <% if (name.length > 19) { %> 
           <h5><%=name.slice(0,19) %>...</h5> <% } else{ %>

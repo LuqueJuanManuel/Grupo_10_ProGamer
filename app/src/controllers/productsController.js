@@ -1,19 +1,34 @@
 /* Requires */
 /* const { readJSON, writeJSON } = require('../dataBase/');
 const products = readJSON('products.json');
-const categories = readJSON('categories.json');
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); */
-
+const categories = readJSON('categories.json');*/
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); 
+const {Product, Product_category, Banner} = require ('../database/models');
 
 module.exports = {
     index: (req, res) => {
-
-        res.render("products/products", {
+        const products =Product.findAll({
+            include:[{ association: 'images'}]
+        })
+        const categories = Product_category.findAll()
+        const banner = Banner.findAll()
+        Promise.all([products, categories, banner])
+        .then(([products, categories, banner])=>{
+            /* console.log(products)
+            res.send(products) */
+            res.render("products/products", {
+                products,
+                categories,
+                session: req.session,
+                toThousand,
+            }) 
+        })
+        /* res.render("products/products", {
             products,
             categories,
             session: req.session,
             toThousand,
-        })
+        }) */
     },
 
     productDetail : (req, res) => {
