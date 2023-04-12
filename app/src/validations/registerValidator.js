@@ -1,7 +1,7 @@
 /* para la validaciones requerir express-validator */
 const { check, body } = require("express-validator");
 /* const { users }  = require("../database"); */
-
+const { User } = require("../database/models")
 
 module.exports = [
     /* nombre requerido */
@@ -21,12 +21,16 @@ module.exports = [
     /* el email no tiene que estar registrado previamente */
     body("email")
     .custom((value) => {
-        let user = users.find(user => user.email === value);
-
-        return user === undefined;
+        User.findOne({
+            where:{
+                email:value
+            }
+        })
+    .then(user =>{
+        if(user) return Promise.reject("email ya registrado")
     })
-    .withMessage("Email ya registrado"),
-    
+    .catch(error => console.log(error))
+}),
     /* contraseña obligatoria */
     check('pass')
     .notEmpty()

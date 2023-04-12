@@ -20,8 +20,8 @@ module.exports = {
     },
     userEdit: (req, res) => {
         let userSessionID = req.session.user.id;
-        let userSession = users.find(user => user.id === userSessionID);
-        const USER = User.findByPk(userSession, {
+        /* let userSession = users.find(user => user.id === userSessionID); */
+        User.findByPk(userSessionID, {
             include:[
                 {association:"user_categories"}
             ]
@@ -134,17 +134,10 @@ module.exports = {
             
             /* si no hay errores */
             if(errors.isEmpty()){
-                let lastId = 0;
-                /* si en la lista de usuarios el ultimo usuario es menor dele el valor de id que trae usuario */
-                Users.forEach(user => {
-                 if(user.id > lastId) {
-                     lastId = user.id;
-                 }
-                });
+              
                     /* creando un nuevo usuario */
                 let newUser = {
                     /* dale el id del ultimo usuario + 1 */
-                 id: lastId + 1,
                  name: req.body.name,
                  lastname: req.body.lastname,
                  email: req.body.email,
@@ -157,11 +150,12 @@ module.exports = {
                  tel:""
                 };
          
-                users.push(newUser);
-         
-                writeJSON("users.json", users);
-         
-                res.redirect("/users/login");
+                User.create(newUser)
+                .then(user =>{
+                    res.redirect("/users/login");
+                })
+                .catch(error => console.log(error))
+            
             } else {
                 res.render("users/register", {
                     errors: errors.mapped(),
