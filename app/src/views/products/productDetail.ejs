@@ -17,9 +17,9 @@
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <% product.image.forEach(img => { %>
+              <% product.images.forEach(img => { %>
                  <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/images/products/<%= img %>" class="d-block w-100" alt="imagen">
+                <img src="/images/products/<%= img.name %>" class="d-block w-100" alt="imagen">
                 <div class="carousel-caption d-none d-md-block">
                 </div>
               </div>
@@ -38,12 +38,12 @@
         <div class="detalles">
             <ul class="list-group">
                 <li class="list-group-item"><%= product.name ? product.name : "-" %></li>
-                <li class="list-group-item">$ <%= product.price ? product.price : "-" %></li>
+                <li class="list-group-item">$ <%=toThousand (product.price ? product.price : "-" )%></li>
                 <li class="list-group-item"><%= product.discount ? product.discount : "-" %> %OFF</li>
                 <li class="list-group-item"><%= product.description ? product.description : "-" %></li>
                 <li class="list-group-item">Stock: <%= product.stock ? product.stock : "No hay Stock" %></li>
                 <li class="list-group-item">Marca: <%= product.brand ? product.brand : "-" %></li>
-                <li class="list-group-item">Categoria: <%= product.category ? product.category : "-" %></li>
+                <li class="list-group-item">Categoria: <%= category.name ? category.name : "-" %></li>
                 <li class="list-group-item">CPU: <%= product.cpu ? product.cpu : "-" %></li>
                 <li class="list-group-item">Tarjeta Grafica: <%= product.graphicCard ? product.graphicCard : "-" %></li>
                 <li class="list-group-item">Sistema Operativo: <%= product.so ? product.so : "-" %></li>
