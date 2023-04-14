@@ -162,7 +162,7 @@ module.exports = {
                  city: "" ,
                  postalCode:"",
                  tel:"", 
-                 category
+                 user_category: 0
                   
                 };
          
