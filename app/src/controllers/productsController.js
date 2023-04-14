@@ -8,14 +8,16 @@ const {Op} = Sequelize;
 module.exports = {
     index: (req, res) => {
         const products =Product.findAll({
-            include:[{ association: 'images'}]
+            where:{
+                price:{[Sequelize.Op.lte]: 5000000}
+            },include:[{association: 'images'}]
         })
         const categories = Product_category.findAll()
         const banner = Banner.findAll()
         Promise.all([products, categories, banner])
         .then(([products, categories, banner])=>{
             /* console.log(products)*/
-            /* return res.send(banner)  */
+            /* return res.send(products)  */
             res.render("products/products", {
                 products,
                 categories,
@@ -24,6 +26,7 @@ module.exports = {
                 toThousand,
             }) 
         })
+        .catch(error => console.log(error))
         /* res.render("products/products", {
             products,
             categories,
@@ -38,12 +41,10 @@ module.exports = {
         const productosEnOferta = products.filter(product => product.discount >= 20); */
         const productId = Number(req.params.id);
         const productosEnOferta = Product.findAll({
-                include:[{association: 'images'}]
-            },{
             where:{
-                price:{[Op.gte]: 20}
-                }
-            })
+                discount:{[Sequelize.Op.gte]: 20}
+            },include:[{association: 'images'}]
+        })
         const product = Product.findByPk(productId,{
             include: [{association: 'images'}]
         })
@@ -51,7 +52,7 @@ module.exports = {
         const category = Product_category.findByPk(productId)
         Promise.all([product, productosEnOferta, category])
         .then(([product, productosEnOferta, category])=>{
-            /* return res.send(product.images) */
+            /* return res.send(product) */
             return res.render("products/productDetail", {
                 product,
                 productosEnOferta,
@@ -60,7 +61,7 @@ module.exports = {
                 toThousand,
             })
         })
-        
+        .catch(error => console.log(error))
 
     },
 

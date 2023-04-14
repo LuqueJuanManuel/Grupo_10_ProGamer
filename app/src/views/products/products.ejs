@@ -81,22 +81,22 @@
     
     <h2 class="nuestrosProductos">Nuestros Productos:</h2>
 
-    <% products.forEach(({images, name, discount, price, id})=> { %>
+    <% products.forEach((product)=> { %>
       <div class="col-12  col-md-6 col-lg-4 p-3">
         <div class="card">
-        <img src="/images/products/<%= images[0].name %>" class="card-img-top" alt="imagen del producto">
+        <img src="/images/products/<%= product.images[0].name %>" class="card-img-top" alt="imagen del producto">
         <div class="card-body">
-          <% if (name.length > 19) { %> 
-          <h5><%=name.slice(0,19) %>...</h5> <% } else{ %>
-          <h5 class="card-title"><%= name %></h5>
+          <% if (product.name.length > 19) { %> 
+          <h5><%=product.name.slice(0,19) %>...</h5> <% } else{ %>
+          <h5 class="card-title"><%= product.name %></h5>
           <% } %>
           <div class="precio-descuento">
-            <p class="card-text">$<%= toThousand(price) %></p>
-            <% if (discount > 0) { %>
-            <p class="card-text discount"><%= discount %>% off</p>
+            <p class="card-text">$<%= toThousand(product.price) %></p>
+            <% if (product.discount > 0) { %>
+            <p class="card-text discount"><%= product.discount %>% off</p>
             <% } %>
           </div>
-          <a href="/products/productDetail/<%= id %>" class="btn btn-primary">Ver detalles</a>
+          <a href="/products/productDetail/<%= product.id %>" class="btn btn-primary">Ver detalles</a>
         </div>
         </div>
       </div>
