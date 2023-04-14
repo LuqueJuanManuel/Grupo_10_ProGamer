@@ -28,6 +28,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "user_category_id",
         })
     } 
-
+ 
     return User_category;
 }

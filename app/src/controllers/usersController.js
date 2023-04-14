@@ -13,28 +13,29 @@ module.exports = {
     },
     userHome: (req, res) => {
         let userSessionID = req.session.user.id;
-        let userSession = users.find(user => user.id === userSessionID);
-
-        return res.render("users/userHome",{
-            user: userSession,session: req.session})
+        
+        User.findByPk(userSessionID, {
+            include:[{association: "user_categories"}]
+        })
+        .then(user =>{
+            return res.render("users/userHome",{
+                user ,
+                session: req.session})
+        })
+        .catch(error => console.log(error))
+        
     },
     userEdit: (req, res) => {
         let userSessionID = req.session.user.id;
         /* let userSession = users.find(user => user.id === userSessionID); */
-        User.findByPk(userSessionID, {
-            include:[
-                {association:"user_categories"}
-            ]
-        })
+        User.findByPk(userSessionID)
         .then(user => {
             return res.render("users/userEdit",{
                 user: user,
                 session:req.session
             })
-            .catch(error => console-log(error));
-        });
-    
-
+        })
+        .catch(error => console-log(error));
 
         
     },
@@ -43,34 +44,41 @@ module.exports = {
 
         if(errors.isEmpty()){
             let userId = req.session.user.id;
-            let user = users.find(user => user.id === userId);
+            
 
             const {name, lastname, address, city, postalCode, tel} = req.body
 
-            user.name = name;
-            user.lastname = lastname;
-            user.address = address;
-            user.city = city;
-            user.postalCode = postalCode;
-            user.tel = tel;
-            user.avatar = req.file ? req.file.filename : user.avatar;
             
-            
-            writeJSON("users.json", users);
-            
-            /* delete user.pass; */
-            req.session.user = user;
-
+            User.update({
+            name : name,
+            lastname : lastname,
+            address : address,
+            city : city,
+            postalCode : postalCode,
+            tel : tel,
+            avatar : req.file ? req.file.filename : avatar,
+            },
+            {
+               where: {id: userId} 
+            })
+            .then(user =>{
+                req.session.user = user;
             return res.redirect('/users/userHome');
+            })
+            .catch(error => console.log(error))  
         }else{
             let userSessionID = req.session.user.id;
-            let userSession = users.find(user => user.id === userSessionID);
-
-            return res.render("users/userEdit",{
-                user: userSession,
-                session:req.session,
-                errors: errors.mapped()
+            /* let userSession = users.find(user => user.id === userSessionID); */
+            User.findByPk(userSessionID)
+            .then(user =>{
+                return res.render("users/userEdit",{
+                    user,
+                    session:req.session,
+                    errors: errors.mapped()
+                })
             })
+
+            
         }
         
 
@@ -81,20 +89,25 @@ module.exports = {
         
         if (errors.isEmpty()){
             /* usuario logeado */
-            let user = users.find(user => user.email === req.body.email);
-            req.session.user = {
-                id: user.id,
-                name: user.name,
-                lastname: user.lastname,
-                email: user.email,
-                category: user.category,
-                address: user.address,
-                avatar: user.avatar,
-                city: user.city,
-                postalCode:user.postalCode,
-                tel: user.tel
-            }
-            /* tiempo de duracion - 1 hora */
+            User.findOne({
+                where:{
+                    email:req.body.email,
+                }
+            })
+            .then(user =>{
+                req.session.user = {
+                    id: user.id,
+                    name: user.name,
+                    lastname: user.lastname,
+                    email: user.email,
+                    category: user.category,
+                    address: user.address,
+                    avatar: user.avatar,
+                    city: user.city,
+                    postalCode:user.postalCode,
+                    tel: user.tel
+                }
+                 /* tiempo de duracion - 1 hora */
             let times = 3600000;
 
             /* cookie para mantener la cuenta abierta */
@@ -109,11 +122,12 @@ module.exports = {
                     }
                 )
             }
-            
-            /* crea para poder acceder a la variable */
-            res.locals.user = req.session.user;
-            res.redirect('/');
+             /* crea para poder acceder a la variable */
+             res.locals.user = req.session.user;
+             res.redirect('/');
 
+            })
+            .catch(error => console.log(error))
         }else{
             
             return res.render('users/login',{
@@ -124,6 +138,7 @@ module.exports = {
         }
 
         },
+            
         register : (req, res) => {
             res.render("users/register", {session: req.session})
             
@@ -143,16 +158,19 @@ module.exports = {
                  email: req.body.email,
                  pass: bcrypt.hashSync(req.body.pass, 10),
                  avatar: req.file ? req.file.filename : "default-image.png",
-                 category: "USER",
                  address: "",
                  city: "" ,
                  postalCode:"",
-                 tel:""
+                 tel:"", 
+                 category
+                  
                 };
          
-                User.create(newUser)
-                .then(user =>{
-                    res.redirect("/users/login");
+                User.create(newUser /* {
+                    include:[{association: "user_categories"}]
+                } */)
+                .then(() =>{
+                    return res.redirect("/users/login");
                 })
                 .catch(error => console.log(error))
             
