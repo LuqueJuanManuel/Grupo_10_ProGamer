@@ -60,7 +60,7 @@ FOREIGN KEY (user_category_id) references user_categories(id)
             type: dataTypes.STRING(100),
             defaultValue: null
         },
-        user_category_id: {
+        user_category: {
             type: dataTypes.INTEGER(100).UNSIGNED,
             allowNull: false
         },
@@ -72,13 +72,6 @@ FOREIGN KEY (user_category_id) references user_categories(id)
     };
     const User = sequelize.define(alias, cols, config)
 
-     User.associate = (models) => {
-        User.belongsTo(models.User_category, {
-            as: "user_categories",
-            foreignKey: "user_category_id",
-            
-        })
-    } 
 
     return User;
 }
