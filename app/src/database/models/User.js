@@ -55,8 +55,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             defaultValue: null
         },
-        user_category_id: {
-            type: dataTypes.INTEGER(100),
+        user_category: {
+            type: dataTypes.INTEGER(100).UNSIGNED,
             allowNull: false
         },
     };
@@ -67,13 +67,6 @@ module.exports = (sequelize, dataTypes) => {
     };
     const User = sequelize.define(alias, cols, config)
 
-      User.associate = (models) => {
-        User.belongsTo(models.User_category, {
-            as: "user_categories",
-            foreignKey: "user_category_id",
-            
-        })
-    }  
 
     return User;
 }
