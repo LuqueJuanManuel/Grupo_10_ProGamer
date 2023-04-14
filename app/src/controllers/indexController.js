@@ -27,7 +27,7 @@ module.exports = {
     Promise.all([productosDestacados, productosEnOferta, banner])
 
     .then(([productosDestacados, productosEnOferta, banner]) =>{
-      console.log(productosDestacados, productosEnOferta, banner)
+      /* console.log(productosDestacados, productosEnOferta, banner) */
       /* res.send( banner) */
       res.render("index", {
         toThousand,
