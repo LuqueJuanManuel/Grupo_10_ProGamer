@@ -286,4 +286,13 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 ## Martes 11 de abril
 
+## Emanuel Gauna
+
 - require de database/models a archivo userController y registerValidator, armado de create de usuario en userController
+
+
+## miercoles 12 de abril
+
+## Emanuel Gauna
+
+- cambie  en el middleware sessionadmincheck "ADMIN" por el nro 1... en la linea 30 del partials-header cambiel el admin por el nro 1.... de userController  modifique los metodos: userEdit - userEditUpdate - userHome y proccesLogin

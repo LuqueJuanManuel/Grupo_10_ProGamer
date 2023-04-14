@@ -21,7 +21,7 @@ module.exports = [
     /* el email no tiene que estar registrado previamente */
     body("email")
     .custom((value) => {
-        User.findOne({
+       return User.findOne({
             where:{
                 email:value
             }
