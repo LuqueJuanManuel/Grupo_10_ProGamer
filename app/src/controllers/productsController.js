@@ -71,7 +71,26 @@ module.exports = {
 
     search: (req, res) => {
         const { keywords } = req.query;
-        let results = [];
+
+        const results = Product.findAll({
+            where: {
+                [Op.or]:[
+                    {name:{[Op.like]: `%${keywords}%`}},
+                    {brand:{[Op.like]:`%${keywords}%`}},
+                ],
+            }, include: [{association: 'images'}]
+        })
+        .then(results =>{
+            //console.log(results)
+            //return res.send(results)
+            res.render("products/search", {
+                keywords,
+                toThousand,
+                results,
+                session: req.session,
+               })
+        })
+        /* let results = [];
 
         products.forEach(product => {
 			if(product.name.toLowerCase().includes(keywords.toLowerCase())) {
@@ -85,7 +104,7 @@ module.exports = {
         results,
         products,
         session: req.session,
-       })
+       }) */
     },
     categories: (req,res) => {
         

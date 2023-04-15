@@ -39,7 +39,7 @@
         <% results.forEach(product => { %>
           <div class="col-12  col-md-6 col-lg-4 p-3">
             <div class="card">
-            <img src="/images/products/<%= product.image[0] %>" class="card-img-top" alt="imagen del producto">
+            <img src="/images/products/<%= product.images[0].name %>" class="card-img-top" alt="imagen del producto">
             <div class="card-body">
               <% if (product.name.length > 19) { %> 
               <h5><%= product.name.slice(0,19) %>...</h5> <% } else{ %>
