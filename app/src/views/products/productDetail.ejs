@@ -17,7 +17,7 @@
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <% product.images.forEach(img => { %>
+              <% images.forEach(img => { %>
                  <div class="carousel-item active" data-bs-interval="10000">
                 <img src="/images/products/<%= img.name %>" class="d-block w-100" alt="imagen">
                 <div class="carousel-caption d-none d-md-block">

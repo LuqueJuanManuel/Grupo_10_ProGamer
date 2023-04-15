@@ -53,8 +53,10 @@ module.exports = {
         Promise.all([product, productosEnOferta, category])
         .then(([product, productosEnOferta, category])=>{
             /* return res.send(product) */
+            /* console.log(product.images) */
             return res.render("products/productDetail", {
                 product,
+                images: product.images,
                 productosEnOferta,
                 category,
                 session: req.session,
@@ -90,6 +92,7 @@ module.exports = {
                 session: req.session,
                })
         })
+        .catch(error => console.log(error))
         /* let results = [];
 
         products.forEach(product => {
@@ -107,6 +110,24 @@ module.exports = {
        }) */
     },
     categories: (req,res) => {
-        
+        const categoriesId = req.params.id;
+
+        const category = Product_category.findByPk(categoriesId,{
+            include:[{association: 'products',
+                include:{association: 'images'}}]
+        })
+        const banner = Banner.findAll()
+        Promise.all([category, banner])
+        .then(([category, banner]) =>{
+            /* return res.send(category.products) */
+            res.render('products/productsCategories',{
+                category: category.name,
+                products: category.products,
+                banner,
+                toThousand,
+                session: req.session
+            })
+        })
+        .catch(error => console.log(error))
     }
 }
