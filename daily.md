@@ -302,3 +302,9 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 ## Emanuel Gauna
 
 - userController edit y processRegister completo
+
+## sabado 15 de abril 
+
+## Emanuel Gauna
+
+- CRUD userController terminado

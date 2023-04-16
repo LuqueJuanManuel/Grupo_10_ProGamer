@@ -5,6 +5,7 @@ const path = require('path');
 /*  requiere express-validator*/
 const { validationResult } = require("express-validator");
 
+
 //const products = readJSON('products.json');
 //const arrayDeCategorias = readJSON('categories.json');
 
@@ -16,16 +17,16 @@ module.exports ={
     adminHome: (req, res) => {
       Product.findAll()
       .then(products =>{
-        res.render("admin/adminHome",{
+        return res.render("admin/adminHome",{
           products,
           session: req.session,
     
         })
       })
-      .catch(error => console.log(error))
+      .catch(error => console.log(error))/* ok */
     },
     create: (req, res) => {
-      const products = Product.finAll()
+      const products = Product.findAll()
       const arrayDeCategorias = Product_category.findAll()
       Promise.all([products, arrayDeCategorias])
       .then(([products, arrayDeCategorias])=>{
@@ -35,9 +36,97 @@ module.exports ={
           session: req.session,
         });
       })
-      .catch(error => console.log(error))
+      .catch(error => console.log(error))/* ok */
         
     },
+    store: (req, res) => {
+
+      const errors = validationResult(req);
+     /*  let lastId = products[products.length - 1].id; */
+     
+      if(errors.isEmpty()) {
+
+          let newProduct = {
+              /* id : lastId + 1, */
+              name : req.body.name,
+              brand : req.body.brand,
+              /* category : req.body.category, */
+              lastname : req.body.lastname,
+              price : req.body.price,
+              discount : req.body.discount,
+              stock: req.body.stock,
+              description : req.body.description,
+              cpu : req.body.cpu,
+              graficCard : req.body.graficCard,
+              so : req.body.so,
+              ram : req.body.ram,
+              capacity : req.body.capacity,
+              puertos : req.body.puertos,
+              hdmi : req.body.hdmi,
+              ethernet : req.body.ethernet,
+              usb : req.body.usb,
+              wifi : req.body.wifi,
+              webCam : req.body.webCam,
+              bluetooth : req.body.bluetooth,
+              screenSize : req.body.screenSize,
+              display : req.body.display,
+              resolution : req.body.resolution,
+              Conection : req.body.Conection,
+              weight : req.body.weight,
+              high : req.body.high,
+              width : req.body.width,
+              depth : req.body.depth,
+              product_category_id:  req.body.category,
+              /* image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],  */
+          };
+          Product.create(newProduct)
+          .then(product => {
+            if(req.files.length === 0){
+              Image.create({
+                name: "default-image.png" ,
+                product_id: product.id,
+              }).then(() =>{
+               return res.redirect("/products")
+              });
+            }else {
+              const files = req.files.map(file =>{
+                return{
+                  name: file.filename,
+                  product_id: product.id
+                };
+              });
+              Image.bulkCreate(files).then(()=>{
+                return res.redirect("/products")
+              })  
+            };
+          })
+          .catch(error => console.log(error));
+        } else{
+          const product = Product.findAll()
+          const arrayDeCategorias = Product_category.findAll()
+
+          Promise.all([product, arrayDeCategorias])
+          .then(([product, arrayDeCategorias])=>{
+            return res.render("admin/adminAdd", {
+              product,
+              arrayDeCategorias,
+              errors : errors.mapped(),
+              session: req.session,
+              old : req.body,
+          })
+        })
+        .catch(error => console.log(error))
+        }
+
+     /*      products.push(newProduct);
+
+          writeJSON("products.json", products);
+
+           */
+     
+
+      /* Fin del condicional */
+  },
     edit: (req, res) => {
       
         let productToEdit = products.find(
@@ -123,64 +212,6 @@ module.exports ={
         res.redirect("/admin/home");
     },
 
-    store: (req, res) => {
-
-        const errors = validationResult(req);
-        let lastId = products[products.length - 1].id;
-       
-        if(errors.isEmpty()) {
-
-
-            let newProduct = {
-                id : lastId + 1,
-                name : req.body.name,
-                brand : req.body.brand,
-                category : req.body.category,
-                lastname : req.body.lastname,
-                price : req.body.price,
-                discount : req.body.discount,
-                stock: req.body.stock,
-                description : req.body.description,
-                cpu : req.body.cpu,
-                graficCard : req.body.graficCard,
-                so : req.body.so,
-                ram : req.body.ram,
-                capacity : req.body.capacity,
-                puertos : req.body.puertos,
-                hdmi : req.body.hdmi,
-                ethernet : req.body.ethernet,
-                usb : req.body.usb,
-                wifi : req.body.wifi,
-                webCam : req.body.webCam,
-                bluetooth : req.body.bluetooth,
-                screenSize : req.body.screenSize,
-                display : req.body.display,
-                resolution : req.body.resolution,
-                Conection : req.body.Conection,
-                weight : req.body.weight,
-                high : req.body.high,
-                width : req.body.width,
-                depth : req.body.depth,
-                image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],
-            };
-
-            products.push(newProduct);
-
-            writeJSON("products.json", products);
-
-            res.redirect("/products")
-        }
-        else {
-            return res.render("admin/adminAdd", {
-                products,
-                arrayDeCategorias,
-                errors : errors.mapped(),
-                session: req.session,
-                old : req.body,
-            })
-        };
-
-        /* Fin del condicional */
-    }
+    
         
 }
