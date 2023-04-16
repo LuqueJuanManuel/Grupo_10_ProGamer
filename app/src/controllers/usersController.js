@@ -4,7 +4,7 @@ const { validationResult } = require("express-validator");
 /*  const { users , writeJSON, readJSON } = require("../oldDatabase/index");  */
 /* requerimos bcrypt para hashear contraseñas */
 const bcrypt = require("bcryptjs");
-const { Image , Sequelize , User , User_category } = require('../database/models');
+const { Image , Sequelize , User ,  } = require('../database/models');
 
 
 module.exports = {
@@ -13,10 +13,8 @@ module.exports = {
     },
     userHome: (req, res) => {
         let userSessionID = req.session.user.id;
-        
-        User.findByPk(userSessionID, {
-            include:[{association: "user_categories"}]
-        })
+
+        User.findByPk(userSessionID)
         .then(user =>{
             return res.render("users/userHome",{
                 user ,
@@ -46,7 +44,7 @@ module.exports = {
             let userId = req.session.user.id;
             
 
-            const {name, lastname, address, city, postalCode, tel} = req.body
+            const {name, lastname, address, city, postalCode, tel, avatar} = req.body
 
             
             User.update({
@@ -62,7 +60,7 @@ module.exports = {
                where: {id: userId} 
             })
             .then(user =>{
-                req.session.user = user;
+                userId = user  ;
             return res.redirect('/users/userHome');
             })
             .catch(error => console.log(error))  
