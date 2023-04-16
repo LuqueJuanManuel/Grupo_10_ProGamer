@@ -9,29 +9,7 @@
     <main id="products" class="container d-flex justify-content-between align-items-center">
         <!-- Acordeon -->
         <section class="row">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item p-2">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <p class="filtrarPorCategoria">
-                  Filtrar por categorias
-                </p>
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <ul>
-                  <li><a href="/products">Todos los productos</a></li>
-                  <li><a href="">Notebook</a></li>
-                  <li><a href="">Computadoras</a></li>
-                  <li><a href="">Componentes de PC</a></li>
-                  <li><a href="">Monitores</a></li>
-                  <li><a href="">Consolas</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+          <%- include("../partials/categoryFilter")%>
     
         <!-- Card -->
     
@@ -39,7 +17,7 @@
         <% results.forEach(product => { %>
           <div class="col-12  col-md-6 col-lg-4 p-3">
             <div class="card">
-            <img src="/images/products/<%= product.image[0] %>" class="card-img-top" alt="imagen del producto">
+            <img src="/images/products/<%= product.images[0].name %>" class="card-img-top" alt="imagen del producto">
             <div class="card-body">
               <% if (product.name.length > 19) { %> 
               <h5><%= product.name.slice(0,19) %>...</h5> <% } else{ %>

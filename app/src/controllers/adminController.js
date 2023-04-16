@@ -1,30 +1,42 @@
 const fs = require('fs');
 const path = require('path');
 
-const { readJSON, writeJSON } = require('../oldDataBase/');
+//const { readJSON, writeJSON } = require('../oldDataBase/');
 /*  requiere express-validator*/
 const { validationResult } = require("express-validator");
 
-const products = readJSON('products.json');
-const arrayDeCategorias = readJSON('categories.json');
+//const products = readJSON('products.json');
+//const arrayDeCategorias = readJSON('categories.json');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+const {Product, Product_category} = require('../database/models');
 
 module.exports ={
     adminHome: (req, res) => {
+      Product.findAll()
+      .then(products =>{
         res.render("admin/adminHome",{
-			products,
-      session: req.session,
-
-		})
+          products,
+          session: req.session,
+    
+        })
+      })
+      .catch(error => console.log(error))
     },
     create: (req, res) => {
+      const products = Product.finAll()
+      const arrayDeCategorias = Product_category.findAll()
+      Promise.all([products, arrayDeCategorias])
+      .then(([products, arrayDeCategorias])=>{
         res.render('admin/adminAdd' , {
           products,
           arrayDeCategorias,
           session: req.session,
         });
+      })
+      .catch(error => console.log(error))
+        
     },
     edit: (req, res) => {
       

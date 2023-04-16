@@ -9,26 +9,24 @@ module.exports = {
   index: (req, res) => {
     
     const productosDestacados = Product.findAll({
-      include:[{association: 'images'}]
-    },{
       where:{
         price:{[Sequelize.Op.lte]: 245000}
-      }
+      },include:[{association: 'images'}]
     })
+
     const productosEnOferta = Product.findAll({
-      include:[{association: 'images'}]
-    },{
       where:{
-        price:{[Sequelize.Op.gte]: 20}
-      }
-    })
+        discount:{[Sequelize.Op.gte]: 20}
+      },include:[{association: 'images'}]
+    }  
+)
     const banner = Banner.findAll()
 
     Promise.all([productosDestacados, productosEnOferta, banner])
 
     .then(([productosDestacados, productosEnOferta, banner]) =>{
       /* console.log(productosDestacados, productosEnOferta, banner) */
-      /* res.send( banner) */
+      /* res.send( productosDestacados) */
       res.render("index", {
         toThousand,
         productosDestacados, 
@@ -38,6 +36,7 @@ module.exports = {
         
       }) 
     })
+    
     /* const productosEnOferta = products.filter(product => product.discount >= 20);
     const productosDestacados = products.filter(product => product.price <= 50000);
     
