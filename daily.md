@@ -296,3 +296,9 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 ## Emanuel Gauna
 
 - cambie  en el middleware sessionadmincheck "ADMIN" por el nro 1... en la linea 30 del partials-header cambiel el admin por el nro 1.... de userController  modifique los metodos: userEdit - userEditUpdate - userHome y proccesLogin
+
+## jueves 13 de abril
+
+## Emanuel Gauna
+
+- userController edit y processRegister completo
