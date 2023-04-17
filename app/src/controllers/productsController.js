@@ -52,7 +52,7 @@ module.exports = {
         const category = Product_category.findByPk(productId)
         Promise.all([product, productosEnOferta, category])
         .then(([product, productosEnOferta, category])=>{
-              return res.send(product)   
+              /* return res.send(product)   */ 
             /* console.log(product.images) */
             return res.render("products/productDetail", {
                 product,

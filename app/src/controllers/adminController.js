@@ -75,17 +75,18 @@ module.exports ={
               high : req.body.high,
               width : req.body.width,
               depth : req.body.depth,
-              product_category_id:  req.body.category,
+              product_category_id:  req.body.categoria,
               /* image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],  */
           };
           Product.create(newProduct)
           .then(product => {
+          /* return  res.send(req.body.categoria) */
             if(req.files.length === 0){
               Image.create({
                 name: "default-image.png",
                 products_id: product.id,
               }).then(() =>{
-               return res.redirect("/products")
+               return res.redirect("/admin/home")
               });
             }else {
               const files = req.files.map(file =>{
@@ -95,16 +96,16 @@ module.exports ={
                 }
               });
               Image.bulkCreate(files).then(()=>{
-                return res.redirect("/products")
+                return res.redirect("/admin/home")
               });
             }
           })
           .catch(error => console.log(error))
         } else{
           const productId = +req.params.id;
+
           const newProducts = Product.findAll();
-          /* const arrayDeCategorias = Product_category.findAll(); */
-          const arrayDeCategorias = Product_category.findByPk(productId)
+           const arrayDeCategorias = Product_category.findAll(); 
           Promise.all([newProducts,arrayDeCategorias])
           .then((product, arrayDeCategorias)=>{
             return res.render("admin/adminAdd", {
