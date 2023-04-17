@@ -3,6 +3,6 @@
 
 module.exports = (req, res, next) => {
     if(!req.session.user) return res.redirect("/users/login");
-    if(req.session.user.user_category == 0 ) return res.redirect("/");
+    if(req.session.user.category !== 1 ) return res.redirect("/");
     next();
 }

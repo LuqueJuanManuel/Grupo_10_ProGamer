@@ -98,7 +98,7 @@ module.exports = {
                     name: user.name,
                     lastname: user.lastname,
                     email: user.email,
-                    category: user.category,
+                    category: user.user_category,
                     address: user.address,
                     avatar: user.avatar,
                     city: user.city,
