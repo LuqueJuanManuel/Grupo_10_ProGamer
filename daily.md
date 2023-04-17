@@ -282,6 +282,29 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 ## Emanuel Gauna
 
-- creacion de modelo User_category entablesco relacion de categoria y usuario y relacion de imagenes a productos"
+- creacion de modelo User_category entablesco relacion de categoria y usuario y relacion de imagenes a productos
+
+## Martes 11 de abril
+
+## Emanuel Gauna
+
+- require de database/models a archivo userController y registerValidator, armado de create de usuario en userController
 
 
+## miercoles 12 de abril
+
+## Emanuel Gauna
+
+- cambie  en el middleware sessionadmincheck "ADMIN" por el nro 1... en la linea 30 del partials-header cambiel el admin por el nro 1.... de userController  modifique los metodos: userEdit - userEditUpdate - userHome y proccesLogin
+
+## jueves 13 de abril
+
+## Emanuel Gauna
+
+- userController edit y processRegister completo
+
+## sabado 15 de abril 
+
+## Emanuel Gauna
+
+- CRUD userController terminado

@@ -4,7 +4,7 @@ const { validationResult } = require("express-validator");
 /*  const { users , writeJSON, readJSON } = require("../oldDatabase/index");  */
 /* requerimos bcrypt para hashear contraseñas */
 const bcrypt = require("bcryptjs");
-const { Image , Sequelize , User , User_category } = require('../database/models');
+const { Image , Sequelize , User ,  } = require('../database/models');
 
 
 module.exports = {
@@ -13,28 +13,27 @@ module.exports = {
     },
     userHome: (req, res) => {
         let userSessionID = req.session.user.id;
-        let userSession = users.find(user => user.id === userSessionID);
 
-        return res.render("users/userHome",{
-            user: userSession,session: req.session})
+        User.findByPk(userSessionID)
+        .then(user =>{
+            return res.render("users/userHome",{
+                user ,
+                session: req.session})
+        })
+        .catch(error => console.log(error))
+        
     },
     userEdit: (req, res) => {
         let userSessionID = req.session.user.id;
-        let userSession = users.find(user => user.id === userSessionID);
-        const USER = User.findByPk(userSession, {
-            include:[
-                {association:"user_categories"}
-            ]
-        })
+        /* let userSession = users.find(user => user.id === userSessionID); */
+        User.findByPk(userSessionID)
         .then(user => {
             return res.render("users/userEdit",{
                 user: user,
                 session:req.session
             })
-            .catch(error => console-log(error));
-        });
-    
-
+        })
+        .catch(error => console-log(error));
 
         
     },
@@ -43,34 +42,41 @@ module.exports = {
 
         if(errors.isEmpty()){
             let userId = req.session.user.id;
-            let user = users.find(user => user.id === userId);
-
-            const {name, lastname, address, city, postalCode, tel} = req.body
-
-            user.name = name;
-            user.lastname = lastname;
-            user.address = address;
-            user.city = city;
-            user.postalCode = postalCode;
-            user.tel = tel;
-            user.avatar = req.file ? req.file.filename : user.avatar;
             
-            
-            writeJSON("users.json", users);
-            
-            /* delete user.pass; */
-            req.session.user = user;
 
+            const {name, lastname, address, city, postalCode, tel, avatar} = req.body
+
+            
+            User.update({
+            name : name,
+            lastname : lastname,
+            address : address,
+            city : city,
+            postalCode : postalCode,
+            tel : tel,
+            avatar : req.file ? req.file.filename : avatar,
+            },
+            {
+               where: {id: userId} 
+            })
+            .then(user =>{
+                userId = user  ;
             return res.redirect('/users/userHome');
+            })
+            .catch(error => console.log(error))  
         }else{
             let userSessionID = req.session.user.id;
-            let userSession = users.find(user => user.id === userSessionID);
-
-            return res.render("users/userEdit",{
-                user: userSession,
-                session:req.session,
-                errors: errors.mapped()
+            /* let userSession = users.find(user => user.id === userSessionID); */
+            User.findByPk(userSessionID)
+            .then(user =>{
+                return res.render("users/userEdit",{
+                    user,
+                    session:req.session,
+                    errors: errors.mapped()
+                })
             })
+
+            
         }
         
 
@@ -81,20 +87,25 @@ module.exports = {
         
         if (errors.isEmpty()){
             /* usuario logeado */
-            let user = users.find(user => user.email === req.body.email);
-            req.session.user = {
-                id: user.id,
-                name: user.name,
-                lastname: user.lastname,
-                email: user.email,
-                category: user.category,
-                address: user.address,
-                avatar: user.avatar,
-                city: user.city,
-                postalCode:user.postalCode,
-                tel: user.tel
-            }
-            /* tiempo de duracion - 1 hora */
+            User.findOne({
+                where:{
+                    email:req.body.email,
+                }
+            })
+            .then(user =>{
+                req.session.user = {
+                    id: user.id,
+                    name: user.name,
+                    lastname: user.lastname,
+                    email: user.email,
+                    category: user.user_category,
+                    address: user.address,
+                    avatar: user.avatar,
+                    city: user.city,
+                    postalCode:user.postalCode,
+                    tel: user.tel
+                }
+                 /* tiempo de duracion - 1 hora */
             let times = 3600000;
 
             /* cookie para mantener la cuenta abierta */
@@ -109,11 +120,12 @@ module.exports = {
                     }
                 )
             }
-            
-            /* crea para poder acceder a la variable */
-            res.locals.user = req.session.user;
-            res.redirect('/');
+             /* crea para poder acceder a la variable */
+             res.locals.user = req.session.user;
+             res.redirect('/');
 
+            })
+            .catch(error => console.log(error))
         }else{
             
             return res.render('users/login',{
@@ -124,6 +136,7 @@ module.exports = {
         }
 
         },
+            
         register : (req, res) => {
             res.render("users/register", {session: req.session})
             
@@ -134,34 +147,31 @@ module.exports = {
             
             /* si no hay errores */
             if(errors.isEmpty()){
-                let lastId = 0;
-                /* si en la lista de usuarios el ultimo usuario es menor dele el valor de id que trae usuario */
-                Users.forEach(user => {
-                 if(user.id > lastId) {
-                     lastId = user.id;
-                 }
-                });
+              
                     /* creando un nuevo usuario */
                 let newUser = {
                     /* dale el id del ultimo usuario + 1 */
-                 id: lastId + 1,
                  name: req.body.name,
                  lastname: req.body.lastname,
                  email: req.body.email,
                  pass: bcrypt.hashSync(req.body.pass, 10),
                  avatar: req.file ? req.file.filename : "default-image.png",
-                 category: "USER",
                  address: "",
                  city: "" ,
                  postalCode:"",
-                 tel:""
+                 tel:"", 
+                 user_category: 0
+                  
                 };
          
-                users.push(newUser);
-         
-                writeJSON("users.json", users);
-         
-                res.redirect("/users/login");
+                User.create(newUser /* {
+                    include:[{association: "user_categories"}]
+                } */)
+                .then(() =>{
+                    return res.redirect("/users/login");
+                })
+                .catch(error => console.log(error))
+            
             } else {
                 res.render("users/register", {
                     errors: errors.mapped(),

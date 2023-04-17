@@ -35,7 +35,7 @@
                         <select name="category" id="category" class="input-select">
                             <option value="" hidden selected>Elija su categoria</option>
                             <% arrayDeCategorias.forEach(categoria => { %>
-                                <option value="<%= categoria.name %>"><%= categoria.name %></option>
+                                <option value="<%= categoria.id %>"><%= categoria.name %></option>
                             <% }) %>
                         </select>
                         <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>

@@ -1,21 +1,16 @@
 /* const { categories } = require("../../controllers/productsController"); */
 
 module.exports = (sequelize, dataTypes) => {
-  /*  users(
-id INT unsigned NOT NULL AUTO_INCREMENT,
-name varchar(100) NOT NULL,
-lastname varchar(100) NOT NULL,
-email varchar(100) NOT NULL,
-pass varchar(150) NOT NULL,
-avatar varchar(100) NOT NULL,
-address varchar(100) DEFAULT NULL,
-city varchar(100) DEFAULT NULL,
-postalCode varchar(100) DEFAULT NULL,
-tel varchar(100) DEFAULT NULL,
-user_category_id INT unsigned NOT NULL,
-PRIMARY KEY (id),
-FOREIGN KEY (user_category_id) references user_categories(id)
-); */
+    /* name: req.body.name,
+    lastname: req.body.lastname,
+    email: req.body.email,
+    pass: bcrypt.hashSync(req.body.pass, 10),
+    avatar: req.file ? req.file.filename : "default-image.png",
+    category: "USER", 0 y 1 en caso de administrador
+    address: "",
+    city: "" ,
+    postalCode:"",
+    tel:"" */
     let alias = 'User';
     let cols = {
         id: {
@@ -60,7 +55,7 @@ FOREIGN KEY (user_category_id) references user_categories(id)
             type: dataTypes.STRING(100),
             defaultValue: null
         },
-        user_category_id: {
+        user_category: {
             type: dataTypes.INTEGER(100).UNSIGNED,
             allowNull: false
         },
@@ -72,13 +67,6 @@ FOREIGN KEY (user_category_id) references user_categories(id)
     };
     const User = sequelize.define(alias, cols, config)
 
-     User.associate = (models) => {
-        User.belongsTo(models.User_category, {
-            as: "user_categories",
-            foreignKey: "user_category_id",
-            
-        })
-    } 
 
     return User;
 }

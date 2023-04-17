@@ -27,7 +27,7 @@
           <i class="fa-solid fa-user"></i>
         </a>
         <div class="users-menu">
-          <%if (session.user.category === "admin") {%>
+          <%if (session.user.category === 1) {%>
             <a class="users-menu-links" href="/admin/home">Admin</a>
           <%}%>
           <a class="users-menu-links" href="/users/userHome">Mis datos</a>
@@ -49,11 +49,11 @@
   <nav>
     <ul class="links-busquedas">
       <li><a href="/products">Todos los productos</a></li>
-      <li><a href="#">Notebooks</a></li>
-      <li><a href="#">Computadores</a></li>
-      <li><a href="#">Componentes de PC</a></li>
-      <li><a href="#">Monitores</a></li>
-      <li><a href="#">Consolas</a></li>
+      <li><a href="/products/categories/1">Notebooks</a></li>
+      <li><a href="/products/categories/2">Computadores</a></li>
+      <li><a href="/products/categories/3">Componentes de PC</a></li>
+      <li><a href="/products/categories/4">Monitores</a></li>
+      <li><a href="/products/categories/5">Consolas</a></li>
 
     </ul>
   </nav>
