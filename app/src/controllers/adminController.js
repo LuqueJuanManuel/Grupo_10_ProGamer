@@ -75,7 +75,7 @@ module.exports ={
               high : req.body.high,
               width : req.body.width,
               depth : req.body.depth,
-              product_category_id:  req.body.categoria,
+              product_category_id:  req.body.category,
               /* image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],  */
           };
           Product.create(newProduct)
