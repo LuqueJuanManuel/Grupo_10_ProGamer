@@ -104,7 +104,7 @@ module.exports ={
         } else{
           const productId = +req.params.id;
 
-          const newProducts = Product.findAll();
+          const newProducts = Product.findByPk(productId,{include:["product_category"]});
            const arrayDeCategorias = Product_category.findAll(); 
           Promise.all([newProducts,arrayDeCategorias])
           .then((product, arrayDeCategorias)=>{
@@ -148,106 +148,67 @@ module.exports ={
       // Update - Method to update
       update: (req, res) => {
 
-        const errors = validationResult(req);
+        if(errors.isEmpty()){
     
-        if (errors.isEmpty()) {
-    
-          const productID = req.params.id;
-    
-          let product = Product.update(
-            {
-              name: req.body.name,
-              brand: req.body.brand,
-              lastname: req.body.lastname,
-              price: req.body.price,
-              discount: req.body.discount,
-              stock: req.body.stock,
-              description: req.body.description,
-              cpu: req.body.cpu,
-              graficCard: req.body.graficCard,
-              so: req.body.so,
-              ram: req.body.ram,
-              capacity: req.body.capacity,
-              puertos: req.body.puertos,
-              hdmi: req.body.hdmi,
-              ethernet: req.body.ethernet,
-              usb: req.body.usb,
-              wifi: req.body.wifi,
-              webCam: req.body.webCam,
-              bluetooth: req.body.bluetooth,
-              screenSize: req.body.screenSize,
-              display: req.body.display,
-              resolution: req.body.resolution,
-              conection: req.body.conection,
-              high: req.body.high,
-              weight: req.body.weight,
-              width: req.body.width,
-              depth: req.body.depth,
-              product_category_id: req.body.category,
+
+            const productID = req.params.id;
+
+            Product.update(
+              {
+            name: req.body.name,
+            brand: req.body.brand,
+            lastname: req.body.lastname,
+            price: req.body.price,
+            discount: req.body.discount,
+            stock: req.body.stock,
+            description: req.body.description,
+            cpu: req.body.cpu,
+            graficCard: req.body.graficCard,
+            so: req.body.so,
+            ram: req.body.ram,
+            capacity: req.body.capacity,
+            puertos: req.body.puertos,
+            hdmi: req.body.hdmi,
+            ethernet: req.body.ethernet,
+            usb: req.body.usb,
+            wifi: req.body.wifi,
+            webCam: req.body.webCam,
+            bluetooth: req.body.bluetooth,
+            screenSize: req.body.screenSize,
+            display: req.body.display,
+            resolution: req.body.resolution,
+            conection: req.body.conection,
+            high: req.body.high,
+            weight: req.body.weight,
+            width: req.body.width,
+            depth: req.body.depth,
+            product_category_id : req.body.category,
             },
             {
-              where: { id: productID }
+              where: {id: productID}
             }).then(() => {
-              return res.redirect("/admin/home");
+              return res.redirect("/admin/home")
             })
             .catch(error => console.log(error))
-        } else {
-          const productId = +req.params.id;
+        }else{
+          const productId = req.params.id;
+
           const PRODUCT_TO_EDIT = Product.findByPk(productId);
-          const CATEGORIES = Product_category.findAll();
-          return res.send(errors.mapped())
+          const CATEGORIES = Product_category.findAll()
+          /* res.send(errors.mapped()) */
+      
          Promise.all([PRODUCT_TO_EDIT, CATEGORIES])
             .then(([product, arrayDeCategorias]) => {
               return res.render("admin/adminEdit", {
                 product,
                 arrayDeCategorias,
                 session: req.session,
-                toThousand,
-                errors: errors.mapped()
+                error: errors.mapped(),
+                toThousand
               });
             })
         }
       },
-         /* let productModify =  {
-                        ...product,
-                        name: name.trim(),
-                        price: +price,
-                        discount: +discount,
-                        category,
-                        brand,
-                        stock: +stock,
-                        description: description.trim(),
-                        lastname,
-                        cpu,
-                        graficCard,
-                        so,
-                        ram,
-                        capacity,
-                        puertos,
-                        hdmi,
-                        ethernet,
-                        usb,
-                        wifi,
-                        webCam,
-                        bluetooth,
-                        screenSize,
-                        display,
-                        resolution,
-                        conection,
-                        high,
-                        weight,
-                        width,
-                        depth,
-                        product_category_id,
-                        image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],
-                    }; */
-                  /*   if (req.files) {
-                        fs.existsSync(`./public/images/products/${product.image}`) &&
-                          fs.unlinkSync(`./public/images/products/${product.image}`);
-                      } */
-              
-
-   
 
       
     

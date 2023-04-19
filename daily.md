@@ -308,3 +308,9 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 ## Emanuel Gauna
 
 - CRUD userController terminado
+
+## lunes 17 de abril 
+
+## Emanuel Gauna
+
+- adminController metodos destroy,create,edit,store,
