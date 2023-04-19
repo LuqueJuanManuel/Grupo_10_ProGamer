@@ -325,7 +325,7 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 ## Tomas Lopez Turconi
 
--me junte con ema a modificar algunas cosas en la BBDD
+- me junte con ema a modificar algunas cosas en la BBDD
 
 ## sabado 14 de abril 
 
@@ -343,4 +343,16 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 ## Emanuel Gauna
 
-- adminController metodos destroy,create,edit,store,
+- adminController metodos destroy,create,edit,store, finalizados
+
+## miercoles 19 de abril 
+
+## Emanuel Gauna 
+## Tomas Lopez Turconi
+## Juan Luque
+
+- actualizacion de tarjetas de trello
+- finalizacion de daily.md
+- finalizacion de retro.md 
+
+

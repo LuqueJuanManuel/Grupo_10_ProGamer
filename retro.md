@@ -96,8 +96,40 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 - Comprobar en las ramas individuales antes de subirlo a develop y asi evitar errores.
 
 **************************************************************************************************************
+## RESTROSPECTIVA DEL SPRINT 6
+
+### Seguir haciendo: 
+- Seguir manteniendo una comunicación activa con el equipo, atravez de Whatsapp y el tablero de trello. como en sprint anteriores la comunicacion es fundamental
+
+### Hacer más:
+
+- Empezar a hacer commits con tareas mas pequeñas, para tener un mejor control de los cambios realizados.
+
+- mantener las ramas actualizadas
+
+- Una vez que la tarea realizada funciona correctamente en nuestras ramas, no olvidarnos de mantener actualizado la rama develop.
+
+### Empezar a hacer:
+
+- Ni bien se finaliza el día de trabajo, subir un reporte al archivo daily.md con lo realizado.
+
+- subir cambios en daily.md al finalizar la jornada
+
+- dejar el codigo limpio (eliminar codigo inutilizable)
+
+### Hacer menos:
+
+- avanzar mucho en el proyecto sin hacer los commit necesarios. 
 
 
+
+### Dejar de hacer:
+
+- Hacer codigo extenso sin guardar los cambios.
+
+- Comprobar en las ramas individuales antes de subirlo a develop y asi evitar errores.
+
+- subir codigo que cumpla mismas funciones(repetir codigo)
 
 
 
