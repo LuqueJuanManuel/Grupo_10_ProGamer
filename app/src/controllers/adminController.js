@@ -75,7 +75,7 @@ module.exports ={
               high : req.body.high,
               width : req.body.width,
               depth : req.body.depth,
-              product_category_id:  req.body.categoria,
+              product_category_id:  req.body.category,
               /* image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],  */
           };
           Product.create(newProduct)
@@ -104,7 +104,7 @@ module.exports ={
         } else{
           const productId = +req.params.id;
 
-          const newProducts = Product.findAll();
+          const newProducts = Product.findByPk(productId,{include:["product_category"]});
            const arrayDeCategorias = Product_category.findAll(); 
           Promise.all([newProducts,arrayDeCategorias])
           .then((product, arrayDeCategorias)=>{
@@ -128,44 +128,34 @@ module.exports ={
 
       /* Fin del condicional */
   },
-    edit: (req, res) => {
-      
-       const productId = +req.params.id; 
-      /*  let productToEdit = products.find(
-        (product) => product.id == productId); */
-        
-        
+  edit: (req, res) => {
 
-      Product.findByPk(productId)
-      .then((product) => {
+    const productId = +req.params.id;
+    const PRODUCT_TO_EDIT = Product.findByPk(productId);
+    const CATEGORIES = Product_category.findAll();
+
+   Promise.all([PRODUCT_TO_EDIT, CATEGORIES])
+      .then(([product, arrayDeCategorias]) => {
         return res.render("admin/adminEdit", {
           product,
+          arrayDeCategorias,
           session: req.session,
           toThousand
         });
       })
-      
-    },
+
+  },
       // Update - Method to update
       update: (req, res) => {
         
           const errors = validationResult(req);
 
-          if(req.fileValidatorError){
-            errors.errors.push({
-                value: "",
-                msg: req.fileValidatorError,
-                param: "image",
-                location: "file",
-            });
-        }
-
         if(errors.isEmpty()){
     
 
-            const productID = +req.params.id;
+            const productID = req.params.id;
 
-            let  product = Product.update(
+            Product.update(
               {
             name: req.body.name,
             brand: req.body.brand,
@@ -198,64 +188,29 @@ module.exports ={
             },
             {
               where: {id: productID}
-            }).then((product) => {
-              return res.redirect("/admin/home",{
+            }).then(() => {
+              return res.redirect("/admin/home")
+            })
+            .catch(error => console.log(error))
+        }else{
+          const productId = req.params.id;
+
+          const PRODUCT_TO_EDIT = Product.findByPk(productId);
+          const CATEGORIES = Product_category.findAll()
+          /* res.send(errors.mapped()) */
+      
+         Promise.all([PRODUCT_TO_EDIT, CATEGORIES])
+            .then(([product, arrayDeCategorias]) => {
+              return res.render("admin/adminEdit", {
                 product,
-                errors: errors.mapped(),
-                old: req.body,
-                 session: req.session,
+                arrayDeCategorias,
+                session: req.session,
+                error: errors.mapped(),
                 toThousand
               });
             })
-            .catch(error => console.log(error))
-          /* if (req.file) {
-          return res.render("admin/adminEdit", {
-            product,
-            
-          }
-        )} */
         }
       },
-         /* let productModify =  {
-                        ...product,
-                        name: name.trim(),
-                        price: +price,
-                        discount: +discount,
-                        category,
-                        brand,
-                        stock: +stock,
-                        description: description.trim(),
-                        lastname,
-                        cpu,
-                        graficCard,
-                        so,
-                        ram,
-                        capacity,
-                        puertos,
-                        hdmi,
-                        ethernet,
-                        usb,
-                        wifi,
-                        webCam,
-                        bluetooth,
-                        screenSize,
-                        display,
-                        resolution,
-                        conection,
-                        high,
-                        weight,
-                        width,
-                        depth,
-                        product_category_id,
-                        image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],
-                    }; */
-                  /*   if (req.files) {
-                        fs.existsSync(`./public/images/products/${product.image}`) &&
-                          fs.unlinkSync(`./public/images/products/${product.image}`);
-                      } */
-              
-
-   
 
       
     

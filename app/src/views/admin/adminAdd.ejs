@@ -34,8 +34,8 @@
                         <h6 class="datos-box">Categoria:</h6>
                         <select name="category" id="category" class="input-select">
                             <option value="" hidden selected>Elija su categoria</option>
-                            <% arrayDeCategorias.forEach(categoria => { %>
-                                <option value="<%= categoria.id %>"><%= categoria.name %></option>
+                            <% arrayDeCategorias.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.name %></option>
                             <% }) %>
                         </select>
                         <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>

@@ -45,8 +45,11 @@ module.exports = {
                 discount:{[Sequelize.Op.gte]: 20}
             },include:[{association: 'images'}]
         })
+        /* const product = Product.findByPk(productId,{
+            include: [{association: 'images'}, {association: "product_category"}]
+        }) */
         const product = Product.findByPk(productId,{
-            include: [{association: 'images'}]
+            include: [{association: 'images'}, {association: "product_category"}]
         })
         
         const category = Product_category.findByPk(productId)

@@ -33,13 +33,11 @@
                     <!-- agregar categoria -->
                     <div class="input-container">
                         <h6 class="datos-box">Categoria:</h6>
-                        <select name="category" id="category" class="input-select <%= (locals.errors && errors.category) && 'is-invalid'%>" required>
-                            <option value="<%= product.category %>" hidden selected ><%= product.category %></option>
-                            <option value="Notebooks">Notebooks</option>
-                            <option value="Computadores">Computadores</option>
-                            <option value="Componentes-de-PC">Componentes de PC</option>
-                            <option value="Monitores">Monitores</option>
-                            <option value="Consolas">Consolas</option>
+                        <select name="category" id="category" class="input-select">
+                            <option value="" hidden selected>Elija su categoria</option>
+                            <% arrayDeCategorias.forEach(categoria => { %>
+                                <option value="<%= categoria.id %>" <%- categoria.id === product.product_category_id && "selected" %>><%= categoria.name %></option>
+                            <% }) %>
                         </select>
                         <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
                     </div>
