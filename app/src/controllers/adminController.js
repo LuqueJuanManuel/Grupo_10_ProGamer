@@ -147,9 +147,9 @@ module.exports ={
   },
       // Update - Method to update
       update: (req, res) => {
-        
-          const errors = validationResult(req);
 
+        const errors = validationResult(req);
+        
         if(errors.isEmpty()){
     
 
