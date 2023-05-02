@@ -230,9 +230,11 @@ main#home section.payMode-section article.modes {
 
 main#home section.payMode-section article.modes div.text-modes {
     display: flex;
+    position: relative;
     justify-content: flex-start;
     margin-bottom: 0.9rem;
     margin-left: 0.5rem;
+    align-items: center;
 }
 
 main#home section.payMode-section article.modes div.text-modes a {
@@ -242,7 +244,7 @@ main#home section.payMode-section article.modes div.text-modes a {
     align-items: center;
 }
 
-main#home section.payMode-section article.modes div.text-modes a i{
+main#home section.payMode-section article.modes div.text-modes  i.iconpay{
     font-size: 1.1rem;
     margin-right: 0.5rem;
     border: 2px solid var(--violeta-oscuro);
@@ -254,10 +256,11 @@ main#home section.payMode-section article.modes div.text-modes a i{
     align-items: center;
     color: var(--violeta-oscuro);
     background-color: var(--verde-oscuro);
+    cursor: pointer;
     transition: all 1s ease;
 }
 
-main#home section.payMode-section article.modes div.text-modes a i:hover{
+main#home section.payMode-section article.modes div.text-modes  i.iconpay:hover{
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
 }
 
@@ -270,16 +273,17 @@ main#home section.payMode-section article.modes div.text-modes p.text {
     margin-bottom: 0 !important;
 }
 
-main#home section.payMode-section article.modes div.text-modes a p{
+main#home section.payMode-section article.modes div.text-modes  p.verMas{
     font-size: 0.7rem;
     font-family: var(--fuente-parrafos);
     margin-left: 1rem;
     color: var(--violeta-oscuro);
     margin-bottom: 0 !important;
+    cursor: pointer;
     transition: all 1s ease;
 }
 
-main#home section.payMode-section article.modes div.text-modes a p:hover{
+main#home section.payMode-section article.modes div.text-modes  p.verMas:hover{
     color: var(--verde-oscuro);
     text-decoration: underline var(--verde-oscuro);
 }
@@ -294,11 +298,11 @@ main#home section.payMode-section article.modes div.more-info {
     
 }
 
-main#home section.payMode-section article.modes div.more-info a {
+/* main#home section.payMode-section article.modes div.more-info a {
     text-decoration: none;
-}
+} */
 
-main#home section.payMode-section article.modes div.more-info a i {
+main#home section.payMode-section article.modes div.more-info  i {
     border: 7px solid var(--violeta-oscuro);
     color: var(--violeta-oscuro);
     height: 2.7rem;
@@ -311,11 +315,60 @@ main#home section.payMode-section article.modes div.more-info a i {
     font-weight: bolder;
     background-color: var(--verde-oscuro);
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
     transition: all 1s ease;
 }
 
-main#home section.payMode-section article.modes div.more-info a i:hover {
+main#home section.payMode-section article.modes div.more-info  i:hover {
     box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+}
+
+main#home .ventana {
+    display: none; /* Ocultar la ventana al principio */
+    position: fixed; /* Posición fija para que se muestre sobre todo */
+    z-index: 1; /* Z-index alto para que esté en primer plano */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho del 100% */
+    height: 100%; /* Altura del 100% */
+    /* overflow: auto; */ /* Agregar un desplazamiento cuando la ventana sea demasiado grande */
+    background-color: rgba(0,0,0,0.4); /* Color de fondo oscuro para oscurecer el contenido detrás de la ventana */
+}
+
+/* ventana emergente */
+
+main#home .contenido-ventana {
+    background-color: var(--crema);
+    margin: 50% auto; /* Centrar vertical y horizontalmente */
+    padding: 20px;
+    border: 2px solid var(--violeta-oscuro);
+    border-radius: 16px;
+    width: 65%; /* Ancho del contenido */
+}
+main#home .contenido-ventana:hover{
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+}
+main#home .contenido-ventana button.cerrar {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 2rem;
+    width: 8rem;
+    font-family: var(--fuente-parrafos);
+    font-size: 1.1rem;
+    text-decoration: underline;
+    color: var(--violeta-oscuro);
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    background-color: var(--crema);
+    transition: all 1s ease;
+}
+main#home .contenido-ventana button.cerrar:hover{
+    background-color: var(--verde-oscuro);
+    box-shadow: 0px 0 4px 2px var(--crema);
 }
 
 /* banner oferta */
@@ -477,6 +530,11 @@ main#home section form div.form  div.button-container button.btn:hover {
         height: 2.2rem;
         /* padding: 0.4rem 0.5rem 0 0.8rem; */
     } 
+    main#home .contenido-ventana {
+        
+        margin: 35% auto; /* Centrar vertical y horizontalmente */
+        
+    }
 
     main#home section form div.form div.input-container input.input-style::placeholder {
         font-size: 1.5rem;/**/
@@ -508,6 +566,11 @@ main#home section form div.form  div.button-container button.btn:hover {
         
         font-size: 2.5rem;
     }
+    main#home .contenido-ventana {
+        
+        margin: 30% auto; /* Centrar vertical y horizontalmente */
+        
+    }
     
 }
 
@@ -520,6 +583,11 @@ main#home section form div.form  div.button-container button.btn:hover {
 
     main#home section form div.form {
         margin-top: 2rem;
+    }
+    main#home .contenido-ventana {
+        
+        margin: 20% auto; /* Centrar vertical y horizontalmente */
+        
     }
 }
 
