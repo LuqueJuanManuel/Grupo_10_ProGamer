@@ -12,6 +12,7 @@ const { validationResult } = require("express-validator");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const {Product, Product_category, Image, Banner} = require('../database/models');
+const { log } = require('console');
 
 module.exports ={
     adminHome: (req, res) => {
@@ -102,10 +103,11 @@ module.exports ={
           })
           .catch(error => console.log(error))
         } else{
-          const productId = +req.params.id;
+          const productId = req.body.id;
 
           const newProducts = Product.findByPk(productId,{include:["product_category"]});
            const arrayDeCategorias = Product_category.findAll(); 
+           return res.send(arrayDeCategorias);
           Promise.all([newProducts,arrayDeCategorias])
           .then((product, arrayDeCategorias)=>{
             return res.render("admin/adminAdd", {
@@ -149,7 +151,7 @@ module.exports ={
       update: (req, res) => {
 
         const errors = validationResult(req);
-        
+        console.log(errors);
         if(errors.isEmpty()){
     
 
@@ -197,7 +199,7 @@ module.exports ={
 
           const PRODUCT_TO_EDIT = Product.findByPk(productId);
           const CATEGORIES = Product_category.findAll()
-          /* res.send(errors.mapped()) */
+         
       
          Promise.all([PRODUCT_TO_EDIT, CATEGORIES])
             .then(([product, arrayDeCategorias]) => {
@@ -205,7 +207,7 @@ module.exports ={
                 product,
                 arrayDeCategorias,
                 session: req.session,
-                error: errors.mapped(),
+                errors: errors.mapped(),
                 toThousand
               });
             })
