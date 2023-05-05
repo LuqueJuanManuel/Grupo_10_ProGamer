@@ -7,11 +7,17 @@ module.exports = [
     /* nombre requerido */
     check("name")
     .notEmpty()
-    .withMessage("El nombre es obligatorio"),
+    .withMessage("El nombre es obligatorio")
+    .isLength({
+        min: 2,
+    }).withMessage("El nombre tiene que tener mas de 2 caracteres"),
      /* apellido requerido */
     check("lastname")
     .notEmpty()
-    .withMessage("El apellido es obligatorio"),
+    .withMessage("El apellido es obligatorio")
+    .isLength({
+        min: 2,
+    }).withMessage("El nombre tiene que tener mas de 2 caracteres"),
     /* email requerido */
     check("email")
     .notEmpty()
@@ -36,9 +42,9 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes escribir tu contraseña').bail()
     .isLength({
-        min: 6,
+        min: 8,
     })
-    .withMessage('La contraseña debe tener como mínimo 6 caracteres'),
+    .withMessage('La contraseña debe tener como mínimo 8 caracteres'),
     
     /* considencia de contraseñas */
     body('pass2')
