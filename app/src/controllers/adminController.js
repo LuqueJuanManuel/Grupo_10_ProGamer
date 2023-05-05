@@ -103,10 +103,11 @@ module.exports ={
           })
           .catch(error => console.log(error))
         } else{
-          const productId = +req.params.id;
+          const productId = req.body.id;
 
           const newProducts = Product.findByPk(productId,{include:["product_category"]});
            const arrayDeCategorias = Product_category.findAll(); 
+           return res.send(arrayDeCategorias);
           Promise.all([newProducts,arrayDeCategorias])
           .then((product, arrayDeCategorias)=>{
             return res.render("admin/adminAdd", {
