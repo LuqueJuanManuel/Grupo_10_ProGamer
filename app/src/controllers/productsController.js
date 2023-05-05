@@ -45,20 +45,23 @@ module.exports = {
                 discount:{[Sequelize.Op.gte]: 20}
             },include:[{association: 'images'}]
         })
+        /* const product = Product.findByPk(productId,{
+            include: [{association: 'images'}, {association: "product_category"}]
+        }) */
         const product = Product.findByPk(productId,{
-            include: [{association: 'images'}]
+            include: [{association: 'images'}, {association: "product_category"}]
         })
         
-        const category = Product_category.findByPk(productId)
-        Promise.all([product, productosEnOferta, category])
-        .then(([product, productosEnOferta, category])=>{
-              /* return res.send(product)   */ 
+        
+        Promise.all([product, productosEnOferta])
+        .then(([product, productosEnOferta])=>{
+              /* return res.send(product)  */  
             /* console.log(product.images) */
             return res.render("products/productDetail", {
                 product,
                 images: product.images,
                 productosEnOferta,
-                category,
+                
                 session: req.session,
                 toThousand,
             })

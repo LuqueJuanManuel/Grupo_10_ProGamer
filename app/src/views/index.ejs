@@ -48,7 +48,7 @@
              <article class="product carousel-cell">
                 <div class="photo-container">
                     <a href="/products/productDetail/<%= product.id %>">
-                        <img src="images/products/<%= product.images[0]/* .name */%>" alt="">
+                        <img src="images/products/<%= product.images[0].name %>" alt="">
                     </a>
                     <!-- moto ofert y heard -->
                     <i class="fa-regular fa-heart"></i>
@@ -75,37 +75,81 @@
         <section class="payMode-section">
             <article class="modes">
                 <div class="modes-container">
+
                     <div class="text-modes">
-                        <a href=""><i class="fa-solid fa-credit-card"></i></a>
+                        <i  id="abrir1" class="fa-solid fa-credit-card iconpay"></i>
                         <p class="text">Tarjeta de crédito</p>
-                        <a class="verMas" href="">
-                            <p>Ver mas</p>
-                        </a>
+                        <p class="verMas" id="abrir2">Ver mas</p>
+                        <div id="miVentana" class="ventana">
+                            <div class="contenido-ventana">
+                                <h2>Tarjeta de crédito</h2>
+                                <p>Ahora 12, 6 y 3 cuotas
+                                    En productos seleccionados con Visa, American Express, Cabal, Tarjeta Shopping, Cordobesa y Mastercard bancarias.</p>
+                                <button class="cerrar"id="cerrar">Cerrar ventana</button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="text-modes">
-                        <a href=""><i class="fa-solid fa-truck-fast"></i></a>
+                        <i id="abrir1" class="fa-solid fa-truck-fast iconpay"></i>
                         <p class="text">Forma de envio</p>
-                        <a class="verMas" href="">
-                            <p>Ver mas</p>
-                        </a>
+                        <p class="verMas" id="abrir2">Ver mas</p>
+                        <div id="miVentana" class="ventana">
+                            <div class="contenido-ventana">
+                                <h2>Forma de envio</h2>
+                                <p>Los vendedores pueden utilizar servicios de correo o mensajería para enviar los productos a los compradores. En este caso, el comprador y el vendedor deben acordar previamente el método de envío y el costo del mismo.
+                                    Retiro en tienda: ofrecemos la posibilidad de que el comprador retire el producto en el local, evitando así el costo y la incertidumbre del envío
+                                </p>
+                                <button class="cerrar"id="cerrar">Cerrar ventana</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="text-modes">
-                        <a href=""><i class="fa-regular fa-credit-card"></i></a>
+                        <i id="abrir1" class="fa-regular fa-credit-card iconpay"></i>
                         <p class="text">Tarjeta de débito</p>
-                        <a class="verMas" href="">
-                            <p>Ver mas</p>
-                        </a>
+                        <p class="verMas" id="abrir2">Ver mas</p>
+                        <div id="miVentana" class="ventana">
+                            <div class="contenido-ventana">
+                                <h2>Tarjeta de débito</h2>
+                                <p>Podés pagar tus compras con cualquiera de estos medios. Es rápido y seguro, siempre.
+                                    Cuotas sin tarjeta de crédito
+Elegí a Mercado Crédito al comprar. Luego pagás las cuotas mes a mes en efectivo, con débito o con el dinero en tu cuenta de Mercado Pago.
+                                    Tarjetas de crédito en hasta 24 cuotas*
+                                    Acreditación instantánea.
+                                    Efectivo
+                                    Es muy simple: cuando termines tu compra, te daremos las instrucciones para que sepas cómo y dónde pagarla. Tanto Pago-facil como Rapi-pago.
+                                </p>
+                                <button class="cerrar" id="cerrar">Cerrar ventana</button>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="text-modes">
-                        <a href=""><i class="fa-solid fa-money-bill-1-wave"></i></a>
+                        <i id="abrir1" class="fa-solid fa-money-bill-1-wave iconpay"></i>
                         <p class="text">Efectivo</p>
-                        <a class="verMas" href="">
-                            <p>Ver mas</p>
-                        </a>
+                        <p class="verMas" id="abrir2">Ver mas</p>
+                        <div id="miVentana" class="ventana">
+                            <div class="contenido-ventana">
+                                <h2>Efectivo</h2>
+                                <p>cuando termines tu compra, te daremos las instrucciones para que sepas cómo y dónde pagarla. Tanto Pago-facil como Rapi-pago.
+
+                                </p>
+                                <button class="cerrar" id="cerrar">Cerrar ventana</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="more-info">
-                    <a href=""><i class="fa-solid fa-plus"></i></a>
+                    <i id="abrir1" class="fa-solid fa-plus"></i>
+                    <div id="miVentana" class="ventana">
+                        <div class="contenido-ventana">
+                            <h2>Medios de pago</h2>
+                            <p>Podés pagar tus compras con cualquiera de estos medios. Es rápido y seguro, siempre.
+                                
+                            </p>
+                            <button class="cerrar" id="cerrar">Cerrar ventana</button>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
@@ -146,6 +190,7 @@
             </form>
         </section>
     </main>
+    <script src="/JS/modoDePago.js"></script>
     <!-- footer -->
     <%- include("./partials/footer")  %> 
     <!-- fin del footer -->

@@ -124,6 +124,7 @@ main#productDetail div button.btn-primary:hover >a {
 
   main#productDetail img {
     height: 300px;
+    object-fit: Contain;
   }
 
   main#productDetail div.detalles {

@@ -16,7 +16,7 @@ module.exports = {
 
     const productosEnOferta = Product.findAll({
       where:{
-        discount:{[Sequelize.Op.gte]: 20}
+        discount:{[Sequelize.Op.gte]: 10}
       },include:[{association: 'images'}]
     }  
 )

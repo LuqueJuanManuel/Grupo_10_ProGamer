@@ -101,7 +101,14 @@ insert into products(id, name, brand, lastname, price, discount, stock, descript
 bluetooth, screenSize, display, resolution, conection, high, weight, width, depth, product_category_id)
 values (default, 'Asus Vivobook X1502', 'Asus', 'Notebook', 244000, 25, 2, 'Procesador:Intel Core i5 4.40 Ghz, Memoria: 8 GB soldados + 8 GB SO-DIMM, Pantalla: Full HD y antireflejante, Sistema de audio: SonicMaster, Puertos: 3 USB 3.2 tipo C y A y otro USB 2.0 Tipo A',
 'Intel Core i5 de 12va Generación', 'Intel® Iris® Xe Graphics', 'Windows', '16 GB DDR4', 'Disco SSD 480GB M.2 Nvme PCIE', '4-USB y 1-HDMI', '1 X HDMI Versión 1.4', 'No', 'si', 'si', 'si', 'si',
-null, 'TN', '1920 x 1080 px', null, '23,25 mm', '1,7 kg', '35,97 mm', '1,99 mm', 1);
+null, 'TN', '1920 x 1080 px', null, '23,25 mm', '1,7 kg', '35,97 mm', '1,99 mm', 1),(default, 'Monitor Gigabyte Gaming 27 Full HD 144Hz', 'Gigabyte', '', 178915, 0, 2, 'Ángulo de visión, horizontal y vertical: 178°, sRGB: Si , Cobertura sRGB (típica): 125%, Tecnología Flicker free (reduce el parpadeo de la pantalla): Si',
+'', '', '', '', '', '2 USB tipo A y 2 HDMI', 'si', '', 'si', '', '', '','68,6 cm (27″)', 'LCD', '1920 x 1080 px', null, '365.5 mm', '6.6 Kg', '619 mm', '56 mm', 4), (default, 'SickleFlow 120 RGB', 'Cooler Master', 'Cooler', 7984, 25, 4, 'un buen producto de calidad', null, null, null, null, null, null, null, null, null, null, null, 
+null, null, null, null, null, '10 cm', '3g', '15 cm', '12 cm', 3),(default, 'Nintendo Switch 32GB Standard', 'Nintendo', 'Consola', 178499, 5, 2, 'Edición Standard, Color: Gris/Negro ,Tipos de tarjetas de memoria: Micro-SD, Micro-SDXC, Micro-SDHC', null, null, null, '4 GB', '32 GB LPDDR4', null, 'si', null, 'no', 'si', null, 
+null, null, null, null, null, null, null, null, null, 5),(default, 'Pack-2 compu PRO-GAMER Heavy', 'Varios', 'PC', 676299, 5, 1, 'Motherboard: Chipset B560 ASUS O GIGABYTE, Marca de placa grafica: Asus o Gigabyte, Fuente: 750w 80 Plus, Gabinete: Seasonic Syncro Q704',
+ 'Intel i7 11700K', 'Nvidia Gtx 3070 8gb', 'Windows', '16GB DDR4 3000MHz', 'SSD 1 TB', 'USB tipo 2x A y 1x C y 1-HDMI', '1 X HDMI Versión 1.4', 'Si', 'si', 'no', 'si', 
+'si', null, null, null, null, null, null, null, null, 2);
+
+
 
 /*select * from products;
 
@@ -125,6 +132,11 @@ CREATE TABLE images(
  FOREIGN KEY (products_id) references products(id)
  );
  insert into images(id, name, products_id)
- values (default, 'asus-vivobook-x1502_1.jpeg',1),(default, 'asus-vivobook-x1502_2.jpeg',1),(default, 'asus-vivobook-x1502_3.jpeg',1);
+ values (default, 'asus-vivobook-x1502_1.jpeg',1),(default, 'asus-vivobook-x1502_2.jpeg',1),(default, 'asus-vivobook-x1502_3.jpeg',1),
+ (default, 'monitor-gigabyte-gaming-27-1.jpg',2),(default, 'monitor-gigabyte-gaming-27-2.png',2),(default, 'monitor-gigabyte-gaming-27-3.jpg',2), 
+ (default, 'sickleflow-120-rgb_2161300_md.png',3),(default, 'Nintendo-Switch-32GB-Standard_1.jfif',4),(default, 'Nintendo-Switch-32GB-Standard_2.jfif',4),
+ (default, 'Nintendo-Switch-32GB-Standard_3.jfif',4),(default, 'pc-armada_2-1.jpg',5),(default, 'pc-armada_2-2.jfif',5),(default, 'pc-armada_2-3.jpg',5);
+ 
+ 
  
  /*select * from images;*/

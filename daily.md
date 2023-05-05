@@ -277,6 +277,9 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - cracion de modelos Image y User 
 
+## Tomas Lopez Turconi
+
+- Termine la base de datos y lo subi al repositorio
 
 ## Sabado 8 de abril
 
@@ -284,12 +287,25 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - creacion de modelo User_category entablesco relacion de categoria y usuario y relacion de imagenes a productos
 
+## Tomas Lopez Turconi
+
+- Empeze el models de product_category y su vinculacion con product.
+
+## Martes 10 de abril
+
+## Tomas Lopez Turconi
+
+-Intento de solucionar problemas en los models. Se pudo arreglar
+
 ## Martes 11 de abril
 
 ## Emanuel Gauna
 
 - require de database/models a archivo userController y registerValidator, armado de create de usuario en userController
 
+## Tomas Lopez Turconi
+
+-Pude levantar la base de datos y termine el indexController
 
 ## miercoles 12 de abril
 
@@ -297,14 +313,46 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - cambie  en el middleware sessionadmincheck "ADMIN" por el nro 1... en la linea 30 del partials-header cambiel el admin por el nro 1.... de userController  modifique los metodos: userEdit - userEditUpdate - userHome y proccesLogin
 
+## Tomas Lopez Turconi
+
+- comenze con el productController, haciendo el index, productDetail(modifiando un poco las vistas) y averigue como hacer el search .
+
 ## jueves 13 de abril
 
 ## Emanuel Gauna
 
 - userController edit y processRegister completo
 
+## Tomas Lopez Turconi
+
+- me junte con ema a modificar algunas cosas en la BBDD
+
+## sabado 14 de abril 
+
+## Tomas Lopez Turconi
+
+- termine el search de productController(Crud ProductC. teminado), y empeze con el adminController(create y adminHome). problemas solo en el productDetail qe el array de images apareces desordenado.
+
 ## sabado 15 de abril 
 
 ## Emanuel Gauna
 
 - CRUD userController terminado
+
+## lunes 17 de abril 
+
+## Emanuel Gauna
+
+- adminController metodos destroy,create,edit,store, finalizados
+
+## miercoles 19 de abril 
+
+## Emanuel Gauna 
+## Tomas Lopez Turconi
+## Juan Luque
+
+- actualizacion de tarjetas de trello
+- finalizacion de daily.md
+- finalizacion de retro.md 
+
+
