@@ -20,14 +20,14 @@
                     <!-- nombre del producto -->
                     <div class="input-container">
                         <h6  class="datos-box">Nombre del producto:</h6>
-                        <input class="input-style <%= locals.errors && errors.product.name ? 'is-invalid' : null%> " type="text" name="name" id="name" placeholder="ingresa un nombre..." value="<%= locals.old && old.product.name ? old.product.name : product.name %>">
+                        <input class="input-style <%= locals.errors && errors.name ? 'is-invalid' : null%> " type="text" name="name" id="name" placeholder="ingresa un nombre..." value="<%= locals.old && old.product.name ? old.product.name : product.name %>">
                       <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
                     </div>
 
                       <div class="input-container">
                         <h6 class="datos-box">Marca del producto:</h6>
-                        <input class="input-style  <%= (locals.errors && errors.product.brand) && 'is-invalid'%>" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= locals.old && old.product.brand ? old.product.brand : product.brand %>">
-                        <small class="text-danger ms-2"><%= locals.errors && errors.product.brand ? errors.brand.msg : null%></small>
+                        <input class="input-style  <%= (locals.errors && errors.brand) ? 'is-invalid' : ''%>" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= locals.old && old.product.brand ? old.product.brand : product.brand %>">
+                        <small class="text-danger ms-2"><%= locals.errors && errors.brand ? errors.brand.msg : null%></small>
                     </div>
     
                     <!-- agregar categoria -->

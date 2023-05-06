@@ -21,8 +21,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: 'product_category',
         timestamps: false,
-        /* createdAt: 'created_at',
-        updatedAt: 'updated_at', */
+        
     }
     const Product_Category = sequelize.define(alias, cols, config);
 
