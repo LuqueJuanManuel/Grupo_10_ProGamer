@@ -107,9 +107,8 @@ module.exports ={
 
           const newProducts = Product.findByPk(productId,{include:["product_category"]});
            const arrayDeCategorias = Product_category.findAll(); 
-           return res.send(arrayDeCategorias);
           Promise.all([newProducts,arrayDeCategorias])
-          .then((product, arrayDeCategorias)=>{
+          .then(([product, arrayDeCategorias])=>{
             return res.render("admin/adminAdd", {
               product,
               arrayDeCategorias,
