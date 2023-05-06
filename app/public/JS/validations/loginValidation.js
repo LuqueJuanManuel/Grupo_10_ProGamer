@@ -66,6 +66,11 @@ window.addEventListener("load", () => {
                 break;
         }
     })
+
+    $inputCheck.addEventListener("click", () => {
+        
+    })
+
     $form.addEventListener("submit", (event) => {
         event.preventDefault()
         const FORM_ELEMENTS = event.target.elements;
