@@ -11,7 +11,8 @@ const { validationResult } = require("express-validator");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const { Product, Product_category, Image, Banner } = require('../database/models');
+const {Product, Product_category, Image, Banner} = require('../database/models');
+const { log } = require('console');
 
 module.exports = {
   adminHome: (req, res) => {
@@ -81,33 +82,34 @@ module.exports = {
           Product.create(newProduct)
           .then(product => {
           /* return  res.send(req.body.categoria) */
-          if (req.files.length === 0) {
-            Image.create({
-              name: "default-image.png",
-              products_id: product.id,
-            }).then(() => {
-              return res.redirect("/admin/home")
-            });
-          } else {
-            const files = req.files.map(file => {
-              return {
-                name: file.filename,
-                products_id: product.id
-              }
-            });
-            Image.bulkCreate(files).then(() => {
-              return res.redirect("/admin/home")
-            });
-          }
-        })
-        .catch(error => console.log(error))
-    } else {
-      const productId = +req.params.id;
+            if(req.files.length === 0){
+              Image.create({
+                name: "default-image.png",
+                products_id: product.id,
+              }).then(() =>{
+               return res.redirect("/admin/home")
+              });
+            }else {
+              const files = req.files.map(file =>{
+                return{
+                  name: file.filename,
+                  products_id: product.id
+                }
+              });
+              Image.bulkCreate(files).then(()=>{
+                return res.redirect("/admin/home")
+              });
+            }
+          })
+          .catch(error => console.log(error))
+        } else{
+          const productId = req.body.id;
 
           const newProducts = Product.findAll();
            const arrayDeCategorias = Product_category.findAll(); 
+           return res.send(arrayDeCategorias);
           Promise.all([newProducts,arrayDeCategorias])
-          .then((product, arrayDeCategorias)=>{
+          .then(([product, arrayDeCategorias])=>{
             return res.render("admin/adminAdd", {
               product,
               arrayDeCategorias,
@@ -149,18 +151,9 @@ module.exports = {
     },
       // Update - Method to update
       update: (req, res) => {
-        
-          const errors = validationResult(req);
 
-          if(req.fileValidatorError){
-            errors.errors.push({
-                value: "",
-                msg: req.fileValidatorError,
-                param: "image",
-                location: "file",
-            });
-        }
-
+        const errors = validationResult(req);
+        console.log(errors);
         if(errors.isEmpty()){
     
 
@@ -199,12 +192,24 @@ module.exports = {
             },
             {
               where: {id: productID}
-            }).then((product) => {
-              return res.redirect("/admin/home",{
+            }).then(() => {
+              return res.redirect("/admin/home")
+            })
+            .catch(error => console.log(error))
+        }else{
+          const productId = req.params.id;
+
+          const PRODUCT_TO_EDIT = Product.findByPk(productId);
+          const CATEGORIES = Product_category.findAll()
+         
+      
+         Promise.all([PRODUCT_TO_EDIT, CATEGORIES])
+            .then(([product, arrayDeCategorias]) => {
+              return res.render("admin/adminEdit", {
                 product,
+                arrayDeCategorias,
+                session: req.session,
                 errors: errors.mapped(),
-                old: req.body,
-                 session: req.session,
                 toThousand
               });
             })
