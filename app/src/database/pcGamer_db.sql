@@ -22,8 +22,8 @@ user_category INT unsigned NOT NULL,
 PRIMARY KEY (id)
 );
 insert into users(id, name, lastname, email, pass, avatar, address, city, postalCode, tel, user_category)
-values (default, 'usuario', 'admin', 'usuario@admin.com', '$2a$10$Dw1y158zAoHbLdb7g2p74uhM8BEw4XEZ6awGj20Kpa326SP4pRw/6', 'default-image.png', null, null, null, null, 1),
-(default, 'usuario', 'log', 'usuario@log.com', '$2a$10$/.wYt7d7aQslTDM1J0MvMeAOWsFnBA8OP7n.QKOACwxRr3BfbnhWK', 'default-image.png', null, null, null, null, 0);
+values (default, 'usuario', 'admin', 'usuario@admin.com', '$2a$10$DQ6OKW81aFwhgLwt8bZRO.cqmZuYIgMBd9vj7EAEXANu2TduWE/3K', 'default-image.png', null, null, null, null, 1),
+(default, 'usuario', 'log', 'usuario@log.com', '$2a$10$U5HKDmGaT3dUVLIMwUmcNOEIuG7R90FvMigXkN7eYt2TVRiEi2FXC', 'default-image.png', null, null, null, null, 0);
 
 /*select * from  users;
 
