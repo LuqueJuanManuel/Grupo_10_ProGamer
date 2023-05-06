@@ -18,7 +18,8 @@ w.addEventListener("load", () => {
         $pass = qs("#pass"),
         $passErrors = qs("#passErrors"),
         $pass2 = qs("#pass2"),
-        $pass2Errors = qs("#passErrors")
+        $pass2Errors = qs("#passErrors"),
+        $form = qs("#form")
         regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,//dato alfabetico
         regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,//dato mail
         regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;//dato contraseña
@@ -89,7 +90,7 @@ w.addEventListener("load", () => {
                     $pass.classList.add('is-invalid')
                     break;
                 case !regExPass.test($pass.value):
-                    $passErrors.innerText = 'La contraseña debe tener: entre 8 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
+                    $passErrors.innerText = 'La contraseña debe tener: entre 6 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
                     $pass.classList.add('is-invalid')
                     break
                 default:
@@ -116,4 +117,29 @@ w.addEventListener("load", () => {
                     break;
             }
         })
+
+      //la aplicamos al formulario el evento submit
+        $form.addEventListener("submit", (event) => {
+            event.preventDefault()//prevenimos q lo envie//
+            const  FORM_ELEMENTS =  event.target.elements;//variable de  todos los elemetos de formulario
+    
+            for (let i = 0; i < FORM_ELEMENTS.length -1 ; i++) {//recorremos los elementos
+                const element = FORM_ELEMENTS[i];//variable de cada elemento
+                if (element.value === "" && element.type != "file") {
+                    element.classList.add("is-invalid")
+                }//si los elementos tienen valor vacio y y es distinto de un file
+            }//agregale la clase is invalid
+    
+            let elementosConErrores = document.querySelectorAll(".is-invalid");
+            //asignamos a una variable todos los errores
+            let errores = elementosConErrores.length > 0;
+            //variable de errores existentes
+            if(errores){//si hay errores-- manda en msj hay errores en el formulario
+                $submitErrors.innerText = "hay errores en el formulario"
+            }else{//caso contrario envia el formulario
+                $form.submit()
+            }
+         })
+    
+
 })
