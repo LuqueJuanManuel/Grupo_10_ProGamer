@@ -356,3 +356,24 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 - finalizacion de retro.md 
 
 
+**********************************************************************************************
+
+
+# Sprint / - Validaciones.
+
+## miercoles 3 de Mayo
+
+##  Emanuel Gauna
+
+- creacion de archivo editEditProfile.js
+- repaso y modificacion de Validaciones del Back-end "userEditValidator.js"
+
+## viernes 5 de Mayo
+
+##  Emanuel Gauna
+
+-  creacion de validaciones de input de registro de usuario 
+- modificacion de archivo register.ejs creacion de clases, ids.
+- creacion de span con mensaje de errores de validaciones del front-end  
+
+

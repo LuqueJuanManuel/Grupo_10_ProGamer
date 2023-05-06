@@ -4,6 +4,12 @@
 <%- include("../partials/head", {title: "registro"}) %>
 
 <title>registro</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<style>
+    span{
+        color: red;
+    }
+</style>
 <body>
     <!-- header -->
     <%- include("../partials/header") %> 
@@ -11,7 +17,7 @@
     <main id="register">
         <div class="registro-container">
 
-            <form action="/users/register" method="post" enctype="multipart/form-data">
+            <form id="form" action="/users/register" method="post" enctype="multipart/form-data">
     
                 <div class="registro-form">
     
@@ -19,7 +25,8 @@
                 
                     <div class="input-container">
                         <h6 class="datos-box">Nombre*</h6>
-                        <input class="input-style" type="text" name="name" placeholder="Ingresar nombre..." value="<%= locals.old && old.name %>">
+                        <input id="name" class="input-style form-control " type="text" name="name" placeholder="Ingresar nombre..." value="<%= locals.old && old.name %>">
+                        <span id="nameErrors"></span>
                         <% if (locals.errors && errors.name) { %>
                             <small class="text-danger"><%= errors.name.msg %> </small>
                         <% } %>
@@ -27,15 +34,17 @@
                     
                     <div class="input-container">
                         <h6 class="datos-box">Apellido*</h6>
-                        <input class="input-style" type="text" name="lastname" placeholder="Ingresar apellido..."value="<%= locals.old && old.lastname %>">
+                        <input id="lastname" class="input-style form-control " type="text" name="lastname" placeholder="Ingresar apellido..."value="<%= locals.old && old.lastname %>">
+                        <span id="lastnameErrors"></span>
                         <% if (locals.errors && errors.lastname) { %>
-                            <small class="text-danger"><%= errors.lastname.msg %> </small>
+                            <small id="lastnameError" class="text-danger"><%= errors.lastname.msg %> </small>
                         <% } %>
                     </div>
 
                     <div class="input-container">
                         <h6 class="datos-box">Email*</h6>
-                        <input class="input-style" type="email" name="email" placeholder="Ingresar email..."value="<%= locals.old && old.email %>">
+                        <input id="email" class="input-style  form-control " type="email" name="email" placeholder="Ingresar email..."value="<%= locals.old && old.email %>">
+                        <span id="emailErrors"></span>
                         <% if(locals.errors && errors.email) { %>
                             <small class="text-danger"><%= errors.email.msg %> </small>
                             <% } %>
@@ -43,7 +52,8 @@
     
                     <div class="input-container">
                         <h6 class="datos-box">Contraseña*</h6>
-                        <input class="input-style" type="password" name="pass" placeholder="Ingresar contraseña...">
+                        <input id="pass" class="input-style  form-control" type="password" name="pass" placeholder="Ingresar contraseña...">
+                        <span id="passErrors"></span>
                         <% if (locals.errors && errors.pass) { %>
                             <small class="text-danger"><%= errors.pass.msg %> </small>
                         <% } %>
@@ -51,7 +61,8 @@
     
                     <div class="input-container">
                         <h6 class="datos-box">Confirma tu contraseña*</h6>
-                        <input class="input-style" type="password" name="pass2" placeholder="Confirmar contraseña...">
+                        <input id="pass2" class="input-style  form-control" type="password" name="pass2" placeholder="Confirmar contraseña...">
+                        <span id="pass2Errors"></span>
                         <% if (locals.errors && errors.pass2) { %>
                             <small class="text-danger"><%= errors.pass2.msg %> </small>
                         <% } %>
@@ -116,6 +127,8 @@
     <%- include("../partials/footer") %> 
     <!-- fin del footer -->
     <%- include("../partials/scripts") %>
+ <!--    <script src="/JS/userEditProfile.js"></script>  -->
+    <script src="http://momentjs.com/downloads/moment.min.js"></script>
 </body>
 
 </html>
