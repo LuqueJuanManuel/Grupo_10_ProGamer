@@ -2,6 +2,7 @@
 const { check, body } = require("express-validator");
 /* const { users }  = require("../database"); */
 const { User } = require("../database/models")
+const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
 module.exports = [
     /* nombre requerido */
@@ -42,10 +43,16 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes escribir tu contraseña').bail()
     .isLength({
-        min: 8,
+        min: 6,
     })
-    .withMessage('La contraseña debe tener como mínimo 8 caracteres'),
-    
+    .withMessage('La contraseña debe tener como mínimo 6 caracteres'),
+    //la contraseña tiene q tener valores alfanumericos
+    body("pass")
+       .custom((value) => {
+           return regExPass.test(value)
+       })
+        .withMessage("la contraseña deberá tener letras mayúsculas, minúsculas, un número y un carácter especial."),
+   
     /* considencia de contraseñas */
     body('pass2')
     .custom((value, {req}) => value !== req.body.pass ? false : true)
