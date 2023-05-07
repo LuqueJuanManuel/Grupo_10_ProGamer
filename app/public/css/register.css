@@ -1,3 +1,7 @@
+main#register span.error {
+    color : red;
+}
+
 main#register h4{
     font-family: var(--fuente-titulos);
     margin-bottom: 1rem;
