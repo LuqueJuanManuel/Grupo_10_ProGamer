@@ -69,6 +69,18 @@ window.addEventListener("load", () => {
 
     $inputCheck.addEventListener("click", () => {
         
+        if ($inputCheck.checked === false) {
+            if (confirm("¿Estás seguro de que no quieres recordar tu cuenta?")) {
+                $inputCheck.checked = false;
+                /* console.log($inputCheck.checked); */
+            } else {
+                $inputCheck.checked = true;
+                /* console.log($inputCheck.checked); */
+            }
+        } else {
+            $inputCheck.checked = true;
+            /* console.log($inputCheck.checked); */
+        }
     })
 
     $form.addEventListener("submit", (event) => {
