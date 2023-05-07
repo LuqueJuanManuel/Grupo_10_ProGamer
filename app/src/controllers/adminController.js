@@ -14,37 +14,37 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const {Product, Product_category, Image, Banner} = require('../database/models');
 const { log } = require('console');
 
-module.exports ={
-    adminHome: (req, res) => {
-       Product.findAll()
-      .then(products =>{ 
-        return res.render("admin/adminHome",{
-          products, 
+module.exports = {
+  adminHome: (req, res) => {
+    Product.findAll()
+      .then(products => {
+        return res.render("admin/adminHome", {
+          products,
           session: req.session,
-    
+
         })
-       }) 
+      })
       .catch(error => console.log(error))/* ok */
-    },
-    create: (req, res) => {
-      const products = Product.findAll()
-      const arrayDeCategorias = Product_category.findAll()
-      Promise.all([products, arrayDeCategorias])
-      .then(([products, arrayDeCategorias])=>{
-        res.render('admin/adminAdd' , {
+  },
+  create: (req, res) => {
+    const products = Product.findAll()
+    const arrayDeCategorias = Product_category.findAll()
+    Promise.all([products, arrayDeCategorias])
+      .then(([products, arrayDeCategorias]) => {
+        res.render('admin/adminAdd', {
           products,
           arrayDeCategorias,
           session: req.session,
         });
       })
       .catch(error => console.log(error))/* ok */
-        
-    },
-    store: (req, res) => {
-      const errors = validationResult(req);
-     /*  let lastId = products[products.length - 1].id; */
-     
-      if(errors.isEmpty()) {
+
+  },
+  store: (req, res) => {
+    const errors = validationResult(req);
+    /*  let lastId = products[products.length - 1].id; */
+
+    if (errors.isEmpty()) {
 
           let newProduct = {
               /* id : lastId + 1, */
@@ -105,7 +105,7 @@ module.exports ={
         } else{
           const productId = req.body.id;
 
-          const newProducts = Product.findByPk(productId,{include:["product_category"]});
+          const newProducts = Product.findAll();
            const arrayDeCategorias = Product_category.findAll(); 
           Promise.all([newProducts,arrayDeCategorias])
           .then(([product, arrayDeCategorias])=>{
@@ -118,25 +118,27 @@ module.exports ={
           })
         })
         .catch(error => console.log(error))
-        }
+    }
 
-     /*      products.push(newProduct);
+    /*      products.push(newProduct);
 
-          writeJSON("products.json", products);
+         writeJSON("products.json", products);
 
-           */
-     
+          */
 
-      /* Fin del condicional */
+
+    /* Fin del condicional */
   },
-  edit: (req, res) => {
+    edit: (req, res) => {
+      
+       const productId = +req.params.id; 
+      /*  let productToEdit = products.find(
+        (product) => product.id == productId); */
+        
+        
 
-    const productId = +req.params.id;
-    const PRODUCT_TO_EDIT = Product.findByPk(productId);
-    const CATEGORIES = Product_category.findAll();
-
-   Promise.all([PRODUCT_TO_EDIT, CATEGORIES])
-      .then(([product, arrayDeCategorias]) => {
+      Product.findByPk(productId)
+      .then((product) => {
         return res.render("admin/adminEdit", {
           product,
           arrayDeCategorias,
@@ -144,8 +146,8 @@ module.exports ={
           toThousand
         });
       })
-
-  },
+      
+    },
       // Update - Method to update
       update: (req, res) => {
 
@@ -154,9 +156,9 @@ module.exports ={
         if(errors.isEmpty()){
     
 
-            const productID = req.params.id;
+            const productID = +req.params.id;
 
-            Product.update(
+            let  product = Product.update(
               {
             name: req.body.name,
             brand: req.body.brand,
@@ -210,32 +212,79 @@ module.exports ={
                 toThousand
               });
             })
+            .catch(error => console.log(error))
+          /* if (req.file) {
+          return res.render("admin/adminEdit", {
+            product,
+            
+          }
+        )} */
         }
       },
+         /* let productModify =  {
+                        ...product,
+                        name: name.trim(),
+                        price: +price,
+                        discount: +discount,
+                        category,
+                        brand,
+                        stock: +stock,
+                        description: description.trim(),
+                        lastname,
+                        cpu,
+                        graficCard,
+                        so,
+                        ram,
+                        capacity,
+                        puertos,
+                        hdmi,
+                        ethernet,
+                        usb,
+                        wifi,
+                        webCam,
+                        bluetooth,
+                        screenSize,
+                        display,
+                        resolution,
+                        conection,
+                        high,
+                        weight,
+                        width,
+                        depth,
+                        product_category_id,
+                        image: req.files ? req.files.map(image => image.filename) : ["default-image.png"],
+                    }; */
+                  /*   if (req.files) {
+                        fs.existsSync(`./public/images/products/${product.image}`) &&
+                          fs.unlinkSync(`./public/images/products/${product.image}`);
+                      } */
+              
+
+   
 
       
     
     destroy: (req,res) => {
         let productId = Number(req.params.id);
 
-         Product.destroy({
-          where: {
-            id: productId
-          }
-         })
-         .then(()=>{
-          res.redirect("/admin/home");
-         })
-        
-        /* products.forEach(product => {
-          if(product.id === productId){
-            let newArrayProducts = products.indexOf(product);
-            products.splice(newArrayProducts, 1)
-          }
-        }) */
-        
-    },
+    Product.destroy({
+      where: {
+        id: productId
+      }
+    })
+      .then(() => {
+        res.redirect("/admin/home");
+      })
 
-    
-        
+    /* products.forEach(product => {
+      if(product.id === productId){
+        let newArrayProducts = products.indexOf(product);
+        products.splice(newArrayProducts, 1)
+      }
+    }) */
+
+  },
+
+
+
 }
