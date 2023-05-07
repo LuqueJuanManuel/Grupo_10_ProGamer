@@ -226,6 +226,14 @@ div.user-Image-container img:hover{
     box-shadow: 4px 4px 20px var(--violeta-oscuro);
 }
 
+main#register input.is-invalid {
+    border : 1px solid red;
+}
+
+main#register span#submitErrors {
+    color: red;
+}
+
 @media (min-width: 415px){
     .cpu {
         
