@@ -93,9 +93,9 @@ high varchar(100) DEFAULT NULL,
 weight varchar(100) DEFAULT NULL,
 width varchar(100) DEFAULT NULL,
 depth varchar(100) DEFAULT NULL,
-product_category_id INT unsigned NOT NULL,
+product_category_id INT unsigned DEFAULT NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (product_category_id) references product_category(id)
+FOREIGN KEY (product_category_id) references product_category(id) ON DELETE SET NULL ON UPDATE SET NULL
 );
 insert into products(id, name, brand, lastname, price, discount, stock, description, cpu, graficCard, so, ram, capacity, puertos, hdmi, ethernet, usb, wifi, webCam, 
 bluetooth, screenSize, display, resolution, conection, high, weight, width, depth, product_category_id)
@@ -127,9 +127,9 @@ DROP TABLE IF EXISTS images;
 CREATE TABLE images(
  id INT unsigned NOT NULL AUTO_INCREMENT,
  name varchar(255) NOT NULL,
- products_id int unsigned NOT NULL,
+ products_id int unsigned DEFAULT NULL,
  PRIMARY KEY (id),
- FOREIGN KEY (products_id) references products(id)
+ FOREIGN KEY (products_id) references products(id) ON DELETE SET NULL ON UPDATE SET NULL
  );
  insert into images(id, name, products_id)
  values (default, 'asus-vivobook-x1502_1.jpeg',1),(default, 'asus-vivobook-x1502_2.jpeg',1),(default, 'asus-vivobook-x1502_3.jpeg',1),
