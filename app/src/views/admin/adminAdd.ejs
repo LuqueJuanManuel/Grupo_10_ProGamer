@@ -20,14 +20,14 @@
                     <!-- nombre del producto -->
                     <div class="input-container">
                         <h6  class="datos-box">Nombre del producto:</h6>
-                        <input class="input-style" type="text" name="name" id="name" placeholder="Ingresar nombre..." value="<%= locals.old && locals.old.name ? locals.old.name : null %>">
+                        <input class="input-style obligatoria" type="text" name="name" id="name" placeholder="Ingresar nombre..." value="<%= locals.old && locals.old.name ? locals.old.name : null %>">
                         <span class="error" id="nameErrors"></span>
                         <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>                    
                     </div>
                     <!-- Marca del producto -->
                     <div class="input-container">
                         <h6 class="datos-box">Marca del producto:</h6>
-                        <input class="input-style" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= locals.old && locals.old.name ? locals.old.name : null %>">
+                        <input class="input-style obligatoria" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= locals.old && locals.old.name ? locals.old.name : null %>">
                         <span class="error" id="brandErrors"></span>
                         <small class="text-danger ms-2"><%= locals.errors && errors.brand ? errors.brand.msg : null%></small>
                     </div>
@@ -35,7 +35,7 @@
                     <!-- agregar categoria -->
                     <div class="input-container">
                         <h6 class="datos-box">Categoria:</h6>
-                        <select name="category" id="category" class="input-select">
+                        <select name="category" id="category" class="input-select obligatoria">
                             <option value="" hidden selected>Elija su categoria</option>
                             <% arrayDeCategorias.forEach(category => { %>
                                 <option value="<%= category.id %>"><%= category.name %></option>
@@ -53,14 +53,14 @@
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
                             <h6 class="datos-box ">Precio:</h6>
-                            <input class="input-style" type="text" name="price" id="price" placeholder="Numerico" value="<%= locals.old && locals.old.price ? locals.old.price : null %>">
+                            <input class="input-style obligatoria" type="text" name="price" id="price" placeholder="Numerico" value="<%= locals.old && locals.old.price ? locals.old.price : null %>">
                             <span class="error" id="priceErrors"></span>
                             <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
                         </div>
                     <!-- Discount -->
                         <div class="input-container container-descount-A">
                             <h6 class="datos-box">Descuento:</h6>
-                            <input class="input-style" type="text" name="discount" id="discount" placeholder="Numerico" value="<%= locals.old && locals.old.discount ? locals.old.discount : null %>">
+                            <input class="input-style obligatoria" type="text" name="discount" id="discount" placeholder="Numerico" value="<%= locals.old && locals.old.discount ? locals.old.discount : null %>">
                             <span class="error" id="discountErrors"></span>                          
                             <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
                         </div>
@@ -78,7 +78,7 @@
                     <!-- description general -->
                     <div class="input-container">
                         <h6 class="datos-box">Descripción:</h6>
-                        <textarea name="description" id="description"  placeholder="Descripción del producto..." value="<%= locals.old && locals.old.description ? locals.old.description : null %>"></textarea>
+                        <textarea name="description" id="description" class='obligatoria'  placeholder="Descripción del producto..." value="<%= locals.old && locals.old.description ? locals.old.description : null %>"></textarea>
                         <span class="error" id="descriptionErrors"></span>
                         <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
                     </div>

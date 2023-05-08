@@ -117,7 +117,7 @@ window.addEventListener('load', () => {
             $discountErrors.innerText = 'Debes ingresar un valor en descuento';
             break;
 
-            case $inputDiscount.value.length < 100:
+            case $inputDiscount.value.length > 100:
             $discountErrors.innerText = 'El descuento no puede ser mayor a 100%'
             break;
 
@@ -130,10 +130,57 @@ window.addEventListener('load', () => {
     })
 
     $form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const FORM_ELEMENTS = event.target.elements;
+       event.preventDefault();
 
-        for (let index = 0; index < FORM_ELEMENTS.length - 1; index++) {
+       let error;
+
+       if ($inputName.value.trim() === "") {
+        $inputName.classList.add("is-invalid");
+        $nameErrors.innerText = "El nombre es obligatorio";
+        error = true;
+       }
+
+       if ($inputBrand.value.trim() === "") {
+        $inputBrand.classList.add("is-invalid");
+        $brandErrors.innerText = 'Debes indicar la marca'
+        error = true;
+       }
+
+       if ($inputCategory.value.trim() === "") {
+        $inputCategory.classList.add("is-invalid");
+        $categoryErrors.innerHTML = 'Debes indicar la categoría';
+        error = true;
+       }
+
+       if ($inputDescription.value.trim() === "") {
+        $inputDescription.classList.add("is-invalid");
+        $descriptionErrors.innerText = 'La descripción es obligatoria';
+        error = true;
+       }
+
+       if ($inputPrice.value.trim() === "") {
+        $inputPrice.classList.add("is-invalid");
+        $priceErrors.innerText = 'Debes indicar un precio y que sea mayor a 0';
+        error = true;
+       }
+
+       if ($inputDiscount.value.trim() === "") {
+        $inputDiscount.classList.add("is-invalid");
+        $discountErrors.innerText = 'Debes ingresar un valor en descuento';
+        error = true;
+       }
+
+
+       if(error) {
+        submitErrors.innerText = "El formulario no puede ser enviado vacio"
+    } else {
+        $form.submit();
+    }
+       /*  const FORM_ELEMENTS = document.getElementsByClassName("obligatoria");
+       
+        
+
+        for (let index = 0; index <= FORM_ELEMENTS.length ; index++) {
             const element = FORM_ELEMENTS[index];
             if(element.value === "" && element.type !== "file") {
                 element.classList.add("is-invalid")
@@ -141,14 +188,16 @@ window.addEventListener('load', () => {
            
         }
 
-        let elementosConErrores = document.querySelectorAll(".is-invalid");
+        let elementosConErrores = document.getElementsByClassName("is-invalid");
         let errores = elementosConErrores.length > 0; 
 
         if(errores) {
             submitErrors.innerText = "El formulario no puede ser enviado vacio"
         } else {
             $form.submit()
-        }
+        }*/
+
+        
      })
 
 
