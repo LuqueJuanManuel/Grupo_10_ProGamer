@@ -12,6 +12,9 @@ window.addEventListener('load', () => {
     let $inputDescription = qs('#description');
     let $form = qs('#form');
     let $imgPreview = qs('#img-preview');
+    let $file = qs('#image');
+    let $fileErrors = qs('#fileErrors');
+    
     
     let $nameErrors = qs('#nameErrors');
     let $brandErrors = qs('#brandErrors');
@@ -99,8 +102,9 @@ window.addEventListener('load', () => {
     
     $inputPrice.addEventListener('blur', () => {
         switch (true) {
-            case $inputPrice.value.trim():
-            $priceErrors.innerText = 'Debes indicar un precio y que sea mayor a 0'
+            case !$inputPrice.value.trim():
+            $inputPrice.classList.add("is-invalid");
+            $priceErrors.innerText = 'Debes indicar un precio y que sea mayor a 0';
             break;
 
             default: 
@@ -176,29 +180,33 @@ window.addEventListener('load', () => {
     } else {
         $form.submit();
     }
-       /*  const FORM_ELEMENTS = document.getElementsByClassName("obligatoria");
-       
-        
-
-        for (let index = 0; index <= FORM_ELEMENTS.length ; index++) {
-            const element = FORM_ELEMENTS[index];
-            if(element.value === "" && element.type !== "file") {
-                element.classList.add("is-invalid")
-            }
-           
-        }
-
-        let elementosConErrores = document.getElementsByClassName("is-invalid");
-        let errores = elementosConErrores.length > 0; 
-
-        if(errores) {
-            submitErrors.innerText = "El formulario no puede ser enviado vacio"
-        } else {
-            $form.submit()
-        }*/
-
         
      })
+
+
+     $file.addEventListener('change', () => {
+        let filePath = $file.value, //Capturo el valor del input
+            allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
+        if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+            $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
+            $fileErrors.style.color = 'red';
+            $file.value = '';
+            $imgPreview.innerHTML = '';
+            return false;
+        }else{
+            // Image preview
+            console.log($file.files);
+            if($file.files && $file.files[0]){
+                let reader = new FileReader();
+                reader.onload = function(e){
+                    $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
+                };
+                reader.readAsDataURL($file.files[0]);
+                $fileErrors.innerHTML = '';
+                $file.classList.remove('is-invalid')
+            }
+        }
+    })
 
 
 })

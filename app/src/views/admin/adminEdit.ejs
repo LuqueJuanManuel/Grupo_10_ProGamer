@@ -12,7 +12,7 @@
 
     <main id="register">
         <div class="registro-container">
-            <form action="/admin/edit/<%= product.id  %>?_method=PUT" method="POST" enctype="multipart/form-data" novalidate>
+            <form action="/admin/edit/<%= product.id  %>?_method=PUT" method="POST" enctype="multipart/form-data" id="form" novalidate>
                 
                 <div class="registro-form">
     
@@ -20,25 +20,29 @@
                     <!-- nombre del producto -->
                     <div class="input-container">
                         <h6  class="datos-box">Nombre del producto:</h6>
-                        <input class="input-style <%= locals.errors && errors.name ? 'is-invalid' : null%> " type="text" name="name" id="name" placeholder="ingresa un nombre..." value="<%= locals.old && old.product.name ? old.product.name : product.name %>">
-                      <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
+                        <input class="input-style <%= locals.errors && errors.name ? 'is-invalid' : null%> obligatoria" type="text" name="name" id="name" placeholder="ingresa un nombre..." value="<%= locals.old && old.product.name ? old.product.name : product.name %>">
+                        <span class="error" id="nameErrors"></span>
+                        <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
                     </div>
 
+                    <!-- nombre de la marca -->
                       <div class="input-container">
                         <h6 class="datos-box">Marca del producto:</h6>
-                        <input class="input-style  <%= (locals.errors && errors.brand) ? 'is-invalid' : ''%>" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= locals.old && old.product.brand ? old.product.brand : product.brand %>">
+                        <input class="input-style  <%= (locals.errors && errors.brand) ? 'is-invalid' : ''%> obligatoria" type="text" name="brand" id="brand" placeholder="Ingresar la marca..." value="<%= locals.old && old.product.brand ? old.product.brand : product.brand %>">
+                        <span class="error" id="brandErrors"></span>                       
                         <small class="text-danger ms-2"><%= locals.errors && errors.brand ? errors.brand.msg : null%></small>
                     </div>
     
                     <!-- agregar categoria -->
                     <div class="input-container">
                         <h6 class="datos-box">Categoria:</h6>
-                        <select name="category" id="category" class="input-select">
+                        <select name="category" id="category" class="input-select obligatoria">
                             <option value="" hidden selected>Elija su categoria</option>
                             <% arrayDeCategorias.forEach(categoria => { %>
                                 <option value="<%= categoria.id %>" <%- categoria.id === product.product_category_id && "selected" %>><%= categoria.name %></option>
                             <% }) %>
                         </select>
+                        <span class="error" id="categoryErrors"></span>
                         <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
                     </div>
                     <!-- agregar sub categoria -->
@@ -50,13 +54,15 @@
                     <!-- descount -->
                     <div class="contaner-price-descount">
                         <div class="input-container container-price-A">
-                            <h6 class="datos-box ">Precio:$</h6>
-                            <input class="input-style  <%= (locals.errors && errors.price) && 'is-invalid'%> " type="text" name="price" id="price" placeholder="Precio" value="<%= locals.old && old.price ? old.price : product.price %>">
+                            <h6 class="datos-box ">Precio:</h6>
+                            <input class="input-style  obligatoria <%= (locals.errors && errors.price) && 'is-invalid'%>" type="text" name="price" id="price" placeholder="Precio" value="<%= locals.old && old.price ? old.price : product.price %>">
+                            <span class="error" id="priceErrors"></span>
                             <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
                         </div>
                         <div class="input-container container-descount-A">
                             <h6 class="datos-box">Descuento:<%= product.discount %>%OFF</h6>
-                            <input class="input-style  <%= (locals.errors && errors.discount) && 'is-invalid'%> " type="text" name="discount" id="discount" placeholder="Descuento" value="<%= locals.old && old.discount ? old.discount : product.discount %>">
+                            <input class="input-style  <%= (locals.errors && errors.discount) && 'is-invalid'%> obligatoria" type="text" name="discount" id="discount" placeholder="Descuento" value="<%= locals.old && old.discount ? old.discount : product.discount %>">
+                            <span class="error" id="discountErrors"></span>
                             <small class="text-danger ms-2"><%= locals.errors && errors.discount? errors.discount.msg : null%></small>
                         </div>
                     </div>
@@ -73,7 +79,8 @@
                     <!-- description general -->
                     <div class="input-container <%= (locals.errors && errors.description) && 'is-invalid'%>">
                         <h6 class="datos-box">Descripción:</h6>
-                        <textarea name="description" id="description"  placeholder="Descripción del producto..."><%= locals.old && old.description ? old.description : product.description %></textarea>
+                        <textarea name="description" class="obligatoria" id="description"  placeholder="Descripción del producto..."><%= locals.old && old.description ? old.description : product.description %></textarea>
+                        <span class="error" id="descriptionErrors"></span>
                         <small class="text-danger ms-2"><%= locals.errors && errors.description? errors.description.msg : null%></small>
                     </div>
     
@@ -196,12 +203,17 @@
                     <!-- agregar image -->
                     <div class="input-container input-file">
                         <h6 class="datos-box">Imagenes del producto:</h6>
+                        <div class="img-container" id="img-preview">
+                        
+                        </div>
+                        <span id="fileErrors"></span>
                         <input class="input-style-file"  type="file" value="<%= product.image %>"  name="image" id="image" multiple>
                         <label for="image" class="form-label-arch-edit">Archivos a modificar: <%= product.image %></label>
 
                     </div>
     
                     <!-- boton de enviar -->
+                    <span id="submitErrors"></span>
                     <button class="button-container" type="submit"><a class="register" >Guardar cambios</a></button>
                 </div>
             </form>
@@ -212,6 +224,6 @@
     <%- include("../partials/footer") %> 
     <!-- fin del footer -->
     <%- include("../partials/scripts") %>
-    
+    <script src="/JS/validations/productAddValidator.js"></script>
 </body>
 </html>
