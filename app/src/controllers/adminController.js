@@ -266,6 +266,12 @@ module.exports = {
   destroy: (req, res) => {
     let productId = Number(req.params.id);
 
+    Image.destroy({
+      where: {
+        products_id: productId
+      }
+    })
+    
     Product.destroy({
       where: {
         id: productId
