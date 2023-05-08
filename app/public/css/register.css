@@ -2,6 +2,20 @@ main#register span.error {
     color : red;
 }
 
+main#register .img-container {
+    width: 100%;
+    height: 200px;
+    border: thin solid gray ;
+    border-radius: 10px;
+    text-align: center;
+}
+
+main#register img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 main#register h4{
     font-family: var(--fuente-titulos);
     margin-bottom: 1rem;
