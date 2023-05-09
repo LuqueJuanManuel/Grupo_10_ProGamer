@@ -19,7 +19,8 @@ w.addEventListener("load", () => {
         $passErrors = qs("#passErrors"),
         $pass2 = qs("#pass2"),
         $pass2Errors = qs("#passErrors"),
-        $form = qs("#form")
+        $form = qs("#form"),
+        $submitErrors = qs("#submitErrors")
         regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,//dato alfabetico
         regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,//dato mail
         regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;//dato contraseña
@@ -121,6 +122,7 @@ w.addEventListener("load", () => {
       //la aplicamos al formulario el evento submit
         $form.addEventListener("submit", (event) => {
             event.preventDefault()//prevenimos q lo envie//
+           
             const  FORM_ELEMENTS =  event.target.elements;//variable de  todos los elemetos de formulario
     
             for (let i = 0; i < FORM_ELEMENTS.length -1 ; i++) {//recorremos los elementos

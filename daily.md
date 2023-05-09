@@ -363,17 +363,68 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 ## miercoles 3 de Mayo
 
+- nos reunimos para repartirnos las tareas
+
 ##  Emanuel Gauna
 
 - creacion de archivo editEditProfile.js
 - repaso y modificacion de Validaciones del Back-end "userEditValidator.js"
 
+## jueves 4 de  Mayo 
+
+## Juan Luque
+
+- Empezando a realizar las validaciones de Front , notamos un error al mandar el formalario vacio, tuve problemas en la vista le estaba llegando mal las categorias de los productos.
+- Intente solucionarlo, pero no pude, quedamos en juntarnos con el equipo para ver el problema.
+
+## Tomas Lopez Turconi
+
+- empecé con el login de declarando los input, por viaje lo seguí al otro dia
+
 ## viernes 5 de Mayo
 
-##  Emanuel Gauna
+##  Emanuel Gauna 
 
 -  creacion de validaciones de input de registro de usuario 
 - modificacion de archivo register.ejs creacion de clases, ids.
 - creacion de span con mensaje de errores de validaciones del front-end  
+
+## Juan Luque 
+
+- Nos juntamos con equipo para intentar resolver el problema con las validaciones de Back, pero no encontramos el problema.
+- Pude resolver el problema anterior y comprobamos que las validaciones al mandar el formulario vacio ya estaban funcionando correctamente.
+
+## Tomas Lopez Turconi
+
+- casi termino todo el login con algunas modificaciones en el css, solo me falto el submit
+
+## Sabado 6 de Mayo
+
+## Juan Luque
+
+- Se crea la Carpeta Validations dentro de public/JS que es donde se van s ubir las validaciones de Front.
+- se crean las variables donde voy a almacenar los input y las variables donde guardo los span que dan mensaje de error al usuario.
+
+## Tomas Lopez Turconi
+
+- termine el login. No tuve mayor problema
+
+## Emanuel Gauna
+
+- caparacion de validaciones de front-end con las del back-end
+- validacion del submit de registro de usuario
+
+## Domingo 7 de Mayo
+
+## Juan Luque
+
+- Aplico las validaciones de Front de Agregar producto.
+- Agrego las validaciones para modificar un producto. -->
+
+## Tomas Lopez Turconi
+
+- arregle unas cositas del password y modifique la base de datos, para no tener problemas al eliminar el producto.
+
+
 
 
