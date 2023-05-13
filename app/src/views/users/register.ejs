@@ -117,7 +117,8 @@
                         <input class="input-style" type="tel" name="tel" placeholder="Ingresar teléfono...">
                     </div> -->
                     <p>Campos obligatorios *</p>
-                    <button class="button-container" type="submit"><a class="register" >Registrarme</a></button>
+                    <span id="submitErrors"></span>
+                    <button id="" class="button-container" type="submit"><a class="register" >Registrarme</a></button>
                 </div>
             </form>
         </div>
@@ -127,7 +128,7 @@
     <%- include("../partials/footer") %> 
     <!-- fin del footer -->
     <%- include("../partials/scripts") %>
-    <script src="/JS/userEditProfile.js"></script> 
+    <script src="/JS/validations/userRegisterValidator.js"></script>  
     <script src="http://momentjs.com/downloads/moment.min.js"></script>
 </body>
 
