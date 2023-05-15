@@ -121,7 +121,7 @@ window.addEventListener('load', () => {
             $discountErrors.innerText = 'Debes ingresar un valor en descuento';
             break;
 
-            case $inputDiscount.value.length > 100:
+            case $inputDiscount.value > 100:
             $discountErrors.innerText = 'El descuento no puede ser mayor a 100%'
             break;
 
