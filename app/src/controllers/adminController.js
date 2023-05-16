@@ -206,7 +206,8 @@ module.exports = {
                 //obtener nombre de las imagenes a eliminar
                 //eliminar arch.
                 images.forEach((productImage) => {
-                  console.log(productImage)
+                  if(productImage.name !== "default-image.png"){
+                    console.log(productImage)
                   const MATCH =fs.existsSync('./public/images/products/', productImage.name);
                   if(MATCH){
                     try{
@@ -216,6 +217,7 @@ module.exports = {
                     }
                   }else{
                     console.log("No se encontro el archivo");
+                  }
                   }
                 });
                 // 4- Eliminamos las imagenes de la DB (destroy)
@@ -322,7 +324,8 @@ module.exports = {
     })
     .then((images) => {
       images.forEach((productImage) => {
-        console.log(productImage)
+        if(productImage.name !== "default-image.png"){
+          console.log(productImage)
         const MATCH =fs.existsSync('./public/images/products/', productImage.name);
         if(MATCH){
           try{
@@ -332,6 +335,7 @@ module.exports = {
           }
         }else{
           console.log("No se encontró el archivo");
+        }
         }
       })
       Image.destroy({
