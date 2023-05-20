@@ -5,9 +5,10 @@ window.addEventListener("load", () =>{
 
     }
 
- var $menu  = qs('div#menu');
- var $desplegable   = qs('nav.close');
- var $oscurecer = qs('.oscurecer');
+ let $menu  = qs('div#menu');
+ let $desplegable   = qs('nav.close');
+ let $oscurecer = qs('.oscurecer');
+ 
 
     $menu.addEventListener('click', function (e) {
         /*Abrir $menu*/
