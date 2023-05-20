@@ -53,7 +53,7 @@ window.addEventListener("load", () => {
                 $iconPass.classList.add("estadoEmail-incorrecto");
                 break;
             case !regExPass.test($inputpass.value):
-                $passError.innerText = 'Debe ingresar un mail válido';
+                $passError.innerText = 'Debe ingresar una contraseña válida';
                 $inputpass.classList.add('is-invalid');
                 $iconPass.classList.add("estadoEmail-incorrecto");
                 break;

@@ -190,8 +190,59 @@ module.exports = {
         },
         {
           where: { id: productID }
-        }).then(() => {
-          return res.redirect("/admin/home")
+        }).then((result) => {
+          if(result){
+            //si no reemplaza imagen
+            if(req.files.length === 0){
+              return res.redirect("/admin/home")
+            }else {
+              // obtener las imagenes del producto a actualizar
+              Image.findAll({
+                where: {
+                  products_id: productID
+                }
+              })
+              .then((images) => {
+                //obtener nombre de las imagenes a eliminar
+                //eliminar arch.
+                images.forEach((productImage) => {
+                  if(productImage.name !== "default-image.png"){
+                    console.log(productImage)
+                  const MATCH =fs.existsSync('./public/images/products/', productImage.name);
+                  if(MATCH){
+                    try{
+                      fs.unlinkSync(`./public/images/products/${productImage.name}`)
+                    }catch(error){
+                      throw new Error(error)
+                    }
+                  }else{
+                    console.log("No se encontro el archivo");
+                  }
+                  }
+                });
+                // 4- Eliminamos las imagenes de la DB (destroy)
+                Image.destroy({
+                  where: {
+                    products_id: productID
+                  }
+                })
+                .then(() => {
+                  // crear los registros de la nueva img
+                  const files = req.files.map((file) => {
+                    return {
+                      name: file.filename,
+                      products_id: productID,
+                    }
+                  })
+                  Image.bulkCreate(files)
+                  .then(() => {
+                    return res.redirect("/admin/home")
+                  })
+                })
+              })
+            }
+          }
+          
         })
         .catch(error => console.log(error))
     } else {
@@ -266,14 +317,44 @@ module.exports = {
   destroy: (req, res) => {
     let productId = Number(req.params.id);
 
-    Product.destroy({
+    Image.findAll({
       where: {
-        id: productId
+        products_id: productId
       }
     })
-      .then(() => {
-        res.redirect("/admin/home");
+    .then((images) => {
+      images.forEach((productImage) => {
+        if(productImage.name !== "default-image.png"){
+          console.log(productImage)
+        const MATCH =fs.existsSync('./public/images/products/', productImage.name);
+        if(MATCH){
+          try{
+            fs.unlinkSync(`./public/images/products/${productImage.name}`)
+          }catch(error){
+            throw new Error(error)
+          }
+        }else{
+          console.log("No se encontró el archivo");
+        }
+        }
       })
+      Image.destroy({
+        where: {
+          products_id: productId
+        }
+      })
+      .then(() => {
+        Product.destroy({
+          where: {
+            id: productId
+          }
+        })
+          .then(() => {
+            res.redirect("/admin/home");
+          })
+      })
+    })
+    .catch(error => console.log(error))
 
     /* products.forEach(product => {
       if(product.id === productId){

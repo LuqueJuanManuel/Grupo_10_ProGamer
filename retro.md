@@ -131,6 +131,33 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 - subir codigo que cumpla mismas funciones(repetir codigo)
 
+**********************************************************************************************************
+
+## RESTROSPECTIVA DEL SPRINT 7
+
+### Seguir haciendo: 
+- Unos de las cualidades que mantuvimos durante todos los sprint fue mantener una comunicacion constante por WhatsApp
+
+### Hacer más:
+
+- mantener las ramas actualizadas ni bien finalizada la tarea.
+
+### Empezar a hacer:
+
+- subir cambios en daily.md al finalizar la tarea.
+
+- eliminar codigo que ya no utilizamos y esta comentado.
+
+### Hacer menos:
+
+- Dejar mucho tiempo estaticas las tarjetas de trello.
+- Archivar las tarjetas del sprint anterior, cuando ya esta reañlizado el feedback. 
+
+### Dejar de hacer:
+
+- Subir cambios a develop, sin haber comprobado que no tenga ningun error (Comprarlo en la rama individual).
+
+
 
 
 
