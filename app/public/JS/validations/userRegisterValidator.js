@@ -18,7 +18,7 @@ w.addEventListener("load", () => {
         $pass = qs("#pass"),
         $passErrors = qs("#passErrors"),
         $pass2 = qs("#pass2"),
-        $pass2Errors = qs("#passErrors"),
+        $pass2Errors = qs("#pass2Errors"),
         $form = qs("#form"),
         $submitErrors = qs("#submitErrors")
         regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,//dato alfabetico
@@ -101,6 +101,13 @@ w.addEventListener("load", () => {
                     break;
             }
         })
+        $pass.addEventListener("change", ()=>{
+            if($pass.value != $pass2.value){
+                /* error = true */
+                $pass2Errors.innerText = "Las contraseñas no coinciden";
+                $pass2.classList.add("is-invalid");
+            }
+        })
     $pass2.addEventListener('blur', () => {
             switch (true) {
                 case !$pass2.value.trim():
@@ -118,7 +125,6 @@ w.addEventListener("load", () => {
                     break;
             }
         })
-
       //la aplicamos al formulario el evento submit
         $form.addEventListener("submit", (event) => {
             event.preventDefault()//prevenimos q lo envie//
