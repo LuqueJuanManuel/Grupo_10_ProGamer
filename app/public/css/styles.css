@@ -178,13 +178,28 @@ ul.container-nav li{
     color: black;
     background-color: var(--verde-neon);
     margin: 1px;
+    transition: all 1s ease;
     
 }
+/*  */
+ul.container-nav li:hover{
+    background-color: var(--violeta-oscuro);
+    transform: scale(1.4);
+    border-color: var(--verde-claro);
+}
+ul.container-nav li a:hover{
+    color: white;
+
+}
+
+/*  */
 ul.container-nav li a{
     color:var(--violeta-oscuro);
     font-family: var(--fuente-parrafos);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0%;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 /*  */
