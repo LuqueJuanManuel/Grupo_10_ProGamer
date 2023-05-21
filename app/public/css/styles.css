@@ -203,6 +203,7 @@ ul.container-nav li a{
 }
 
 /*  */
+
 button.glass {
     display: none;
 }
@@ -414,7 +415,7 @@ header button.glass {
        display: flex;
        width: 90%;
        flex-flow: row wrap;
-       justify-content: space-evenly;
+       justify-content: space-between;
 
    }
    ul.container-nav{
@@ -423,6 +424,9 @@ header button.glass {
 } 
 div.oscurecer{
     width: 0%;
+}
+nav.close{
+    display: none;
 }
 
    form.form-header {
@@ -439,9 +443,9 @@ div.oscurecer{
        text-align: center;
        border-radius: 5px;
         border: 2px solid ;
-        border-radius: 25px;
-       
+        border-radius: 25px;    
    }
+
    input.search{
        width: 100%;
        font-size: 24px;
@@ -450,8 +454,9 @@ div.oscurecer{
        border: solid white 2px;
        color: white;
        font-family: var(--parrafos);
-
+       padding-left: 10px;
    }
+
    div.input-glass{
        width: 62%;
    }
