@@ -13,11 +13,22 @@
     <main class="adminHome">
         <section class="admin-add-user">
             <article>
-                <a href="/admin/create" title="Agregar producto"><i class="bi bi-plus plus"><!-- <p class="add-product">Agregar producto</p> --></i></a>
+                <a href="/admin/create" title="Agregar producto">
+                    <i class="bi bi-plus plus">
+                        <p class="add-product">Agregar producto</p>
+                    </i>
+                </a>
             </article>
-            <article>
-                <a href="/" title="Usuarios"><i class="bi bi-people people"></i></a>
-            </article>
+            <% if (session.user.category === 3) {%>
+                <article>
+                    <a href="/" title="Usuarios">
+                        <i class="bi bi-people people">
+                            <p class="Mod-Rol-User">Rol de usurio</p>
+                        </i>
+                    </a>
+                </article>
+            <%} %>
+                
         </section>
         <section class="row ">
             <article class="col-12 table-responsive">

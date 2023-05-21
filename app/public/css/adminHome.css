@@ -17,14 +17,23 @@ main.adminHome  section.admin-add-user a i.bi {
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
     transition: all 0.5s ease;
 }
-/* main.adminHome section.admin-add-user a i.bi p.add-product{
+main.adminHome section.admin-add-user a i.bi p.add-product{
+    /* display: none; */
     position: absolute;
     z-index: 100;
     top: 80%;
-    left: 29%;
     color: var(--verde-neon);
     font-size: 1.2rem;
-} */
+}
+
+main.adminHome section.admin-add-user a i.bi p.Mod-Rol-User{
+    /* display: none; */
+    position: absolute;
+    z-index: 100;
+    top: 90%;
+    color: var(--verde-neon);
+    font-size: 1.2rem;
+}
 
 /*main.adminHome section.admin-add-user a i.plus{
     color: #39b54a;
@@ -93,5 +102,22 @@ main.adminHome  i:hover , svg:hover{
     }
     main.adminHome  section.row{
         margin:0;
+    }
+}
+
+@media (min-width: 818px){
+    main.adminHome section.admin-add-user a i.bi p.add-product{
+        position: absolute;
+        z-index: 100;
+        top: 80%;
+        left: 31%;
+        color: var(--verde-neon);
+        font-size: 1.2rem;
+    }
+    main.adminHome section.admin-add-user a i.bi p.Mod-Rol-User{
+        position: absolute;
+        z-index: 100;
+        top: 110%;
+        left: 38%;
     }
 }
