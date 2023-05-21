@@ -18,9 +18,11 @@ w.addEventListener("load", () => {
         $pass = qs("#pass"),
         $passErrors = qs("#passErrors"),
         $pass2 = qs("#pass2"),
-        $pass2Errors = qs("#passErrors"),
+        $pass2Errors = qs("#pass2Errors"),
         $form = qs("#form"),
-        $submitErrors = qs("#submitErrors")
+        $submitErrors = qs("#submitErrors"),
+        $file = qs("#image"),
+        $fileErrors = qs("#fileErrors")
         regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,//dato alfabetico
         regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,//dato mail
         regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;//dato contraseña
@@ -101,6 +103,13 @@ w.addEventListener("load", () => {
                     break;
             }
         })
+        $pass.addEventListener("change", ()=>{
+            if($pass.value != $pass2.value){
+                /* error = true */
+                $pass2Errors.innerText = "Las contraseñas no coinciden";
+                $pass2.classList.add("is-invalid");
+            }
+        })
     $pass2.addEventListener('blur', () => {
             switch (true) {
                 case !$pass2.value.trim():
@@ -118,7 +127,6 @@ w.addEventListener("load", () => {
                     break;
             }
         })
-
       //la aplicamos al formulario el evento submit
         $form.addEventListener("submit", (event) => {
             event.preventDefault()//prevenimos q lo envie//
@@ -143,5 +151,27 @@ w.addEventListener("load", () => {
             }
          })
     
+         $file.addEventListener('change', () => {
+            let filePath = $file.value, //Capturo el valor del input
+                allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
+            if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+                $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
+                $file.value = '';
+                $imgPreview.innerHTML = '';
+                return false;
+            }else{
+                // Image preview
+                console.log($file.files);
+                if($file.files && $file.files[0]){
+                    let reader = new FileReader();
+                    reader.onload = function(e){
+                        $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
+                    };
+                    reader.readAsDataURL($file.files[0]);
+                    $fileErrors.innerHTML = '';
+                    $file.classList.remove('is-invalid')
+                }
+            }
+        })
 
 })
