@@ -11,11 +11,12 @@ main#products div.accordion-item {
 main#products button.accordion-button {
     background-color: var(--crema);
     border: 1px solid var(--verde-claro);
+    
 }
 
 main#products p.filtrarPorCategoria {
     font-family: var(--fuente-titulos);
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: var(--gris-claro);
 }
 

@@ -17,7 +17,7 @@
 @import url("/css/userHome.css");  
 
 
-/* se pisan los estilos */
+
 
 /* General */
 * {
@@ -77,20 +77,89 @@ header{
     
 }
 
-/* @keyframes logo-name {
-    0%{
-        filter: hue-rotate(45deg);
-    }
-    25%{
-        filter: hue-rotate(90deg);
-    }
-    50%{
-        filter: hue-rotate(180deg);
-    }
-    100%{
-        filter: hue-rotate(360deg);
-    } 
-}*/
+/* Menu de Hambuerguesa */
+header nav.navbar {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #ffffff99 !important;
+}
+
+header div.container-fluid {
+    margin: 0;
+    padding: 0;
+    border: 2px solid var(--verde-neon);
+    border-radius: 10px;
+}
+
+header a.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+header button.navbar-toggler {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background-color: var(--violeta-oscuro); 
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid; 
+    box-shadow: 5px 5px 15px black; 
+    max-width: 45px ;
+    max-height: 45px;
+    text-decoration: none;
+    transition: all 1s ease ;
+}
+
+header div.navbar-collapse {
+    padding: 10px;
+}
+
+header form.d-flex {
+    margin: 10px;
+}
+
+
+header ul li a.nav-link {
+    font-family: var(--fuente-titulos);
+    color: var(--violeta-oscuro);
+    transition: all 2s ease;
+    font-weight: 900;
+}
+
+header ul li:hover a.nav-link {
+    color: black;
+    text-decoration: underline;
+    transform: scale(2);
+    font-size: 2.5rem;
+}
+
+header button.btn {
+    background-color: var(--violeta-oscuro); 
+    color: white;
+    border-radius: 5px;
+    border: 2px solid; 
+    box-shadow: 5px 5px 15px black; 
+    transition: all 1s ease ;
+}
+
+header button.btn:hover {
+    background-color: var(--crema);
+    color: black;
+    transform:  scale(1.5);
+}
+
+header input.form-control {
+    border: 1px solid var(--violeta-oscuro);
+    border-radius: 10px;
+}
+
+/* Final de Menu de Hambuerguesa */
+
 div.logo img.logo{
     display: none;
     width: 15%;
@@ -349,6 +418,8 @@ footer div.footer-align{
 /* inicio media queries */
 /*  tablet */
 @media(min-width:480px){
+
+
     header{
        background-color: var(--verde-neon);
        background-image: none;
@@ -360,6 +431,11 @@ footer div.footer-align{
       width: 100%;
 
    }
+
+   header nav.navbar {
+    display: none;
+   }
+
    div.hamburguer-container{
        display: none;
    }
