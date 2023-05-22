@@ -11,7 +11,7 @@ const { validationResult } = require("express-validator");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const { Product, Product_category, Image, Banner } = require('../database/models');
+const { Product, Product_category, Image, Banner, User } = require('../database/models');
 const { log } = require('console');
 
 module.exports = {
@@ -364,7 +364,53 @@ module.exports = {
     }) */
 
   },
+  UserRol: (req, res) => {
 
+    User.findAll({
+      attributes:['id','name','lastname', 'user_category']
+    })
+
+    .then((users)=>{
+      
+      return res.render("admin/SAdminRolEdit", {
+        users,
+        session: req.session,
+
+      })
+    })
+    .catch(error => console.log(error))
+  },
+  UserRolEdit: (req, res) => {
+    let errors = validationResult(req);
+    if(errors.isEmpty()){
+      let idUser = req.params.id;
+    User.update(
+      { user_category: req.body.user_category },
+      { where: { id: idUser } }
+    )
+    
+
+    .then((user)=>{
+      res.redirect('/admin/home/roledit');
+    })
+    .catch(error => console.log(error))  
+    }else {
+      User.findAll({
+        attributes:['id','name','lastname', 'user_category']
+      })
+  
+      .then((users)=>{
+        
+        return res.render("admin/SAdminRolEdit", {
+          users,
+          session: req.session,
+          errors: errors.mapped(),
+        })
+      })
+      .catch(error => console.log(error))
+    }
+    
+  },
 
 
 }

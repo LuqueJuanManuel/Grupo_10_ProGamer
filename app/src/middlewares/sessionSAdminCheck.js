@@ -4,6 +4,6 @@
 module.exports = (req, res, next) => {
     if(!req.session.user) return res.redirect("/users/login");
     const category = req.session.user.category ;
-    if(category !== 1 && category !== 2 ) return res.redirect("/");
+    if(category !== 2 ) return res.redirect("/admin/home");
     next();
 }
