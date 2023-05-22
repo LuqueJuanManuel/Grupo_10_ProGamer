@@ -5,6 +5,7 @@ const { uploadImageProduct } = require("../middlewares/upload");
 const productsAddValidator = require("../validations/productsAddValidator");
 const sessionAdminCheck = require("../middlewares/sessionAdminCheck")
 const adminRolValidator = require('../validations/adminRolValidator');
+const sessionSAdminCheck =require("../middlewares/sessionSAdminCheck");
 
 /* Home */
 router.get('/home', sessionAdminCheck, controller.adminHome);
@@ -29,7 +30,8 @@ router.put('/edit/:id', uploadImageProduct.array("image") , productEditValidator
 /* DELETE */
 router.delete('/delete/:id', controller.destroy);
 /* Users */
-router.get('/home/roledit', controller.UserRol);
+router.get('/home/roledit',sessionSAdminCheck, controller.UserRol);
 router.put('/home/roledit/:id',adminRolValidator, controller.UserRolEdit);
+router.delete('/home/roledit/delete/:id', controller.UserRolDestroy)
 
 module.exports = router;

@@ -168,6 +168,22 @@ main.adminHome span#formRolError{
     color: tomato;
     font-family: var(--fuente-parrafos);
 }
+main.adminHome div a.btnAdminRol-prev{
+    text-decoration: none;
+    color: var(--violeta-oscuro);
+    border: none;
+    background-color: var(--verde-neon);
+    margin: 0 2px 0 10px;
+    padding: .2rem 1rem;
+    border-radius: 10px;
+    font-weight: bolder;
+    box-shadow: 0 0 5px 1px var(--verde-neon);
+    transition: 1s ease;
+}
+main.adminHome div a.btnAdminRol-prev:hover{
+    box-shadow: 0px 2px 7px  var(--crema);
+    font-weight:700;
+}
 
 @media (max-width: 720px){
     main.adminHome section.admin-add-user{

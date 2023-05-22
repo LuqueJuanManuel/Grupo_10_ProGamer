@@ -411,6 +411,27 @@ module.exports = {
     }
     
   },
+  UserRolDestroy: (req, res) => {
+    let idUser = req.params.id;
+    User.findByPk(idUser)
 
+    .then((user) => {
+      /* console.log(user) */
+
+      if(fs.existsSync(path.join('./public/images/users/', user.avatar)) && user.avatar !== 'default-image.png'){
+        
+        fs.unlinkSync(`./public/images/users/${user.avatar}`)
+
+      }
+      User.destroy({
+        where: {id : idUser}
+      })
+      .then(()=> {
+        res.redirect('/admin/home/roledit');
+      })
+      .catch(error => console.log(error))
+    })
+    .catch(error => console.log(error))
+  },
 
 }

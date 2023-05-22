@@ -48,7 +48,7 @@
                                 </form>
                                 
                                 <td class="align-middle ">
-                                    <%if (user.user_category > 0 && user.id !== session.user.id) {%>
+                                    <%if (user.id !== session.user.id) {%>
                                         <div class="userRolDelete">
                                         <i class="bi bi-trash3 trash" id="adminmiventanaAbrir"></i>
                                     </div>
@@ -59,7 +59,7 @@
                                                 <div class="adminMiventanaCerrarYDestroy">
                                                     <button class="adminMiventanaCerrarE" id="adminMiventanaCerrar">Cerrar</button>
 
-                                                    <form action="/admin/delete/<%= user.id %>?_method=DELETE" method="post">
+                                                    <form action="/admin/home/roledit/delete/<%= user.id %>?_method=DELETE" method="post">
                                                         <button class="a adminMiventanaDelete" title="Eliminar">
                                                             <i class="bi bi-trash3 trash"></i>
                                                         </button>
@@ -70,10 +70,6 @@
                                         </div>
                                     </div>
                                     <%}%>
-                                    
-                                                
-                                        
-                                        
                                         
                                     </td>
                             
@@ -85,8 +81,11 @@
                         
                     </tbody>
                 </table>
+                
             </article>
-            
+            <div>
+                <a href="/admin/home" class="btnAdminRol-prev">VOLVER</a>
+            </div>
             <% if (locals.errors && errors.user_category) { %>
                 <small class="text-danger"><%= errors.user_category.msg %> </small>
             <% } %>
