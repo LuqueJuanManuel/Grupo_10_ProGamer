@@ -78,14 +78,15 @@
                                     </td>
                             
                             </tr>
+                            <span id="RolError" class="errorsF col-2"></span>
+                            <span id="formRolError" class="errorsF col-md-2"></span>
                         <%});%>
                         
                         
                     </tbody>
                 </table>
             </article>
-            <span id="RolError" class="errorsF"></span>
-            <span id="formRolError" class="errorsF"></span>
+            
             <% if (locals.errors && errors.user_category) { %>
                 <small class="text-danger"><%= errors.user_category.msg %> </small>
             <% } %>

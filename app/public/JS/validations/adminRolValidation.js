@@ -1,5 +1,6 @@
 const qs = (element) => {
-    return document.querySelector(element);
+    return document.querySelectorAll(element);
+    
 }
 window.addEventListener('load',() => {
     
@@ -7,44 +8,40 @@ window.addEventListener('load',() => {
     $RolError = qs('#RolError'),
     $formRol = qs('#formRol'),
     $formRolError = qs('#formRolError');
-
+    /* console.log( $formRol) */
     
-    const userId = $inputRol.dataset.userId;
-    
-    $inputRol.addEventListener('blur', () => {
-        if ($inputRol.value === null) { 
-            $RolError.innerText = 'Las 1 contraseñas no coinciden';
-            $inputRol.classList.add('is-invalid');
-        }
-        if ($inputRol.value === undefined) {
-            $RolError.innerText = 'Las 2 contraseñas no coinciden';
-            $inputRol.classList.add('is-invalid');
-        }
-    });
+for (let i = 0; i < $inputRol.length; i++) {
 
-    $inputRol.addEventListener('blur', () =>{
+    const userId = $inputRol[i].dataset.userId;
+    $inputRol[i].addEventListener('blur', () =>{
+        
         switch (true) {
-            case !$inputRol.value.trim():
-                $RolError.innerText = 'El 3 campo es obligatorio';
-                $inputRol.classList.add('is-invalid');
-                
+            case !$inputRol[i].value.trim():
+                $RolError[i].innerText = `El campo Roles del usuario ${userId} es obligatorio!!  `;
+                $inputRol[i].classList.add('is-invalid');
+                break;
+            case $inputRol[i].value < 0 || $inputRol[i].value > 2:
+                $RolError[i].innerText = `El campo Roles del usuario ${userId} tiene que ser entre 0 y 2.  `;
+                $inputRol[i].classList.add('is-invalid');
                 break;
             
             default:
-                $inputRol.classList.remove('is-invalid');
-                $RolError.innerText = '';
+                $inputRol[i].classList.remove('is-invalid');
+                $RolError[i].innerText = '';
                 break;
         }
     })
-    $formRol.addEventListener('submit', (event) => {
+    $formRol[i].addEventListener('submit', (event) => {
         event.preventDefault()
         const elementErrors = document.querySelectorAll(".is-invalid");
-        console.log(elementErrors)
+        
         const ERRORES = elementErrors.length > 0;
+        console.log(ERRORES)
         if (ERRORES) {
-            $formRolError.innerText = `Hay errores en el usurario con Id :  ${userId}`;
+            $formRolError[i].innerText = ` Hay errores en el usurario con Id :  ${userId}`;
         }else{
-            $formRol.submit()
+            $formRol[i].submit()
         }
     })
+}
 });
