@@ -425,6 +425,18 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - arregle unas cositas del password y modifique la base de datos, para no tener problemas al eliminar el producto.
 
+*************************************************************************************************
 
+# Sprint  8/ - Api + React
 
+## miercoles 3 de Mayo
 
+- nos reunimos para repartirnos las tareas
+
+##  Emanuel Gauna
+
+## Domingo 28 de mayo
+
+## Emanuel Gauna
+
+- agregando ruta notFound 404 y ruta de terminos y condiciones
