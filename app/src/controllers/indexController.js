@@ -48,6 +48,9 @@ module.exports = {
       session: req.session,
       toThousand,
     }) */
+  },
+  terms: (req,res) => {
+   return  res.render("terms&Conditions")
   }
 }
 
