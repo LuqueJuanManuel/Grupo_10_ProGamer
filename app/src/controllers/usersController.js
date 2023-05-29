@@ -1,4 +1,6 @@
 /* requerir validaciones de usuarios */
+const fs = require('fs');
+const path = require('path');
 const { validationResult } = require("express-validator");
 /* requerir database de usuarios */
 /*  const { users , writeJSON, readJSON } = require("../oldDatabase/index");  */
@@ -188,6 +190,32 @@ module.exports = {
             res.redirect("/");
             
         },
+        userDestroy: (req, res) => {
+            let idUser = req.params.id;
+            
+            User.findByPk(idUser)
+
+            .then((user) => {
+            /* console.log(user) */
+
+                if(fs.existsSync(path.join('./public/images/users/', user.avatar)) && user.avatar !== 'default-image.png'){
+        
+                fs.unlinkSync(`./public/images/users/${user.avatar}`)
+
+            }
+            User.destroy({
+                where: {id : idUser}
+            })
+            .then(()=> {
+                req.session.destroy();
+                if (req.cookies.proGamer) {
+                    res.cookie("proGamer", "", {maxAge: -1})
+                }
+                res.redirect('/');
+            })
+            .catch(error => console.log(error))
+        })
+        .catch(error => console.log(error))
+        },
     
-     
 }
