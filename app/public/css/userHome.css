@@ -64,6 +64,13 @@ main.userHome .btn-userHome a ,main.userHome .btn-userHomeDelete a{
     transition: all 1s ease;
     padding: 0.3rem 0 0.3rem 0;
 }
+main.userHome .btn-userHomeDelete p.deleteUserBtn{
+    text-align: center;
+    color: var(--violeta-oscuro);
+    font-family: var(--fuente-parrafos);
+    padding: 0.3rem 0 0.3rem 0;
+    transition: all 1s ease;
+}
 main.userHome .btn-userHomeDelete:hover{
     background-color: rgb(255, 0, 0);
     box-shadow: 0px 0 4px 2px var(--verde-oscuro);
@@ -81,4 +88,69 @@ main.userHome .btn-userHome:hover{
 
 main.userHome .btn-userHome a:hover,main.userHome .btn-userHomeDelete a:hover{
     color: var(--crema);
+}
+main.userHome .btn-userHomeDelete p.deleteUserBtn:hover{
+    color: var(--crema)!important;
+}
+
+/* ventna Em */
+main.userHome div.userVentanaEmerg{
+    display: none; /* Ocultar la ventana al principio */
+    position: fixed; /* Posición fija para que se muestre sobre todo */
+    z-index: 1000; /* Z-index alto para que esté en primer plano */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho del 100% */
+    height: 100%; /* Altura del 100% */
+    /* overflow: auto; */ /* Agregar un desplazamiento cuando la ventana sea demasiado grande */
+    background-color: rgba(0,0,0,0.4); /* Color de fondo oscuro para oscurecer el contenido detrás de la ventana */
+}
+main.userHome div.userventanaContenido{
+    background-color: var(--crema);
+    margin: 50% auto; /* Centrar vertical y horizontalmente */
+    padding: 20px;
+    border: 2px solid var(--violeta-oscuro);
+    border-radius: 16px;
+    width: 60%;
+}
+main.userHome div.userventanaContenido:hover{
+    box-shadow: 0.5px 0 6px 2px var(--verde-oscuro);
+}
+
+main.userHome div.userVentanaEmerg div.userventanaContenido h3.userVentanaTitle{
+    text-align: center;
+    color: var(--violeta-oscuro);
+    font-family: var(--fuente-parrafos);
+}
+main.userHome div.userVentanaEmerg div.userventanaContenido div.userVentanaCerrarDestroy{
+    
+    text-align: center;
+}
+main.userHome div.userVentanaEmerg div.userventanaContenido div.userVentanaCerrarDestroy .userVentanaCerrarEm{
+    margin-bottom: 0.2rem !important;
+    padding: .2rem .6rem;
+}
+
+
+
+
+
+@media (min-width: 659px){
+    main.userHome div.userVentanaEmerg div.userventanaContenido div.userVentanaCerrarDestroy{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem 1rem 1rem 1rem;
+    }
+    main.userHome div.userVentanaEmerg div.userventanaContenido div.userVentanaCerrarDestroy .userVentanaCerrarEm{
+        margin: 0 !important;
+        padding: .2rem .6rem;
+    }
+}
+
+@media (min-width: 750px){
+    main.userHome div.userventanaContenido{
+        
+        margin: 25% auto; /* Centrar vertical y horizontalmente */
+        
+    }
 }

@@ -18,8 +18,21 @@
                         <a href="">Ver Compras</a>
                     </div>
                     <div class="btn-userHomeDelete">
-                        <a href="">Eliminar cuenta</a>
+                        <p class="deleteUserBtn" id="userMiventanaAbrir">Eliminar cuenta</p>
                     </div>
+
+                    <div class="userVentanaEmerg" id="userMiventana">
+                        <div class="userventanaContenido">
+                            <h3 class="userVentanaTitle"><%= user.name %>, ¿Esta sequro que desea eliminar su cuenta?</h3>
+                            <div class="userVentanaCerrarDestroy">
+                                <button class="userVentanaCerrarEm btn-userHome" id="userVentanaCerrar">Cerrar</button>
+                                <form action="/users/userHome/delete/<%= user.id %>?_method=DELETE" method="post">
+                                    <button class="userVentanaCerrarEm btn-userHomeDelete" id="userVentanaDestroy">Confirmar Eliminacion!!</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="btn-userHomeDelete">
                         <a href="/users/logOut">Cerrar sesion</a>
                     </div>
@@ -29,6 +42,7 @@
         </section>
             
     </main>
+    <script src="/JS/userHomeEmerg.js"></script>
     <!-- footer-->
     <%- include("../partials/footer")  %> 
     <!-- fin del footer -->
