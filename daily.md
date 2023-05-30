@@ -429,11 +429,76 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 # Sprint  8/ - Api + React
 
-## miercoles 3 de Mayo
+## Lunes 15 de Mayo
 
 - nos reunimos para repartirnos las tareas
 
 ##  Emanuel Gauna
+
+
+## Martes 16 de Mayo
+
+## Tomas Lopez Turconi
+
+- Arregle en el adminController para que las imágenes en edit y destroy se borren tanto de la BBDD y del proyecto, exceptuando la imagen por default.
+
+
+
+## Jueves 18 de Mayo
+
+## Tomas Lopez Turconi
+
+- Empecé con las APIs de productos. Sin problemas. También modifique en la app web le mensaje del pass que da en el login.
+
+
+
+## Viernes 19 de Mayo
+
+## Tomas Lopez Turconi
+
+- Termine APIs de productos y lo subí a git rama develop.
+
+
+
+## Sabado 20 de Mayo
+
+## Tomas Lopez Turconi
+
+- Empecé a crear el modo superAdmin.(vistas, validaciones back y front, middleware, agregando rutas y controlador). Tuve algunos problemas con 	las vistas y 	que me tome el middleware sessionAdminCheck y sessionSAdminCheck.
+
+
+
+## Domingo 21 de Mayo
+
+## Tomas Lopez Turconi
+
+- Seguí con la creación del modo superAdmin., donde implemente los controladores en adminController UserRolEdit y UserRolDestroy. También 	cambie algunas cosas a las vista.
+
+
+
+## Lunes 22 de Mayo
+
+## Tomas Lopez Turconi
+
+- Creando las validaciones en front del superAdmin.(adminRolValidation), tuve problemas que no me las tomaba bien. pero lo pude solucionar. Luego lo subí al reposito.
+
+
+
+## Jueves 25 de Mayo
+
+## Tomas Lopez Turconi
+
+- Creamos el proyecto Dashboard.
+
+
+
+## Savado 27 de Mayo
+
+## Tomas Lopez Turconi
+
+- Agregue la modalidad para que el usuario pueda eliminar su cuenta. También modifique la vista agregando una ventana emergente.
+
+
 
 ## Domingo 28 de mayo
 

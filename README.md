@@ -1,5 +1,9 @@
 # ProGamer
 
+- [APIS](https://github.com/emanuel-gauna/grupo-10-Progamer_APIS-REACT)
+
+- [Dashboard](https://github.com/TomasLopezTur/Dashboard_Pro-gamer_Grupo10)
+
 <img alt="pro-gamer-logo" src="./design/proGamer_logo.png">
 
 ## ¿Quienes somos?
