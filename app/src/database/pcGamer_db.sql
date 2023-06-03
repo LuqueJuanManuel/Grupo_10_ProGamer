@@ -18,7 +18,7 @@ address varchar(100) DEFAULT NULL,
 city varchar(100) DEFAULT NULL,
 postalCode varchar(100) DEFAULT NULL,
 tel varchar(100) DEFAULT NULL,
-google_id varchar(100) DEFAULT NULL,
+google_id varchar(100),
 user_category INT unsigned NOT NULL,
 PRIMARY KEY (id)
 );

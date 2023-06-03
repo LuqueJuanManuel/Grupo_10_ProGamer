@@ -55,6 +55,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             defaultValue: null
         },
+        google_id: {
+            type: dataTypes.STRING(100),
+        },
         user_category: {
             type: dataTypes.INTEGER(100).UNSIGNED,
             allowNull: false

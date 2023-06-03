@@ -217,5 +217,17 @@ module.exports = {
         })
         .catch(error => console.log(error))
         },
+        googleLogin: async (req, res) => {
+             // Aquí puedes redirigir al usuario a una página de inicio o realizar otras acciones
+        let user = req.session.passport.user;
+        req.session.user = {
+            id: user.id,
+            name: user.name,
+            avatar: user.avatar,
+            rol: user.rol
+        }
+        
+        res.redirect('/');
+        },
     
 }
