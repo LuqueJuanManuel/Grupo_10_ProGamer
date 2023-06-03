@@ -442,6 +442,16 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - Arregle en el adminController para que las imágenes en edit y destroy se borren tanto de la BBDD y del proyecto, exceptuando la imagen por default.
 
+##  Emanuel Gauna
+
+- Creacion de de carpetas de proyecto- Apis- user y products - instalacion de paquetes de node 
+
+
+## Miercoles  17 de Mayo
+
+## Emanuel Gauna 
+
+- creacion de rutas y controladores Api-rest
 
 
 ## Jueves 18 de Mayo
@@ -458,7 +468,10 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - Termine APIs de productos y lo subí a git rama develop.
 
+## Emanuel Gauna
 
+- creacion de validaciones 
+- finalizacion de de endpoint de usuarios y detalle de usuario
 
 ## Sabado 20 de Mayo
 
@@ -466,7 +479,9 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - Empecé a crear el modo superAdmin.(vistas, validaciones back y front, middleware, agregando rutas y controlador). Tuve algunos problemas con 	las vistas y 	que me tome el middleware sessionAdminCheck y sessionSAdminCheck.
 
+## Emanuel Gauna 
 
+- modifico validacion de confirmacion de contraseña del front-end ya que la validacion tenia una falla. 
 
 ## Domingo 21 de Mayo
 
@@ -474,7 +489,9 @@ Tuve algunos problemas en la vista y la tuve qe cambiar un poco.
 
 - Seguí con la creación del modo superAdmin., donde implemente los controladores en adminController UserRolEdit y UserRolDestroy. También 	cambie algunas cosas a las vista.
 
+## Emanuel Gauna
 
+- Correcion para la subida de imagenes que solo acepte formatos validos 
 
 ## Lunes 22 de Mayo
 
