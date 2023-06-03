@@ -11,6 +11,10 @@ const cookieParser = require("cookie-parser");
 /* requerir chequeo de cookies a nivel global de app */
 const cookieCheck = require("./middlewares/cookieCheck");
 
+const passport = require('passport');
+
+require('dotenv').config();
+
 /* Template engine Config. */
 app.set("view engine", "ejs");
 app.set("views", "./src/views");
@@ -26,6 +30,10 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+/* login google passport and session */
+app.use(passport.session());
+app.use(passport.initialize());
+
 app.use(cookieParser());
 /* aplicar cookie parser de manera global de app */
 app.use(cookieCheck);
