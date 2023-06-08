@@ -8,6 +8,7 @@ main#register .img-container {
     border: thin solid gray ;
     border-radius: 10px;
     text-align: center;
+    margin-bottom: .5rem;
 }
 
 main#register img {
@@ -42,7 +43,7 @@ main#register .registro-form{
 main#register form {
     width: 75%;
     max-width: 350px;
-    margin:2rem 0 4rem 0;
+    margin:2rem 0 3rem 0;
 }
 
 main#register .registro-container{
@@ -192,7 +193,7 @@ textarea:focus {
 /* price-descount */
 .contaner-price-descount{
     position: relative;
-    left: 0.2rem;
+    left: 0.5rem;
     width: 25%;
     display: flex;
     /* justify-content: end; */
@@ -246,6 +247,25 @@ main#register input.is-invalid {
 
 main#register span#submitErrors {
     color: red;
+}
+main#register div.container-btnVolver{
+    margin-bottom:   5%;
+}
+main#register div.container-btnVolver a.btnAdminRol-prev{
+    text-decoration: none;
+    color: var(--violeta-oscuro);
+    border: none;
+    background-color: var(--verde-neon);
+    margin: 0 2px 0 10px;
+    padding: .4rem 2rem;
+    border-radius: 10px;
+    font-weight: bolder;
+    box-shadow: 0 0 5px 1px var(--verde-neon);
+    transition: 1s ease;
+}
+main#register div.container-btnVolver a.btnAdminRol-prev:hover{
+    box-shadow: 0px 2px 7px  var(--crema);
+    font-weight:700;
 }
 
 @media (min-width: 415px){
