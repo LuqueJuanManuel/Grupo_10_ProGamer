@@ -24,7 +24,7 @@ PRIMARY KEY (id)
 );
 insert into users(id, name, lastname, email, pass, avatar, address, city, postalCode, tel, user_category)
 values (default, 'usuario', 'admin', 'usuario@admin.com', '$2a$10$DQ6OKW81aFwhgLwt8bZRO.cqmZuYIgMBd9vj7EAEXANu2TduWE/3K', 'default-image.png', null, null, null, null, 1),
-(default, 'usuario', 'SuperAdmin', 'usuario@Superadmin.com', '$2a$10$4TsWgNZaYgmSFKC6WgQK3upmp5ehlh91WtYEhnDho1Tv8haQH/FmO', 'default-image.png', null, null, null, null, 2),
+(default, 'usuario', 'SuperAdmin', 'usuario@Sadmin.com', '$2a$10$4TsWgNZaYgmSFKC6WgQK3upmp5ehlh91WtYEhnDho1Tv8haQH/FmO', 'default-image.png', null, null, null, null, 2),
 (default, 'usuario', 'log', 'usuario@log.com', '$2a$10$U5HKDmGaT3dUVLIMwUmcNOEIuG7R90FvMigXkN7eYt2TVRiEi2FXC', 'default-image.png', null, null, null, null, 0);
 
 /*select * from  users;
