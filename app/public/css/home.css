@@ -520,8 +520,8 @@ main#home section form div.form  div.button-container button.btn:hover {
 
     main#home section.payMode-section article.modes {
         margin: 0 auto;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
         max-width: 378px;
     }
 
@@ -590,4 +590,27 @@ main#home section form div.form  div.button-container button.btn:hover {
         
     }
 }
-
+@media (min-width: 970px){
+    main#home section.banner-bottom div.img-ofert {
+        margin: 0 5rem 0 5rem;
+        padding: 2rem;
+    }
+    main#home section.payMode-section article.modes {
+        
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        
+    }
+}
+@media (min-width: 1630px){
+    main#home section.banner-bottom div.img-ofert {
+        margin: 0 7rem 0 7rem;
+        padding: 5rem;
+    }
+    main#home section.payMode-section article.modes {
+        
+        margin-top: 4rem;
+        margin-bottom: 0rem;
+        
+    }
+}
