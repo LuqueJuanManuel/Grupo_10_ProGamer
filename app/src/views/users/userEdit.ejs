@@ -43,16 +43,16 @@
                         
                         <h6 class="datos-box">Provincia</h6>
                         <select name="city" class="input-select">
-                            <%if (session.user.city !== "") {%>
-                                <option value="<%= user.city %>"><%= locals.old ? old.city : user.city %></option>
-                            <%}else{%>
-                                <option value="" hidden selected>Elija una provincia</option>
-                            <%}%>
-                            <option value="Buenos Aires">Buenos Aires</option>
-                            <option value="chaco">Chaco</option>
-                            <option value="cordoba">Córdoba</option>
-                            <option value="misiones">Misiones</option>
-                            <option value="chubut">Chubut</option>
+                            <option value="<%=  user.city %>" hidden selected>Elija una provincia</option>
+                            <% provinces.forEach(province => { %>
+                                
+                                <% if (province.id === user.city) { %>
+                                    <option value="<%= province.id %>" selected><%- province.nombre %></option>
+                                    <% } else { %>
+                                        <option value="<%= province.id %>"><%- province.nombre %></option>
+                                    <% } %>
+                                <% }) %>
+                            
                         </select>
                     </div>
     

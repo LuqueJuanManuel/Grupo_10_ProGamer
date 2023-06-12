@@ -771,10 +771,10 @@ div.contact ul.github{
     flex-direction: column
     ;
 }
-div.contact ul.github li{
+/* div.contact ul.github li{
     display: block;
 
-}
+} */
 div.contact a{
     font-weight: 900;
 

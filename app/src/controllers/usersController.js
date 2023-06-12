@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require("express-validator");
+const fetch = require('node-fetch')
 /* requerir database de usuarios */
 /*  const { users , writeJSON, readJSON } = require("../oldDatabase/index");  */
 /* requerimos bcrypt para hashear contraseñas */
@@ -28,9 +29,17 @@ module.exports = {
     userEdit: (req, res) => {
         let userSessionID = req.session.user.id;
         /* let userSession = users.find(user => user.id === userSessionID); */
-        User.findByPk(userSessionID)
-        .then(user => {
+        const user = User.findByPk(userSessionID)
+        const data  =  fetch("https://apis.datos.gob.ar/georef/api/provincias?campos=nombre,id")
+        .then(response => response.json());
+        
+        Promise.all([user, data])
+        .then(([user, data ])=> {
+           /* return res.send(data.provincias) */
+            /* console.log(user) */
+            
             return res.render("users/userEdit",{
+                provinces: data.provincias,
                 user: user,
                 session:req.session
             })
