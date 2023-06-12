@@ -423,6 +423,7 @@ nav ul.nav-container li:hover{
     border: solid var(--violeta-oscuro) 2px;
 }
 nav ul.nav-container li a{
+    font-size: 20px;
     color: var(--crema);
     text-decoration: none;
     font-family: roboto;
@@ -647,6 +648,8 @@ nav.close{
 
     
     p.text-copyright{
+    font-size: 20px;
+    font-weight: 900;
     display: flex;
     position: absolute;
     left: 55px;
