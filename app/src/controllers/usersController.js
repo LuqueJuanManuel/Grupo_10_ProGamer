@@ -233,7 +233,7 @@ module.exports = {
             id: user.id,
             name: user.name,
             avatar: user.avatar,
-            rol: user.rol
+            category: user.user_category
         }
         
         res.redirect('/');
