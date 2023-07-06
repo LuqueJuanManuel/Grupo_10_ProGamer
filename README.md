@@ -8,7 +8,7 @@
 
 ## Installacion del proyecto MCV desde la terminal
   - Clonar el proyecto: git clone https://github.com/LuqueJuanManuel/Grupo_10_ProGamer.git
-  - ingresar a la carpeta del proyecto y despues dentro de app poner: npm install
+  - Ingresar a la carpeta del proyecto y despues dentro de app poner: npm install
   - En app/src/database esta la base de datos pcGamer_db.sql
   - Despues de tener todo esto, para levantar el proyecto poner en Grupo_10_ProGamer/app : nodemon
 
